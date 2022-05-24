@@ -10,17 +10,19 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var modelData: ModelData
     
+    var filteredPara: [Paragraph] {
+           modelData.chapterOne.filter { paragraph in
+               paragraph.id == 1
+           }
+        }
 
     var body: some View {
-        let chapterOne = modelData.chapterOne
-                
-        Text("Hello, world!")
+        
+        let PARA = filteredPara[0]
+        
+        Text(PARA.content)
             .padding()
-            .onAppear{
-                for para in chapterOne{
-                    print(para.content)
-                }
-            }
+            .font(.body)
     }
 }
 
