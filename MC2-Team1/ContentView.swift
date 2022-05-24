@@ -8,21 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var modelData: ModelData
     
-    var filteredPara: [Paragraph] {
-           modelData.chapterOne.filter { paragraph in
-               paragraph.id == 1
-           }
-        }
-
+    // Define
+    @EnvironmentObject var modelData: ModelData
+    @State var paragraphId = 1
+    
+    // Body
     var body: some View {
+        let currentParagraph = modelData.filterPara(id: paragraphId)
         
-        let PARA = filteredPara[0]
-        
-        Text(PARA.content)
+        //Content
+        Text(currentParagraph.content)
             .padding()
             .font(.body)
+        
+        //Choices
+        if currentParagraph.hasChoices() {
+            
+            ForEach(currentParagraph.choices!, id: \.self) {choice in
+                Text(choice.content)
+                    .onTapGesture {
+                        paragraphId = choice.nextParagraphId
+                    }
+            }
+            
+        }
     }
 }
 

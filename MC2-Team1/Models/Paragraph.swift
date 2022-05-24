@@ -12,29 +12,22 @@ struct Paragraph: Hashable, Codable, Identifiable {
     let content: String
     let audioName: String?
     let imageName: String?
-    let choices: [String:Int]?
+    let choices: [Choice]?
     
-    func isChoices() -> Bool {
-        if self.choices == nil{
-            return false
-        } else {
-            return true
-        }
+    func hasChoices() -> Bool {
+        return self.choices == nil ? false : true
     }
+    
+    func hasAudio() -> Bool {
+        return self.audioName == nil ? false : true
+    }
+    
+    func hasImage() -> Bool {
+        return self.imageName == nil ? false : true
+    }
+}
 
-    func isAudio() -> Bool{
-        if self.audioName == nil {
-            return false
-        } else {
-            return true
-        }
-    }
-    
-    func isImage() -> Bool{
-        if self.imageName == nil {
-            return false
-        } else {
-            return true
-        }
-    }
+struct Choice: Hashable, Codable {
+    let content: String
+    let nextParagraphId: Int
 }

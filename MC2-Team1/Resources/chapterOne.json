@@ -2,18 +2,36 @@
   {
     "id": 1,
     "content": "1번 문단 입니다 어쩌구 저쩌구 그랬습니다.",
-    "choices": {
-        "2번으로 가겠습니다": 2,
-        "3번으로 가겠습니다": 3,
-    }
+    "choices": [
+        {
+            "content" : "2번으로 가겠습니다",
+            "nextParagraphId" : 2
+        },
+        {
+            "content" : "3번으로 가겠습니다",
+            "nextParagraphId" : 3
+        }
+    ]
   },
   {
     "id": 2,
-    "content": "2번 문단 입니다 어쩌구 저쩌구 그랬습니다."
+    "content": "2번 문단 입니다 어쩌구 저쩌구 그랬습니다.",
+    "choices": [
+        {
+            "content" : "이어가기",
+            "nextParagraphId" : 4
+        }
+    ]
   },
   {
     "id": 3,
-    "content": "3번 문단 입니다 어쩌구 저쩌구 그랬습니다."
+    "content": "3번 문단 입니다 어쩌구 저쩌구 그랬습니다.",
+    "choices": [
+        {
+            "content" : "이어가기",
+            "nextParagraphId" : 4
+        }
+    ]
   },
   {
     "id": 4,
