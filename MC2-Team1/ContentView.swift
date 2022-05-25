@@ -12,21 +12,21 @@ struct ContentView: View {
     // Define
     @EnvironmentObject var modelData: ModelData
     @State var paragraphId = 1
+    let NotoSerifMedium = "NotoSerifKR-Bold"
     
     // Body
     var body: some View {
         let currentParagraph = modelData.filterPara(id: paragraphId)
         
         //Content
-        Text(currentParagraph.content)
-            .padding()
-            .font(.body)
+        FadeInOutView(text: currentParagraph.content, startTime: 0.1)        
         
         //Choices
         if currentParagraph.hasChoices() {
             
             ForEach(currentParagraph.choices!, id: \.self) {choice in
                 Text(choice.content)
+                    .font(.custom(NotoSerifMedium, size: 18))
                     .onTapGesture {
                         paragraphId = choice.nextParagraphId
                     }

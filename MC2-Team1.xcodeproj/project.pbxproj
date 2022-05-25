@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C613C433283E0BE800BCFC82 /* FadeInOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C613C432283E0BE800BCFC82 /* FadeInOutView.swift */; };
+		C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */; };
+		C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */; };
+		C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */; };
+		C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C439283E12A400BCFC82 /* NotoSerifKR-Light.otf */; };
+		C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C438283E12A400BCFC82 /* NotoSerifKR-Medium.otf */; };
+		C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C437283E12A400BCFC82 /* NotoSerifKR-Regular.otf */; };
+		C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */; };
 		C6E1B9A8283B772E00EEC6F1 /* MC2_Team1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9A7283B772E00EEC6F1 /* MC2_Team1App.swift */; };
 		C6E1B9AA283B772E00EEC6F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */; };
 		C6E1B9AC283B772E00EEC6F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E1B9AB283B772E00EEC6F1 /* Assets.xcassets */; };
@@ -17,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C613C432283E0BE800BCFC82 /* FadeInOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInOutView.swift; sourceTree = "<group>"; };
+		C613C435283E112300BCFC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Black.otf"; sourceTree = "<group>"; };
+		C613C437283E12A400BCFC82 /* NotoSerifKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Regular.otf"; sourceTree = "<group>"; };
+		C613C438283E12A400BCFC82 /* NotoSerifKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Medium.otf"; sourceTree = "<group>"; };
+		C613C439283E12A400BCFC82 /* NotoSerifKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Light.otf"; sourceTree = "<group>"; };
+		C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Bold.otf"; sourceTree = "<group>"; };
+		C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-SemiBold.otf"; sourceTree = "<group>"; };
+		C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-ExtraLight.otf"; sourceTree = "<group>"; };
 		C6E1B9A4283B772E00EEC6F1 /* MC2-Team1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC2-Team1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E1B9A7283B772E00EEC6F1 /* MC2_Team1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2_Team1App.swift; sourceTree = "<group>"; };
 		C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +55,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C613C434283E108A00BCFC82 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */,
+				C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */,
+				C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */,
+				C613C439283E12A400BCFC82 /* NotoSerifKR-Light.otf */,
+				C613C438283E12A400BCFC82 /* NotoSerifKR-Medium.otf */,
+				C613C437283E12A400BCFC82 /* NotoSerifKR-Regular.otf */,
+				C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		C6E1B99B283B772E00EEC6F1 = {
 			isa = PBXGroup;
 			children = (
@@ -57,8 +88,10 @@
 		C6E1B9A6283B772E00EEC6F1 /* MC2-Team1 */ = {
 			isa = PBXGroup;
 			children = (
+				C613C435283E112300BCFC82 /* Info.plist */,
 				C6E1B9A7283B772E00EEC6F1 /* MC2_Team1App.swift */,
 				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
+				C613C432283E0BE800BCFC82 /* FadeInOutView.swift */,
 				C6E1B9BB283B782700EEC6F1 /* ModelData.swift */,
 				C6E1B9B6283B776A00EEC6F1 /* Resources */,
 				C6E1B9B5283B776600EEC6F1 /* Models */,
@@ -88,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */,
+				C613C434283E108A00BCFC82 /* fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -150,6 +184,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */,
+				C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */,
+				C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */,
+				C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */,
+				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
+				C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */,
+				C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */,
 				C6E1B9BA283B77C100EEC6F1 /* chapterOne.json in Resources */,
 				C6E1B9AF283B772E00EEC6F1 /* Preview Assets.xcassets in Resources */,
 				C6E1B9AC283B772E00EEC6F1 /* Assets.xcassets in Resources */,
@@ -165,6 +206,7 @@
 			files = (
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
 				C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */,
+				C613C433283E0BE800BCFC82 /* FadeInOutView.swift in Sources */,
 				C6E1B9AA283B772E00EEC6F1 /* ContentView.swift in Sources */,
 				C6E1B9A8283B772E00EEC6F1 /* MC2_Team1App.swift in Sources */,
 			);
@@ -298,6 +340,7 @@
 				DEVELOPMENT_TEAM = 76AJ433CP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MC2-Team1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -327,6 +370,7 @@
 				DEVELOPMENT_TEAM = 76AJ433CP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MC2-Team1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

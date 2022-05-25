@@ -35,6 +35,12 @@
   },
   {
     "id": 4,
-    "content": "4번 문단 입니다 어쩌구 저쩌구 그랬습니다."
+    "content": "4번 문단 입니다 어쩌구 저쩌구 그랬습니다.",
+    "choices": [
+        {
+            "content" : "처음으로",
+            "nextParagraphId" : 1
+        }
+    ]
   }
 ]
