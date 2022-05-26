@@ -6,32 +6,32 @@
 //
 
 import SwiftUI
+import WrappingHStack
 
 struct FadeInOutView: View {
-    
-    @State var characters: Array<String.Element>
+    var text: String
+    @State var startTime: Double
     @State var opacity: Double = 0
-    @State var baseTime: Double
-    
-    let NotoSerifMedium = "NotoSerifKR-Bold"
-    
-    init(text: String, startTime: Double) {
-        characters = Array(text)
-        baseTime = startTime
-    }
-    
+    let NotoSerifMedium = "NotoSerifKR-Medium"
+
+
     var body: some View {
-        HStack(spacing:0){
-            ForEach(0..<characters.count) { num in
-                Text(String(self.characters[num]))
-                    .font(.custom(NotoSerifMedium, size: 18))
-                    .opacity(opacity)
-                    .animation(.easeInOut.delay( Double(num) * 0.015 ),
-                               value: opacity)
-            }
+        let characters: Array<String.Element> = Array(text)
+        
+        WrappingHStack(
+            0..<characters.count,
+            spacing: .constant(1.2),
+            lineSpacing: 3
+        ) { index in
+
+            Text(String(characters[index]))
+                .font(.custom(NotoSerifMedium, size: 18))
+                .opacity(opacity)
+                .animation(.easeInOut.delay( Double(index) * 0.01 ),
+                           value: opacity)
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + baseTime){
+            DispatchQueue.main.asyncAfter(deadline: .now() + startTime){
                 opacity = 1
             }
         }

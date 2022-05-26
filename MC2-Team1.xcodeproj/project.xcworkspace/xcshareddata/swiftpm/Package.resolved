@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "wrappinghstack",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dkk/WrappingHStack",
+      "state" : {
+        "revision" : "f568b78357a26f740998306f156d1ef97b6b9680",
+        "version" : "2.2.1"
+      }
+    }
+  ],
+  "version" : 2
+}
