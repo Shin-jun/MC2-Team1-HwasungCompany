@@ -10,10 +10,9 @@ import WrappingHStack
 
 struct FadeInOutView: View {
     var text: String
-    @State var startTime: Double
     @State var opacity: Double = 0
+    
     let NotoSerifMedium = "NotoSerifKR-Medium"
-
 
     var body: some View {
         let characters: Array<String.Element> = Array(text)
@@ -23,15 +22,13 @@ struct FadeInOutView: View {
             spacing: .constant(1.2),
             lineSpacing: 3
         ) { index in
-
             Text(String(characters[index]))
                 .font(.custom(NotoSerifMedium, size: 18))
                 .opacity(opacity)
-                .animation(.easeInOut.delay( Double(index) * 0.01 ),
-                           value: opacity)
+                .animation(.easeInOut.delay( Double(index) * 0.005 ), value: opacity)
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + startTime){
+            DispatchQueue.main.asyncAfter(deadline: .now()){
                 opacity = 1
             }
         }

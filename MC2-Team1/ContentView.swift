@@ -13,17 +13,21 @@ struct ContentView: View {
     // Define
     @EnvironmentObject var modelData: ModelData
     @State var paragraphId = 1
+    @State var viewReloader = true
     let NotoSerifMedium = "NotoSerifKR-Medium"
     var currentParagraph: Paragraph {modelData.filterPara(id: paragraphId)}
     
     // Body
     var body: some View {
-
         VStack {
             Spacer()
             
             //Content
-            FadeInOutView(text: currentParagraph.content, startTime: 0.1)
+            if viewReloader {
+                FadeInOutView(text: currentParagraph.content)
+            } else {
+                FadeInOutView(text: currentParagraph.content)
+            }
             
             Spacer()
             
@@ -35,6 +39,7 @@ struct ContentView: View {
                         .font(.custom(NotoSerifMedium, size: 18))
                         .onTapGesture {
                             paragraphId = choice.nextParagraphId
+                            viewReloader.toggle()
                         }
                 }
             }
