@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import WrappingHStack
 
 struct ContentView: View {
     
@@ -14,8 +13,8 @@ struct ContentView: View {
     @EnvironmentObject var modelData: ModelData
     @State var paragraphId = 1
     @State var viewReloader = true
-    let NotoSerifMedium = "NotoSerifKR-Medium"
     var currentParagraph: Paragraph {modelData.filterPara(id: paragraphId)}
+    let NotoSerifMedium = "NotoSerifKR-Medium"
     
     // Body
     var body: some View {
@@ -23,17 +22,12 @@ struct ContentView: View {
             Spacer()
             
             //Content
-            if viewReloader {
-                FadeInOutView(text: currentParagraph.content)
-            } else {
-                FadeInOutView(text: currentParagraph.content)
-            }
+            reloadView(text: currentParagraph.content)
             
             Spacer()
             
             //Choices
             if currentParagraph.hasChoices() {
-                
                 ForEach(currentParagraph.choices!, id: \.self) {choice in
                     Text(choice.content)
                         .font(.custom(NotoSerifMedium, size: 18))
@@ -46,5 +40,15 @@ struct ContentView: View {
             Spacer()
         }
         .padding(.horizontal, 20)
+    }
+}
+
+extension ContentView {
+    @ViewBuilder func reloadView(text: String) -> some View {
+        if viewReloader {
+            FadeInOutView(text: text)
+        } else {
+            FadeInOutView(text: text)
+        }
     }
 }

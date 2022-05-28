@@ -6,11 +6,9 @@
 //
 
 import Foundation
-
-
-import Foundation
 import Combine
 
+// ModelData
 final class ModelData: ObservableObject {
     // Define
     @Published var chapterOne: [Paragraph] = load("chapterOne.json")
@@ -26,6 +24,7 @@ final class ModelData: ObservableObject {
     }
 }
 
+// load JSON
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     

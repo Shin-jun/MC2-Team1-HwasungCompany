@@ -9,12 +9,16 @@ import SwiftUI
 import WrappingHStack
 
 struct FadeInOutView: View {
+    
+    // Define
     var text: String
     @State var opacity: Double = 0
-    
     let NotoSerifMedium = "NotoSerifKR-Medium"
 
+    // Body
     var body: some View {
+        
+        // Define
         let characters: Array<String.Element> = Array(text)
         
         WrappingHStack(
