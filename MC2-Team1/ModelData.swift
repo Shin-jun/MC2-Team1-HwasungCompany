@@ -10,17 +10,14 @@ import Combine
 
 // ModelData
 final class ModelData: ObservableObject {
-    // Define
-    @Published var chapterOne: [Paragraph] = load("chapterOne.json")
     
     //filterPara
-    func filterPara(id: Int) -> Paragraph {
-        var filteredPara: [Paragraph] {
-            chapterOne.filter { paragraph in
-                paragraph.id == id
-            }
+    func filterPara(chapter: String, id: Int) -> Paragraph {
+        let chapter: [Paragraph] = load("\(chapter).json")
+        var filteredPara: Paragraph {
+            chapter.filter { paragraph in paragraph.id == id }.first!
         }
-        return filteredPara[0]
+        return filteredPara
     }
 }
 

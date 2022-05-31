@@ -12,11 +12,12 @@ struct ContentView: View {
     
     // Define
     @EnvironmentObject var modelData: ModelData
-    @State var paragraphId = 1
     @State var reloadTrigger = true
     @State var isShowing = false
-    @State var fontSize: CGFloat = 18
-    var currentParagraph: Paragraph {modelData.filterPara(id: paragraphId)}
+    @AppStorage("chapter") var chapter: String = "chapterOne"
+    @AppStorage("paragraphId") var paragraphId: Int = 1
+    @AppStorage("fontSize") var fontSize: Double = 18
+    var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     let NotoSerifMedium = "NotoSerifKR-Medium"
     
     // body
@@ -28,7 +29,6 @@ struct ContentView: View {
                     
                     //Content
                     FadeInByOrderViewReloader(text: currentParagraph.content, fontSize: fontSize)
-//                    FadeInViewReloader(text: currentParagraph.content)
                     
                     Spacer()
                     
@@ -62,76 +62,18 @@ struct ContentView: View {
                 }
             }
             
+            // Setting Sheet
             HalfASheet(isPresented: $isShowing){
-                VStack(alignment: .leading, spacing: 20){
-                    // Title
-                    HStack{
-                        Spacer()
-                        Text("설정")
-                            .font(.system(size: 22))
-                        Spacer()
-                    }
-                    
-                    // Vibration Toggle
-                    HStack{
-                        Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
-                            Text("진동 효과")
-                        }
-                    }
-                    
-                    // Text Animation Toggle
-                    HStack{
-                        Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
-                            Text("텍스트 애니메이션 효과")
-                        }
-                    }
-                    
-                    // Text Size Adjust
-                    HStack{
-                        Text("텍스트 크기")
-                    }
-                    
-                    VStack{
-                        
-                        // Sample Text
-                        Text("현재 텍스트 크기 입니다.")
-                            .font(.system(size: fontSize))
-                            .padding(.vertical, 10)
-                            .frame(height: 30)
-                        
-                        // Slider
-                        HStack{
-                            Text("가")
-                                .font(.system(size: 12))
-                            Slider(value: $fontSize, in: 12...24, step: 1)
-                            Text("가")
-                                .font(.system(size: 24))
-
-                        }
-                        .padding(.vertical, 10)
-                    }
-                    
-                    // Game Reset Button
-                    HStack{
-                        Button{
-                            
-                        }label: {
-                            Text("게임 초기화 하기")
-                        }
-                        Spacer()
-                    }
-                    Spacer()
-                }
-                .padding(.horizontal)
-                .padding(.vertical, 10)
+                settingViewBuilder()
             }
         }
         .ignoresSafeArea()
     }
 }
 
-// Extension
+// ViewBuilder Extension
 extension ContentView {
+    
     // FadeInOutViewReloader
     @ViewBuilder func FadeInByOrderViewReloader(text: String, fontSize: CGFloat) -> some View {
         if reloadTrigger {
@@ -149,4 +91,74 @@ extension ContentView {
             FadeInView(text: text, fontSize: fontSize)
         }
     }
+    
+    // Setting View Builder
+    @ViewBuilder func settingViewBuilder() -> some View {
+        VStack(alignment: .leading, spacing: 20){
+            // Title
+            HStack{
+                Spacer()
+                Text("설정")
+                    .font(.system(size: 22))
+                Spacer()
+            }
+            
+            // Vibration Toggle
+            HStack{
+                Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
+                    Text("진동 효과")
+                }
+            }
+            
+            // Text Animation Toggle
+            HStack{
+                Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
+                    Text("텍스트 애니메이션 효과")
+                }
+            }
+            
+            // Text Size Adjust
+            HStack{
+                Text("텍스트 크기")
+            }
+            
+            VStack{
+                // Sample Text
+                Text("현재 텍스트 크기 입니다.")
+                    .font(.system(size: fontSize))
+                    .padding(.vertical, 10)
+                    .frame(height: 30)
+                
+                // Slider
+                HStack{
+                    Text("가")
+                        .font(.system(size: 12))
+                    Slider(value: $fontSize, in: 12...24,
+                           step: 2)
+                    Text("가")
+                        .font(.system(size: 24))
+                }
+                .padding(.vertical, 10)
+            }
+            
+            // Game Reset Button
+            HStack{
+                Button{
+                    
+                }label: {
+                    Text("게임 초기화 하기")
+                }
+                Spacer()
+            }
+            Spacer()
+        }
+        .padding(.horizontal)
+        .padding(.vertical, 10)
+
+    }
+}
+
+// function Extension
+extension ContentView {
+    
 }
