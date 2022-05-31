@@ -8,10 +8,11 @@
 import SwiftUI
 import WrappingHStack
 
-struct FadeInOutView: View {
+struct FadeInByOrderView: View {
     
     // Define
     var text: String
+    var fontSize: CGFloat
     @State var opacity: Double = 0
     let NotoSerifMedium = "NotoSerifKR-Medium"
 
@@ -27,7 +28,7 @@ struct FadeInOutView: View {
             lineSpacing: 3
         ) { index in
             Text(String(characters[index]))
-                .font(.custom(NotoSerifMedium, size: 18))
+                .font(.custom(NotoSerifMedium, size: fontSize))
                 .opacity(opacity)
                 .animation(.easeInOut.delay( Double(index) * 0.005 ), value: opacity)
         }
