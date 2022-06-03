@@ -12,11 +12,11 @@ struct ContentView: View {
     
     // Define
     @EnvironmentObject var modelData: ModelData
-    @State var reloadTrigger = true
-    @State var isShowing = false
     @AppStorage("chapter") var chapter: String = "chapterOne"
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("fontSize") var fontSize: Double = 18
+    @State var reloadTrigger = true
+    @State var isShowing = false
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     let NotoSerifMedium = "NotoSerifKR-Medium"
     
