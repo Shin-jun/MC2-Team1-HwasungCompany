@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import HalfASheet
 
 struct ContentView: View {
     
@@ -66,6 +65,7 @@ struct ContentView: View {
             HalfASheet(isPresented: $isShowing){
                 settingViewBuilder()
             }
+            .height(.proportional(0.5))
         }
         .ignoresSafeArea()
     }

@@ -16,8 +16,11 @@
 		C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C437283E12A400BCFC82 /* NotoSerifKR-Regular.otf */; };
 		C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */; };
 		C613C446283E678C00BCFC82 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = C613C445283E678C00BCFC82 /* WrappingHStack */; };
-		C66C56E02844A71900BDC0CC /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = C66C56DF2844A71900BDC0CC /* HalfASheet */; };
 		C66C56E22845E2A200BDC0CC /* FadeInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66C56E12845E2A200BDC0CC /* FadeInView.swift */; };
+		C6E19457284A58EA00EC9131 /* HalfASheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E19456284A58EA00EC9131 /* HalfASheet.swift */; };
+		C6E1945B284A58EF00EC9131 /* HalfASheet+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E19458284A58EF00EC9131 /* HalfASheet+Modifiers.swift */; };
+		C6E1945C284A58EF00EC9131 /* If.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1945A284A58EF00EC9131 /* If.swift */; };
+		C6E1945D284A58EF00EC9131 /* VerticalSlideTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E19459284A58EF00EC9131 /* VerticalSlideTransition.swift */; };
 		C6E1B9A8283B772E00EEC6F1 /* MC2_Team1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9A7283B772E00EEC6F1 /* MC2_Team1App.swift */; };
 		C6E1B9AA283B772E00EEC6F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */; };
 		C6E1B9AC283B772E00EEC6F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E1B9AB283B772E00EEC6F1 /* Assets.xcassets */; };
@@ -37,8 +40,11 @@
 		C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Bold.otf"; sourceTree = "<group>"; };
 		C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-SemiBold.otf"; sourceTree = "<group>"; };
 		C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-ExtraLight.otf"; sourceTree = "<group>"; };
-		C66C56DD2844A6AA00BDC0CC /* HalfASheet */ = {isa = PBXFileReference; lastKnownFileType = text; path = HalfASheet; sourceTree = SOURCE_ROOT; };
 		C66C56E12845E2A200BDC0CC /* FadeInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInView.swift; sourceTree = "<group>"; };
+		C6E19456284A58EA00EC9131 /* HalfASheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfASheet.swift; sourceTree = "<group>"; };
+		C6E19458284A58EF00EC9131 /* HalfASheet+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HalfASheet+Modifiers.swift"; sourceTree = "<group>"; };
+		C6E19459284A58EF00EC9131 /* VerticalSlideTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlideTransition.swift; sourceTree = "<group>"; };
+		C6E1945A284A58EF00EC9131 /* If.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = If.swift; sourceTree = "<group>"; };
 		C6E1B9A4283B772E00EEC6F1 /* MC2-Team1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC2-Team1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E1B9A7283B772E00EEC6F1 /* MC2_Team1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2_Team1App.swift; sourceTree = "<group>"; };
 		C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +61,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C613C446283E678C00BCFC82 /* WrappingHStack in Frameworks */,
-				C66C56E02844A71900BDC0CC /* HalfASheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C6E1945E284A590200EC9131 /* HalfASheet */ = {
+			isa = PBXGroup;
+			children = (
+				C6E19456284A58EA00EC9131 /* HalfASheet.swift */,
+				C6E19458284A58EF00EC9131 /* HalfASheet+Modifiers.swift */,
+				C6E1945A284A58EF00EC9131 /* If.swift */,
+				C6E19459284A58EF00EC9131 /* VerticalSlideTransition.swift */,
+			);
+			path = HalfASheet;
+			sourceTree = "<group>";
+		};
 		C6E1B99B283B772E00EEC6F1 = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +124,8 @@
 				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
 				C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */,
 				C66C56E12845E2A200BDC0CC /* FadeInView.swift */,
+				C6E1945E284A590200EC9131 /* HalfASheet */,
 				C6E1B9BB283B782700EEC6F1 /* ModelData.swift */,
-				C66C56DD2844A6AA00BDC0CC /* HalfASheet */,
 				C6E1B9B6283B776A00EEC6F1 /* Resources */,
 				C6E1B9B5283B776600EEC6F1 /* Models */,
 				C6E1B9AB283B772E00EEC6F1 /* Assets.xcassets */,
@@ -161,7 +177,6 @@
 			name = "MC2-Team1";
 			packageProductDependencies = (
 				C613C445283E678C00BCFC82 /* WrappingHStack */,
-				C66C56DF2844A71900BDC0CC /* HalfASheet */,
 			);
 			productName = "MC2-Team1";
 			productReference = C6E1B9A4283B772E00EEC6F1 /* MC2-Team1.app */;
@@ -230,10 +245,14 @@
 			files = (
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
 				C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */,
+				C6E1945C284A58EF00EC9131 /* If.swift in Sources */,
+				C6E19457284A58EA00EC9131 /* HalfASheet.swift in Sources */,
+				C6E1945D284A58EF00EC9131 /* VerticalSlideTransition.swift in Sources */,
 				C613C433283E0BE800BCFC82 /* FadeInByOrderView.swift in Sources */,
 				C66C56E22845E2A200BDC0CC /* FadeInView.swift in Sources */,
 				C6E1B9AA283B772E00EEC6F1 /* ContentView.swift in Sources */,
 				C6E1B9A8283B772E00EEC6F1 /* MC2_Team1App.swift in Sources */,
+				C6E1945B284A58EF00EC9131 /* HalfASheet+Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,10 +474,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C613C444283E678C00BCFC82 /* XCRemoteSwiftPackageReference "WrappingHStack" */;
 			productName = WrappingHStack;
-		};
-		C66C56DF2844A71900BDC0CC /* HalfASheet */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = HalfASheet;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
