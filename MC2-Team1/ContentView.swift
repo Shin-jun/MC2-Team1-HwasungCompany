@@ -16,6 +16,7 @@ struct ContentView: View {
     @AppStorage("fontSize") var fontSize: Double = 18
     @State var reloadTrigger = true
     @State var isShowing = false
+    @State var showAlert = false
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     let NotoSerifMedium = "NotoSerifKR-Medium"
     
@@ -65,7 +66,7 @@ struct ContentView: View {
             HalfASheet(isPresented: $isShowing){
                 settingViewBuilder()
             }
-            .height(.proportional(0.5))
+            .height(.proportional(0.6))
         }
         .ignoresSafeArea()
     }
@@ -117,6 +118,13 @@ extension ContentView {
                 }
             }
             
+            // Sound Effect Toggle
+            HStack{
+                Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
+                    Text("사운드 효과")
+                }
+            }
+            
             // Text Size Adjust
             HStack{
                 Text("텍스트 크기")
@@ -140,17 +148,30 @@ extension ContentView {
                 }
                 .padding(.vertical, 10)
             }
-            
+                        
             // Game Reset Button
             HStack{
                 Button{
-                    
+                    showAlert = true
                 }label: {
                     Text("게임 초기화 하기")
                 }
+                .alert(isPresented: $showAlert){
+                    
+                    Alert(
+                        title: Text("초기화 하시겠습니까?"),
+                        message: Text("게임의 진행도가 초기화 됩니다. \n이행동은 되돌릴 수 없습니다."),
+                        primaryButton: .default(Text("취소")),
+                        secondaryButton: .destructive(Text("확인")){
+                            // Reset Games
+                        }
+                    )
+                }
                 Spacer()
             }
+            
             Spacer()
+            
         }
         .padding(.horizontal)
         .padding(.vertical, 10)
