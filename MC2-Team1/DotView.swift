@@ -30,6 +30,8 @@ struct DotView: View {
                 .frame(width: 17, height: 17)
                 .foregroundColor(Color.fontColor)
         }.onAppear {
+            guard circleIndex == chapterIndex else { return }
+            
             withAnimation(.spring().repeatForever()) {
                 isAnimating.toggle()
             }
