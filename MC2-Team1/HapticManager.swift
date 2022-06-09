@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//https://seons-dev.tistory.com/entry/SwiftUI-Haptic-Feedback-haptics-vibrations
 class HapticManager {
     
     static let instance = HapticManager()
