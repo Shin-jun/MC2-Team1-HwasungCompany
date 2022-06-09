@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9E2AD2851CA31005BB908 /* DotView.swift */; };
+		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
+		B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */; };
 		C613C433283E0BE800BCFC82 /* FadeInByOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */; };
 		C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */; };
 		C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37D9E2AD2851CA31005BB908 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
+		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInByOrderView.swift; sourceTree = "<group>"; };
 		C613C435283E112300BCFC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Black.otf"; sourceTree = "<group>"; };
@@ -70,6 +76,7 @@
 		C613C434283E108A00BCFC82 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */,
 				C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */,
 				C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */,
 				C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */,
@@ -130,6 +137,8 @@
 				C6E1B9B5283B776600EEC6F1 /* Models */,
 				C6E1B9AB283B772E00EEC6F1 /* Assets.xcassets */,
 				C6E1B9AD283B772E00EEC6F1 /* Preview Content */,
+				B7690EE12851C613008E81AC /* StartView.swift */,
+				37D9E2AD2851CA31005BB908 /* DotView.swift */,
 			);
 			path = "MC2-Team1";
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 				C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */,
 				C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */,
 				C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */,
+				B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */,
 				C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */,
 				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
 				C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */,
@@ -244,6 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
+				B7690EE22851C613008E81AC /* StartView.swift in Sources */,
+				37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */,
 				C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */,
 				C6E1945C284A58EF00EC9131 /* If.swift in Sources */,
 				C6E19457284A58EA00EC9131 /* HalfASheet.swift in Sources */,
