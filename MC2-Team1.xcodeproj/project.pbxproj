@@ -28,6 +28,7 @@
 		C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9B7283B778800EEC6F1 /* Paragraph.swift */; };
 		C6E1B9BA283B77C100EEC6F1 /* chapterOne.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */; };
 		C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9BB283B782700EEC6F1 /* ModelData.swift */; };
+		D4143DD82851DEF900A24DD7 /* PullLeverGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4143DD72851DEF900A24DD7 /* PullLeverGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		C6E1B9B7283B778800EEC6F1 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterOne.json; sourceTree = "<group>"; };
 		C6E1B9BB283B782700EEC6F1 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		D4143DD72851DEF900A24DD7 /* PullLeverGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullLeverGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				C613C435283E112300BCFC82 /* Info.plist */,
 				C6E1B9A7283B772E00EEC6F1 /* MC2_Team1App.swift */,
+				D4143DD72851DEF900A24DD7 /* PullLeverGameView.swift */,
 				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
 				C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */,
 				C66C56E12845E2A200BDC0CC /* FadeInView.swift */,
@@ -246,6 +249,7 @@
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
 				C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */,
 				C6E1945C284A58EF00EC9131 /* If.swift in Sources */,
+				D4143DD82851DEF900A24DD7 /* PullLeverGameView.swift in Sources */,
 				C6E19457284A58EA00EC9131 /* HalfASheet.swift in Sources */,
 				C6E1945D284A58EF00EC9131 /* VerticalSlideTransition.swift in Sources */,
 				C613C433283E0BE800BCFC82 /* FadeInByOrderView.swift in Sources */,
