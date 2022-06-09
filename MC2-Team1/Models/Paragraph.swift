@@ -16,24 +16,24 @@ struct Paragraph: Hashable, Codable, Identifiable {
     let vibrate: String?
     let game: String?
     
-    func hasGame() -> Bool {
-        return self.game == nil ? false : true
-    }
-
-    func hasVibrate() -> Bool {
-        return self.vibrate == nil ? false : true
+    var hasGame: Bool {
+        game != nil
     }
     
-    func hasChoices() -> Bool {
-        return self.choices == nil ? false : true
+    var hasVibrate: Bool {
+        vibrate != nil
     }
     
-    func hasAudio() -> Bool {
-        return self.audioName == nil ? false : true
+    var hasChoices: Bool {
+        choices != nil
     }
     
-    func hasImage() -> Bool {
-        return self.imageName == nil ? false : true
+    var hasAudio: Bool {
+        audioName != nil
+    }
+    
+    var hasImage: Bool {
+        imageName != nil
     }
 }
 
@@ -41,11 +41,11 @@ struct Choice: Hashable, Codable {
     let content: String
     let nextParagraphId: Int
     
-    let effectB: Int?
-    let effectC: Int?
+    var effectB: Int?
+    var effectC: Int?
     
-    func hasEffect() -> Bool {
-        return self.effectB == nil || self.effectC == nil ? false : true
+    var hasEffect: Bool {
+        effectB == nil || effectC == nil ? false : true
     }
 }
 

@@ -33,7 +33,7 @@ struct ContentView: View {
                     Spacer()
                     
                     //Choices
-                    if currentParagraph.hasChoices() {
+                    if currentParagraph.hasChoices {
                         ForEach(currentParagraph.choices!, id: \.self) {choice in
                             Text(choice.content)
                                 .font(.custom(NotoSerifMedium, size: 18))
