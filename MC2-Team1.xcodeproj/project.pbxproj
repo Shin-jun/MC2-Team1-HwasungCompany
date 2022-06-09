@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9E2AD2851CA31005BB908 /* DotView.swift */; };
 		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
 		C613C433283E0BE800BCFC82 /* FadeInByOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */; };
 		C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37D9E2AD2851CA31005BB908 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInByOrderView.swift; sourceTree = "<group>"; };
 		C613C435283E112300BCFC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				C6E1B9AB283B772E00EEC6F1 /* Assets.xcassets */,
 				C6E1B9AD283B772E00EEC6F1 /* Preview Content */,
 				B7690EE12851C613008E81AC /* StartView.swift */,
+				37D9E2AD2851CA31005BB908 /* DotView.swift */,
 			);
 			path = "MC2-Team1";
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			files = (
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
 				B7690EE22851C613008E81AC /* StartView.swift in Sources */,
+				37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */,
 				C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */,
 				C6E1945C284A58EF00EC9131 /* If.swift in Sources */,
 				C6E19457284A58EA00EC9131 /* HalfASheet.swift in Sources */,
