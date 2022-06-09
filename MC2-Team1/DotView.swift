@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DotView: View {
     
-    @State var isAnimating: Bool = true
+    @State private var isAnimating: Bool = true
     
     var circleIndex: Int = 1
     var chapterIndex: Int = 1
