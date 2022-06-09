@@ -13,10 +13,8 @@ struct MC2_Team1App: App {
 
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//                .environmentObject(modelData)
-            StartView()
-                .edgesIgnoringSafeArea(.all)
+            ContentView()
+                .environmentObject(modelData)
         }
     }
 }
