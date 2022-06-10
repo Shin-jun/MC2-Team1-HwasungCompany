@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9E2AD2851CA31005BB908 /* DotView.swift */; };
-		3AA9DFD42851CADD00365420 /* GlassAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFD32851CADD00365420 /* GlassAnimation.swift */; };
+		3AA9DFD42851CADD00365420 /* GlassAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */; };
 		3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEA2851DCEC00365420 /* HapticManager.swift */; };
 		3AA9DFF028532FE300365420 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEF28532FE300365420 /* Constants.swift */; };
 		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		37D9E2AD2851CA31005BB908 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
-		3AA9DFD32851CADD00365420 /* GlassAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassAnimation.swift; sourceTree = "<group>"; };
+		3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassAnimationView.swift; sourceTree = "<group>"; };
 		3AA9DFEA2851DCEC00365420 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		3AA9DFEF28532FE300365420 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -85,9 +85,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37D9E2B0285378B2005BB908 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */,
+				C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */,
+				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
+				C66C56E12845E2A200BDC0CC /* FadeInView.swift */,
+				B7690EE12851C613008E81AC /* StartView.swift */,
+				37D9E2AD2851CA31005BB908 /* DotView.swift */,
+				B7690EE72851DB5D008E81AC /* HistoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B7690F12285322CE008E81AC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3AA9DFEA2851DCEC00365420 /* HapticManager.swift */,
+				3AA9DFEF28532FE300365420 /* Constants.swift */,
 				B7690F13285322D5008E81AC /* Extensions */,
 			);
 			path = Helpers;
@@ -155,24 +171,15 @@
 		C6E1B9A6283B772E00EEC6F1 /* MC2-Team1 */ = {
 			isa = PBXGroup;
 			children = (
+				C6E1B9AB283B772E00EEC6F1 /* Assets.xcassets */,
+				C6E1945E284A590200EC9131 /* HalfASheet */,
 				B7690F12285322CE008E81AC /* Helpers */,
 				C613C435283E112300BCFC82 /* Info.plist */,
 				C6E1B9A7283B772E00EEC6F1 /* MC2_Team1App.swift */,
-				3AA9DFD32851CADD00365420 /* GlassAnimation.swift */,
-				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
-				C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */,
-				C66C56E12845E2A200BDC0CC /* FadeInView.swift */,
-				C6E1B9BB283B782700EEC6F1 /* ModelData.swift */,
-				3AA9DFEA2851DCEC00365420 /* HapticManager.swift */,
-				C6E1945E284A590200EC9131 /* HalfASheet */,
-				C6E1B9B6283B776A00EEC6F1 /* Resources */,
 				C6E1B9B5283B776600EEC6F1 /* Models */,
-				C6E1B9AB283B772E00EEC6F1 /* Assets.xcassets */,
 				C6E1B9AD283B772E00EEC6F1 /* Preview Content */,
-				B7690EE12851C613008E81AC /* StartView.swift */,
-				37D9E2AD2851CA31005BB908 /* DotView.swift */,
-				B7690EE72851DB5D008E81AC /* HistoryView.swift */,
-				3AA9DFEF28532FE300365420 /* Constants.swift */,
+				C6E1B9B6283B776A00EEC6F1 /* Resources */,
+				37D9E2B0285378B2005BB908 /* Views */,
 			);
 			path = "MC2-Team1";
 			sourceTree = "<group>";
@@ -188,6 +195,7 @@
 		C6E1B9B5283B776600EEC6F1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C6E1B9BB283B782700EEC6F1 /* ModelData.swift */,
 				C6E1B9B7283B778800EEC6F1 /* Paragraph.swift */,
 			);
 			path = Models;
@@ -291,7 +299,7 @@
 				3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */,
 				3AA9DFF028532FE300365420 /* Constants.swift in Sources */,
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
-				3AA9DFD42851CADD00365420 /* GlassAnimation.swift in Sources */,
+				3AA9DFD42851CADD00365420 /* GlassAnimationView.swift in Sources */,
 				B7690EE22851C613008E81AC /* StartView.swift in Sources */,
 				37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */,
 				C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */,
