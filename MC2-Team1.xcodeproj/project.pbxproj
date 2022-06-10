@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9E2AD2851CA31005BB908 /* DotView.swift */; };
 		3AA9DFD42851CADD00365420 /* WaterAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFD32851CADD00365420 /* WaterAnimation.swift */; };
-		3AA9DFE92851DC7200365420 /* BloodExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFE82851DC7200365420 /* BloodExample.swift */; };
 		3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEA2851DCEC00365420 /* HapticManager.swift */; };
 		3AA9DFEE2851E58400365420 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFED2851E58400365420 /* Color+.swift */; };
-		37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9E2AD2851CA31005BB908 /* DotView.swift */; };
 		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
 		B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */; };
 		B7690F15285322E2008E81AC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690F14285322E2008E81AC /* Color.swift */; };
@@ -39,11 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37D9E2AD2851CA31005BB908 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 		3AA9DFD32851CADD00365420 /* WaterAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAnimation.swift; sourceTree = "<group>"; };
-		3AA9DFE82851DC7200365420 /* BloodExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodExample.swift; sourceTree = "<group>"; };
 		3AA9DFEA2851DCEC00365420 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		3AA9DFED2851E58400365420 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
-		37D9E2AD2851CA31005BB908 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7690F14285322E2008E81AC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */,
 				C66C56E12845E2A200BDC0CC /* FadeInView.swift */,
 				C6E1B9BB283B782700EEC6F1 /* ModelData.swift */,
-				3AA9DFE82851DC7200365420 /* BloodExample.swift */,
 				3AA9DFEA2851DCEC00365420 /* HapticManager.swift */,
 				C6E1945E284A590200EC9131 /* HalfASheet */,
 				C6E1B9B6283B776A00EEC6F1 /* Resources */,
@@ -286,7 +283,6 @@
 			files = (
 				3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */,
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
-				3AA9DFE92851DC7200365420 /* BloodExample.swift in Sources */,
 				3AA9DFD42851CADD00365420 /* WaterAnimation.swift in Sources */,
 				B7690EE22851C613008E81AC /* StartView.swift in Sources */,
 				37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */,
@@ -429,7 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC2-Team1/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UAM52RQFW9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-Team1/Info.plist";
@@ -460,7 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC2-Team1/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UAM52RQFW9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-Team1/Info.plist";
