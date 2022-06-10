@@ -36,7 +36,7 @@ struct StartView: View {
                     HStack(alignment: .center, spacing: 50) {
                         Spacer()
                         ForEach(0..<6, id: \.self) { index in
-                            DotView(circleIndex: index, chapterIndex: 0)
+                            DotView(circleIndex: index, chapterIndex: 3)
                         }
                         Spacer()
                     }
@@ -80,10 +80,4 @@ struct StartView: View {
             .padding(.top, 120)
         }
     }
-}
-
-extension Color {
-    static let bgColor = Color("BackGround")
-    static let fontColor = Color("Font")
-    static let tapFontColor = Color("TapFontColor")
 }

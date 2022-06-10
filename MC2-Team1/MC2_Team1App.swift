@@ -13,8 +13,8 @@ struct MC2_Team1App: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-//            DemoScrollViewOffsetView()
+//            ContentView()
+            StartView()
                 .environmentObject(modelData)
         }
     }

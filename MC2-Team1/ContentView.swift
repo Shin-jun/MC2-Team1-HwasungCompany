@@ -19,79 +19,109 @@ struct ContentView: View {
     @State var showAlert = false
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     let NotoSerifMedium = "NotoSerifKR-Medium"
-    
-    @State var showHistory = false
-    var drag: some Gesture {
-        DragGesture()
-            .onChanged { gesture in
-                if gesture.translation.height > 65 {
-                    withAnimation {
-                        showHistory = true
-                    }
-                }
-            }
-    }
-    
     // body
     var body: some View {
         ZStack{
-//            NavigationView{
-                VStack {
-                    if showHistory {
-                        HistoryView(showHistory: $showHistory)
-                            .transition(.move(edge: .top))
-                    } else {
-                        Group {
-                            Spacer()
-                                .onAppear {
-                                    print(UIScreen.main.bounds.width)
-                                }
-                            
-                            //Content
-                            FadeInByOrderViewReloader(text: currentParagraph.content, fontSize: fontSize)
-                            
-                            Spacer()
-                            
-                            //Choices
-                            if currentParagraph.hasChoices {
-                                ForEach(currentParagraph.choices!, id: \.self) {choice in
-                                    Text(choice.content)
-                                        .font(.custom(NotoSerifMedium, size: 18))
-                                        .onTapGesture {
-                                            paragraphId = choice.nextParagraphId
-                                            reloadTrigger.toggle()
-                                        }
-                                }
+            // Tool Bar
+            VStack{
+                ZStack{
+                    // Friendship Indicator
+                    ZStack{
+                        ZStack{
+                            Divider()
+                                .frame(height: 1)
+                                .overlay(Color.fontColor)
+                            HStack{
+                                Divider()
+                                    .frame(width: 1, height: 5)
+                                    .overlay(Color.fontColor)
                             }
-                            Spacer()
                         }
-                        .padding(.horizontal, 20)
+                        HStack{
+                            Text("백")
+                                .font(.custom(NotoSerifMedium, size: 18))
+                                .foregroundColor(.fontColor)
+                                .frame(width: 30, height: 30)
+                                .background(Color.tapFontColor)
+                                .cornerRadius(50)
+                            Spacer()
+                            Text("최")
+                                .font(.custom(NotoSerifMedium, size: 18))
+                                .foregroundColor(.fontColor)
+                                .frame(width: 30, height: 30)
+                                .background(Color.tapFontColor)
+                                .cornerRadius(50)
+                        }
+                        Text("나")
+                            .font(.custom(NotoSerifMedium, size: 18))
+                            .foregroundColor(.fontColor)
+                            .frame(width: 30, height: 30)
+                            .background(Color.bgColor)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 50)
+                                    .stroke(Color.tapFontColor, lineWidth: 1)
+                            )
+                            .offset(x: 20)
+                    }
+                    .frame(width: 180)
+                    // Gear Icon
+                    HStack{
+                        Spacer()
+                        Button(){
+                            isShowing.toggle()
+                        }label: {
+                            Image(systemName: "gearshape.fill")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .foregroundColor(.fontColor)
+                        }
+                        .padding()
                     }
                 }
-                .gesture(drag)
-                
-                //ToolBar
-//                .toolbar{
-//                    ToolbarItem{
-//
-//                        //Gear Button
-//                        Button(){
-//                            isShowing.toggle()
-//                        }label: {
-//                            Image(systemName: "gearshape.fill")
-//                            .foregroundColor(Color.black)
-//                        }
-//                    }
-//                }
-//            }
+                .frame(height: 60)
+                Spacer()
+            }
+            
+            // Content
+            VStack {
+                Spacer()
+                FadeInViewReloader(text: currentParagraph.content, fontSize: fontSize)
+                    .padding(.bottom, 160)
+                Spacer()
+            }
+            .padding(.horizontal, 20)
+            
+            // Choices
+            VStack{
+                Spacer()
+                if currentParagraph.hasChoices {
+                    ForEach(currentParagraph.choices!, id: \.self) {choice in
+                        
+                        Text(choice.content)
+                            .foregroundColor(.fontColor)
+                            .font(.custom(NotoSerifMedium, size: 18))
+                            .frame(maxWidth: .infinity, maxHeight: 60)
+                            .background(Color.bgColor)
+                            .cornerRadius(50)
+                            .shadow(color: .gray, radius: 2, x: 0, y: 0)
+                            .onTapGesture {
+                                paragraphId = choice.nextParagraphId
+                                reloadTrigger.toggle()
+                            }
+                            .padding(.horizontal)
+                            .padding(.vertical, 5)
+                    }
+                }
+            }
+            .padding(.horizontal, 20)
             
             // Setting Sheet
             HalfASheet(isPresented: $isShowing){
                 settingViewBuilder()
             }
             .height(.proportional(0.6))
+            .ignoresSafeArea()
         }
-//        .ignoresSafeArea()
     }
 }
 

@@ -20,6 +20,7 @@ struct FadeInView: View {
         Text(text)
             .font(.custom(NotoSerifMedium, size: fontSize))
             .opacity(opacity)
+            .lineSpacing(fontSize - 6)
             .animation(.easeIn.delay( 0.3 ), value: opacity)
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now()){
