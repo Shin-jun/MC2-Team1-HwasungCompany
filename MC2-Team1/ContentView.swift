@@ -26,39 +26,41 @@ struct ContentView: View {
             // Tool Bar
             VStack{
                 ZStack{
-                    let someColor = Color(red: 220 / 255, green: 220 / 255, blue: 220 / 255)
                     // Friendship Indicator
                     ZStack{
                         ZStack{
                             Divider()
                                 .frame(height: 1)
-                                .overlay(.black)
+                                .overlay(Color.fontColor)
                             HStack{
                                 Divider()
                                     .frame(width: 1, height: 5)
-                                    .overlay(.black)
+                                    .overlay(Color.fontColor)
                             }
                         }
                         HStack{
                             Text("백")
                                 .font(.custom(NotoSerifMedium, size: 18))
+                                .foregroundColor(.fontColor)
                                 .frame(width: 30, height: 30)
-                                .background(someColor)
+                                .background(Color.tapFontColor)
                                 .cornerRadius(50)
                             Spacer()
                             Text("최")
                                 .font(.custom(NotoSerifMedium, size: 18))
+                                .foregroundColor(.fontColor)
                                 .frame(width: 30, height: 30)
-                                .background(someColor)
+                                .background(Color.tapFontColor)
                                 .cornerRadius(50)
                         }
                         Text("나")
                             .font(.custom(NotoSerifMedium, size: 18))
+                            .foregroundColor(.fontColor)
                             .frame(width: 30, height: 30)
-                            .background(.white)
+                            .background(Color.bgColor)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 50)
-                                    .stroke(someColor, lineWidth: 1)
+                                    .stroke(Color.tapFontColor, lineWidth: 1)
                             )
                             .offset(x: 20)
                     }
@@ -72,7 +74,7 @@ struct ContentView: View {
                             Image(systemName: "gearshape.fill")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.black)
+                                .foregroundColor(.fontColor)
                         }
                         .padding()
                     }
@@ -97,9 +99,10 @@ struct ContentView: View {
                     ForEach(currentParagraph.choices!, id: \.self) {choice in
                         
                         Text(choice.content)
+                            .foregroundColor(.fontColor)
                             .font(.custom(NotoSerifMedium, size: 18))
                             .frame(maxWidth: .infinity, maxHeight: 60)
-                            .background(.white)
+                            .background(Color.bgColor)
                             .cornerRadius(50)
                             .shadow(color: .gray, radius: 2, x: 0, y: 0)
                             .onTapGesture {
