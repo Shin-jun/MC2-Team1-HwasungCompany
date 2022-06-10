@@ -10,7 +10,7 @@ import SwiftUI
 let width = UIScreen.main.bounds.width
 let height = UIScreen.main.bounds.height
 
-struct WaterAnimation: View {
+struct GlassAnimation: View {
     
     let targetTouchCount = 5
     
@@ -79,8 +79,8 @@ struct WaterAnimation: View {
     }
 }
 
-struct WaterAnimation_Previews: PreviewProvider {
+struct GlassAnimation_Previews: PreviewProvider {
     static var previews: some View {
-        WaterAnimation()
+        GlassAnimation()
     }
 }

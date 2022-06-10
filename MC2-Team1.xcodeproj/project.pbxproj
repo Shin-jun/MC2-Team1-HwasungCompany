@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9E2AD2851CA31005BB908 /* DotView.swift */; };
-		3AA9DFD42851CADD00365420 /* WaterAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFD32851CADD00365420 /* WaterAnimation.swift */; };
+		3AA9DFD42851CADD00365420 /* GlassAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFD32851CADD00365420 /* GlassAnimation.swift */; };
 		3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEA2851DCEC00365420 /* HapticManager.swift */; };
 		3AA9DFEE2851E58400365420 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFED2851E58400365420 /* Color+.swift */; };
 		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
@@ -39,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		37D9E2AD2851CA31005BB908 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
-		3AA9DFD32851CADD00365420 /* WaterAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAnimation.swift; sourceTree = "<group>"; };
+		3AA9DFD32851CADD00365420 /* GlassAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassAnimation.swift; sourceTree = "<group>"; };
 		3AA9DFEA2851DCEC00365420 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		3AA9DFED2851E58400365420 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				B7690F12285322CE008E81AC /* Helpers */,
 				C613C435283E112300BCFC82 /* Info.plist */,
 				C6E1B9A7283B772E00EEC6F1 /* MC2_Team1App.swift */,
-				3AA9DFD32851CADD00365420 /* WaterAnimation.swift */,
+				3AA9DFD32851CADD00365420 /* GlassAnimation.swift */,
 				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
 				C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */,
 				C66C56E12845E2A200BDC0CC /* FadeInView.swift */,
@@ -283,7 +283,7 @@
 			files = (
 				3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */,
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
-				3AA9DFD42851CADD00365420 /* WaterAnimation.swift in Sources */,
+				3AA9DFD42851CADD00365420 /* GlassAnimation.swift in Sources */,
 				B7690EE22851C613008E81AC /* StartView.swift in Sources */,
 				37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */,
 				C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */,
