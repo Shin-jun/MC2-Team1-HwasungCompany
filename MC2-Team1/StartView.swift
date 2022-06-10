@@ -81,10 +81,3 @@ struct StartView: View {
         }
     }
 }
-
-extension Color {
-    static let bgColor = Color("BackGround")
-    static let fontColor = Color("Font")
-    static let tapFontColor = Color("TapFontColor")
-    static let pastColor = Color("pastColor")
-}
