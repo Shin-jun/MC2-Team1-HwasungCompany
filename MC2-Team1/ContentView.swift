@@ -24,6 +24,8 @@ struct ContentView: View {
     // body
     var body: some View {
         ZStack{
+            Color.bgColor
+                .ignoresSafeArea()
             // Tool Bar
             VStack{
                 ZStack{
