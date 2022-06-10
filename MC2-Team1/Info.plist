@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Inter-SemiBold.ttf</string>
+		<string>NuosuSIL-Regular.ttf</string>
 		<string>NotoSerifKR-Black.otf</string>
 		<string>NotoSerifKR-Bold.otf</string>
 		<string>NotoSerifKR-ExtraLight.otf</string>

@@ -20,7 +20,6 @@ struct ContentView: View {
     @State var isShowingAlert = false
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     let NotoSerifMedium = "NotoSerifKR-Medium"
-    
     // body
     var body: some View {
         ZStack{
