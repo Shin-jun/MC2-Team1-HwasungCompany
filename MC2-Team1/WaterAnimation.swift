@@ -19,37 +19,12 @@ struct WaterAnimation: View {
     @State var hurt: Bool = false
 
     @State var bloodShow: Bool = false
-    @State var glassShow: Bool = false
     @State var positions: CGPoint = CGPoint(x:width * 0.5, y: height * 0.5)
     @State var firstTouch: Bool = true
-    
-//    var tapGesture: some Gesture {
-//        // SwiftUI 에서 Tap event 의 position 을 얻기 위해, Drag gesture 을 사용함
-//        DragGesture(minimumDistance: 0)
-//            .onChanged { action in
-//                guard firstTouch else { return }
-//
-//                //positions = action.location
-//                glassShow = true
-//            }
-//            .onEnded { _ in
-//                guard firstTouch else { return }
-//
-//                bloodShow = true
-//                glassShow = false
-//                impact(style: .heavy)
-//                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) {
-//                    bloodShow = false
-//                }
-//            }
-//    }
 
     var body: some View {
         
         ZStack {
-//            Color(.white)
-//                .ignoresSafeArea()
-//                .gesture(tapGesture)
             ZStack {
                 if(hurt == false) {
                     Image("Card")
@@ -72,8 +47,6 @@ struct WaterAnimation: View {
                         .position(positions)
                         .onAppear {
                             withAnimation(.timingCurve(1,0.28,0.72,0.96, duration: 1.0)) {
-                            //withAnimation(.timingCurve(0.36,0.86,0.92,0.57, duration: 1.0)) {
-                            //withAnimation(.timingCurve(0.36,0.86,1,0.71, duration: 1.5)) {
                                 positions.x = width * 0.5
                                 positions.y = height * 1.1
                             }
@@ -95,7 +68,6 @@ struct WaterAnimation: View {
             {
                 HapticManager.instance.notification(type: .error)
                 waterTankBroken = true
-                print("Water Tank Broken!")
             } else if (playerTouchCount == targetTouchCount){
                 HapticManager.instance.notification(type: .success)
                 hurt = true
