@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9E2AD2851CA31005BB908 /* DotView.swift */; };
+		3AA9DFD42851CADD00365420 /* GlassAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFD32851CADD00365420 /* GlassAnimation.swift */; };
+		3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEA2851DCEC00365420 /* HapticManager.swift */; };
 		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
 		B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */; };
 		B7690EE82851DB5D008E81AC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE72851DB5D008E81AC /* HistoryView.swift */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		37D9E2AD2851CA31005BB908 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
+		3AA9DFD32851CADD00365420 /* GlassAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassAnimation.swift; sourceTree = "<group>"; };
+		3AA9DFEA2851DCEC00365420 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7690EE72851DB5D008E81AC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -152,10 +156,12 @@
 				B7690F12285322CE008E81AC /* Helpers */,
 				C613C435283E112300BCFC82 /* Info.plist */,
 				C6E1B9A7283B772E00EEC6F1 /* MC2_Team1App.swift */,
+				3AA9DFD32851CADD00365420 /* GlassAnimation.swift */,
 				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
 				C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */,
 				C66C56E12845E2A200BDC0CC /* FadeInView.swift */,
 				C6E1B9BB283B782700EEC6F1 /* ModelData.swift */,
+				3AA9DFEA2851DCEC00365420 /* HapticManager.swift */,
 				C6E1945E284A590200EC9131 /* HalfASheet */,
 				C6E1B9B6283B776A00EEC6F1 /* Resources */,
 				C6E1B9B5283B776600EEC6F1 /* Models */,
@@ -279,7 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */,
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
+				3AA9DFD42851CADD00365420 /* GlassAnimation.swift in Sources */,
 				B7690EE22851C613008E81AC /* StartView.swift in Sources */,
 				37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */,
 				C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */,
@@ -421,7 +429,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC2-Team1/Preview Content\"";
-				DEVELOPMENT_TEAM = 6VYPR8MZ57;
+				DEVELOPMENT_TEAM = UAM52RQFW9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-Team1/Info.plist";
@@ -452,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC2-Team1/Preview Content\"";
-				DEVELOPMENT_TEAM = 6VYPR8MZ57;
+				DEVELOPMENT_TEAM = UAM52RQFW9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-Team1/Info.plist";

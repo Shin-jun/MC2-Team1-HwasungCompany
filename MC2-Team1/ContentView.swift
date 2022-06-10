@@ -14,9 +14,10 @@ struct ContentView: View {
     @AppStorage("chapter") var chapter: String = "chapterOne"
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("fontSize") var fontSize: Double = 18
+    @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
     @State var reloadTrigger = true
     @State var isShowing = false
-    @State var showAlert = false
+    @State var isShowingAlert = false
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     let NotoSerifMedium = "NotoSerifKR-Medium"
     // body
@@ -86,7 +87,7 @@ struct ContentView: View {
             VStack {
                 Spacer()
                 FadeInViewReloader(text: currentParagraph.content, fontSize: fontSize)
-                    .padding(.bottom, 160)
+                    .padding(.bottom, 110)
                 Spacer()
             }
             .padding(.horizontal, 20)
@@ -131,18 +132,18 @@ extension ContentView {
     // FadeInOutViewReloader
     @ViewBuilder func FadeInByOrderViewReloader(text: String, fontSize: CGFloat) -> some View {
         if reloadTrigger {
-            FadeInByOrderView(text: text, fontSize: fontSize)
+            FadeInByOrderView(text: text, fontSize: fontSize, isTextAnimation: isTextAnimation)
         } else {
-            FadeInByOrderView(text: text, fontSize: fontSize)
+            FadeInByOrderView(text: text, fontSize: fontSize, isTextAnimation: isTextAnimation)
         }
     }
     
     // FadeInViewReloader
     @ViewBuilder func FadeInViewReloader(text: String, fontSize: CGFloat) -> some View {
         if reloadTrigger {
-            FadeInView(text: text, fontSize: fontSize)
+            FadeInView(text: text, fontSize: fontSize, isTextAnimation: isTextAnimation)
         } else {
-            FadeInView(text: text, fontSize: fontSize)
+            FadeInView(text: text, fontSize: fontSize, isTextAnimation: isTextAnimation)
         }
     }
     
@@ -166,7 +167,7 @@ extension ContentView {
             
             // Text Animation Toggle
             HStack{
-                Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
+                Toggle(isOn: $isTextAnimation) {
                     Text("텍스트 애니메이션 효과")
                 }
             }
@@ -205,11 +206,11 @@ extension ContentView {
             // Game Reset Button
             HStack{
                 Button{
-                    showAlert = true
+                    isShowingAlert = true
                 }label: {
                     Text("게임 초기화 하기")
                 }
-                .alert(isPresented: $showAlert){
+                .alert(isPresented: $isShowingAlert){
                     
                     Alert(
                         title: Text("초기화 하시겠습니까?"),
