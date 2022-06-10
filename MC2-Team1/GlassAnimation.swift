@@ -9,21 +9,21 @@ import SwiftUI
 
 struct GlassAnimation: View {
     
-    let targetTouchCount = 5
+    private let targetTouchCount = 5
     
-    @State var playerTouchCount: Int = 0
-    @State var waterTankBroken: Bool = false
-    @State var hurt: Bool = false
+    @State private var playerTouchCount: Int = 0
+    @State private var waterTankBroken: Bool = false
+    @State private var hurt: Bool = false
 
-    @State var bloodShow: Bool = false
-    @State var positions: CGPoint = CGPoint(x:width * 0.5, y: height * 0.5)
-    @State var firstTouch: Bool = true
+    @State private var bloodShow: Bool = false
+    @State private var positions: CGPoint = CGPoint(x:width * 0.5, y: height * 0.5)
+    @State private var firstTouch: Bool = true
 
     var body: some View {
         
         ZStack {
             ZStack {
-                if(hurt == false) {
+                if (hurt == false) {
                     Image("Card")
                         .resizable()
                         .frame(width: width * 0.7, height: width * 0.7)
@@ -52,7 +52,7 @@ struct GlassAnimation: View {
                         }
                 }
             }
-            if(playerTouchCount < targetTouchCount)
+            if (playerTouchCount < targetTouchCount)
             {
                 Image("Glass\(playerTouchCount)")
                     .resizable()
@@ -61,11 +61,10 @@ struct GlassAnimation: View {
         }.frame(width: width, height: height)
         .onTapGesture {
             playerTouchCount += 1
-            if(playerTouchCount == targetTouchCount - 1)
-            {
+            if (playerTouchCount == targetTouchCount - 1) {
                 HapticManager.instance.notification(type: .error)
                 waterTankBroken = true
-            } else if (playerTouchCount == targetTouchCount){
+            } else if (playerTouchCount == targetTouchCount) {
                 HapticManager.instance.notification(type: .success)
                 hurt = true
                 bloodShow = true
