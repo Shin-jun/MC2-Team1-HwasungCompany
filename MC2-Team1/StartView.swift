@@ -10,28 +10,40 @@ import SwiftUI
 struct StartView: View {
     @State private var tapFontColorOpacity = true
     
+    private let textWidth = width * 0.88
+    private let textPadding = width * 0.12
     var body: some View {
         ZStack(alignment: .topLeading) {
             Color.bgColor
+                .ignoresSafeArea()
             
-            VStack(alignment: .leading, spacing: 0) {
-                Text("NIPS")
-                    .font(.custom("NotoSerifKR-SemiBold", size: 96))
-                    .foregroundColor(.fontColor)
-                    .padding(.leading, 50)
+            VStack(spacing: 0) {
                 
-                HStack {
-                    Spacer()
-                    Text("Hydden")
-                        .font(.custom("NotoSerifKR-SemiBold", size: 60))
-                        .foregroundColor(.fontColor)
-                        .padding(.trailing, 50)
+                Group{
+                    HStack{
+                        Text("NIPS")
+                            .font(.custom("NuosuSIL-Regular", size: 96))
+                            .foregroundColor(.fontColor)
+                    }.frame(width: textWidth, alignment: .leading)
+                    HStack {
+                        Spacer()
+                        Text("Hydden")
+                            .font(.custom("NuosuSIL-Regular", size: 60))
+                            .foregroundColor(.fontColor)
+                    }.frame(width: textWidth, alignment: .trailing)
                 }
+                .frame(width: width)
+                .padding(.horizontal, textPadding)
                 
                 ZStack {
-                    Rectangle()
-                        .fill(Color.fontColor)
-                        .frame(height: 2)
+                    HStack {
+                        Rectangle()
+                            .fill(Color.pastColor)
+                            .frame(maxWidth: CGFloat(3 * (50 + 17) + 20), maxHeight: 2)
+                        Rectangle()
+                            .fill(Color.fontColor)
+                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(3 * (50 + 17) + 20), maxHeight: 2)
+                    }
                     
                     HStack(alignment: .center, spacing: 50) {
                         Spacer()
@@ -46,7 +58,7 @@ struct StartView: View {
                 HStack {
                     Spacer()
                     Text("Chapter 1")
-                        .font(.custom("NotoSerifKR-Bold", size: 24))
+                        .font(.custom("NuosuSIL-Regular", size: 24))
                         .foregroundColor(.fontColor)
                         .padding(.top, 30)
                     Spacer()
