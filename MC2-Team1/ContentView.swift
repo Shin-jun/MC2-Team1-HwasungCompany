@@ -20,47 +20,70 @@ struct ContentView: View {
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     let NotoSerifMedium = "NotoSerifKR-Medium"
     
-    // body
-    var body: some View {
-        ZStack{
-            NavigationView{
-                VStack {
-                    Spacer()
-                    
-                    //Content
-                    FadeInByOrderViewReloader(text: currentParagraph.content, fontSize: fontSize)
-                    
-                    Spacer()
-                    
-                    //Choices
-                    if currentParagraph.hasChoices {
-                        ForEach(currentParagraph.choices!, id: \.self) {choice in
-                            Text(choice.content)
-                                .font(.custom(NotoSerifMedium, size: 18))
-                                .onTapGesture {
-                                    paragraphId = choice.nextParagraphId
-                                    reloadTrigger.toggle()
-                                }
-                        }
-                    }
-                    Spacer()
-                }
-                .padding(.horizontal, 20)
-                
-                //ToolBar
-                .toolbar{
-                    ToolbarItem{
-                        
-                        //Gear Button
-                        Button(){
-                            isShowing.toggle()
-                        }label: {
-                            Image(systemName: "gearshape.fill")
-                            .foregroundColor(Color.black)
-                        }
+    @State var showHistory = false
+    var drag: some Gesture {
+        DragGesture()
+            .onChanged { gesture in
+                if gesture.translation.height > 65 {
+                    withAnimation {
+                        showHistory = true
                     }
                 }
             }
+    }
+    
+    // body
+    var body: some View {
+        ZStack{
+//            NavigationView{
+                VStack {
+                    if showHistory {
+                        HistoryView(showHistory: $showHistory)
+                            .transition(.move(edge: .top))
+                    } else {
+                        Group {
+                            Spacer()
+                                .onAppear {
+                                    print(UIScreen.main.bounds.width)
+                                }
+                            
+                            //Content
+                            FadeInByOrderViewReloader(text: currentParagraph.content, fontSize: fontSize)
+                            
+                            Spacer()
+                            
+                            //Choices
+                            if currentParagraph.hasChoices {
+                                ForEach(currentParagraph.choices!, id: \.self) {choice in
+                                    Text(choice.content)
+                                        .font(.custom(NotoSerifMedium, size: 18))
+                                        .onTapGesture {
+                                            paragraphId = choice.nextParagraphId
+                                            reloadTrigger.toggle()
+                                        }
+                                }
+                            }
+                            Spacer()
+                        }
+                        .padding(.horizontal, 20)
+                    }
+                }
+                .gesture(drag)
+                
+                //ToolBar
+//                .toolbar{
+//                    ToolbarItem{
+//
+//                        //Gear Button
+//                        Button(){
+//                            isShowing.toggle()
+//                        }label: {
+//                            Image(systemName: "gearshape.fill")
+//                            .foregroundColor(Color.black)
+//                        }
+//                    }
+//                }
+//            }
             
             // Setting Sheet
             HalfASheet(isPresented: $isShowing){
@@ -68,7 +91,7 @@ struct ContentView: View {
             }
             .height(.proportional(0.6))
         }
-        .ignoresSafeArea()
+//        .ignoresSafeArea()
     }
 }
 
