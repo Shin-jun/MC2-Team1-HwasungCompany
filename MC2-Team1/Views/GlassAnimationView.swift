@@ -17,6 +17,10 @@ struct GlassAnimationView: View {
     
     @State private var positions: CGPoint = CGPoint(x:width * 0.5, y: height * 0.5)
     
+    let customHaptics: [HapticProperty] = [
+        HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.25, 0.3], sharpness: [0.85, 0.3]),
+        HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.55, 0.3], sharpness: [0.85, 0.3]),
+        HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.75, 0.3], sharpness: [0.85, 0.3])]
     var body: some View {
         
         ZStack {
@@ -53,17 +57,18 @@ struct GlassAnimationView: View {
                     .frame(width: width, height: height, alignment: .center)
             }
         }.frame(width: width, height: height)
+            .onAppear(perform: CustomizeHaptic.instance.prepareHaptics)
             .onTapGesture {
-                playerTouchCount += 1
-                if (playerTouchCount == targetTouchCount - 1) {
+                if (playerTouchCount == targetTouchCount - 2) {
                     HapticManager.haptic(type: .error)
                     glassBroken = true
-                } else if (playerTouchCount == targetTouchCount) {
+                } else if (playerTouchCount == targetTouchCount - 1) {
                     HapticManager.haptic(type: .success)
                     hurt = true
-                } else if (playerTouchCount < targetTouchCount - 1){
-                    HapticManager.impact(style: .heavy)
+                } else if (playerTouchCount < targetTouchCount - 2) {
+                    CustomizeHaptic.instance.haptic(hapticCase: Haptic.continuous, hapticProperty:customHaptics[playerTouchCount])
                 }
+                playerTouchCount += 1
             }
     }
 }
