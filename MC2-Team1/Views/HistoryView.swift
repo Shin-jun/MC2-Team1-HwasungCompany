@@ -11,6 +11,7 @@ struct HistoryView: View {
     @EnvironmentObject var modelData: ModelData
     @State var lastSize: CGFloat = 0
     @State var recHeight: CGFloat = 0
+    @AppStorage("fontSize") var fontSize: Double = 18
     
     var body: some View {
         ScrollView {
@@ -29,9 +30,9 @@ struct HistoryView: View {
                                         recHeight = value
                                     }
                             }
-                            FadeInView(text: modelData.pastParas[index], fontSize: 16, isTextAnimation: true)
+                            FadeInView(text: modelData.pastParas[index], fontSize: fontSize, isTextAnimation: true)
                                 .frame(maxWidth: UIScreen.main.bounds.width, alignment: .leading)
-                                .padding(.vertical, 10)
+                                .padding(.vertical, fontSize + 6)
                                 .id(index)
                                 .background(ViewGeometry())
                                 .onPreferenceChange(ViewSizeKey.self) {
