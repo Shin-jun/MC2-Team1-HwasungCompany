@@ -182,10 +182,9 @@ extension ContentView {
             }
             
             // Text Size Adjust
-            HStack{
-                Text("텍스트 크기")
-            }
-            
+            Text("텍스트 크기")
+                .font(.system(size: 16))
+
             VStack{
                 // Sample Text
                 Text("현재 텍스트 크기 입니다.")
@@ -204,6 +203,10 @@ extension ContentView {
                 }
                 .padding(.vertical, 10)
             }
+            .padding()
+            .background(Color.tapFontColor.opacity(0.5))
+            .cornerRadius(15)
+            .offset(y: -10)
             
             // Game Reset Button
             HStack{
