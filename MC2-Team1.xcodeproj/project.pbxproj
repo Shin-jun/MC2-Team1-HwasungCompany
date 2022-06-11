@@ -11,6 +11,7 @@
 		3AA9DFD42851CADD00365420 /* GlassAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */; };
 		3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEA2851DCEC00365420 /* HapticManager.swift */; };
 		3AA9DFF028532FE300365420 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEF28532FE300365420 /* Constants.swift */; };
+		3AA9DFF228543AFA00365420 /* CustomHapticTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFF128543AFA00365420 /* CustomHapticTestView.swift */; };
 		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
 		B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */; };
 		B7690EE82851DB5D008E81AC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE72851DB5D008E81AC /* HistoryView.swift */; };
@@ -37,6 +38,7 @@
 		C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9B7283B778800EEC6F1 /* Paragraph.swift */; };
 		C6E1B9BA283B77C100EEC6F1 /* chapterOne.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */; };
 		C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9BB283B782700EEC6F1 /* ModelData.swift */; };
+		D4EE46B0285465AE00C608DA /* PullLeverGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE46AF285465AE00C608DA /* PullLeverGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,7 @@
 		3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassAnimationView.swift; sourceTree = "<group>"; };
 		3AA9DFEA2851DCEC00365420 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		3AA9DFEF28532FE300365420 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3AA9DFF128543AFA00365420 /* CustomHapticTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHapticTestView.swift; sourceTree = "<group>"; };
 		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7690EE72851DB5D008E81AC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		C6E1B9B7283B778800EEC6F1 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterOne.json; sourceTree = "<group>"; };
 		C6E1B9BB283B782700EEC6F1 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		D4EE46AF285465AE00C608DA /* PullLeverGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullLeverGameView.swift; path = "MC2-Team1/PullLeverGameView.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +92,9 @@
 		37D9E2B0285378B2005BB908 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3AA9DFF128543AFA00365420 /* CustomHapticTestView.swift */,
 				3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */,
+				D4EE46AF285465AE00C608DA /* PullLeverGameView.swift */,
 				C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */,
 				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
 				C66C56E12845E2A200BDC0CC /* FadeInView.swift */,
@@ -298,6 +304,8 @@
 			files = (
 				3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */,
 				3AA9DFF028532FE300365420 /* Constants.swift in Sources */,
+				D4EE46B0285465AE00C608DA /* PullLeverGameView.swift in Sources */,
+				3AA9DFF228543AFA00365420 /* CustomHapticTestView.swift in Sources */,
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
 				3AA9DFD42851CADD00365420 /* GlassAnimationView.swift in Sources */,
 				B7690EE22851C613008E81AC /* StartView.swift in Sources */,
@@ -441,7 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC2-Team1/Preview Content\"";
-				DEVELOPMENT_TEAM = UAM52RQFW9;
+				DEVELOPMENT_TEAM = 9C6L2Z2R74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-Team1/Info.plist";
@@ -472,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC2-Team1/Preview Content\"";
-				DEVELOPMENT_TEAM = UAM52RQFW9;
+				DEVELOPMENT_TEAM = 9C6L2Z2R74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-Team1/Info.plist";
