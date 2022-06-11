@@ -9,6 +9,10 @@ import SwiftUI
 
 struct GlassAnimationView: View {
     
+    private let customHaptics: [HapticProperty] = [
+        HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.25, 0.3], sharpness: [0.85, 0.3]),
+        HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.55, 0.3], sharpness: [0.85, 0.3]),
+        HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.75, 0.3], sharpness: [0.85, 0.3])]
     private let targetTouchCount = 5
     
     @State private var playerTouchCount: Int = 0
@@ -17,10 +21,6 @@ struct GlassAnimationView: View {
     
     @State private var positions: CGPoint = CGPoint(x:width * 0.5, y: height * 0.5)
     
-    let customHaptics: [HapticProperty] = [
-        HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.25, 0.3], sharpness: [0.85, 0.3]),
-        HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.55, 0.3], sharpness: [0.85, 0.3]),
-        HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.75, 0.3], sharpness: [0.85, 0.3])]
     var body: some View {
         
         ZStack {
