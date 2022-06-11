@@ -54,12 +54,12 @@ struct PullLeverGameView: View {
                         let verticalAmount = value.translation.height as CGFloat
                         
                         if abs(horizontalAmount) < abs(verticalAmount) {
-                            imageName = verticalAmount < 0 ? "leverUp" : "leverDown"
+                            imageName = verticalAmount < 0 ? "leverOn" : "leverOff"
                         }
                         if lights == switchsunsu {
                             IsGameClear = true
                         }
-                        if imageName == "leverUp" && IsGameClear == false {
+                        if imageName == "leverOn" && IsGameClear == false {
                             print("lights: \(lights)")
                             print("switchsunsu: \(switchsunsu)")
                             
@@ -72,7 +72,7 @@ struct PullLeverGameView: View {
                                 }
                             }
                             DispatchQueue.main.asyncAfter(deadline: .now() + 4.0 * 0.7 + 1) {
-                                imageName = "leverDown"
+                                imageName = "leverOff"
                                 switchsunsu = []
                                 isHeartOn = [false, false, false, false, false]
                             }
