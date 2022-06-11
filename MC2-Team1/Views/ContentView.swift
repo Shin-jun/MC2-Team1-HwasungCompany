@@ -88,42 +88,42 @@ struct ContentView: View {
                         .padding()
                     }
                 }
-                .frame(height: 60)
-                Spacer()
-            }
-            
-            // Content
-            VStack {
-                Spacer()
-                FadeInViewReloader(text: currentParagraph.content, fontSize: fontSize)
-                    .padding(.bottom, 110)
-                Spacer()
-            }
-            .padding(.horizontal, 20)
-            
-            // Choices
-            VStack{
-                Spacer()
-                if currentParagraph.hasChoices {
-                    ForEach(currentParagraph.choices!, id: \.self) {choice in
-                        
-                        Text(choice.content)
-                            .foregroundColor(.fontColor)
-                            .font(.custom(NotoSerifMedium, size: 18))
-                            .frame(maxWidth: .infinity, maxHeight: 60)
-                            .background(Color.bgColor)
-                            .cornerRadius(50)
-                            .shadow(color: .gray, radius: 2, x: 0, y: 0)
-                            .onTapGesture {
-                                paragraphId = choice.nextParagraphId
-                                reloadTrigger.toggle()
+                .frame(height: 40)
+                
+                HistoryView()
+                    .padding(.horizontal, 20)
+                    .padding(.top, 5)
+                
+                Group {
+                    if currentParagraph.hasChoices {
+                        Group {
+                            ForEach(currentParagraph.choices!, id: \.self) {choice in
+                                
+                                Text(choice.content)
+                                    .foregroundColor(.fontColor)
+                                    .font(.custom(NotoSerifMedium, size: 18))
+                                    .frame(maxWidth: .infinity, maxHeight: 60)
+                                    .background(Color.bgColor)
+                                    .cornerRadius(50)
+                                    .shadow(color: .gray, radius: 2, x: 0, y: 0)
+                                    .onTapGesture {
+                                        paragraphId = choice.nextParagraphId
+                                        reloadTrigger.toggle()
+                                        modelData.pastParas.append(currentParagraph.content)
+                                    }
+                                    .padding(.horizontal)
+                                    .padding(.vertical, 5)
                             }
-                            .padding(.horizontal)
-                            .padding(.vertical, 5)
+                        }
+                        .background(ViewGeometry())
+                        .onPreferenceChange(ViewSizeKey.self) {
+                            print($0.height)
+                        }
+                        
                     }
                 }
+                .padding(.horizontal, 20)
             }
-            .padding(.horizontal, 20)
             
             // Setting Sheet
             HalfASheet(isPresented: $isShowing){

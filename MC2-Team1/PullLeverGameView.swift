@@ -26,7 +26,6 @@ struct PullLeverGameView: View {
             Rectangle()
                 .fill(Color.wallColor)
                 .ignoresSafeArea(.all)
-
             VStack{
                 HStack{
                     ForEach(0..<5){ i in

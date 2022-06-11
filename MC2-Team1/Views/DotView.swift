@@ -28,7 +28,7 @@ struct DotView: View {
             }
             Circle()
                 .frame(width: 17, height: 17)
-                .foregroundColor(circleIndex >= chapterIndex ? .fontColor:.pastColor)
+                .foregroundColor(circleIndex > chapterIndex ? .pastColor:.fontColor)
         }.onAppear {
             guard circleIndex == chapterIndex else { return }
             
