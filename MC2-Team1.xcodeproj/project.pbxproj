@@ -17,6 +17,7 @@
 		B7690EE82851DB5D008E81AC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE72851DB5D008E81AC /* HistoryView.swift */; };
 		B7690F15285322E2008E81AC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690F14285322E2008E81AC /* Color.swift */; };
 		B7690F17285325CA008E81AC /* NuosuSIL-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690F16285325CA008E81AC /* NuosuSIL-Regular.ttf */; };
+		B7690F1928548932008E81AC /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690F1828548932008E81AC /* InitView.swift */; };
 		C613C433283E0BE800BCFC82 /* FadeInByOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */; };
 		C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */; };
 		C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */; };
@@ -52,6 +53,7 @@
 		B7690EE72851DB5D008E81AC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		B7690F14285322E2008E81AC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B7690F16285325CA008E81AC /* NuosuSIL-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NuosuSIL-Regular.ttf"; sourceTree = "<group>"; };
+		B7690F1828548932008E81AC /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
 		C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInByOrderView.swift; sourceTree = "<group>"; };
 		C613C435283E112300BCFC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Black.otf"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				B7690EE12851C613008E81AC /* StartView.swift */,
 				37D9E2AD2851CA31005BB908 /* DotView.swift */,
 				B7690EE72851DB5D008E81AC /* HistoryView.swift */,
+				B7690F1828548932008E81AC /* InitView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				C6E1945D284A58EF00EC9131 /* VerticalSlideTransition.swift in Sources */,
 				C613C433283E0BE800BCFC82 /* FadeInByOrderView.swift in Sources */,
 				C66C56E22845E2A200BDC0CC /* FadeInView.swift in Sources */,
+				B7690F1928548932008E81AC /* InitView.swift in Sources */,
 				C6E1B9AA283B772E00EEC6F1 /* ContentView.swift in Sources */,
 				C6E1B9A8283B772E00EEC6F1 /* MC2_Team1App.swift in Sources */,
 				C6E1945B284A58EF00EC9131 /* HalfASheet+Modifiers.swift in Sources */,
