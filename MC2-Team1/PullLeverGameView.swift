@@ -15,6 +15,7 @@ struct PullLeverGameView: View {
     @State private var switchsunsu: [Int] = []
     
     private let lights: [Int] = [0, 1, 2, 3, 4].shuffled()   // 전구 켜지는 순서 랜덤 배열
+    private var hapticProperty: HapticProperty = HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.65, 0.3], sharpness: [0.85, 0.3])
     
     var body: some View {
         ZStack{
@@ -34,6 +35,7 @@ struct PullLeverGameView: View {
                                 .onTapGesture {
                                     // 스위치 터치 시 isLightOn 값 변경하여 스위치, 전구 이미지 변경
                                     isLightOn[i] = !isLightOn[i]
+                                    CustomizeHaptic.instance.haptic(hapticCase: Haptic.transient, hapticProperty:hapticProperty)
                                     if isLightOn[i] == true{
                                         // 사용자가 스위치 켠 순서 기억
                                         switchsunsu.append(i)
@@ -70,7 +72,7 @@ struct PullLeverGameView: View {
                             }
                             if imageName == "leverOn" && IsGameClear == false {
                                 // 순서 못 맞추면 전구 키는 순서 다시 보여주고 스위치, 레버 리셋
-                                
+                                CustomizeHaptic.instance.haptic(hapticCase: Haptic.continuous, hapticProperty:hapticProperty)
                                 isLightOn = [false, false, false, false, false]
                                 
                                 for i in 0...4 {
@@ -88,7 +90,7 @@ struct PullLeverGameView: View {
                             }
                         })
         
-            }
+            }.onAppear(perform: CustomizeHaptic.instance.prepareHaptics)
             Rectangle()
                 .fill(.black)
                 .opacity(0.3)
