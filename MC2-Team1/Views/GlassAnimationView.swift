@@ -52,7 +52,7 @@ struct GlassAnimationView: View {
                         }
                 }
             }
-            if (playerTouchCount < targetTouchCount)
+            if (playerTouchCount < targetTouchCount - 1)
             {
                 Image("Glass\(playerTouchCount)")
                     .resizable()
