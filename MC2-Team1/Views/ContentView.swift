@@ -81,42 +81,67 @@ struct ContentView: View {
                         .padding()
                     }
                 }
-                .frame(height: 60)
-                Spacer()
+                .frame(height: 40)
+                
+//                FadeInViewReloader(text: currentParagraph.content, fontSize: fontSize)
+                HistoryView()
+                    .padding(.horizontal, 20)
+                    .padding(.top, 5)
+                
+                Group {
+                    if currentParagraph.hasChoices {
+                        ForEach(currentParagraph.choices!, id: \.self) {choice in
+                            
+                            Text(choice.content)
+                                .foregroundColor(.fontColor)
+                                .font(.custom(NotoSerifMedium, size: 18))
+                                .frame(maxWidth: .infinity, maxHeight: 60)
+                                .background(Color.bgColor)
+                                .cornerRadius(50)
+                                .shadow(color: .gray, radius: 2, x: 0, y: 0)
+                                .onTapGesture {
+                                    paragraphId = choice.nextParagraphId
+                                    reloadTrigger.toggle()
+                                }
+                                .padding(.horizontal)
+                                .padding(.vertical, 5)
+                        }
+                    }
+                }
+                .padding(.horizontal, 20)
             }
             
             // Content
-            VStack {
-                Spacer()
-                FadeInViewReloader(text: currentParagraph.content, fontSize: fontSize)
-                    .padding(.bottom, 110)
-                Spacer()
-            }
-            .padding(.horizontal, 20)
+//            VStack {
+//                Spacer()
+//                FadeInViewReloader(text: currentParagraph.content, fontSize: fontSize)
+//                    .padding(.bottom, 110)
+//                Spacer()
+//            }
+//            .padding(.horizontal, 20)
             
             // Choices
-            VStack{
-                Spacer()
-                if currentParagraph.hasChoices {
-                    ForEach(currentParagraph.choices!, id: \.self) {choice in
-                        
-                        Text(choice.content)
-                            .foregroundColor(.fontColor)
-                            .font(.custom(NotoSerifMedium, size: 18))
-                            .frame(maxWidth: .infinity, maxHeight: 60)
-                            .background(Color.bgColor)
-                            .cornerRadius(50)
-                            .shadow(color: .gray, radius: 2, x: 0, y: 0)
-                            .onTapGesture {
-                                paragraphId = choice.nextParagraphId
-                                reloadTrigger.toggle()
-                            }
-                            .padding(.horizontal)
-                            .padding(.vertical, 5)
-                    }
-                }
-            }
-            .padding(.horizontal, 20)
+//            VStack{
+//                if currentParagraph.hasChoices {
+//                    ForEach(currentParagraph.choices!, id: \.self) {choice in
+//
+//                        Text(choice.content)
+//                            .foregroundColor(.fontColor)
+//                            .font(.custom(NotoSerifMedium, size: 18))
+//                            .frame(maxWidth: .infinity, maxHeight: 60)
+//                            .background(Color.bgColor)
+//                            .cornerRadius(50)
+//                            .shadow(color: .gray, radius: 2, x: 0, y: 0)
+//                            .onTapGesture {
+//                                paragraphId = choice.nextParagraphId
+//                                reloadTrigger.toggle()
+//                            }
+//                            .padding(.horizontal)
+//                            .padding(.vertical, 5)
+//                    }
+//                }
+//            }
+//            .padding(.horizontal, 20)
             
             // Setting Sheet
             HalfASheet(isPresented: $isShowing){

@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct HistoryView: View {
-    @Binding var showHistory: Bool
-    @State var isLoaded = false
-    var drag: some Gesture {
-        DragGesture()
-            .onChanged { gesture in
-                if gesture.translation.height < -65 {
-                    withAnimation {
-                        showHistory = false
-                    }
-                }
-            }
-    }
+//    @Binding var showHistory: Bool
+//    @State var isLoaded = false
+//    var drag: some Gesture {
+//        DragGesture()
+//            .onChanged { gesture in
+//                if gesture.translation.height < -65 {
+//                    withAnimation {
+//                        showHistory = false
+//                    }
+//                }
+//            }
+//    }
     
     let chapterNames = [
         "낯선 방",
@@ -49,7 +49,7 @@ struct HistoryView: View {
     var body: some View {
         ScrollView {
             ScrollViewReader { proxy in
-                LazyVStack(spacing: 0, pinnedViews: [.sectionHeaders]) {
+                LazyVStack(spacing: 0) {
                     ForEach(0..<chapterNames.count, id: \.self) { chapterIndex in
                         Section(content: {
                             ForEach(0..<texts[chapterIndex].count, id: \.self) { textIndex in
@@ -63,45 +63,45 @@ struct HistoryView: View {
                                     .id((chapterIndex*4 + textIndex))
                             }
                         }, header: {
-                            HStack {
-                                Text("Chapter \(chapterIndex)")
-                                    .font(.custom("NotoSerifKR-Bold", size: 24))
-                                
-                                Text(chapterNames[chapterIndex])
-                                    .font(.custom("NotoSerifKR-Regular", size: 24))
-                                
-                                Spacer()
-                            }
-                            .padding(.leading, 20)
-                            .padding(.vertical, 10)
-                            .background(Color.bgColor)
-                            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.1), radius: 4, x: 0, y: 4)
+//                            HStack {
+//                                Text("Chapter \(chapterIndex)")
+//                                    .font(.custom("NotoSerifKR-Bold", size: 24))
+//
+//                                Text(chapterNames[chapterIndex])
+//                                    .font(.custom("NotoSerifKR-Regular", size: 24))
+//
+//                                Spacer()
+//                            }
+//                            .padding(.leading, 20)
+//                            .padding(.vertical, 10)
+//                            .background(Color.bgColor)
+//                            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.1), radius: 4, x: 0, y: 4)
                         })
                     }
                     Spacer()
                 }
                 .onAppear {
-                    proxy.scrollTo(11)
+                    proxy.scrollTo(11, anchor: .top)
                 }
-                .background(
-                    GeometryReader {
-                        Color.clear.preference(
-                            key: ViewOffsetKey.self,
-                            value: -$0.frame(in: .named("scroll")).origin.y
-                        )
-                })
-                .onPreferenceChange(ViewOffsetKey.self) {
-                    if $0 > 1000 {
-                        isLoaded = true
-                    } else if $0 > 735.0 && isLoaded {
-                        withAnimation {
-                            showHistory = false
-                        }
-                    }
-                }
+//                .background(
+//                    GeometryReader {
+//                        Color.clear.preference(
+//                            key: ViewOffsetKey.self,
+//                            value: -$0.frame(in: .named("scroll")).origin.y
+//                        )
+//                })
+//                .onPreferenceChange(ViewOffsetKey.self) {
+//                    if $0 > 1000 {
+//                        isLoaded = true
+//                    } else if $0 > 735.0 && isLoaded {
+//                        withAnimation {
+//                            showHistory = false
+//                        }
+//                    }
+//                }
             }
         }
         .padding(.top, 1)
-        .coordinateSpace(name: "scroll")
+//        .coordinateSpace(name: "scroll")
     }
 }
