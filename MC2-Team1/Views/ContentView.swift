@@ -27,6 +27,8 @@ struct ContentView: View {
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     
     let NotoSerifMedium = "NotoSerifKR-Medium"
+    
+    @Binding var mode: Mode
     // body
     var body: some View {
         ZStack{
