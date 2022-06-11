@@ -13,4 +13,5 @@ extension Color {
     static let tapFontColor = Color("TapFontColor")
     static let pastColor = Color("pastColor")
     static let blood = Color("BloodColor")
+    static let wallColor = Color("WallColor")
 }

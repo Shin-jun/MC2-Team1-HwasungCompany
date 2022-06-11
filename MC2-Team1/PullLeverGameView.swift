@@ -20,9 +20,12 @@ struct PullLeverGameView: View {
     var body: some View {
         ZStack{
             Rectangle()
-                .fill(.black)
-                .opacity(0.5)
+                .fill(Color.wallColor)
                 .ignoresSafeArea(.all)
+//            Rectangle()
+//                .fill(.black)
+//                .opacity(0.5)
+//                .ignoresSafeArea(.all)
             VStack{
                 HStack{
                     ForEach(0..<5){ i in
@@ -93,7 +96,7 @@ struct PullLeverGameView: View {
             }.onAppear(perform: CustomizeHaptic.instance.prepareHaptics)
             Rectangle()
                 .fill(.black)
-                .opacity(0.3)
+                .opacity(0.34)
                 .ignoresSafeArea(.all)
         }
         
