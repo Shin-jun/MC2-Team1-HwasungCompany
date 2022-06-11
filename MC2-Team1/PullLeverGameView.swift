@@ -10,76 +10,91 @@ import SwiftUI
 struct PullLeverGameView: View {
     
     @State private var IsGameClear = false
-    @State private var imageName = "leverDown"
-    @State private var isHeartOn: [Bool] = [false, false, false, false, false]
-    private let lights: [Int] = [0, 1, 2, 3, 4].shuffled()   // 전구 켜지는 순서 저장할 배열
+    @State private var imageName = "leverOff"
+    @State private var isLightOn: [Bool] = [false, false, false, false, false]
     @State private var switchsunsu: [Int] = []
     
+    private let lights: [Int] = [0, 1, 2, 3, 4].shuffled()   // 전구 켜지는 순서 랜덤 배열
+    
     var body: some View {
-        VStack{
-            
-            HStack{
-                // 스위치 이미지 터치 시 불빛 켜지는 이미지로 교체
-                ForEach(0..<5){ i in
-                    VStack{
-                        Image(isHeartOn[i] ? "buttonOn" : "buttonOff")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40)
-                            .onTapGesture {
-                                isHeartOn[i] = !isHeartOn[i]
-                                switchsunsu.append(i)
-                            }
-                            .padding(.bottom)
-                        Image(isHeartOn[i] ? "lightOn" : "lightOff")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40)
+        ZStack{
+            Rectangle()
+                .fill(.black)
+                .opacity(0.5)
+                .ignoresSafeArea(.all)
+            VStack{
+                HStack{
+                    ForEach(0..<5){ i in
+                        // 스위치 및 해당 스위치의 전구 이미지 생성
+                        VStack{
+                            Image(isLightOn[i] ? "buttonOn" : "buttonOff")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40)
+                                .onTapGesture {
+                                    // 스위치 터치 시 isLightOn 값 변경하여 스위치, 전구 이미지 변경
+                                    isLightOn[i] = !isLightOn[i]
+                                    if isLightOn[i] == true{
+                                        // 사용자가 스위치 켠 순서 기억
+                                        switchsunsu.append(i)
+                                    }
+                                }
+                                .padding(.bottom)
+                            
+                            Image(isLightOn[i] ? "lightOn" : "lightOff")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40)
+                        }
+                        .padding(.bottom, 30)
                     }
-                    .padding(.bottom, 30)
-                }
+                    
+                }.padding()
                 
-            }.padding()
-            
-            // 스와이프로 레버 손잡이 이미지 변하게하기
-            Image(imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 220)
-                .background(.blue)
-            /*https://stackoverflow.com/questions/60885532/how-to-detect-swiping-up-down-left-and-right-with-swiftui-on-a-view 위아래좌우 스와이프 구분하는 코드*/
-                .gesture(DragGesture(minimumDistance: 100, coordinateSpace: .global)
-                    .onEnded { value in
-                        let horizontalAmount = value.translation.width as CGFloat
-                        let verticalAmount = value.translation.height as CGFloat
-                        
-                        if abs(horizontalAmount) < abs(verticalAmount) {
-                            imageName = verticalAmount < 0 ? "leverOn" : "leverOff"
-                        }
-                        if lights == switchsunsu {
-                            IsGameClear = true
-                        }
-                        if imageName == "leverOn" && IsGameClear == false {
-                            print("lights: \(lights)")
-                            print("switchsunsu: \(switchsunsu)")
+                Image(imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 220)
+                /*https://stackoverflow.com/questions/60885532/how-to-detect-swiping-up-down-left-and-right-with-swiftui-on-a-view 상하좌우 스와이프 구분하는 코드*/
+                    .gesture(DragGesture(minimumDistance: 100, coordinateSpace: .global)
+                        .onEnded { value in
+                            let horizontalAmount = value.translation.width as CGFloat
+                            let verticalAmount = value.translation.height as CGFloat
                             
-                            print(IsGameClear)
-                            isHeartOn = [false, false, false, false, false]
-                            
-                            for i in 0...4 {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * 0.7) {
-                                    isHeartOn[lights[i]] = true
+                            if abs(horizontalAmount) < abs(verticalAmount) {
+                                // 위아래 스와이프로 레버 손잡이 이미지 변경
+                                imageName = verticalAmount < 0 ? "leverOn" : "leverOff"
+                            }
+                            if lights == switchsunsu {
+                                IsGameClear = true
+                            }
+                            if imageName == "leverOn" && IsGameClear == false {
+                                // 순서 못 맞추면 전구 키는 순서 다시 보여주고 스위치, 레버 리셋
+                                
+                                isLightOn = [false, false, false, false, false]
+                                
+                                for i in 0...4 {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + Double(i+1) * 0.7) {
+                                        // 순서대로 전구 불빛 켜기
+                                        isLightOn[lights[i]] = true
+                                    }
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0 * 0.7 + 1) {
+                                    // 불빛 모두 켜진 후에 초기화
+                                    imageName = "leverOff"
+                                    switchsunsu = []
+                                    isLightOn = [false, false, false, false, false]
                                 }
                             }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0 * 0.7 + 1) {
-                                imageName = "leverOff"
-                                switchsunsu = []
-                                isHeartOn = [false, false, false, false, false]
-                            }
-                        }
-                    })
-    
+                        })
+        
+            }
+            Rectangle()
+                .fill(.black)
+                .opacity(0.3)
+                .ignoresSafeArea(.all)
         }
+        
         
     }
 }
