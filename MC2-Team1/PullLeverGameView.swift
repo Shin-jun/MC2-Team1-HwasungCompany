@@ -11,7 +11,9 @@ struct PullLeverGameView: View {
     
     @State private var IsGameClear = false
     @State private var imageName = "leverDown"
-    @State private var isHeartOn : [Bool] = [false, false, false, false, false]
+    @State private var isHeartOn: [Bool] = [false, false, false, false, false]
+    private let lights: [Int] = [0, 1, 2, 3, 4].shuffled()   // 전구 켜지는 순서 저장할 배열
+    @State private var switchsunsu: [Int] = []
     
     var body: some View {
         VStack{
@@ -26,7 +28,9 @@ struct PullLeverGameView: View {
                             .frame(width: 40)
                             .onTapGesture {
                                 isHeartOn[i] = !isHeartOn[i]
+                                switchsunsu.append(i)
                             }
+                            .padding(.bottom)
                         Image(systemName: isHeartOn[i] ? "lightbulb" : "lightbulb.fill")
                             .resizable()
                             .frame(width: 20, height: 30)
@@ -40,9 +44,9 @@ struct PullLeverGameView: View {
             Image(imageName)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 200)
+                .frame(width: 220)
                 .background(.blue)
-            /*https://stackoverflow.com/questions/60885532/how-to-detect-swiping-up-down-left-and-right-with-swiftui-on-a-view*/
+            /*https://stackoverflow.com/questions/60885532/how-to-detect-swiping-up-down-left-and-right-with-swiftui-on-a-view 위아래좌우 스와이프 구분하는 코드*/
                 .gesture(DragGesture(minimumDistance: 100, coordinateSpace: .global)
                     .onEnded { value in
                         let horizontalAmount = value.translation.width as CGFloat
@@ -51,7 +55,29 @@ struct PullLeverGameView: View {
                         if abs(horizontalAmount) < abs(verticalAmount) {
                             imageName = verticalAmount < 0 ? "leverUp" : "leverDown"
                         }
+                        if lights == switchsunsu {
+                            IsGameClear = true
+                        }
+                        if imageName == "leverUp" && IsGameClear == false {
+                            print("lights: \(lights)")
+                            print("switchsunsu: \(switchsunsu)")
+                            
+                            print(IsGameClear)
+                            isHeartOn = [false, false, false, false, false]
+                            
+                            for i in 0...4 {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * 0.7) {
+                                    isHeartOn[lights[i]] = true
+                                }
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0 * 0.7 + 1) {
+                                imageName = "leverDown"
+                                switchsunsu = []
+                                isHeartOn = [false, false, false, false, false]
+                            }
+                        }
                     })
+    
         }
         
     }
