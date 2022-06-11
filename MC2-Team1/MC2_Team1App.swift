@@ -13,9 +13,10 @@ struct MC2_Team1App: App {
 
     var body: some Scene {
         WindowGroup {
-//            ContentView()
+            ContentView()
 //            StartView()
-            GlassAnimationView()
+//            GlassAnimationView()
+//            PullLeverGameView()
                 .environmentObject(modelData)
         }
     }
