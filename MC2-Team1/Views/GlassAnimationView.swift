@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GlassAnimation: View {
+struct GlassAnimationView: View {
     
     private let targetTouchCount = 5
     
@@ -62,14 +62,14 @@ struct GlassAnimation: View {
         .onTapGesture {
             playerTouchCount += 1
             if (playerTouchCount == targetTouchCount - 1) {
-                HapticManager.instance.notification(type: .error)
+                HapticManager.haptic(type: .error)
                 waterTankBroken = true
             } else if (playerTouchCount == targetTouchCount) {
-                HapticManager.instance.notification(type: .success)
+                HapticManager.haptic(type: .success)
                 hurt = true
                 bloodShow = true
             } else if (playerTouchCount < targetTouchCount - 1){
-                HapticManager.instance.impact(style: .heavy)
+                HapticManager.impact(style: .heavy)
             }
         }
     }
@@ -77,6 +77,6 @@ struct GlassAnimation: View {
 
 struct GlassAnimation_Previews: PreviewProvider {
     static var previews: some View {
-        GlassAnimation()
+        GlassAnimationView()
     }
 }

@@ -204,7 +204,7 @@ extension ContentView {
                 }
                 .padding(.vertical, 10)
             }
-                        
+            
             // Game Reset Button
             HStack{
                 Button{
@@ -231,7 +231,7 @@ extension ContentView {
         }
         .padding(.horizontal)
         .padding(.vertical, 10)
-
+        
     }
 }
 
