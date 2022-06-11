@@ -38,11 +38,11 @@ struct StartView: View {
                 ZStack {
                     HStack {
                         Rectangle()
-                            .fill(Color.pastColor)
-                            .frame(maxWidth: CGFloat(3 * (50 + 17) + 20), maxHeight: 2)
-                        Rectangle()
                             .fill(Color.fontColor)
-                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(3 * (50 + 17) + 20), maxHeight: 2)
+                            .frame(maxWidth: CGFloat(3 * (50 + 17) + 50), maxHeight: 2)
+                        Rectangle()
+                            .fill(Color.pastColor)
+                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(3 * (50 + 17) + 50), maxHeight: 2)
                     }
                     
                     HStack(alignment: .center, spacing: 50) {
