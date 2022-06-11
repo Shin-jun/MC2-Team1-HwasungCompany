@@ -37,6 +37,7 @@
 		C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9B7283B778800EEC6F1 /* Paragraph.swift */; };
 		C6E1B9BA283B77C100EEC6F1 /* chapterOne.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */; };
 		C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9BB283B782700EEC6F1 /* ModelData.swift */; };
+		D4EE46B0285465AE00C608DA /* PullLeverGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE46AF285465AE00C608DA /* PullLeverGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		C6E1B9B7283B778800EEC6F1 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterOne.json; sourceTree = "<group>"; };
 		C6E1B9BB283B782700EEC6F1 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		D4EE46AF285465AE00C608DA /* PullLeverGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullLeverGameView.swift; path = "MC2-Team1/PullLeverGameView.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */,
+				D4EE46AF285465AE00C608DA /* PullLeverGameView.swift */,
 				C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */,
 				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
 				C66C56E12845E2A200BDC0CC /* FadeInView.swift */,
@@ -298,6 +301,7 @@
 			files = (
 				3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */,
 				3AA9DFF028532FE300365420 /* Constants.swift in Sources */,
+				D4EE46B0285465AE00C608DA /* PullLeverGameView.swift in Sources */,
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
 				3AA9DFD42851CADD00365420 /* GlassAnimationView.swift in Sources */,
 				B7690EE22851C613008E81AC /* StartView.swift in Sources */,
