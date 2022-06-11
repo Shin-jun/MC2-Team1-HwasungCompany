@@ -12,7 +12,7 @@ struct GlassAnimationView: View {
     private let targetTouchCount = 5
     
     @State private var playerTouchCount: Int = 0
-    @State private var waterTankBroken: Bool = false
+    @State private var glassBroken: Bool = false
     @State private var hurt: Bool = false
 
     @State private var positions: CGPoint = CGPoint(x:width * 0.5, y: height * 0.5)
@@ -57,7 +57,7 @@ struct GlassAnimationView: View {
             playerTouchCount += 1
             if (playerTouchCount == targetTouchCount - 1) {
                 HapticManager.haptic(type: .error)
-                waterTankBroken = true
+                glassBroken = true
             } else if (playerTouchCount == targetTouchCount) {
                 HapticManager.haptic(type: .success)
                 hurt = true
