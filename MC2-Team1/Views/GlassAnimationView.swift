@@ -25,12 +25,10 @@ struct GlassAnimationView: View {
                     Image("Card")
                         .resizable()
                         .frame(width: width * 0.7, height: width * 0.7)
-                        .foregroundColor(Color.red)
                 } else {
                     Image("Card_Blood")
                         .resizable()
                         .frame(width: width * 0.7, height: width * 0.7)
-                        .foregroundColor(Color.red)
                 }
                 if hurt {
                     ZStack {
@@ -62,7 +60,8 @@ struct GlassAnimationView: View {
                 waterTankBroken = true
             } else if (playerTouchCount == targetTouchCount) {
                 HapticManager.haptic(type: .success)
-                hurt = true            } else if (playerTouchCount < targetTouchCount - 1){
+                hurt = true
+            } else if (playerTouchCount < targetTouchCount - 1){
                 HapticManager.impact(style: .heavy)
             }
         }
