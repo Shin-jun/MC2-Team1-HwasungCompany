@@ -22,10 +22,7 @@ struct PullLeverGameView: View {
             Rectangle()
                 .fill(Color.wallColor)
                 .ignoresSafeArea(.all)
-//            Rectangle()
-//                .fill(.black)
-//                .opacity(0.5)
-//                .ignoresSafeArea(.all)
+
             VStack{
                 HStack{
                     ForEach(0..<5){ i in
@@ -54,7 +51,20 @@ struct PullLeverGameView: View {
                         .padding(.bottom, 30)
                     }
                     
-                }.padding()
+                }
+                    .padding()
+                    .onAppear{
+                        for i in 0..<lights.count {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 + Double(i+1) * 0.7) {
+                                // 순서대로 전구 불빛 켜기
+                                isLightOn[lights[i]] = true
+                            }
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 + Double(lights.count+1) * 0.7) {
+                            isLightOn = [false, false, false, false, false]
+                        }
+                
+                    }
                 
                 Image(imageName)
                     .resizable()
