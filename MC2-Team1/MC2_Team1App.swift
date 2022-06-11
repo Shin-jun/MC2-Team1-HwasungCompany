@@ -16,7 +16,6 @@ struct MC2_Team1App: App {
             ContentView()
 //            StartView()
 //            GlassAnimationView()
-//            PullLeverGameView()
                 .environmentObject(modelData)
         }
     }
