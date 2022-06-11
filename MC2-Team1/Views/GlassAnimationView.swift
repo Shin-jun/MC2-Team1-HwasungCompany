@@ -9,15 +9,14 @@ import SwiftUI
 
 struct GlassAnimationView: View {
     
+    private let targetTouchCount = 3
     private let customHaptics: [HapticProperty] = [
         HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.25, 0.3], sharpness: [0.85, 0.3]),
         HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.55, 0.3], sharpness: [0.85, 0.3]),
         HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.75, 0.3], sharpness: [0.85, 0.3])]
-    private let targetTouchCount = 5
     
     @State private var playerTouchCount: Int = 0
     @State private var glassBroken: Bool = false
-    @State private var hurt: Bool = false
     
     @State private var positions: CGPoint = CGPoint(x:width * 0.5, y: height * 0.5)
     
@@ -25,7 +24,7 @@ struct GlassAnimationView: View {
         
         ZStack {
             ZStack {
-                if (hurt == false) {
+                if (glassBroken == false) {
                     Image("Card")
                         .resizable()
                         .frame(width: width * 0.7, height: width * 0.7)
@@ -34,7 +33,7 @@ struct GlassAnimationView: View {
                         .resizable()
                         .frame(width: width * 0.7, height: width * 0.7)
                 }
-                if hurt {
+                if glassBroken {
                     ZStack {
                         //https://stackoverflow.com/questions/57342170/how-do-i-set-the-size-of-a-sf-symbol-in-swiftui
                         Image(systemName: "drop.fill")
@@ -50,7 +49,7 @@ struct GlassAnimationView: View {
                     }
                 }
             }
-            if (playerTouchCount < targetTouchCount - 1)
+            if (playerTouchCount <= targetTouchCount)
             {
                 Image("Glass\(playerTouchCount)")
                     .resizable()
@@ -59,13 +58,13 @@ struct GlassAnimationView: View {
         }.frame(width: width, height: height)
             .onAppear(perform: CustomizeHaptic.instance.prepareHaptics)
             .onTapGesture {
-                if (playerTouchCount == targetTouchCount - 2) {
+                if (playerTouchCount == targetTouchCount) {
                     HapticManager.haptic(type: .error)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+                        HapticManager.haptic(type: .success)
+                    }
                     glassBroken = true
-                } else if (playerTouchCount == targetTouchCount - 1) {
-                    HapticManager.haptic(type: .success)
-                    hurt = true
-                } else if (playerTouchCount < targetTouchCount - 2) {
+                } else if (playerTouchCount < targetTouchCount) {
                     CustomizeHaptic.instance.haptic(hapticCase: Haptic.continuous, hapticProperty:customHaptics[playerTouchCount])
                 }
                 playerTouchCount += 1
