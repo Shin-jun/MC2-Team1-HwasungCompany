@@ -31,9 +31,10 @@ struct PullLeverGameView: View {
                                 switchsunsu.append(i)
                             }
                             .padding(.bottom)
-                        Image(systemName: isHeartOn[i] ? "lightbulb" : "lightbulb.fill")
+                        Image(isHeartOn[i] ? "lightOn" : "lightOff")
                             .resizable()
-                            .frame(width: 20, height: 30)
+                            .scaledToFit()
+                            .frame(width: 40)
                     }
                     .padding(.bottom, 30)
                 }
