@@ -9,10 +9,13 @@ import SwiftUI
 
 struct FadeInView: View {
     
-    // Define
+    // Param
     var text: String
     var fontSize: CGFloat
-    var isTextAnimation: Bool
+    
+    
+    // Define
+    @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
     @State var opacity: Double = 0
     let NotoSerifMedium = "NotoSerifKR-Medium"
     

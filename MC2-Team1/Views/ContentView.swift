@@ -244,9 +244,7 @@ extension ContentView {
                 }
                 Spacer()
             }
-            
             Spacer()
-            
         }
         .padding(.horizontal)
         .padding(.vertical, 10)
