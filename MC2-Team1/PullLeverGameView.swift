@@ -16,7 +16,10 @@ struct PullLeverGameView: View {
     @State private var switchsunsu: [Int] = []
     
     private let lights: [Int] = [0, 1, 2, 3, 4].shuffled()   // 전구 켜지는 순서 랜덤 배열
-    private var hapticProperty: HapticProperty = HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.65, 0.3], sharpness: [0.85, 0.3])
+    private var hapticProperties: [HapticProperty] = [
+            HapticProperty(count: 1, interval: [0.07], intensity: [0.25], sharpness: [0.5]),
+            HapticProperty(count: 2, interval: [0.2, 0.1], intensity: [0.6,0.6], sharpness: [0.5, 0.5]),
+            HapticProperty(count: 4, interval: [0.0, 0.1, 0.05, 0.1], intensity: [0.75, 0.35, 0.6, 0.35], sharpness: [0.5, 0.5, 0.5, 0.5])]
     
     var body: some View {
         ZStack{
@@ -36,7 +39,7 @@ struct PullLeverGameView: View {
                                 .onTapGesture {
                                     // 스위치 터치 시 isLightOn 값 변경하여 스위치, 전구 이미지 변경
                                     isLightOn[i] = !isLightOn[i]
-                                    CustomizeHaptic.instance.haptic(hapticCase: Haptic.transient, hapticProperty:hapticProperty)
+                                    CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[0])
                                     if isLightOn[i] == true{
                                         // 사용자가 스위치 켠 순서 기억
                                         switchsunsu.append(i)
@@ -83,13 +86,14 @@ struct PullLeverGameView: View {
                             }
                             if lights == switchsunsu {
                                 IsGameClear = true
+                                CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[1])
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                     presentationMode.wrappedValue.dismiss()
                                 }
                             }
                             if imageName == "leverOn" && IsGameClear == false {
                                 // 순서 못 맞추면 전구 키는 순서 다시 보여주고 스위치, 레버 리셋
-                                CustomizeHaptic.instance.haptic(hapticCase: Haptic.continuous, hapticProperty:hapticProperty)
+                                CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[2])
                                 isLightOn = [false, false, false, false, false]
                                 
                                 for i in 0...4 {
