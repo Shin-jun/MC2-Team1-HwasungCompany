@@ -11,14 +11,21 @@ struct ContentView: View {
     
     // Define
     @EnvironmentObject var modelData: ModelData
+    
     @AppStorage("chapter") var chapter: String = "chapterOne"
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("fontSize") var fontSize: Double = 18
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
+    
     @State var reloadTrigger = true
     @State var isShowing = false
     @State var isShowingAlert = false
+    @State var isGlassGame = false
+    @State var isPullLeverGame = false
+    @State var isBoxOpenGame = false
+    
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
+    
     let NotoSerifMedium = "NotoSerifKR-Medium"
     // body
     var body: some View {
@@ -124,6 +131,15 @@ struct ContentView: View {
             }
             .height(.proportional(0.6))
             .ignoresSafeArea()
+        }
+        .fullScreenCover(isPresented: $isGlassGame) {
+            GlassAnimationView()
+        }
+        .fullScreenCover(isPresented: $isPullLeverGame) {
+            PullLeverGameView()
+        }
+        .fullScreenCover(isPresented: $isBoxOpenGame) {
+            // 여기에 에버렛 게임 들어가면 됨
         }
     }
 }
