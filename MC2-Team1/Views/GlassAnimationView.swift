@@ -14,9 +14,9 @@ struct GlassAnimationView: View {
     @State private var playerTouchCount: Int = 0
     @State private var glassBroken: Bool = false
     @State private var hurt: Bool = false
-
+    
     @State private var positions: CGPoint = CGPoint(x:width * 0.5, y: height * 0.5)
-
+    
     var body: some View {
         
         ZStack {
@@ -37,13 +37,13 @@ struct GlassAnimationView: View {
                             .font(.system(size: 30, weight: .medium))
                             .foregroundColor(Color.blood)
                     }
-                        .position(positions)
-                        .onAppear {
-                            withAnimation(.timingCurve(1,0.28,0.72,0.96, duration: 1.0)) {
-                                positions.x = width * 0.5
-                                positions.y = height * 1.1
-                            }
+                    .position(positions)
+                    .onAppear {
+                        withAnimation(.timingCurve(1,0.28,0.72,0.96, duration: 1.0)) {
+                            positions.x = width * 0.5
+                            positions.y = height * 1.1
                         }
+                    }
                 }
             }
             if (playerTouchCount < targetTouchCount - 1)
@@ -53,18 +53,18 @@ struct GlassAnimationView: View {
                     .frame(width: width, height: height, alignment: .center)
             }
         }.frame(width: width, height: height)
-        .onTapGesture {
-            playerTouchCount += 1
-            if (playerTouchCount == targetTouchCount - 1) {
-                HapticManager.haptic(type: .error)
-                glassBroken = true
-            } else if (playerTouchCount == targetTouchCount) {
-                HapticManager.haptic(type: .success)
-                hurt = true
-            } else if (playerTouchCount < targetTouchCount - 1){
-                HapticManager.impact(style: .heavy)
+            .onTapGesture {
+                playerTouchCount += 1
+                if (playerTouchCount == targetTouchCount - 1) {
+                    HapticManager.haptic(type: .error)
+                    glassBroken = true
+                } else if (playerTouchCount == targetTouchCount) {
+                    HapticManager.haptic(type: .success)
+                    hurt = true
+                } else if (playerTouchCount < targetTouchCount - 1){
+                    HapticManager.impact(style: .heavy)
+                }
             }
-        }
     }
 }
 
