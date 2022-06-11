@@ -15,9 +15,7 @@ struct GlassAnimationView: View {
     @State private var waterTankBroken: Bool = false
     @State private var hurt: Bool = false
 
-    @State private var bloodShow: Bool = false
     @State private var positions: CGPoint = CGPoint(x:width * 0.5, y: height * 0.5)
-    @State private var firstTouch: Bool = true
 
     var body: some View {
         
@@ -34,7 +32,7 @@ struct GlassAnimationView: View {
                         .frame(width: width * 0.7, height: width * 0.7)
                         .foregroundColor(Color.red)
                 }
-                if bloodShow {
+                if hurt {
                     ZStack {
                         //https://stackoverflow.com/questions/57342170/how-do-i-set-the-size-of-a-sf-symbol-in-swiftui
                         Image(systemName: "drop.fill")
@@ -47,8 +45,6 @@ struct GlassAnimationView: View {
                                 positions.x = width * 0.5
                                 positions.y = height * 1.1
                             }
-                            // 활성화시 한번만 가능
-                            firstTouch = false
                         }
                 }
             }
@@ -66,9 +62,7 @@ struct GlassAnimationView: View {
                 waterTankBroken = true
             } else if (playerTouchCount == targetTouchCount) {
                 HapticManager.haptic(type: .success)
-                hurt = true
-                bloodShow = true
-            } else if (playerTouchCount < targetTouchCount - 1){
+                hurt = true            } else if (playerTouchCount < targetTouchCount - 1){
                 HapticManager.impact(style: .heavy)
             }
         }
