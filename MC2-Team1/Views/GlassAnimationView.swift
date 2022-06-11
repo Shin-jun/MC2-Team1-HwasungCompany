@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GlassAnimationView: View {
+    @Environment(\.presentationMode) var presentationMode
     
     private let targetTouchCount = 3
     private let customHaptics: [HapticProperty] = [
@@ -45,6 +46,9 @@ struct GlassAnimationView: View {
                         withAnimation(.timingCurve(1,0.28,0.72,0.96, duration: 1.0)) {
                             positions.x = width * 0.5
                             positions.y = height * 1.1
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            presentationMode.wrappedValue.dismiss()
                         }
                     }
                 }

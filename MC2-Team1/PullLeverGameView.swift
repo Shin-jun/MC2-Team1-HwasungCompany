@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PullLeverGameView: View {
+    @Environment(\.presentationMode) var presentationMode
     
     @State private var IsGameClear = false
     @State private var imageName = "leverOff"
@@ -69,6 +70,9 @@ struct PullLeverGameView: View {
                             }
                             if lights == switchsunsu {
                                 IsGameClear = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    presentationMode.wrappedValue.dismiss()
+                                }
                             }
                             if imageName == "leverOn" && IsGameClear == false {
                                 // 순서 못 맞추면 전구 키는 순서 다시 보여주고 스위치, 레버 리셋
