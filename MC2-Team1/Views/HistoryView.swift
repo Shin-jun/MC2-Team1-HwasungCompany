@@ -22,7 +22,10 @@ struct HistoryView: View {
                             if index == modelData.currentIndex {
                                 Rectangle()
                                     .fill(Color.bgColor)
-                                    .frame(width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - 230 - recHeight) / 2.0)
+                                    .frame(
+                                        width: UIScreen.main.bounds.width,
+                                        height: (UIScreen.main.bounds.height - 230 - recHeight) / 2.0
+                                    )
                                     .onAppear {
                                         recHeight = lastSize
                                     }
@@ -30,8 +33,14 @@ struct HistoryView: View {
                                         recHeight = value
                                     }
                             }
-                            FadeInView(text: modelData.pastParas[index], fontSize: fontSize, isTextAnimation: true)
-                                .frame(maxWidth: UIScreen.main.bounds.width, alignment: .leading)
+                            FadeInView(
+                                text: modelData.pastParas[index],
+                                fontSize: fontSize
+                            )
+                                .frame(
+                                    maxWidth: UIScreen.main.bounds.width,
+                                    alignment: .leading
+                                )
                                 .padding(.vertical, fontSize + 6)
                                 .id(index)
                                 .background(ViewGeometry())
