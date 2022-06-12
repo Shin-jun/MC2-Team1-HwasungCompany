@@ -127,8 +127,10 @@ struct InBox: View {
                 ZStack {
                     Rectangle()
                         .foregroundColor(.white)
-                        .frame(width: 500, height: 700)
+                        .frame(width: 1000, height: 1000)
                         .padding()
+                    .edgesIgnoringSafeArea(.all)
+                    
                     Image("Photo")
                         .resizable()
                         .frame(width: 400, height: 400)
