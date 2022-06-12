@@ -1,41 +1,18 @@
 //
-//  StartView.swift
+//  NextChapterView.swift
 //  MC2-Team1
 //
-//  Created by peo on 2022/06/09.
+//  Created by peo on 2022/06/11.
 //
 
 import SwiftUI
 
-struct StartView: View {
+struct BridgeView: View {
     @State private var tapFontColorOpacity = true
-    
-    @AppStorage("chapter") var chapter: String = "chapterOne" {
-        didSet {
-            switch chapter {
-            case "chapterOne":
-                chapterIndex = 0
-            case "chapterTwo":
-                chapterIndex = 1
-            case "chapterThree":
-                chapterIndex = 2
-            case "chapterFour":
-                chapterIndex = 3
-            case "chapterFive":
-                chapterIndex = 4
-            case "chapterSix":
-                chapterIndex = 5
-            default :
-                chapterIndex = 0
-            }
-        }
-    }
-    
-    @State var chapterIndex = 0
+    @Binding var mode: Mode
     
     private let textWidth = width * 0.88
     private let textPadding = width * 0.12
-    
     var body: some View {
         ZStack(alignment: .topLeading) {
             Color.bgColor
@@ -43,45 +20,30 @@ struct StartView: View {
             
             VStack(spacing: 0) {
                 
-                Group{
-                    HStack{
-                        Text("NIPS")
-                            .font(.custom("NuosuSIL-Regular", size: 96))
-                            .foregroundColor(.fontColor)
-                    }.frame(width: textWidth, alignment: .leading)
-                    HStack {
-                        Spacer()
-                        Text("Hydden")
-                            .font(.custom("NuosuSIL-Regular", size: 60))
-                            .foregroundColor(.fontColor)
-                    }.frame(width: textWidth, alignment: .trailing)
-                }
-                .frame(width: width)
-                .padding(.horizontal, textPadding)
+                Spacer()
                 
                 ZStack {
                     HStack {
                         Rectangle()
                             .fill(Color.fontColor)
-                            .frame(maxWidth: CGFloat(chapterIndex * (50 + 17) + 35), maxHeight: 2)
+                            .frame(maxWidth: CGFloat(3 * (50 + 17) + 50), maxHeight: 2)
                         Rectangle()
                             .fill(Color.pastColor)
-                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(chapterIndex * (50 + 17) + 35), maxHeight: 2)
+                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(3 * (50 + 17) + 50), maxHeight: 2)
                     }
                     
                     HStack(alignment: .center, spacing: 50) {
                         Spacer()
                         ForEach(0..<6, id: \.self) { index in
-                            DotView(circleIndex: index, chapterIndex: chapterIndex)
+                            DotView(circleIndex: index, chapterIndex: 3)
                         }
                         Spacer()
                     }
                 }
-                .padding(.top, 160)
                 
                 HStack {
                     Spacer()
-                    Text("Chapter \(chapterIndex + 1)")
+                    Text("Chapter 1")
                         .font(.custom("NuosuSIL-Regular", size: 24))
                         .foregroundColor(.fontColor)
                         .padding(.top, 30)

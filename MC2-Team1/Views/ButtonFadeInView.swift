@@ -24,8 +24,8 @@ struct ButtonFadeInView: View {
     var body: some View {
         
         Button{
+            modelData.pastParas.append([currentParagraph.content, choice.content])
             paragraphId = choice.nextParagraphId
-            modelData.pastParas.append(currentParagraph.content)
         } label: {
             Text(choice.content)
                 .foregroundColor(.fontColor)

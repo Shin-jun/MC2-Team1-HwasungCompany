@@ -28,13 +28,16 @@ struct ContentView: View {
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     
     let NotoSerifMedium = "NotoSerifKR-Medium"
+    
+    @Binding var mode: Mode
     // body
     var body: some View {
         ZStack{
             Color.bgColor
                 .ignoresSafeArea()
-            // Tool Bar
+ 
             VStack{
+                // Tool Bar
                 ZStack{
                     // Friendship Indicator
                     ZStack{
@@ -95,6 +98,7 @@ struct ContentView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 5)
                 
+                // Choice Buttons
                 Group {
                     if currentParagraph.hasChoices {
                         Group {
