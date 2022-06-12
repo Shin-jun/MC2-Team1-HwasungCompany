@@ -102,9 +102,9 @@
 		37D9E2B0285378B2005BB908 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
 				3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */,
 				D4EE46AF285465AE00C608DA /* PullLeverGameView.swift */,
-				C6E1B9A9283B772E00EEC6F1 /* ContentView.swift */,
 				C66C56E12845E2A200BDC0CC /* FadeInView.swift */,
 				C6AE29522855CDB200E9F39F /* ButtonFadeInView.swift */,
 				B7690EE12851C613008E81AC /* StartView.swift */,
