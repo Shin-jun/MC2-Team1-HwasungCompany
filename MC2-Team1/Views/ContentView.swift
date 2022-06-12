@@ -136,7 +136,8 @@ extension ContentView {
                     )
                     .offset(x: getFriendshipDistance())
             }
-            .frame(width: 180)
+            .frame(width: 230)
+
             // Gear Icon
             HStack{
                 Spacer()
@@ -251,10 +252,10 @@ extension ContentView {
             result = CGFloat(0)
         } else if Bfriendship > Cfriendship {
             let sum = Bfriendship - Cfriendship
-            result = CGFloat(Double(sum) * -1.8)
+            result = CGFloat(Double(sum) * -2.8)
         } else if Cfriendship > Bfriendship {
             let sum = Cfriendship - Bfriendship
-            result = CGFloat(Double(sum) * 1.8)
+            result = CGFloat(Double(sum) * 2.8)
         }
         return result
     }
