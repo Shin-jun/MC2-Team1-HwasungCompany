@@ -8,18 +8,27 @@
 import SwiftUI
 
 struct InitView: View {
-    @State var isTapped = false
+    @State var mode: Mode = .start
     
     var body: some View {
-        if isTapped {
-            ContentView()
-        } else {
+        switch mode {
+        case .start:
             StartView()
                 .onTapGesture {
                     withAnimation(.spring()) {
-                        isTapped = true
+                        mode = .content
                     }
                 }
+        case .content:
+            ContentView(mode: $mode)
+        case .bridge:
+            BridgeView(mode: $mode)
         }
     }
+}
+
+enum Mode {
+    case start
+    case content
+    case bridge
 }

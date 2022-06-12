@@ -49,18 +49,18 @@ struct ButtonFadeInView: View {
 extension ButtonFadeInView{
     @ViewBuilder func buttonViewBuilder() -> some View {
         Button{
+            modelData.pastParas.append([currentParagraph.content, choice.content])
             paragraphId = choice.nextParagraphId
-            modelData.pastParas.append(currentParagraph.content)
         } label: {
             Text(choice.content)
                 .foregroundColor(.fontColor)
                 .font(.custom(NotoSerifMedium, size: 18))
-                .frame(maxWidth: .infinity, maxHeight: 60)
+                .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
                 .background(Color.bgColor)
                 .cornerRadius(50)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
                 .padding(.horizontal)
-                .padding(.vertical, 5)
+                .padding(.vertical, RatioSize.getResheight(height: 5))
         }
     }
 }
