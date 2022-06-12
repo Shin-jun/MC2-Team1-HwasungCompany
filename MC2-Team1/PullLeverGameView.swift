@@ -15,6 +15,8 @@ struct PullLeverGameView: View {
     @State private var isLightOn: [Bool] = [false, false, false, false, false]
     @State private var switchsunsu: [Int] = []
     
+    @State private var isTouchEnable = false
+    
     private let lights: [Int] = [0, 1, 2, 3, 4].shuffled()   // 전구 켜지는 순서 랜덤 배열
     private var hapticProperties: [HapticProperty] = [
             HapticProperty(count: 1, interval: [0.07], intensity: [0.25], sharpness: [0.5]),
@@ -37,12 +39,15 @@ struct PullLeverGameView: View {
                                 .frame(width: 40)
                                 .onTapGesture {
                                     // 스위치 터치 시 isLightOn 값 변경하여 스위치, 전구 이미지 변경
-                                    isLightOn[i] = !isLightOn[i]
-                                    CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[0])
-                                    if isLightOn[i] == true{
-                                        // 사용자가 스위치 켠 순서 기억
-                                        switchsunsu.append(i)
+                                    if isTouchEnable == true {
+                                        isLightOn[i] = !isLightOn[i]
+                                        CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[0])
+                                        if isLightOn[i] == true{
+                                            // 사용자가 스위치 켠 순서 기억
+                                            switchsunsu.append(i)
+                                        }
                                     }
+                                    
                                 }
                                 .padding(.bottom)
                             
@@ -65,6 +70,7 @@ struct PullLeverGameView: View {
                         }
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 + Double(lights.count+1) * 0.7) {
                             isLightOn = [false, false, false, false, false]
+                            isTouchEnable = true
                         }
                 
                     }
@@ -79,18 +85,20 @@ struct PullLeverGameView: View {
                             let horizontalAmount = value.translation.width as CGFloat
                             let verticalAmount = value.translation.height as CGFloat
                             
-                            if abs(horizontalAmount) < abs(verticalAmount) {
+                            if abs(horizontalAmount) < abs(verticalAmount) && isTouchEnable == true {
                                 // 위아래 스와이프로 레버 손잡이 이미지 변경
                                 imageName = verticalAmount < 0 ? "leverOn" : "leverOff"
                             }
                             if lights == switchsunsu {
                                 IsGameClear = true
+                                isTouchEnable = false
                                 CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[1])
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                     presentationMode.wrappedValue.dismiss()
                                 }
                             }
-                            if imageName == "leverOn" && IsGameClear == false {
+                            if imageName == "leverOn" && IsGameClear == false && isTouchEnable == true {
+                                isTouchEnable = false
                                 // 순서 못 맞추면 전구 키는 순서 다시 보여주고 스위치, 레버 리셋
                                 CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[2])
                                 isLightOn = [false, false, false, false, false]
@@ -106,6 +114,7 @@ struct PullLeverGameView: View {
                                     imageName = "leverOff"
                                     switchsunsu = []
                                     isLightOn = [false, false, false, false, false]
+                                    isTouchEnable = true
                                 }
                             }
                         })
