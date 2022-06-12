@@ -15,15 +15,19 @@ struct PullLeverGameView: View {
     @State private var isLightOn: [Bool] = [false, false, false, false, false]
     @State private var switchsunsu: [Int] = []
     
+    @State private var isTouchEnable = false
+    
     private let lights: [Int] = [0, 1, 2, 3, 4].shuffled()   // 전구 켜지는 순서 랜덤 배열
-    private var hapticProperty: HapticProperty = HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.65, 0.3], sharpness: [0.85, 0.3])
+    private var hapticProperties: [HapticProperty] = [
+            HapticProperty(count: 1, interval: [0.07], intensity: [0.25], sharpness: [0.5]),
+            HapticProperty(count: 2, interval: [0.2, 0.1], intensity: [0.6,0.6], sharpness: [0.5, 0.5]),
+            HapticProperty(count: 4, interval: [0.0, 0.1, 0.05, 0.1], intensity: [0.75, 0.35, 0.6, 0.35], sharpness: [0.5, 0.5, 0.5, 0.5])]
     
     var body: some View {
         ZStack{
             Rectangle()
                 .fill(Color.wallColor)
                 .ignoresSafeArea(.all)
-            
             VStack{
                 HStack{
                     ForEach(0..<5){ i in
@@ -35,12 +39,15 @@ struct PullLeverGameView: View {
                                 .frame(width: 40)
                                 .onTapGesture {
                                     // 스위치 터치 시 isLightOn 값 변경하여 스위치, 전구 이미지 변경
-                                    isLightOn[i] = !isLightOn[i]
-                                    CustomizeHaptic.instance.haptic(hapticCase: Haptic.transient, hapticProperty:hapticProperty)
-                                    if isLightOn[i] == true{
-                                        // 사용자가 스위치 켠 순서 기억
-                                        switchsunsu.append(i)
+                                    if isTouchEnable == true {
+                                        isLightOn[i] = !isLightOn[i]
+                                        CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[0])
+                                        if isLightOn[i] == true{
+                                            // 사용자가 스위치 켠 순서 기억
+                                            switchsunsu.append(i)
+                                        }
                                     }
+                                    
                                 }
                                 .padding(.bottom)
                             
@@ -52,7 +59,21 @@ struct PullLeverGameView: View {
                         .padding(.bottom, 30)
                     }
                     
-                }.padding()
+                }
+                    .padding()
+                    .onAppear{
+                        for i in 0..<lights.count {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 + Double(i+1) * 0.7) {
+                                // 순서대로 전구 불빛 켜기
+                                isLightOn[lights[i]] = true
+                            }
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 + Double(lights.count+1) * 0.7) {
+                            isLightOn = [false, false, false, false, false]
+                            isTouchEnable = true
+                        }
+                
+                    }
                 
                 Image(imageName)
                     .resizable()
@@ -64,19 +85,22 @@ struct PullLeverGameView: View {
                             let horizontalAmount = value.translation.width as CGFloat
                             let verticalAmount = value.translation.height as CGFloat
                             
-                            if abs(horizontalAmount) < abs(verticalAmount) {
+                            if abs(horizontalAmount) < abs(verticalAmount) && isTouchEnable == true {
                                 // 위아래 스와이프로 레버 손잡이 이미지 변경
                                 imageName = verticalAmount < 0 ? "leverOn" : "leverOff"
                             }
                             if lights == switchsunsu {
                                 IsGameClear = true
+                                isTouchEnable = false
+                                CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[1])
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                     presentationMode.wrappedValue.dismiss()
                                 }
                             }
-                            if imageName == "leverOn" && IsGameClear == false {
+                            if imageName == "leverOn" && IsGameClear == false && isTouchEnable == true {
+                                isTouchEnable = false
                                 // 순서 못 맞추면 전구 키는 순서 다시 보여주고 스위치, 레버 리셋
-                                CustomizeHaptic.instance.haptic(hapticCase: Haptic.continuous, hapticProperty:hapticProperty)
+                                CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[2])
                                 isLightOn = [false, false, false, false, false]
                                 
                                 for i in 0...4 {
@@ -90,6 +114,7 @@ struct PullLeverGameView: View {
                                     imageName = "leverOff"
                                     switchsunsu = []
                                     isLightOn = [false, false, false, false, false]
+                                    isTouchEnable = true
                                 }
                             }
                         })
