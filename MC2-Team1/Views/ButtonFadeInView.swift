@@ -16,6 +16,8 @@ struct ButtonFadeInView: View {
     @EnvironmentObject var modelData: ModelData
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("chapter") var chapter: String = "chapterOne"
+    @AppStorage("Bfriendship") var Bfriendship: Int = 0
+    @AppStorage("Cfriendship") var Cfriendship: Int = 0
     @State var opacity: Double = 0
     @State var isButtonHidden = true
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
@@ -51,6 +53,12 @@ extension ButtonFadeInView{
         Button{
             modelData.pastParas.append([currentParagraph.content, choice.content])
             paragraphId = choice.nextParagraphId
+            if let effectB = choice.effectB {
+                Bfriendship += effectB
+            }
+            if let effectC = choice.effectC {
+                Cfriendship += effectC
+            }
         } label: {
             Text(choice.content)
                 .foregroundColor(.fontColor)

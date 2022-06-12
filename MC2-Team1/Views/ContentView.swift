@@ -16,6 +16,8 @@ struct ContentView: View {
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("fontSize") var fontSize: Double = 18
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
+    @AppStorage("Bfriendship") var Bfriendship: Int = 0
+    @AppStorage("Cfriendship") var Cfriendship: Int = 0
     
     @State var isShowing = false
     @State var isShowingAlert = false
@@ -131,7 +133,7 @@ extension ContentView {
                         RoundedRectangle(cornerRadius: 50)
                             .stroke(Color.tapFontColor, lineWidth: 1)
                     )
-                    .offset(x: 20)
+                    .offset(x: getFriendshipDistance())
             }
             .frame(width: 180)
             // Gear Icon
@@ -241,5 +243,18 @@ extension ContentView {
 
 // function Extension
 extension ContentView {
-    
+    func getFriendshipDistance() -> CGFloat{
+        var result = CGFloat(0)
+        
+        if Bfriendship == Cfriendship {
+            result = CGFloat(0)
+        } else if Bfriendship > Cfriendship {
+            let sum = Bfriendship - Cfriendship
+            result = CGFloat(Double(sum) * -1.8)
+        } else if Cfriendship > Bfriendship {
+            let sum = Cfriendship - Bfriendship
+            result = CGFloat(Double(sum) * 1.8)
+        }
+        return result
+    }
 }
