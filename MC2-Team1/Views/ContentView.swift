@@ -29,66 +29,17 @@ struct ContentView: View {
     // body
     var body: some View {
         ZStack{
+            
+            // Background
             Color.bgColor
                 .ignoresSafeArea()
-            // Tool Bar
+            
             VStack{
-                ZStack{
-                    // Friendship Indicator
-                    ZStack{
-                        ZStack{
-                            Divider()
-                                .frame(height: 1)
-                                .overlay(Color.fontColor)
-                            HStack{
-                                Divider()
-                                    .frame(width: 1, height: 5)
-                                    .overlay(Color.fontColor)
-                            }
-                        }
-                        HStack{
-                            Text("백")
-                                .font(.custom(NotoSerifMedium, size: 18))
-                                .foregroundColor(.fontColor)
-                                .frame(width: 30, height: 30)
-                                .background(Color.tapFontColor)
-                                .cornerRadius(50)
-                            Spacer()
-                            Text("최")
-                                .font(.custom(NotoSerifMedium, size: 18))
-                                .foregroundColor(.fontColor)
-                                .frame(width: 30, height: 30)
-                                .background(Color.tapFontColor)
-                                .cornerRadius(50)
-                        }
-                        Text("나")
-                            .font(.custom(NotoSerifMedium, size: 18))
-                            .foregroundColor(.fontColor)
-                            .frame(width: 30, height: 30)
-                            .background(Color.bgColor)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 50)
-                                    .stroke(Color.tapFontColor, lineWidth: 1)
-                            )
-                            .offset(x: 20)
-                    }
-                    .frame(width: 180)
-                    // Gear Icon
-                    HStack{
-                        Spacer()
-                        Button(){
-                            isShowing.toggle()
-                        }label: {
-                            Image(systemName: "gearshape.fill")
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.fontColor)
-                        }
-                        .padding()
-                    }
-                }
-                .frame(height: 40)
+
+                // Tool Bar
+                toolbarViewBuilder()
                 
+                // Content && History
                 HistoryView()
                     .padding(.horizontal, 20)
                     .padding(.top, 5)
@@ -136,6 +87,66 @@ extension ContentView {
     // ButtonViewReloader
     @ViewBuilder func ButtonViewReloader(choice: Choice) -> some View {
         ButtonFadeInView(choice: choice)
+    }
+    
+    // Toolbar ViewBuilder
+    @ViewBuilder func toolbarViewBuilder() ->  some View{
+        ZStack{
+            // Friendship Indicator
+            ZStack{
+                ZStack{
+                    Divider()
+                        .frame(height: 1)
+                        .overlay(Color.fontColor)
+                    HStack{
+                        Divider()
+                            .frame(width: 1, height: 5)
+                            .overlay(Color.fontColor)
+                    }
+                }
+                HStack{
+                    Text("백")
+                        .font(.custom(NotoSerifMedium, size: 18))
+                        .foregroundColor(.fontColor)
+                        .frame(width: 30, height: 30)
+                        .background(Color.tapFontColor)
+                        .cornerRadius(50)
+                    Spacer()
+                    Text("최")
+                        .font(.custom(NotoSerifMedium, size: 18))
+                        .foregroundColor(.fontColor)
+                        .frame(width: 30, height: 30)
+                        .background(Color.tapFontColor)
+                        .cornerRadius(50)
+                }
+                Text("나")
+                    .font(.custom(NotoSerifMedium, size: 18))
+                    .foregroundColor(.fontColor)
+                    .frame(width: 30, height: 30)
+                    .background(Color.bgColor)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 50)
+                            .stroke(Color.tapFontColor, lineWidth: 1)
+                    )
+                    .offset(x: 20)
+            }
+            .frame(width: 180)
+            // Gear Icon
+            HStack{
+                Spacer()
+                Button(){
+                    isShowing.toggle()
+                }label: {
+                    Image(systemName: "gearshape.fill")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.fontColor)
+                }
+                .padding()
+            }
+        }
+        .frame(height: 40)
+
     }
     
     // Setting View Builder
