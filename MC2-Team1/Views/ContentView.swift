@@ -18,6 +18,7 @@ struct ContentView: View {
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
     
     @State var reloadTrigger = true
+//    @State var buttonReloadTrigger = true
     @State var isShowing = false
     @State var isShowingAlert = false
     @State var isGlassGame = false
@@ -102,25 +103,10 @@ struct ContentView: View {
                     if currentParagraph.hasChoices {
                         Group {
                             ForEach(currentParagraph.choices!, id: \.self) {choice in
-                                
-                                Text(choice.content)
-                                    .foregroundColor(.fontColor)
-                                    .font(.custom(NotoSerifMedium, size: 18))
-                                    .frame(maxWidth: .infinity, maxHeight: 60)
-                                    .background(Color.bgColor)
-                                    .cornerRadius(50)
-                                    .shadow(color: .gray, radius: 2, x: 0, y: 0)
-                                    .onTapGesture {
-                                        modelData.pastParas.append([currentParagraph.content, choice.content])
-                                        paragraphId = choice.nextParagraphId
-                                        reloadTrigger.toggle()
-                                    }
-                                    .padding(.horizontal)
-                                    .padding(.vertical, 5)
+                                ButtonViewReloader(choice: choice)
                             }
                         }
                         .background(ViewGeometry())
-                        
                     }
                 }
                 .padding(.horizontal, 20)
@@ -140,7 +126,7 @@ struct ContentView: View {
             PullLeverGameView()
         }
         .fullScreenCover(isPresented: $isBoxOpenGame) {
-            // 여기에 에버렛 게임 들어가면 됨
+            BoxOpenView()
         }
     }
 }
@@ -148,22 +134,14 @@ struct ContentView: View {
 // ViewBuilder Extension
 extension ContentView {
     
-    // FadeInOutViewReloader
-    @ViewBuilder func FadeInByOrderViewReloader(text: String, fontSize: CGFloat) -> some View {
-        if reloadTrigger {
-            FadeInByOrderView(text: text, fontSize: fontSize, isTextAnimation: isTextAnimation)
-        } else {
-            FadeInByOrderView(text: text, fontSize: fontSize, isTextAnimation: isTextAnimation)
-        }
-    }
-    
     // FadeInViewReloader
     @ViewBuilder func FadeInViewReloader(text: String, fontSize: CGFloat) -> some View {
-        if reloadTrigger {
-            FadeInView(text: text, fontSize: fontSize, isTextAnimation: isTextAnimation)
-        } else {
-            FadeInView(text: text, fontSize: fontSize, isTextAnimation: isTextAnimation)
-        }
+        FadeInView(text: text, fontSize: fontSize, isTextAnimation: isTextAnimation)
+    }
+    
+    // ButtonViewReloader
+    @ViewBuilder func ButtonViewReloader(choice: Choice) -> some View {
+        ButtonFadeInView(choice: choice, reloadTrigger: $reloadTrigger)
     }
     
     // Setting View Builder

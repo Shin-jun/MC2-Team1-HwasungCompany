@@ -26,7 +26,6 @@ struct FadeInView: View {
             .opacity( isTextAnimation == true ? opacity : Double(1))
             .lineSpacing(fontSize - 6)
             .animation(.easeIn.delay( 0.3 ), value: opacity)
-            .lineSpacing(fontSize - 7)
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now()){
                     opacity = 1
