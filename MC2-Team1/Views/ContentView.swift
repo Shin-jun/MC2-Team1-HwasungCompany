@@ -139,7 +139,7 @@ struct ContentView: View {
             PullLeverGameView()
         }
         .fullScreenCover(isPresented: $isBoxOpenGame) {
-            // 여기에 에버렛 게임 들어가면 됨
+            BoxOpenView()
         }
     }
 }
