@@ -33,7 +33,7 @@ struct ButtonFadeInView: View {
                 .frame(maxWidth: .infinity, maxHeight: 60)
                 .background(Color.bgColor)
                 .cornerRadius(50)
-                .shadow(color: .gray, radius: 2, x: 0, y: 0)
+                .shadow(color: Color("ButtonShadow"), radius: 3, x: 0, y: 0)
                 .padding(.horizontal)
                 .padding(.vertical, 5)
         }
