@@ -17,11 +17,37 @@ struct ButtonFadeInView: View {
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("chapter") var chapter: String = "chapterOne"
     @State var opacity: Double = 0
+    @State var isButtonHidden = true
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     let NotoSerifMedium = "NotoSerifKR-Medium"
 
     var body: some View {
         
+        Group{
+            if isButtonHidden {
+                buttonViewBuilder()
+                    .hidden()
+            } else {
+                buttonViewBuilder()
+                   .opacity(opacity)
+                   .animation(.easeIn.delay( 0.1 ), value: opacity)
+                   .onAppear {
+                       DispatchQueue.main.asyncAfter(deadline: .now()){
+                           opacity = 1
+                       }
+                   }
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+                self.isButtonHidden = false
+            }
+        }
+    }
+}
+
+extension ButtonFadeInView{
+    @ViewBuilder func buttonViewBuilder() -> some View {
         Button{
             modelData.pastParas.append([currentParagraph.content, choice.content])
             paragraphId = choice.nextParagraphId
@@ -36,13 +62,5 @@ struct ButtonFadeInView: View {
                 .padding(.horizontal)
                 .padding(.vertical, RatioSize.getResheight(height: 5))
         }
-        .opacity(opacity)
-        .animation(.easeIn.delay( 1.5 ), value: opacity)
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now()){
-                opacity = 1
-            }
-        }
     }
 }
-
