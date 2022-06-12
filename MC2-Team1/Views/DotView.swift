@@ -18,16 +18,16 @@ struct DotView: View {
         ZStack {
             if circleIndex == chapterIndex {
                 Circle()
-                    .frame(width: 29, height: 29)
+                    .frame(width: RatioSize.getResWidth(width: 29), height: RatioSize.getResWidth(width: 29))
                     .foregroundColor(Color.fontColor)
                     .scaleEffect(isAnimating ? 1:1.12)
                 Circle()
-                    .frame(width: 23, height: 23)
+                    .frame(width: RatioSize.getResWidth(width: 23), height: RatioSize.getResWidth(width: 23))
                     .foregroundColor(Color.bgColor)
                     .scaleEffect(isAnimating ? 1:1.18)
             }
             Circle()
-                .frame(width: 17, height: 17)
+                .frame(width: RatioSize.getResWidth(width: 17), height: RatioSize.getResWidth(width: 17))
                 .foregroundColor(circleIndex > chapterIndex ? .pastColor:.fontColor)
         }.onAppear {
             guard circleIndex == chapterIndex else { return }
