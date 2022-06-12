@@ -46,13 +46,13 @@ struct StartView: View {
                 Group{
                     HStack{
                         Text("NIPS")
-                            .font(.custom("NuosuSIL-Regular", size: 96))
+                            .font(.custom("NuosuSIL-Regular", size: RatioSize.getResWidth(width: 96)))
                             .foregroundColor(.fontColor)
                     }.frame(width: textWidth, alignment: .leading)
                     HStack {
                         Spacer()
                         Text("Hydden")
-                            .font(.custom("NuosuSIL-Regular", size: 60))
+                            .font(.custom("NuosuSIL-Regular", size: RatioSize.getResWidth(width: 60)))
                             .foregroundColor(.fontColor)
                     }.frame(width: textWidth, alignment: .trailing)
                 }
@@ -63,13 +63,13 @@ struct StartView: View {
                     HStack {
                         Rectangle()
                             .fill(Color.fontColor)
-                            .frame(maxWidth: CGFloat(chapterIndex * (50 + 17) + 35), maxHeight: 2)
+                            .frame(maxWidth: CGFloat(CGFloat(chapterIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
                         Rectangle()
                             .fill(Color.pastColor)
-                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(chapterIndex * (50 + 17) + 35), maxHeight: 2)
+                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(CGFloat(chapterIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
                     }
                     
-                    HStack(alignment: .center, spacing: 50) {
+                    HStack(alignment: .center, spacing: RatioSize.getResWidth(width: 50)) {
                         Spacer()
                         ForEach(0..<6, id: \.self) { index in
                             DotView(circleIndex: index, chapterIndex: chapterIndex)
@@ -77,32 +77,32 @@ struct StartView: View {
                         Spacer()
                     }
                 }
-                .padding(.top, 160)
+                .padding(.top, RatioSize.getResheight(height: 160))
                 
                 HStack {
                     Spacer()
                     Text("Chapter \(chapterIndex + 1)")
-                        .font(.custom("NuosuSIL-Regular", size: 24))
+                        .font(.custom("NuosuSIL-Regular", size: RatioSize.getResWidth(width: 24)))
                         .foregroundColor(.fontColor)
-                        .padding(.top, 30)
+                        .padding(.top, RatioSize.getResheight(height: 30))
                     Spacer()
                 }
                 
                 HStack {
                     Spacer()
                     Text("\"낯선 방\"")
-                        .font(.custom("NotoSerifKR-Regular", size: 20))
+                        .font(.custom("NotoSerifKR-Regular", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.fontColor)
                     Spacer()
                 }
-                .padding(.top, 10)
+                .padding(.top, RatioSize.getResheight(height: 10))
                 
                 Spacer()
                 
                 HStack {
                     Spacer()
                     Text("탭해서 시작하기")
-                        .font(.custom("Inter-SemiBold", size: 20))
+                        .font(.custom("Inter-SemiBold", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.tapFontColor)
                         .opacity(tapFontColorOpacity ? 1 : 0)
                         .animation(.linear(duration: 1).repeatForever(), value: tapFontColorOpacity)
@@ -111,9 +111,9 @@ struct StartView: View {
                         }
                     Spacer()
                 }
-                .padding(.bottom, 60)
+                .padding(.bottom, RatioSize.getResheight(height: 60))
             }
-            .padding(.top, 120)
+            .padding(.top, RatioSize.getResheight(height: 120))
         }
     }
 }

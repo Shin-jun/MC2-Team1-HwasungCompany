@@ -11,18 +11,43 @@ struct ButtonFadeInView: View {
     
     // param
     let choice: Choice
-    @Binding var reloadTrigger: Bool
     
     // define
     @EnvironmentObject var modelData: ModelData
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("chapter") var chapter: String = "chapterOne"
     @State var opacity: Double = 0
+    @State var isButtonHidden = true
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     private let mainFontBold = "NanumMyeongjoBold"
 
     var body: some View {
         
+        Group{
+            if isButtonHidden {
+                buttonViewBuilder()
+                    .hidden()
+            } else {
+                buttonViewBuilder()
+                   .opacity(opacity)
+                   .animation(.easeIn.delay( 0.1 ), value: opacity)
+                   .onAppear {
+                       DispatchQueue.main.asyncAfter(deadline: .now()){
+                           opacity = 1
+                       }
+                   }
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+                self.isButtonHidden = false
+            }
+        }
+    }
+}
+
+extension ButtonFadeInView{
+    @ViewBuilder func buttonViewBuilder() -> some View {
         Button{
             modelData.pastParas.append([currentParagraph.content, choice.content])
             paragraphId = choice.nextParagraphId
@@ -35,15 +60,7 @@ struct ButtonFadeInView: View {
                 .cornerRadius(50)
                 .shadow(color: Color("ButtonShadow"), radius: 3, x: 0, y: 0)
                 .padding(.horizontal)
-                .padding(.vertical, 5)
-        }
-        .opacity(opacity)
-        .animation(.easeIn.delay( 1.5 ), value: opacity)
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now()){
-                opacity = 1
-            }
+                .padding(.vertical, RatioSize.getResheight(height: 5))
         }
     }
 }
-
