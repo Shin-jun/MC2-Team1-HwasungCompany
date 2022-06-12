@@ -67,13 +67,14 @@ struct BoxOpenView_Previews: PreviewProvider {
  */
 
 struct InBox: View {
+    @Environment(\.presentationMode) var presentationMode
     
     typealias OffsetType = (offset: CGSize, lastOffset: CGSize)
     
     @State private var objects: [OffsetType] = [
         (offset: CGSize(width: -20, height: 0.0),
          lastOffset: CGSize(width: -20, height: 0.0)),
-                                                
+        
         (offset: CGSize(width: 40, height: 0.0),
          lastOffset: CGSize(width: 40, height: 0.0)),
         
@@ -83,8 +84,8 @@ struct InBox: View {
         (offset: CGSize(width: 0.0, height: 200),
          lastOffset: CGSize(width: 0.0, height: 200))
         
-    
-            
+        
+        
     ]
     
     @State private var Photo = false
@@ -97,7 +98,7 @@ struct InBox: View {
                 .resizable()
                 .foregroundColor(Color.brown)
                 .frame(width: 400, height: 400)
-
+            
             Image("BookFrame")
                 .resizable()
                 .frame(width: 100, height: 100, alignment: .center)
@@ -129,15 +130,20 @@ struct InBox: View {
                         .foregroundColor(.white)
                         .frame(width: 1000, height: 1000)
                         .padding()
-                    .edgesIgnoringSafeArea(.all)
+                        .edgesIgnoringSafeArea(.all)
                     
                     Image("Photo")
                         .resizable()
                         .frame(width: 400, height: 400)
                         .padding()
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                                presentationMode.wrappedValue.dismiss()
+                            }
+                        }
                 }
                 .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.0)))
-
+                
             }
         }
     }
@@ -238,7 +244,7 @@ struct LottieBox: UIViewRepresentable {
         animationView.animation = animation
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = loopMode
-
+        
         
         animationView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(animationView)
