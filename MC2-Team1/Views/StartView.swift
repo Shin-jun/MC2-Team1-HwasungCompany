@@ -10,8 +10,32 @@ import SwiftUI
 struct StartView: View {
     @State private var tapFontColorOpacity = true
     
+    @AppStorage("chapter") var chapter: String = "chapterOne" {
+        didSet {
+            switch chapter {
+            case "chapterOne":
+                chapterIndex = 0
+            case "chapterTwo":
+                chapterIndex = 1
+            case "chapterThree":
+                chapterIndex = 2
+            case "chapterFour":
+                chapterIndex = 3
+            case "chapterFive":
+                chapterIndex = 4
+            case "chapterSix":
+                chapterIndex = 5
+            default :
+                chapterIndex = 0
+            }
+        }
+    }
+    
+    @State var chapterIndex = 0
+    
     private let textWidth = width * 0.88
     private let textPadding = width * 0.12
+    
     var body: some View {
         ZStack(alignment: .topLeading) {
             Color.bgColor
@@ -39,16 +63,16 @@ struct StartView: View {
                     HStack {
                         Rectangle()
                             .fill(Color.fontColor)
-                            .frame(maxWidth: CGFloat(3 * (50 + 17) + 35), maxHeight: 2)
+                            .frame(maxWidth: CGFloat(chapterIndex * (50 + 17) + 35), maxHeight: 2)
                         Rectangle()
                             .fill(Color.pastColor)
-                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(3 * (50 + 17) + 35), maxHeight: 2)
+                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(chapterIndex * (50 + 17) + 35), maxHeight: 2)
                     }
                     
                     HStack(alignment: .center, spacing: 50) {
                         Spacer()
                         ForEach(0..<6, id: \.self) { index in
-                            DotView(circleIndex: index, chapterIndex: 3)
+                            DotView(circleIndex: index, chapterIndex: chapterIndex)
                         }
                         Spacer()
                     }
@@ -57,7 +81,7 @@ struct StartView: View {
                 
                 HStack {
                     Spacer()
-                    Text("Chapter 1")
+                    Text("Chapter \(chapterIndex + 1)")
                         .font(.custom("NuosuSIL-Regular", size: 24))
                         .foregroundColor(.fontColor)
                         .padding(.top, 30)

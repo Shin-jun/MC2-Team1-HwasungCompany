@@ -34,8 +34,9 @@ struct ContentView: View {
         ZStack{
             Color.bgColor
                 .ignoresSafeArea()
-            // Tool Bar
+ 
             VStack{
+                // Tool Bar
                 ZStack{
                     // Friendship Indicator
                     ZStack{
@@ -96,6 +97,7 @@ struct ContentView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 5)
                 
+                // Choice Buttons
                 Group {
                     if currentParagraph.hasChoices {
                         Group {
@@ -109,18 +111,15 @@ struct ContentView: View {
                                     .cornerRadius(50)
                                     .shadow(color: .gray, radius: 2, x: 0, y: 0)
                                     .onTapGesture {
+                                        modelData.pastParas.append([currentParagraph.content, choice.content])
                                         paragraphId = choice.nextParagraphId
                                         reloadTrigger.toggle()
-                                        modelData.pastParas.append(currentParagraph.content)
                                     }
                                     .padding(.horizontal)
                                     .padding(.vertical, 5)
                             }
                         }
                         .background(ViewGeometry())
-                        .onPreferenceChange(ViewSizeKey.self) {
-                            print($0.height)
-                        }
                         
                     }
                 }

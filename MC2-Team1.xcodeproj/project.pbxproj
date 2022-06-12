@@ -18,6 +18,8 @@
 		B7690F17285325CA008E81AC /* NuosuSIL-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690F16285325CA008E81AC /* NuosuSIL-Regular.ttf */; };
 		B7690F1928548932008E81AC /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690F1828548932008E81AC /* InitView.swift */; };
 		B7690F1B28548C0F008E81AC /* BridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690F1A28548C0F008E81AC /* BridgeView.swift */; };
+		B7FD7D662855C347006A509E /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD7D652855C347006A509E /* JsonManager.swift */; };
+		B7FD7D682855C79B006A509E /* PastPara.json in Resources */ = {isa = PBXBuildFile; fileRef = B7FD7D672855C79B006A509E /* PastPara.json */; };
 		C613C433283E0BE800BCFC82 /* FadeInByOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */; };
 		C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */; };
 		C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */; };
@@ -54,6 +56,8 @@
 		B7690F16285325CA008E81AC /* NuosuSIL-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NuosuSIL-Regular.ttf"; sourceTree = "<group>"; };
 		B7690F1828548932008E81AC /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
 		B7690F1A28548C0F008E81AC /* BridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeView.swift; sourceTree = "<group>"; };
+		B7FD7D652855C347006A509E /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
+		B7FD7D672855C79B006A509E /* PastPara.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PastPara.json; sourceTree = "<group>"; };
 		C613C432283E0BE800BCFC82 /* FadeInByOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInByOrderView.swift; sourceTree = "<group>"; };
 		C613C435283E112300BCFC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Black.otf"; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA9DFEA2851DCEC00365420 /* HapticManager.swift */,
+				B7FD7D652855C347006A509E /* JsonManager.swift */,
 				3AA9DFEF28532FE300365420 /* Constants.swift */,
 				B7690F13285322D5008E81AC /* Extensions */,
 			);
@@ -215,6 +220,7 @@
 			children = (
 				C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */,
 				C613C434283E108A00BCFC82 /* fonts */,
+				B7FD7D672855C79B006A509E /* PastPara.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 				C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */,
 				C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */,
 				B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */,
+				B7FD7D682855C79B006A509E /* PastPara.json in Resources */,
 				C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */,
 				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
 				C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */,
@@ -314,6 +321,7 @@
 				37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */,
 				C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */,
 				B7690EE82851DB5D008E81AC /* HistoryView.swift in Sources */,
+				B7FD7D662855C347006A509E /* JsonManager.swift in Sources */,
 				B7690F15285322E2008E81AC /* Color.swift in Sources */,
 				C6E1945C284A58EF00EC9131 /* If.swift in Sources */,
 				C6E19457284A58EA00EC9131 /* HalfASheet.swift in Sources */,
