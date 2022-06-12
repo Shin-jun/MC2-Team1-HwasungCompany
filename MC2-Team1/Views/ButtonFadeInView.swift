@@ -19,7 +19,7 @@ struct ButtonFadeInView: View {
     @State var opacity: Double = 0
     @State var isButtonHidden = true
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
-    let NotoSerifMedium = "NotoSerifKR-Medium"
+    private let mainFontBold = "NanumMyeongjoBold"
 
     var body: some View {
         
@@ -54,11 +54,11 @@ extension ButtonFadeInView{
         } label: {
             Text(choice.content)
                 .foregroundColor(.fontColor)
-                .font(.custom(NotoSerifMedium, size: 18))
-                .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
+                .font(.custom(mainFontBold, size: 18))
+                .frame(maxWidth: .infinity, maxHeight: 60)
                 .background(Color.bgColor)
                 .cornerRadius(50)
-                .shadow(color: .gray, radius: 2, x: 0, y: 0)
+                .shadow(color: Color("ButtonShadow"), radius: 3, x: 0, y: 0)
                 .padding(.horizontal)
                 .padding(.vertical, RatioSize.getResheight(height: 5))
         }

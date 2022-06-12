@@ -25,7 +25,8 @@ struct ContentView: View {
     
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     
-    let NotoSerifMedium = "NotoSerifKR-Medium"
+    //let NotoSerifMedium = "NotoSerifKR-Medium"
+    private let mainFont = "NanumMyeongjo"
     
     @Binding var mode: Mode
     // body
@@ -109,21 +110,21 @@ extension ContentView {
                 }
                 HStack{
                     Text("백")
-                        .font(.custom(NotoSerifMedium, size: 18))
+                        .font(.custom(mainFont, size: 18))
                         .foregroundColor(.fontColor)
                         .frame(width: 30, height: 30)
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
                     Spacer()
                     Text("최")
-                        .font(.custom(NotoSerifMedium, size: 18))
+                        .font(.custom(mainFont, size: 18))
                         .foregroundColor(.fontColor)
                         .frame(width: 30, height: 30)
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
                 }
                 Text("나")
-                    .font(.custom(NotoSerifMedium, size: 18))
+                    .font(.custom(mainFont, size: 18))
                     .foregroundColor(.fontColor)
                     .frame(width: 30, height: 30)
                     .background(Color.bgColor)
