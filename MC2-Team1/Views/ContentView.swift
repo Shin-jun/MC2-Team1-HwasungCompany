@@ -17,8 +17,6 @@ struct ContentView: View {
     @AppStorage("fontSize") var fontSize: Double = 18
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
     
-    @State var reloadTrigger = true
-//    @State var buttonReloadTrigger = true
     @State var isShowing = false
     @State var isShowingAlert = false
     @State var isGlassGame = false
@@ -141,7 +139,7 @@ extension ContentView {
     
     // ButtonViewReloader
     @ViewBuilder func ButtonViewReloader(choice: Choice) -> some View {
-        ButtonFadeInView(choice: choice, reloadTrigger: $reloadTrigger)
+        ButtonFadeInView(choice: choice)
     }
     
     // Setting View Builder

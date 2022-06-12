@@ -11,7 +11,6 @@ struct ButtonFadeInView: View {
     
     // param
     let choice: Choice
-    @Binding var reloadTrigger: Bool
     
     // define
     @EnvironmentObject var modelData: ModelData
