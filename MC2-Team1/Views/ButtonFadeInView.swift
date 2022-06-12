@@ -19,7 +19,7 @@ struct ButtonFadeInView: View {
     @AppStorage("chapter") var chapter: String = "chapterOne"
     @State var opacity: Double = 0
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
-    let NotoSerifMedium = "NotoSerifKR-Medium"
+    private let mainFontBold = "NanumMyeongjoBold"
 
     var body: some View {
         
@@ -29,7 +29,7 @@ struct ButtonFadeInView: View {
         } label: {
             Text(choice.content)
                 .foregroundColor(.fontColor)
-                .font(.custom(NotoSerifMedium, size: 18))
+                .font(.custom(mainFontBold, size: 18))
                 .frame(maxWidth: .infinity, maxHeight: 60)
                 .background(Color.bgColor)
                 .cornerRadius(50)
