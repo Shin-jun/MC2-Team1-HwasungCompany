@@ -42,7 +42,7 @@ struct HistoryView: View {
                                 .fill(Color.bgColor)
                                 .frame(
                                     width: UIScreen.main.bounds.width,
-                                    height: (UIScreen.main.bounds.height - 230 - recHeight) / 2.0
+                                    height: (UIScreen.main.bounds.height - RatioSize.getResheight(height: 230 + recHeight)) / 2.0
                                 )
                                 .onAppear {
                                     recHeight = lastSize
@@ -63,14 +63,13 @@ struct HistoryView: View {
                             .background(ViewGeometry())
                             .onPreferenceChange(ViewSizeKey.self) {
                                 lastSize = $0.height
-                                print(lastSize)
                             }
                         }
                     }
                     
                     Rectangle()
                         .fill(Color.bgColor)
-                        .frame(width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - 230 - recHeight) / 2.0)
+                        .frame(width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - RatioSize.getResheight(height: 230 + recHeight)) / 2.0)
                         .onAppear {
                             recHeight = lastSize
                         }
