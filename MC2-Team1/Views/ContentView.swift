@@ -28,12 +28,8 @@ struct ContentView: View {
     @State var isBoxOpenGame = false
     
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
-<<<<<<< Updated upstream
-    
-    let NotoSerifMedium = "NotoSerifKR-Medium"
-=======
+
     private let mainFont = "NanumMyeongjo"
->>>>>>> Stashed changes
     
     // body
     var body: some View {
@@ -116,21 +112,21 @@ extension ContentView {
                 }
                 HStack{
                     Text("백")
-                        .font(.custom(NotoSerifMedium, size: 18))
+                        .font(.custom(mainFont, size: 18))
                         .foregroundColor(.fontColor)
                         .frame(width: 30, height: 30)
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
                     Spacer()
                     Text("최")
-                        .font(.custom(NotoSerifMedium, size: 18))
+                        .font(.custom(mainFont, size: 18))
                         .foregroundColor(.fontColor)
                         .frame(width: 30, height: 30)
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
                 }
                 Text("나")
-                    .font(.custom(NotoSerifMedium, size: 18))
+                    .font(.custom(mainFont, size: 18))
                     .foregroundColor(.fontColor)
                     .frame(width: 30, height: 30)
                     .background(Color.bgColor)
