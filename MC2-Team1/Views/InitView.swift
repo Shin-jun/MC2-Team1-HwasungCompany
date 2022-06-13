@@ -10,8 +10,6 @@ import SwiftUI
 struct InitView: View {
     @State var mode: Mode = .start
     
-    @AppStorage("chapter") var chapter: String = "chapterSix"
-    
     var body: some View {
         switch mode {
         case .start:
@@ -20,9 +18,6 @@ struct InitView: View {
                     withAnimation(.spring()) {
                         mode = .content
                     }
-                }
-                .onAppear {
-                    chapter = "chapterSix"
                 }
         case .content:
             ContentView(mode: $mode)

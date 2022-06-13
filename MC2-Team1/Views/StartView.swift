@@ -8,33 +8,15 @@
 import SwiftUI
 
 struct StartView: View {
+    @EnvironmentObject var modelData: ModelData
+    
     @State private var tapFontColorOpacity = true
-    
-    @AppStorage("chapter") var chapter: String = "chapterSix" {
-        didSet {
-            switch chapter {
-            case "chapterOne":
-                chapterIndex = 0
-            case "chapterTwo":
-                chapterIndex = 1
-            case "chapterThree":
-                chapterIndex = 2
-            case "chapterFour":
-                chapterIndex = 3
-            case "chapterFive":
-                chapterIndex = 4
-            case "chapterSix":
-                chapterIndex = 5
-            default :
-                chapterIndex = 0
-            }
-        }
-    }
-    
-    @State var chapterIndex = 0
     
     private let textWidth = width * 0.88
     private let textPadding = width * 0.12
+    
+    @State private var chapterNumber = "1"
+    
     
     var body: some View {
         ZStack(alignment: .topLeading) {
@@ -63,16 +45,16 @@ struct StartView: View {
                     HStack {
                         Rectangle()
                             .fill(Color.fontColor)
-                            .frame(maxWidth: CGFloat(CGFloat(chapterIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
+                            .frame(maxWidth: CGFloat(CGFloat(modelData.dotIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
                         Rectangle()
                             .fill(Color.pastColor)
-                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(CGFloat(chapterIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
+                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(CGFloat(modelData.dotIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
                     }
                     
                     HStack(alignment: .center, spacing: RatioSize.getResWidth(width: 50)) {
                         Spacer()
                         ForEach(0..<6, id: \.self) { index in
-                            DotView(circleIndex: index, chapterIndex: chapterIndex)
+                            DotView(circleIndex: index, chapterIndex: modelData.dotIndex)
                         }
                         Spacer()
                     }
@@ -81,10 +63,32 @@ struct StartView: View {
                 
                 HStack {
                     Spacer()
-                    Text("Chapter \(chapterIndex + 1)")
+                    Text("Chapter \(chapterNumber)")
                         .font(.custom("NuosuSIL-Regular", size: RatioSize.getResWidth(width: 24)))
                         .foregroundColor(.fontColor)
                         .padding(.top, RatioSize.getResheight(height: 30))
+                        .onAppear {
+                            switch modelData.currentChapterIndex {
+                            case 0:
+                                chapterNumber = "1"
+                            case 1:
+                                chapterNumber = "2"
+                            case 2:
+                                chapterNumber = "3"
+                            case 3:
+                                chapterNumber = "4"
+                            case 4:
+                                chapterNumber = "5"
+                            case 5:
+                                chapterNumber = "6-A"
+                            case 6:
+                                chapterNumber = "6-B"
+                            case 7:
+                                chapterNumber = "6-C"
+                            default :
+                                chapterNumber = ""
+                            }
+                        }
                     Spacer()
                 }
                 

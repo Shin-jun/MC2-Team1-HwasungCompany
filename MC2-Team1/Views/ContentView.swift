@@ -12,7 +12,6 @@ struct ContentView: View {
     // Define
     @EnvironmentObject var modelData: ModelData
     
-    @AppStorage("chapter") var chapter: String = "chapterSix"
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("fontSize") var fontSize: Double = 18
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
@@ -25,7 +24,7 @@ struct ContentView: View {
     @State var isPullLeverGame = false
     @State var isBoxOpenGame = false
     
-    var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
+    var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
     
     //let NotoSerifMedium = "NotoSerifKR-Medium"
     private let mainFont = "NanumMyeongjo"
@@ -230,7 +229,12 @@ extension ContentView {
                         primaryButton: .default(Text("취소")),
                         secondaryButton: .destructive(Text("확인")){
                             // Clear history
+                            modelData.currentChapterIndex = 0
                             modelData.pastParas = [["기록들"]]
+                            withAnimation {
+                                mode = .start
+                            }
+                            paragraphId = 1
                         }
                     )
                 }

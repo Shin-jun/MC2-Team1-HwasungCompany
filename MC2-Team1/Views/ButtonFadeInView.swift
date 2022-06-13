@@ -15,12 +15,11 @@ struct ButtonFadeInView: View {
     // define
     @EnvironmentObject var modelData: ModelData
     @AppStorage("paragraphId") var paragraphId: Int = 1
-    @AppStorage("chapter") var chapter: String = "chapterSix"
     @AppStorage("Bfriendship") var Bfriendship: Int = 0
     @AppStorage("Cfriendship") var Cfriendship: Int = 0
     @State var opacity: Double = 0
     @State var isButtonHidden = true
-    var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
+    var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
     private let mainFontBold = "NanumMyeongjoBold"
 
     var body: some View {

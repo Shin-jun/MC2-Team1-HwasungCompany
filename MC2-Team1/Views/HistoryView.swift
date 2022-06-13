@@ -12,7 +12,6 @@ struct HistoryView: View {
     @State var lastSize: CGFloat = 0
     @State var recHeight: CGFloat = 0
     @AppStorage("fontSize") var fontSize: Double = 18
-    @AppStorage("chapter") var chapter: String = "chapterSix"
     @AppStorage("paragraphId") var paragraphId: Int = 1
     let NotoSerifMedium = "NotoSerifKR-Medium"
     
@@ -52,7 +51,7 @@ struct HistoryView: View {
                                 }
                             
                             FadeInView(
-                                text: modelData.filterPara(chapter: chapter, id: paragraphId).content,
+                                text: modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId).content,
                                 fontSize: fontSize
                             )
                             .frame(
@@ -77,12 +76,12 @@ struct HistoryView: View {
                             recHeight = value
                         }
                 }
-                .onChange(of: modelData.currentIndex) { value in
+                .onChange(of: modelData.lastPastParaIndex) { value in
                     proxy.scrollTo(value, anchor: .top)
                 }
                 .onAppear {
-                    modelData.currentIndex = modelData.pastParas.count
-                    proxy.scrollTo(modelData.currentIndex, anchor: .top)
+                    modelData.lastPastParaIndex = modelData.pastParas.count
+                    proxy.scrollTo(modelData.lastPastParaIndex, anchor: .top)
                 }
             }
         }
