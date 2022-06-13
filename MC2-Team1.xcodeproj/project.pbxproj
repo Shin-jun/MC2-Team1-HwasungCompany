@@ -47,6 +47,7 @@
 		D4EE46BA2855DE7800C608DA /* NanumMyeongjoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4EE46B72855DE7800C608DA /* NanumMyeongjoBold.ttf */; };
 		D4EE46BB2855DE7800C608DA /* NanumMyeongjoExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4EE46B82855DE7800C608DA /* NanumMyeongjoExtraBold.ttf */; };
 		D4EE46BC2855DE7800C608DA /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4EE46B92855DE7800C608DA /* NanumMyeongjo.ttf */; };
+		D4EE46C22857107400C608DA /* chapterFour.json in Resources */ = {isa = PBXBuildFile; fileRef = D4EE46C12857107400C608DA /* chapterFour.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		D4EE46B72855DE7800C608DA /* NanumMyeongjoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoBold.ttf; sourceTree = "<group>"; };
 		D4EE46B82855DE7800C608DA /* NanumMyeongjoExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoExtraBold.ttf; sourceTree = "<group>"; };
 		D4EE46B92855DE7800C608DA /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
+		D4EE46C12857107400C608DA /* chapterFour.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFour.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 			children = (
 				058249AB2854DE9800EC0832 /* openBox.json */,
 				C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */,
+				D4EE46C12857107400C608DA /* chapterFour.json */,
 				C613C434283E108A00BCFC82 /* fonts */,
 				B7FD7D672855C79B006A509E /* PastPara.json */,
 			);
@@ -321,6 +324,7 @@
 				C6E1B9AF283B772E00EEC6F1 /* Preview Assets.xcassets in Resources */,
 				D4EE46BA2855DE7800C608DA /* NanumMyeongjoBold.ttf in Resources */,
 				C6E1B9AC283B772E00EEC6F1 /* Assets.xcassets in Resources */,
+				D4EE46C22857107400C608DA /* chapterFour.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
