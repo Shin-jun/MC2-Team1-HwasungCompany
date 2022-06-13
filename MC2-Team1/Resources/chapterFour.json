@@ -174,34 +174,24 @@
     },
     {
         "id": 17,
-        "content": "이게 그 치료제인가?\n막대를 이리 저리 기울이며 관찰하고 있던 중, 바깥에서 큰 소리가 들렸다.",
-        "choices": [
-            {
-                "content": "다음으로",
-                "nextParagraphId": 18
-            }
-        ]
-    },
-    {
-        "id": 18,
         "content": "최지원의 목소리였다. 나가봐야 할 것 같은데, 이 막대는 어떡하지?",
         "choices": [
             {
                 "content": "망설임 없이 챙긴다",
-                "nextParagraphId": 19,
+                "nextParagraphId": 18,
                 "effectB": 1,
                 "effectC": -1
             },
             {
                 "content": "혹시 가져가도 되는지 고민스럽지만 우선 챙겨본다.",
-                "nextParagraphId": 19,
+                "nextParagraphId": 18,
                 "effectB": -1,
                 "effectC": 1
             }
         ]
     },
     {
-        "id": 19,
+        "id": 18,
         "content": "나는 문을 열었다.",
         "choices": [
             {
