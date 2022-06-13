@@ -78,5 +78,5 @@ final class ModelData: ObservableObject {
         }
     }
     
-    let chapterNameArray = ["\"낯선 방\"", "\"백연우\"", "\"최지원\"", "\"치료제\"", "\"갈림길\"", "\"안지민\""]
+    let chapterNameArray = ["\"낯선 방\"", "\"백연우\"", "\"최지원\"", "\"치료제\"", "\"갈림길\"", "\"안지민\"", "\"안지민\""]
 }
