@@ -185,7 +185,8 @@
     "choices": [
         {
             "content" : "처음으로",
-            "nextParagraphId" : 1
+            "nextParagraphId" : 1,
+            "nextChapterIndex" : 1,
         }
     ]
   },

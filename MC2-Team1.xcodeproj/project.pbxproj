@@ -34,6 +34,7 @@
 		C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */; };
 		C66C56E22845E2A200BDC0CC /* FadeInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66C56E12845E2A200BDC0CC /* FadeInView.swift */; };
 		C6AE29532855CDB200E9F39F /* ButtonFadeInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE29522855CDB200E9F39F /* ButtonFadeInView.swift */; };
+		C6AE2957285705CA00E9F39F /* chapterTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = C6AE2956285705CA00E9F39F /* chapterTwo.json */; };
 		C6E19457284A58EA00EC9131 /* HalfASheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E19456284A58EA00EC9131 /* HalfASheet.swift */; };
 		C6E1945B284A58EF00EC9131 /* HalfASheet+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E19458284A58EF00EC9131 /* HalfASheet+Modifiers.swift */; };
 		C6E1945C284A58EF00EC9131 /* If.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1945A284A58EF00EC9131 /* If.swift */; };
@@ -80,6 +81,7 @@
 		C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-ExtraLight.otf"; sourceTree = "<group>"; };
 		C66C56E12845E2A200BDC0CC /* FadeInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInView.swift; sourceTree = "<group>"; };
 		C6AE29522855CDB200E9F39F /* ButtonFadeInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFadeInView.swift; sourceTree = "<group>"; };
+		C6AE2956285705CA00E9F39F /* chapterTwo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterTwo.json; sourceTree = "<group>"; };
 		C6E19456284A58EA00EC9131 /* HalfASheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfASheet.swift; sourceTree = "<group>"; };
 		C6E19458284A58EF00EC9131 /* HalfASheet+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HalfASheet+Modifiers.swift"; sourceTree = "<group>"; };
 		C6E19459284A58EF00EC9131 /* VerticalSlideTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlideTransition.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				058249AB2854DE9800EC0832 /* openBox.json */,
 				C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */,
 				D4EE46C12857107400C608DA /* chapterFour.json */,
+				C6AE2956285705CA00E9F39F /* chapterTwo.json */,
 				05FB2E0E285710360089359B /* chapterSixB.json */,
 				11139EBA28570D5B00EF6FD1 /* chapterFive.json */,
 				C613C434283E108A00BCFC82 /* fonts */,
@@ -324,6 +327,7 @@
 				B7FD7D682855C79B006A509E /* PastPara.json in Resources */,
 				C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */,
 				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
+				C6AE2957285705CA00E9F39F /* chapterTwo.json in Resources */,
 				C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */,
 				05FB2E0F285710360089359B /* chapterSixB.json in Resources */,
 				058249AC2854DE9800EC0832 /* openBox.json in Resources */,

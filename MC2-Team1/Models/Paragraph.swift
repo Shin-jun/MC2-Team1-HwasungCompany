@@ -10,30 +10,16 @@ import Foundation
 struct Paragraph: Hashable, Codable, Identifiable {
     let id: Int
     let content: String
-    let audioName: String?
-    let imageName: String?
     let choices: [Choice]?
-    let vibrate: String?
+    let isForkedParagraph: Bool?
     let game: String?
     
     var hasGame: Bool {
         game != nil
     }
     
-    var hasVibrate: Bool {
-        vibrate != nil
-    }
-    
     var hasChoices: Bool {
         choices != nil
-    }
-    
-    var hasAudio: Bool {
-        audioName != nil
-    }
-    
-    var hasImage: Bool {
-        imageName != nil
     }
 }
 
@@ -41,8 +27,10 @@ struct Choice: Hashable, Codable {
     let content: String
     let nextParagraphId: Int
     
-    var effectB: Int?
-    var effectC: Int?
+    let effectB: Int?
+    let effectC: Int?
+    
+    let nextChapterIndex: Int?
     
     var hasEffect: Bool {
         effectB == nil || effectC == nil ? false : true
