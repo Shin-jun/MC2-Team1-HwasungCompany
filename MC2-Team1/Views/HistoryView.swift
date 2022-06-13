@@ -33,6 +33,10 @@ struct HistoryView: View {
                                     }
                                 }
                                 .font(.custom("NanumMyeongjo", size: fontSize))
+                                .lineLimit(nil)
+                                .frame(
+                                    maxWidth: UIScreen.main.bounds.width
+                                )
                                 .lineSpacing(fontSize - 6)
                             }
                         } else { // Show current paragraph
