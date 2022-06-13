@@ -112,7 +112,7 @@ extension ContentView {
                     }
                 }
                 HStack{
-                    Text("백")
+                    Text((modelData.currentChapterIndex == 1 && paragraphId >= 7) || modelData.currentChapterIndex > 1 ? "백":"?")
                         .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
                         .foregroundColor(.fontColor)
                         .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResheight(height: 30))
@@ -121,7 +121,7 @@ extension ContentView {
                     
                     Spacer()
                     
-                    Text("최")
+                    Text((modelData.currentChapterIndex == 2 && paragraphId >= 14) || modelData.currentChapterIndex > 2 ? "최":"?")
                         .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
                         .foregroundColor(.fontColor)
                         .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResheight(height: 30))
