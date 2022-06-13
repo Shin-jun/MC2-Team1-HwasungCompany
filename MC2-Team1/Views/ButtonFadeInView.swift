@@ -50,13 +50,19 @@ struct ButtonFadeInView: View {
 extension ButtonFadeInView{
     @ViewBuilder func buttonViewBuilder() -> some View {
         Button{
-            modelData.pastParas.append([currentParagraph.content, choice.content])
-            paragraphId = choice.nextParagraphId
-            if let effectB = choice.effectB {
-                Bfriendship += effectB
-            }
-            if let effectC = choice.effectC {
-                Cfriendship += effectC
+            if choice.nextParagraphId == -1 {
+                modelData.currentChapterIndex = choice.nextChapterIndex!
+                modelData.pastParas = [["기록들"]]
+                paragraphId = 1
+            } else {
+                modelData.pastParas.append([currentParagraph.content, choice.content])
+                paragraphId = choice.nextParagraphId
+                if let effectB = choice.effectB {
+                    Bfriendship += effectB
+                }
+                if let effectC = choice.effectC {
+                    Cfriendship += effectC
+                }
             }
         } label: {
             Text(choice.content)
