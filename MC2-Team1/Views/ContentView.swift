@@ -28,7 +28,7 @@ struct ContentView: View {
     @State var isBoxOpenGame = false
     
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
-
+    
     private let mainFont = "NanumMyeongjo"
     
     // body
@@ -83,14 +83,16 @@ extension ContentView {
     // ButtonViewReloader
     @ViewBuilder func ButtonViewBuilder() -> some View {
         Group {
+            
             if currentParagraph.hasChoices {
                 Group {
-                    ForEach(currentParagraph.choices!, id: \.self) {choice in
+                    ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
                         ButtonFadeInView(choice: choice)
                     }
                 }
                 .background(ViewGeometry())
             }
+            
         }
         .padding(.horizontal, 20)
     }
@@ -117,14 +119,17 @@ extension ContentView {
                         .frame(width: 30, height: 30)
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
+                    
                     Spacer()
+                    
                     Text("최")
                         .font(.custom(mainFont, size: 18))
                         .foregroundColor(.fontColor)
                         .frame(width: 30, height: 30)
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
-                }
+                }//HStack
+                
                 Text("나")
                     .font(.custom(mainFont, size: 18))
                     .foregroundColor(.fontColor)
@@ -135,7 +140,7 @@ extension ContentView {
                             .stroke(Color.tapFontColor, lineWidth: 1)
                     )
                     .offset(x: getFriendshipDistance())
-            }
+            }//ZStack
             .frame(width: 230)
             
             // Gear Icon
