@@ -10,6 +10,8 @@
 		058249AA2854DE7300EC0832 /* BoxOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058249A92854DE7300EC0832 /* BoxOpenView.swift */; };
 		058249AC2854DE9800EC0832 /* openBox.json in Resources */ = {isa = PBXBuildFile; fileRef = 058249AB2854DE9800EC0832 /* openBox.json */; };
 		058249AF2854DECF00EC0832 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 058249AE2854DECF00EC0832 /* Lottie */; };
+		05FB2E0F285710360089359B /* chapterSixB.json in Resources */ = {isa = PBXBuildFile; fileRef = 05FB2E0E285710360089359B /* chapterSixB.json */; };
+		11139EBB28570D5B00EF6FD1 /* chapterFive.json in Resources */ = {isa = PBXBuildFile; fileRef = 11139EBA28570D5B00EF6FD1 /* chapterFive.json */; };
 		37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9E2AD2851CA31005BB908 /* DotView.swift */; };
 		3AA9DFD42851CADD00365420 /* GlassAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */; };
 		3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEA2851DCEC00365420 /* HapticManager.swift */; };
@@ -33,6 +35,7 @@
 		C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */; };
 		C66C56E22845E2A200BDC0CC /* FadeInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66C56E12845E2A200BDC0CC /* FadeInView.swift */; };
 		C6AE29532855CDB200E9F39F /* ButtonFadeInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE29522855CDB200E9F39F /* ButtonFadeInView.swift */; };
+		C6AE2957285705CA00E9F39F /* chapterTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = C6AE2956285705CA00E9F39F /* chapterTwo.json */; };
 		C6E19457284A58EA00EC9131 /* HalfASheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E19456284A58EA00EC9131 /* HalfASheet.swift */; };
 		C6E1945B284A58EF00EC9131 /* HalfASheet+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E19458284A58EF00EC9131 /* HalfASheet+Modifiers.swift */; };
 		C6E1945C284A58EF00EC9131 /* If.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1945A284A58EF00EC9131 /* If.swift */; };
@@ -53,6 +56,8 @@
 /* Begin PBXFileReference section */
 		058249A92854DE7300EC0832 /* BoxOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOpenView.swift; sourceTree = "<group>"; };
 		058249AB2854DE9800EC0832 /* openBox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = openBox.json; sourceTree = "<group>"; };
+		05FB2E0E285710360089359B /* chapterSixB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterSixB.json; sourceTree = "<group>"; };
+		11139EBA28570D5B00EF6FD1 /* chapterFive.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFive.json; sourceTree = "<group>"; };
 		37D9E2AD2851CA31005BB908 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 		3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassAnimationView.swift; sourceTree = "<group>"; };
 		3AA9DFEA2851DCEC00365420 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 		C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-ExtraLight.otf"; sourceTree = "<group>"; };
 		C66C56E12845E2A200BDC0CC /* FadeInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInView.swift; sourceTree = "<group>"; };
 		C6AE29522855CDB200E9F39F /* ButtonFadeInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFadeInView.swift; sourceTree = "<group>"; };
+		C6AE2956285705CA00E9F39F /* chapterTwo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterTwo.json; sourceTree = "<group>"; };
 		C6E19456284A58EA00EC9131 /* HalfASheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfASheet.swift; sourceTree = "<group>"; };
 		C6E19458284A58EF00EC9131 /* HalfASheet+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HalfASheet+Modifiers.swift"; sourceTree = "<group>"; };
 		C6E19459284A58EF00EC9131 /* VerticalSlideTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlideTransition.swift; sourceTree = "<group>"; };
@@ -236,6 +242,9 @@
 			children = (
 				058249AB2854DE9800EC0832 /* openBox.json */,
 				C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */,
+				C6AE2956285705CA00E9F39F /* chapterTwo.json */,
+				05FB2E0E285710360089359B /* chapterSixB.json */,
+				11139EBA28570D5B00EF6FD1 /* chapterFive.json */,
 				C613C434283E108A00BCFC82 /* fonts */,
 				B7FD7D672855C79B006A509E /* PastPara.json */,
 				B70C7352285705A6009F8D61 /* chapterSixC.json */,
@@ -313,12 +322,15 @@
 				B70C7353285705A6009F8D61 /* chapterSixC.json in Resources */,
 				D4EE46BB2855DE7800C608DA /* NanumMyeongjoExtraBold.ttf in Resources */,
 				C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */,
+				11139EBB28570D5B00EF6FD1 /* chapterFive.json in Resources */,
 				C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */,
 				B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */,
 				B7FD7D682855C79B006A509E /* PastPara.json in Resources */,
 				C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */,
 				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
+				C6AE2957285705CA00E9F39F /* chapterTwo.json in Resources */,
 				C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */,
+				05FB2E0F285710360089359B /* chapterSixB.json in Resources */,
 				058249AC2854DE9800EC0832 /* openBox.json in Resources */,
 				C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */,
 				C6E1B9BA283B77C100EEC6F1 /* chapterOne.json in Resources */,
@@ -493,8 +505,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,7 +517,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -524,8 +537,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -535,7 +549,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

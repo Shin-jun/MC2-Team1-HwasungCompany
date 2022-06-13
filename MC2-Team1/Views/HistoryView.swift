@@ -13,7 +13,6 @@ struct HistoryView: View {
     @State var recHeight: CGFloat = 0
     @AppStorage("fontSize") var fontSize: Double = 18
     @AppStorage("paragraphId") var paragraphId: Int = 1
-    let NotoSerifMedium = "NotoSerifKR-Medium"
     
     var body: some View {
         ScrollView {
@@ -33,7 +32,7 @@ struct HistoryView: View {
                                             .padding(.vertical, fontSize)
                                     }
                                 }
-                                .font(.custom(NotoSerifMedium, size: fontSize))
+                                .font(.custom("NanumMyeongjo", size: fontSize))
                                 .lineSpacing(fontSize - 6)
                             }
                         } else { // Show current paragraph

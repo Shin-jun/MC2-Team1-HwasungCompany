@@ -11,6 +11,7 @@ struct StartView: View {
     @EnvironmentObject var modelData: ModelData
     
     @State private var tapFontColorOpacity = true
+    let chapterNameArray = ["\"낯선 방\""]
     
     private let textWidth = width * 0.88
     private let textPadding = width * 0.12
@@ -94,7 +95,7 @@ struct StartView: View {
                 
                 HStack {
                     Spacer()
-                    Text("\"낯선 방\"")
+                    Text("\(chapterNameArray[0])")
                         .font(.custom("NotoSerifKR-Regular", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.fontColor)
                     Spacer()

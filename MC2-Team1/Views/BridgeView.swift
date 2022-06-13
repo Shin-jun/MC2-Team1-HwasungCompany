@@ -26,13 +26,13 @@ struct BridgeView: View {
                     HStack {
                         Rectangle()
                             .fill(Color.fontColor)
-                            .frame(maxWidth: CGFloat(3 * (50 + 17) + 50), maxHeight: 2)
+                            .frame(maxWidth: RatioSize.getResWidth(width: 251), maxHeight: RatioSize.getResheight(height: 2))
                         Rectangle()
                             .fill(Color.pastColor)
-                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(3 * (50 + 17) + 50), maxHeight: 2)
+                            .frame(maxWidth: UIScreen.main.bounds.width - RatioSize.getResWidth(width: 251), maxHeight: RatioSize.getResheight(height: 2))
                     }
                     
-                    HStack(alignment: .center, spacing: 50) {
+                    HStack(alignment: .center, spacing: RatioSize.getResWidth(width: 50)) {
                         Spacer()
                         ForEach(0..<6, id: \.self) { index in
                             DotView(circleIndex: index, chapterIndex: 3)
@@ -44,27 +44,27 @@ struct BridgeView: View {
                 HStack {
                     Spacer()
                     Text("Chapter 1")
-                        .font(.custom("NuosuSIL-Regular", size: 24))
+                        .font(.custom("NuosuSIL-Regular", size: RatioSize.getResWidth(width: 24)))
                         .foregroundColor(.fontColor)
-                        .padding(.top, 30)
+                        .padding(.top, RatioSize.getResheight(height: 30))
                     Spacer()
                 }
                 
                 HStack {
                     Spacer()
                     Text("\"낯선 방\"")
-                        .font(.custom("NotoSerifKR-Regular", size: 20))
+                        .font(.custom("NanumMyeongjoBold", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.fontColor)
                     Spacer()
                 }
-                .padding(.top, 10)
+                .padding(.top, RatioSize.getResheight(height: 10))
                 
                 Spacer()
                 
                 HStack {
                     Spacer()
                     Text("탭해서 시작하기")
-                        .font(.custom("Inter-SemiBold", size: 20))
+                        .font(.custom("Inter-SemiBold", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.tapFontColor)
                         .opacity(tapFontColorOpacity ? 1 : 0)
                         .animation(.linear(duration: 1).repeatForever(), value: tapFontColorOpacity)
@@ -73,9 +73,9 @@ struct BridgeView: View {
                         }
                     Spacer()
                 }
-                .padding(.bottom, 60)
+                .padding(.bottom, RatioSize.getResheight(height: 60))
             }
-            .padding(.top, 120)
+            .padding(.top, RatioSize.getResheight(height: 120))
         }
     }
 }
