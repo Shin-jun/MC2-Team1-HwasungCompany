@@ -187,11 +187,13 @@
         "choices": [
             {
                 "content" : "백연우에게 건넨다.",
-                "nextParagraphId" : -1
+                "nextParagraphId" : -1,
+                "nextChapterIndex": 5
             },
             {
                 "content" : "최지원에게 건넨다.",
-                "nextParagraphId" : -1
+                "nextParagraphId": -1,
+                "nextChapterIndex": 5
             }
         ]
     },
