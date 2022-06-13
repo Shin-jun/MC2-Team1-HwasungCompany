@@ -4,6 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>NanumMyeongjoExtraBold.ttf</string>
+		<string>NanumMyeongjoBold.ttf</string>
+		<string>NanumMyeongjo.ttf</string>
 		<string>Inter-SemiBold.ttf</string>
 		<string>NuosuSIL-Regular.ttf</string>
 		<string>NotoSerifKR-Black.otf</string>
