@@ -11,7 +11,7 @@ struct StartView: View {
     @State private var tapFontColorOpacity = true
     
     @AppStorage("chapter") var chapter: String = "chapterOne" {
-        didSet {
+        didSet{
             switch chapter {
             case "chapterOne":
                 chapterIndex = 0
@@ -32,6 +32,8 @@ struct StartView: View {
     }
     
     @State var chapterIndex = 0
+
+    let chapterNameArray = ["\"낯선 방\""]
     
     private let textWidth = width * 0.88
     private let textPadding = width * 0.12
@@ -90,8 +92,8 @@ struct StartView: View {
                 
                 HStack {
                     Spacer()
-                    Text("\"낯선 방\"")
-                        .font(.custom("NanumMyeongjoBold", size: RatioSize.getResWidth(width: 20)))
+                    Text("\(chapterNameArray[0])")
+                        .font(.custom("NotoSerifKR-Regular", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.fontColor)
                     Spacer()
                 }
