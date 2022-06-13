@@ -11,7 +11,6 @@ struct StartView: View {
     @EnvironmentObject var modelData: ModelData
     
     @State private var tapFontColorOpacity = true
-    let chapterNameArray = ["\"낯선 방\""]
     
     private let textWidth = width * 0.88
     private let textPadding = width * 0.12
@@ -81,10 +80,8 @@ struct StartView: View {
                             case 4:
                                 chapterNumber = "5"
                             case 5:
-                                chapterNumber = "6-A"
-                            case 6:
                                 chapterNumber = "6-B"
-                            case 7:
+                            case 6:
                                 chapterNumber = "6-C"
                             default :
                                 chapterNumber = ""
@@ -95,7 +92,7 @@ struct StartView: View {
                 
                 HStack {
                     Spacer()
-                    Text("\(chapterNameArray[0])")
+                    Text("\(modelData.chapterNameArray[modelData.currentChapterIndex])")
                         .font(.custom("NotoSerifKR-Regular", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.fontColor)
                     Spacer()

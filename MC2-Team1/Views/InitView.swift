@@ -23,6 +23,11 @@ struct InitView: View {
             ContentView(mode: $mode)
         case .bridge:
             BridgeView(mode: $mode)
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        mode = .content
+                    }
+                }
         }
     }
 }
