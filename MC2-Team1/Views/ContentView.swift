@@ -86,7 +86,7 @@ extension ContentView {
             if currentParagraph.hasChoices {
                 Group {
                     ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
-                        ButtonFadeInView(choice: choice)
+                        ButtonFadeInView(mode: $mode, choice: choice)
                     }
                 }
                 .background(ViewGeometry())
