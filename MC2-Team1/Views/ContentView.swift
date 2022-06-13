@@ -12,7 +12,7 @@ struct ContentView: View {
     // Define
     @EnvironmentObject var modelData: ModelData
     
-    @AppStorage("chapter") var chapter: String = "chapterOne"
+    @AppStorage("chapter") var chapter: String = "chapterSix"
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("fontSize") var fontSize: Double = 18
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
@@ -229,7 +229,8 @@ extension ContentView {
                         message: Text("게임의 진행도가 초기화 됩니다. \n이행동은 되돌릴 수 없습니다."),
                         primaryButton: .default(Text("취소")),
                         secondaryButton: .destructive(Text("확인")){
-                            // Reset Games
+                            // Clear history
+                            modelData.pastParas = [["기록들"]]
                         }
                     )
                 }

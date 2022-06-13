@@ -12,7 +12,7 @@ struct HistoryView: View {
     @State var lastSize: CGFloat = 0
     @State var recHeight: CGFloat = 0
     @AppStorage("fontSize") var fontSize: Double = 18
-    @AppStorage("chapter") var chapter: String = "chapterOne"
+    @AppStorage("chapter") var chapter: String = "chapterSix"
     @AppStorage("paragraphId") var paragraphId: Int = 1
     let NotoSerifMedium = "NotoSerifKR-Medium"
     

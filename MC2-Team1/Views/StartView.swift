@@ -10,7 +10,7 @@ import SwiftUI
 struct StartView: View {
     @State private var tapFontColorOpacity = true
     
-    @AppStorage("chapter") var chapter: String = "chapterOne" {
+    @AppStorage("chapter") var chapter: String = "chapterSix" {
         didSet {
             switch chapter {
             case "chapterOne":

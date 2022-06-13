@@ -15,7 +15,7 @@ struct ButtonFadeInView: View {
     // define
     @EnvironmentObject var modelData: ModelData
     @AppStorage("paragraphId") var paragraphId: Int = 1
-    @AppStorage("chapter") var chapter: String = "chapterOne"
+    @AppStorage("chapter") var chapter: String = "chapterSix"
     @AppStorage("Bfriendship") var Bfriendship: Int = 0
     @AppStorage("Cfriendship") var Cfriendship: Int = 0
     @State var opacity: Double = 0
