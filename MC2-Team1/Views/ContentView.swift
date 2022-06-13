@@ -233,7 +233,6 @@ extension ContentView {
                             // Clear history
                             modelData.currentChapterIndex = 0
                             modelData.pastParas = [["기록들"]]
-                            paragraphId = 1
                             withAnimation {
                                 mode = .start
                             }

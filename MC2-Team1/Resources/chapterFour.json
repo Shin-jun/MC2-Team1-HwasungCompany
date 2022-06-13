@@ -196,8 +196,7 @@
         "choices": [
             {
                 "content": "다음으로",
-                "nextParagraphId": -1,
-                "nextChapterIndex": 4
+                "nextParagraphId": -1
             }
         ]
     }
