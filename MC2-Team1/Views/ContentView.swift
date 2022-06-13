@@ -14,7 +14,6 @@ struct ContentView: View {
     // Define
     @EnvironmentObject var modelData: ModelData
     
-    @AppStorage("chapter") var chapter: String = "chapterOne"
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("fontSize") var fontSize: Double = 18
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
@@ -27,7 +26,7 @@ struct ContentView: View {
     @State var isPullLeverGame = false
     @State var isBoxOpenGame = false
     
-    var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
+    var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
     
     private let mainFont = "NanumMyeongjo"
     
@@ -231,9 +230,12 @@ extension ContentView {
                         message: Text("게임의 진행도가 초기화 됩니다. \n이행동은 되돌릴 수 없습니다."),
                         primaryButton: .default(Text("취소")),
                         secondaryButton: .destructive(Text("확인")){
-                            // Reset Games
-                            chapter = "chapterOne"
-                            paragraphId = 1
+                            // Clear history
+                            modelData.currentChapterIndex = 0
+                            modelData.pastParas = [["기록들"]]
+                            withAnimation {
+                                mode = .start
+                            }
                             fontSize = 18
                             isTextAnimation = true
                             Bfriendship = 0
