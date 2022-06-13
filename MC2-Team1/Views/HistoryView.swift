@@ -24,19 +24,33 @@ struct HistoryView: View {
                             VStack {
                                 Group {
                                     Text(modelData.pastParas[index][0])
-                                        .padding(.vertical, fontSize)
+                                        .padding(.vertical, index == 0 ? RatioSize.getResheight(height: 10) : RatioSize.getResheight(height: 5))
+                                        .font(.custom("NanumMyeongjo", size: index == 0 ? fontSize + 4 : fontSize))
+                                        .frame(
+                                            maxWidth: UIScreen.main.bounds.width,
+                                            alignment: index == 0 ? .center : .leading
+                                        )
                                     
                                     // with choice
                                     if modelData.pastParas[index].count == 2 {
                                         Text(modelData.pastParas[index][1])
-                                            .padding(.vertical, fontSize)
+                                            .frame(
+                                                maxWidth: UIScreen.main.bounds.width,
+                                                alignment: .center
+                                            )
+                                            .foregroundColor(.fontColor)
+                                            .font(.custom("NanumMyeongjoBold", size: 18))
+                                            .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
+                                            .padding(.vertical, RatioSize.getResheight(height: 5))
+                                            .background(Color.bgColor)
+                                            .cornerRadius(50)
+                                            .shadow(color: Color("ButtonShadow"), radius: 3, x: 0, y: 0)
+                                            .padding(.horizontal)
+                                            .padding(.vertical, RatioSize.getResheight(height: 5))
                                     }
                                 }
                                 .font(.custom("NanumMyeongjo", size: fontSize))
                                 .lineLimit(nil)
-                                .frame(
-                                    maxWidth: UIScreen.main.bounds.width
-                                )
                                 .lineSpacing(fontSize - 6)
                             }
                         } else { // Show current paragraph
