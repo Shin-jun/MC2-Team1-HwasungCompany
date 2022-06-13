@@ -4,11 +4,11 @@
         "content": "\"줄 수 없어!\"\n최지원이 소리쳤다.\n자리를 비운 사이에 대체 무슨 일이 있었던거지?",
         "choices": [
             {
-                "content" : "백연우를 쳐다본다.",
+                "content" : "백연우를 쳐다본다",
                 "nextParagraphId" : 3
             },
             {
-                "content" : "최지원에게 물어본다.",
+                "content" : "최지원에게 물어본다",
                 "nextParagraphId" : 2
             }
         ]
@@ -186,12 +186,15 @@
         "content": "누구에게 치료제를 줘야하지?",
         "choices": [
             {
-                "content" : "백연우에게 건넨다.",
-                "nextParagraphId" : -1
+                "content" : "백연우에게 건넨다",
+                "nextParagraphId" : -1,
+                "nextChapterIndex" : 3
+                
             },
             {
-                "content" : "최지원에게 건넨다.",
-                "nextParagraphId" : -1
+                "content" : "최지원에게 건넨다",
+                "nextParagraphId" : -1,
+                "nextChapterIndex" : 3
             }
         ]
     },
