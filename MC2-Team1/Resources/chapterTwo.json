@@ -142,11 +142,11 @@
     "content": "왼쪽에 책상과 유리수납장이 있다.",
     "choices": [
         {
-            "content" : "캐비닛을 수색한다",
+            "content" : "책상을 수색한다",
             "nextParagraphId" : 14
         },
         {
-            "content" : "책상을 수색한다",
+            "content" : "유리수납장을 수색한다",
             "nextParagraphId" : 15
         },
     ]
