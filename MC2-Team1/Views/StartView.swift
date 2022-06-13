@@ -91,7 +91,7 @@ struct StartView: View {
                 HStack {
                     Spacer()
                     Text("\"낯선 방\"")
-                        .font(.custom("NotoSerifKR-Regular", size: RatioSize.getResWidth(width: 20)))
+                        .font(.custom("NanumMyeongjoBold", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.fontColor)
                     Spacer()
                 }

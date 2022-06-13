@@ -63,7 +63,7 @@ extension ButtonFadeInView{
             Text(choice.content)
                 .foregroundColor(.fontColor)
                 .font(.custom(mainFontBold, size: 18))
-                .frame(maxWidth: .infinity, maxHeight: 60)
+                .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
                 .background(Color.bgColor)
                 .cornerRadius(50)
                 .shadow(color: Color("ButtonShadow"), radius: 3, x: 0, y: 0)
