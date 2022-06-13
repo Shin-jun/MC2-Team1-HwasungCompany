@@ -38,8 +38,8 @@
         {
             "content": "다친 곳이 더 있는 걸까? 염려스럽다",
             "nextParagraphId": 4,
-            "effectB": 0,
-            "effectC": 0
+            "effectB": 1,
+            "effectC": -1
         }
     ]
   },
