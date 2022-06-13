@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ButtonFadeInView: View {
+    @Binding var mode: Mode
     
     // param
     let choice: Choice
@@ -19,6 +20,7 @@ struct ButtonFadeInView: View {
     @AppStorage("Cfriendship") var Cfriendship: Int = 0
     @State var opacity: Double = 0
     @State var isButtonHidden = true
+    
     var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
     private let mainFontBold = "NanumMyeongjoBold"
 
@@ -50,11 +52,16 @@ struct ButtonFadeInView: View {
 extension ButtonFadeInView{
     @ViewBuilder func buttonViewBuilder() -> some View {
         Button{
+            // go to next chapter, need to show bridge view
             if choice.nextParagraphId == -1 {
                 modelData.currentChapterIndex = choice.nextChapterIndex!
                 modelData.pastParas = [["기록들"]]
                 paragraphId = 1
+                withAnimation {
+                    mode = .bridge
+                }
             } else {
+                // show next paragraph
                 modelData.pastParas.append([currentParagraph.content, choice.content])
                 paragraphId = choice.nextParagraphId
                 if let effectB = choice.effectB {
