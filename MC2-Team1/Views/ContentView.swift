@@ -28,12 +28,8 @@ struct ContentView: View {
     @State var isBoxOpenGame = false
     
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
-<<<<<<< Updated upstream
-    
-    let NotoSerifMedium = "NotoSerifKR-Medium"
-=======
+
     private let mainFont = "NanumMyeongjo"
->>>>>>> Stashed changes
     
     // body
     var body: some View {
