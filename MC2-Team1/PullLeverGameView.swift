@@ -36,7 +36,7 @@ struct PullLeverGameView: View {
                             Image(isLightOn[i] ? "buttonOn" : "buttonOff")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 40)
+                                .frame(width: RatioSize.getResWidth(width: 40))
                                 .onTapGesture {
                                     // 스위치 터치 시 isLightOn 값 변경하여 스위치, 전구 이미지 변경
                                     if isTouchEnable == true {
@@ -54,9 +54,9 @@ struct PullLeverGameView: View {
                             Image(isLightOn[i] ? "lightOn" : "lightOff")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 40)
+                                .frame(width: RatioSize.getResWidth(width: 40))
                         }
-                        .padding(.bottom, 30)
+                        .padding(.bottom, RatioSize.getResheight(height: 30))
                     }
                     
                 }
@@ -78,9 +78,9 @@ struct PullLeverGameView: View {
                 Image(imageName)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 220)
+                    .frame(width: RatioSize.getResWidth(width: 220))
                 /*https://stackoverflow.com/questions/60885532/how-to-detect-swiping-up-down-left-and-right-with-swiftui-on-a-view 상하좌우 스와이프 구분하는 코드*/
-                    .gesture(DragGesture(minimumDistance: 100, coordinateSpace: .global)
+                    .gesture(DragGesture(minimumDistance: RatioSize.getResWidth(width: 100), coordinateSpace: .global)
                         .onEnded { value in
                             let horizontalAmount = value.translation.width as CGFloat
                             let verticalAmount = value.translation.height as CGFloat

@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Param
+    @Binding var mode: Mode
     
     // Define
     @EnvironmentObject var modelData: ModelData
     
-    @AppStorage("chapter") var chapter: String = "chapterOne"
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("fontSize") var fontSize: Double = 18
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
@@ -25,12 +26,10 @@ struct ContentView: View {
     @State var isPullLeverGame = false
     @State var isBoxOpenGame = false
     
-    var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
+    var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
     
-    //let NotoSerifMedium = "NotoSerifKR-Medium"
     private let mainFont = "NanumMyeongjo"
     
-    @Binding var mode: Mode
     // body
     var body: some View {
         ZStack{
@@ -40,27 +39,17 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack{
-
+                
                 // Tool Bar
                 toolbarViewBuilder()
                 
                 // Content && History
                 HistoryView()
-                    .padding(.horizontal, 20)
-                    .padding(.top, 5)
+                    .padding(.horizontal, RatioSize.getResWidth(width: 20))
+                    .padding(.top, RatioSize.getResheight(height: 5))
                 
                 // Choice Buttons
-                Group {
-                    if currentParagraph.hasChoices {
-                        Group {
-                            ForEach(currentParagraph.choices!, id: \.self) {choice in
-                                ButtonViewReloader(choice: choice)
-                            }
-                        }
-                        .background(ViewGeometry())
-                    }
-                }
-                .padding(.horizontal, 20)
+                ButtonViewBuilder()
             }
             
             // Setting Sheet
@@ -91,8 +80,20 @@ extension ContentView {
     }
     
     // ButtonViewReloader
-    @ViewBuilder func ButtonViewReloader(choice: Choice) -> some View {
-        ButtonFadeInView(choice: choice)
+    @ViewBuilder func ButtonViewBuilder() -> some View {
+        Group {
+            
+            if currentParagraph.hasChoices {
+                Group {
+                    ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
+                        ButtonFadeInView(mode: $mode, choice: choice)
+                    }
+                }
+                .background(ViewGeometry())
+            }
+            
+        }
+        .padding(.horizontal, 20)
     }
     
     // Toolbar ViewBuilder
@@ -102,33 +103,36 @@ extension ContentView {
             ZStack{
                 ZStack{
                     Divider()
-                        .frame(height: 1)
+                        .frame(height: RatioSize.getResheight(height: 1))
                         .overlay(Color.fontColor)
                     HStack{
                         Divider()
-                            .frame(width: 1, height: 5)
+                            .frame(width: RatioSize.getResWidth(width: 1), height: RatioSize.getResheight(height: 5))
                             .overlay(Color.fontColor)
                     }
                 }
                 HStack{
-                    Text("백")
-                        .font(.custom(mainFont, size: 18))
+                    Text((modelData.currentChapterIndex == 1 && paragraphId >= 7) || modelData.currentChapterIndex > 1 ? "백":"?")
+                        .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
                         .foregroundColor(.fontColor)
-                        .frame(width: 30, height: 30)
+                        .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResheight(height: 30))
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
+                    
                     Spacer()
-                    Text("최")
-                        .font(.custom(mainFont, size: 18))
+                    
+                    Text((modelData.currentChapterIndex == 2 && paragraphId >= 14) || modelData.currentChapterIndex > 2 ? "최":"?")
+                        .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
                         .foregroundColor(.fontColor)
-                        .frame(width: 30, height: 30)
+                        .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResheight(height: 30))
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
-                }
+                }//HStack
+                
                 Text("나")
-                    .font(.custom(mainFont, size: 18))
+                    .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
                     .foregroundColor(.fontColor)
-                    .frame(width: 30, height: 30)
+                    .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResheight(height: 30))
                     .background(Color.bgColor)
                     .overlay(
                         RoundedRectangle(cornerRadius: 50)
@@ -136,8 +140,7 @@ extension ContentView {
                     )
                     .offset(x: getFriendshipDistance())
             }
-            .frame(width: 230)
-
+            .frame(width: RatioSize.getResWidth(width: 230))
             // Gear Icon
             HStack{
                 Spacer()
@@ -146,24 +149,23 @@ extension ContentView {
                 }label: {
                     Image(systemName: "gearshape.fill")
                         .resizable()
-                        .frame(width: 20, height: 20)
+                        .frame(width: RatioSize.getResWidth(width: 20), height: RatioSize.getResheight(height: 20))
                         .foregroundColor(.fontColor)
                 }
                 .padding()
             }
         }
-        .frame(height: 40)
-
+        .frame(height: RatioSize.getResheight(height: 40))
     }
     
     // Setting View Builder
     @ViewBuilder func settingViewBuilder() -> some View {
-        VStack(alignment: .leading, spacing: 20){
+        VStack(alignment: .leading, spacing: RatioSize.getResWidth(width: 20)){
             // Title
             HStack{
                 Spacer()
                 Text("설정")
-                    .font(.system(size: 22))
+                    .font(.system(size: RatioSize.getResWidth(width: 22)))
                 Spacer()
             }
             
@@ -190,13 +192,12 @@ extension ContentView {
             
             // Text Size Adjust
             Text("텍스트 크기")
-                .font(.system(size: 16))
-
+                .font(.system(size: RatioSize.getResWidth(width: 16)))
             VStack{
                 // Sample Text
                 Text("현재 텍스트 크기 입니다.")
                     .font(.system(size: fontSize))
-                    .padding(.vertical, 10)
+                    .padding(.vertical, RatioSize.getResheight(height: 10))
                     .frame(height: 30)
                 
                 // Slider
@@ -208,7 +209,7 @@ extension ContentView {
                     Text("가")
                         .font(.system(size: 24))
                 }
-                .padding(.vertical, 10)
+                .padding(.vertical, RatioSize.getResheight(height: 10))
             }
             .padding()
             .background(Color.tapFontColor.opacity(0.5))
@@ -229,7 +230,17 @@ extension ContentView {
                         message: Text("게임의 진행도가 초기화 됩니다. \n이행동은 되돌릴 수 없습니다."),
                         primaryButton: .default(Text("취소")),
                         secondaryButton: .destructive(Text("확인")){
-                            // Reset Games
+                            // Clear history
+                            modelData.currentChapterIndex = 0
+                            modelData.pastParas = [["기록들"]]
+                            paragraphId = 1
+                            withAnimation {
+                                mode = .start
+                            }
+                            fontSize = 18
+                            isTextAnimation = true
+                            Bfriendship = 0
+                            Cfriendship = 0
                         }
                     )
                 }
@@ -238,7 +249,7 @@ extension ContentView {
             Spacer()
         }
         .padding(.horizontal)
-        .padding(.vertical, 10)
+        .padding(.vertical, RatioSize.getResheight(height: 10))
         
     }
 }

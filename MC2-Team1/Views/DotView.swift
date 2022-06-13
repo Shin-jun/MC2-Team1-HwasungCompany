@@ -12,7 +12,7 @@ struct DotView: View {
     @State private var isAnimating: Bool = true
     
     var circleIndex: Int = 1
-    var chapterIndex: Int = 1
+    var chapterIndex: Int = 0
     
     var body: some View {
         ZStack {

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ButtonFadeInView: View {
+    @Binding var mode: Mode
     
     // param
     let choice: Choice
@@ -15,12 +16,12 @@ struct ButtonFadeInView: View {
     // define
     @EnvironmentObject var modelData: ModelData
     @AppStorage("paragraphId") var paragraphId: Int = 1
-    @AppStorage("chapter") var chapter: String = "chapterOne"
     @AppStorage("Bfriendship") var Bfriendship: Int = 0
     @AppStorage("Cfriendship") var Cfriendship: Int = 0
     @State var opacity: Double = 0
     @State var isButtonHidden = true
-    var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
+    
+    var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
     private let mainFontBold = "NanumMyeongjoBold"
 
     var body: some View {
@@ -51,19 +52,30 @@ struct ButtonFadeInView: View {
 extension ButtonFadeInView{
     @ViewBuilder func buttonViewBuilder() -> some View {
         Button{
-            modelData.pastParas.append([currentParagraph.content, choice.content])
-            paragraphId = choice.nextParagraphId
-            if let effectB = choice.effectB {
-                Bfriendship += effectB
-            }
-            if let effectC = choice.effectC {
-                Cfriendship += effectC
+            // go to next chapter, need to show bridge view
+            if choice.nextParagraphId == -1 {
+                modelData.currentChapterIndex = choice.nextChapterIndex!
+                modelData.pastParas = [["기록들"]]
+                paragraphId = 1
+                withAnimation {
+                    mode = .bridge
+                }
+            } else {
+                // show next paragraph
+                modelData.pastParas.append([currentParagraph.content, choice.content])
+                paragraphId = choice.nextParagraphId
+                if let effectB = choice.effectB {
+                    Bfriendship += effectB
+                }
+                if let effectC = choice.effectC {
+                    Cfriendship += effectC
+                }
             }
         } label: {
             Text(choice.content)
                 .foregroundColor(.fontColor)
                 .font(.custom(mainFontBold, size: 18))
-                .frame(maxWidth: .infinity, maxHeight: 60)
+                .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
                 .background(Color.bgColor)
                 .cornerRadius(50)
                 .shadow(color: Color("ButtonShadow"), radius: 3, x: 0, y: 0)

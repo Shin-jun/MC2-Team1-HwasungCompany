@@ -24,7 +24,7 @@ struct BoxOpenView: View {
                 if showBox {
                     LottieBox()
                         .gesture(
-                            DragGesture(minimumDistance: 50)
+                            DragGesture(minimumDistance: RatioSize.getResWidth(width: 50))
                                 .onEnded { _ in
                                     dragCompleted = true
                                     boxDec = "더블클릭해서 상자안을 봐주세요"
@@ -97,29 +97,29 @@ struct InBox: View {
             Image("InTheBox")
                 .resizable()
                 .foregroundColor(Color.brown)
-                .frame(width: 400, height: 400)
+                .frame(width: RatioSize.getResWidth(width: 400), height: RatioSize.getResWidth(width: 400))
             
             Image("BookFrame")
                 .resizable()
-                .frame(width: 100, height: 100, alignment: .center)
+                .frame(width: RatioSize.getResWidth(width: 100), height: RatioSize.getResWidth(width: 100), alignment: .center)
                 .offset(objects[2].offset)
                 .gesture(dragGesture(indexOfObject: 2, false))
             
             Image("DocFrame")
                 .resizable()
-                .frame(width: 100, height: 100, alignment: .center)
+                .frame(width: RatioSize.getResWidth(width: 100), height: RatioSize.getResWidth(width: 100), alignment: .center)
                 .offset(objects[3].offset)
                 .gesture(dragGesture(indexOfObject: 3, false))
             
             Image("Book")
                 .resizable()
-                .frame(width: 100, height: 100, alignment: .center)
+                .frame(width: RatioSize.getResWidth(width: 100), height: RatioSize.getResWidth(width: 100), alignment: .center)
                 .offset(objects[0].offset)
                 .gesture(dragGesture(indexOfObject: 0, true))
             
             Image("Doc")
                 .resizable()
-                .frame(width: 100, height: 100, alignment: .center)
+                .frame(width: RatioSize.getResWidth(width: 100), height: RatioSize.getResWidth(width: 100), alignment: .center)
                 .offset(objects[1].offset)
                 .gesture(dragGesture(indexOfObject: 1, true))
             
@@ -128,13 +128,13 @@ struct InBox: View {
                 ZStack {
                     Rectangle()
                         .foregroundColor(.white)
-                        .frame(width: 1000, height: 1000)
+                        .frame(width: RatioSize.getResWidth(width: 1000), height: RatioSize.getResWidth(width: 1000))
                         .padding()
                         .edgesIgnoringSafeArea(.all)
                     
                     Image("Photo")
                         .resizable()
-                        .frame(width: 400, height: 400)
+                        .frame(width: RatioSize.getResWidth(width: 400), height: RatioSize.getResWidth(width: 400))
                         .padding()
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 4) {

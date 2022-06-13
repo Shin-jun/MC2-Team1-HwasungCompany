@@ -13,7 +13,6 @@ struct FadeInView: View {
     var text: String
     var fontSize: CGFloat
     
-    
     // Define
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
     @State var opacity: Double = 0

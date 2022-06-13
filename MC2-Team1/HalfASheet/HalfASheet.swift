@@ -100,43 +100,6 @@ public struct HalfASheet<Content: View>: View {
 // MARK: - Private
 extension HalfASheet {
     
-//    private var titleView: IfLet {
-//
-//        let titleView = IfLet(title) { title in
-//
-//            VStack {
-//                HStack {
-//                    Image(systemName: "xmark.circle.fill")
-//                        .font(Font.title.weight(.semibold))
-//                        .opacity(0)
-//                        .padding(EdgeInsets(top: 10, leading: 13, bottom: 0, trailing: 0))
-//                    Spacer()
-//                    Text(title)
-//                        .font(Font.headline.weight(.semibold))
-//                        .padding(EdgeInsets(top: 18, leading: 0, bottom: 0, trailing: 0))
-//                        .lineLimit(1)
-//                    Spacer()
-//                    closeButton
-//                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 13))
-//                }
-//                Spacer()
-//            }
-//
-//        } else: {
-//
-//            VStack {
-//                HStack {
-//                    Spacer()
-//                    closeButton
-//                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 13))
-//                }
-//                Spacer()
-//            }
-//        }
-//
-//        return titleView
-//    }
-    
     private func dragGesture(_ geometry: GeometryProxy) -> _EndedGesture<_ChangedGesture<DragGesture>> {
         
         let gesture = DragGesture()

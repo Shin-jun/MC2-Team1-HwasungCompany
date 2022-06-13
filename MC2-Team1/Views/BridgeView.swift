@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct BridgeView: View {
+    @EnvironmentObject var modelData: ModelData
     @State private var tapFontColorOpacity = true
     @Binding var mode: Mode
     
     private let textWidth = width * 0.88
     private let textPadding = width * 0.12
+    
+    @State private var chapterNumber = "1"
+    
     var body: some View {
         ZStack(alignment: .topLeading) {
             Color.bgColor
@@ -26,16 +30,16 @@ struct BridgeView: View {
                     HStack {
                         Rectangle()
                             .fill(Color.fontColor)
-                            .frame(maxWidth: CGFloat(3 * (50 + 17) + 50), maxHeight: 2)
+                            .frame(maxWidth: CGFloat(CGFloat(modelData.dotIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
                         Rectangle()
                             .fill(Color.pastColor)
-                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(3 * (50 + 17) + 50), maxHeight: 2)
+                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(CGFloat(modelData.dotIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
                     }
                     
-                    HStack(alignment: .center, spacing: 50) {
+                    HStack(alignment: .center, spacing: RatioSize.getResWidth(width: 50)) {
                         Spacer()
                         ForEach(0..<6, id: \.self) { index in
-                            DotView(circleIndex: index, chapterIndex: 3)
+                            DotView(circleIndex: index, chapterIndex: modelData.dotIndex)
                         }
                         Spacer()
                     }
@@ -43,28 +47,48 @@ struct BridgeView: View {
                 
                 HStack {
                     Spacer()
-                    Text("Chapter 1")
-                        .font(.custom("NuosuSIL-Regular", size: 24))
+                    Text("Chapter \(chapterNumber)")
+                        .font(.custom("NuosuSIL-Regular", size: RatioSize.getResWidth(width: 24)))
                         .foregroundColor(.fontColor)
-                        .padding(.top, 30)
+                        .padding(.top, RatioSize.getResheight(height: 30))
+                        .onAppear {
+                            switch modelData.currentChapterIndex {
+                            case 0:
+                                chapterNumber = "1"
+                            case 1:
+                                chapterNumber = "2"
+                            case 2:
+                                chapterNumber = "3"
+                            case 3:
+                                chapterNumber = "4"
+                            case 4:
+                                chapterNumber = "5"
+                            case 5:
+                                chapterNumber = "6-B"
+                            case 6:
+                                chapterNumber = "6-C"
+                            default :
+                                chapterNumber = ""
+                            }
+                        }
                     Spacer()
                 }
                 
                 HStack {
                     Spacer()
-                    Text("\"낯선 방\"")
-                        .font(.custom("NotoSerifKR-Regular", size: 20))
+                    Text("\(modelData.chapterNameArray[modelData.currentChapterIndex])")
+                        .font(.custom("NotoSerifKR-Regular", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.fontColor)
                     Spacer()
                 }
-                .padding(.top, 10)
+                .padding(.top, RatioSize.getResheight(height: 10))
                 
                 Spacer()
                 
                 HStack {
                     Spacer()
                     Text("탭해서 시작하기")
-                        .font(.custom("Inter-SemiBold", size: 20))
+                        .font(.custom("Inter-SemiBold", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.tapFontColor)
                         .opacity(tapFontColorOpacity ? 1 : 0)
                         .animation(.linear(duration: 1).repeatForever(), value: tapFontColorOpacity)
@@ -73,9 +97,9 @@ struct BridgeView: View {
                         }
                     Spacer()
                 }
-                .padding(.bottom, 60)
+                .padding(.bottom, RatioSize.getResheight(height: 60))
             }
-            .padding(.top, 120)
+            .padding(.top, RatioSize.getResheight(height: 120))
         }
     }
 }
