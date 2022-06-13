@@ -195,7 +195,7 @@
         "content": "나는 문을 열었다.",
         "choices": [
             {
-                "content": "다음으로",
+                "content": "다음 챕터로",
                 "nextParagraphId": -1,
                 "nextChapterIndex": 4
             }

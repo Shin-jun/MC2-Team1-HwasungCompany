@@ -50,7 +50,7 @@ final class ModelData: ObservableObject {
     @Published var lastPastParaIndex = 0
     
     // currentChapter
-    @Published var currentChapterIndex = UserDefaults.standard.integer(forKey: "currentChapter") {
+    @Published var currentChapterIndex = 0 {
         didSet {
             UserDefaults.standard.set(currentChapterIndex, forKey: "currentChapter")
             

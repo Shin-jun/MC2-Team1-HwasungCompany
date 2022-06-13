@@ -184,9 +184,9 @@
     "content": "이내 그의 표정이 밝아지더니 입가에 미소가 자리했다.\n\"어서 나가죠!\"",
     "choices": [
         {
-            "content" : "처음으로",
+            "content" : "다음 챕터로",
             "nextParagraphId" : -1,
-            "nextChapterIndex" : 3
+            "nextChapterIndex" : 1
         }
     ]
   },
