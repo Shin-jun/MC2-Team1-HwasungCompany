@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Param
+    @Binding var mode: Mode
     
     // Define
     @EnvironmentObject var modelData: ModelData
@@ -27,10 +29,8 @@ struct ContentView: View {
     
     var currentParagraph: Paragraph {modelData.filterPara(chapter: chapter, id: paragraphId)}
     
-    //let NotoSerifMedium = "NotoSerifKR-Medium"
     private let mainFont = "NanumMyeongjo"
     
-    @Binding var mode: Mode
     // body
     var body: some View {
         ZStack{
@@ -40,7 +40,7 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack{
-
+                
                 // Tool Bar
                 toolbarViewBuilder()
                 
@@ -50,17 +50,7 @@ struct ContentView: View {
                     .padding(.top, 5)
                 
                 // Choice Buttons
-                Group {
-                    if currentParagraph.hasChoices {
-                        Group {
-                            ForEach(currentParagraph.choices!, id: \.self) {choice in
-                                ButtonViewReloader(choice: choice)
-                            }
-                        }
-                        .background(ViewGeometry())
-                    }
-                }
-                .padding(.horizontal, 20)
+                ButtonViewBuilder()
             }
             
             // Setting Sheet
@@ -91,8 +81,20 @@ extension ContentView {
     }
     
     // ButtonViewReloader
-    @ViewBuilder func ButtonViewReloader(choice: Choice) -> some View {
-        ButtonFadeInView(choice: choice)
+    @ViewBuilder func ButtonViewBuilder() -> some View {
+        Group {
+            
+            if currentParagraph.hasChoices {
+                Group {
+                    ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
+                        ButtonFadeInView(choice: choice)
+                    }
+                }
+                .background(ViewGeometry())
+            }
+            
+        }
+        .padding(.horizontal, 20)
     }
     
     // Toolbar ViewBuilder
@@ -117,14 +119,17 @@ extension ContentView {
                         .frame(width: 30, height: 30)
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
+                    
                     Spacer()
+                    
                     Text("최")
                         .font(.custom(mainFont, size: 18))
                         .foregroundColor(.fontColor)
                         .frame(width: 30, height: 30)
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
-                }
+                }//HStack
+                
                 Text("나")
                     .font(.custom(mainFont, size: 18))
                     .foregroundColor(.fontColor)
@@ -135,9 +140,9 @@ extension ContentView {
                             .stroke(Color.tapFontColor, lineWidth: 1)
                     )
                     .offset(x: getFriendshipDistance())
-            }
+            }//ZStack
             .frame(width: 230)
-
+            
             // Gear Icon
             HStack{
                 Spacer()
@@ -153,7 +158,7 @@ extension ContentView {
             }
         }
         .frame(height: 40)
-
+        
     }
     
     // Setting View Builder
@@ -191,7 +196,7 @@ extension ContentView {
             // Text Size Adjust
             Text("텍스트 크기")
                 .font(.system(size: 16))
-
+            
             VStack{
                 // Sample Text
                 Text("현재 텍스트 크기 입니다.")
@@ -230,6 +235,12 @@ extension ContentView {
                         primaryButton: .default(Text("취소")),
                         secondaryButton: .destructive(Text("확인")){
                             // Reset Games
+                            chapter = "chapterOne"
+                            paragraphId = 1
+                            fontSize = 18
+                            isTextAnimation = true
+                            Bfriendship = 0
+                            Cfriendship = 0
                         }
                     )
                 }
