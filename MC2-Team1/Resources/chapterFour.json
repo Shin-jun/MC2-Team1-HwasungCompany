@@ -7,13 +7,13 @@
                 "content": "네 괜찮아요. 백연우씨는요?",
                 "nextParagraphId": 2,
                 "effectB": 3,
-                "effectC": -1
+                "effectC": -3
             },
             {
                 "content": "……",
                 "nextParagraphId": 3,
                 "effectB": -3,
-                "effectC": 1
+                "effectC": 3
             }
         ]
     },
@@ -59,7 +59,7 @@
     },
     {
         "id": 6,
-        "content": "\"그보다 혹시 의약품을 구할 수 있는 곳이 있을까요? 오는 도중에 살펴 봤지만 제대로된 약품은 보이지 않더군요.\"",
+        "content": "\"그보다 혹시 의약품을 구할 수 있는 곳이 있을까요? 오는 도중에 살펴 봤지만 제대로 된 약품은 보이지 않더군요.\"",
         "choices": [
             {
                 "content": "다음으로",
@@ -102,11 +102,11 @@
         "content": "나는 최지원이 가리키는 문을 열고 방 안으로 들어갔다. 냉장고와 전기 포트, 선반과 수납장. 평범한 휴게실이었다.",
         "choices": [
             {
-                "content": "배가 고프니까 뭐라도 먹어야겠어.",
+                "content": "배가 고프니까 뭐라도 먹어야겠어",
                 "nextParagraphId": 11
             },
             {
-                "content": "지금이 기회다. 뭐라도 단서가 될 것이 있나 찾아보자.",
+                "content": "지금이 기회다 뭐라도 단서가 될 것이 있나 찾아보자",
                 "nextParagraphId": 12
                 
             }
@@ -195,8 +195,9 @@
         "content": "나는 문을 열었다.",
         "choices": [
             {
-                "content": "다음으로",
-                "nextParagraphId": -1
+                "content": "다음 챕터로",
+                "nextParagraphId": -1,
+                "nextChapterIndex": 4
             }
         ]
     }

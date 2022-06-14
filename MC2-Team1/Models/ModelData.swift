@@ -26,10 +26,8 @@ final class ModelData: ObservableObject {
         case 4:
             chapterFileName = "chapterFive"
         case 5:
-            chapterFileName = "chapterSixA"
-        case 6:
             chapterFileName = "chapterSixB"
-        case 7:
+        case 6:
             chapterFileName = "chapterSixC"
         default :
             chapterFileName = "chapterOne"
@@ -59,7 +57,7 @@ final class ModelData: ObservableObject {
             switch currentChapterIndex {
             case 0...5:
                 dotIndex = currentChapterIndex
-            case 6...7:
+            case 6:
                 dotIndex = 5
             default :
                 dotIndex = 0
@@ -73,10 +71,12 @@ final class ModelData: ObservableObject {
         switch currentChapterIndex {
         case 0...5:
             dotIndex = currentChapterIndex
-        case 6...7:
+        case 6:
             dotIndex = 5
         default :
             dotIndex = 0
         }
     }
+    
+    let chapterNameArray = ["\"낯선 방\"", "\"백연우\"", "\"최지원\"", "\"치료제\"", "\"갈림길\"", "\"안지민\""]
 }
