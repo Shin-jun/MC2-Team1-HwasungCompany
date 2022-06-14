@@ -250,9 +250,15 @@ extension ContentView {
         } else if Bfriendship > Cfriendship {
             let sum = Bfriendship - Cfriendship
             result = CGFloat(Double(sum) * -2.8)
+            if result < CGFloat(-25) {
+                result = CGFloat(-25)
+            }
         } else if Cfriendship > Bfriendship {
             let sum = Cfriendship - Bfriendship
             result = CGFloat(Double(sum) * 2.8)
+            if result > CGFloat(25){
+                result = CGFloat(25)
+            }
         }
         return result
     }
