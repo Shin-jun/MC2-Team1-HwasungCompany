@@ -93,9 +93,4 @@ final class ModelData: ObservableObject {
     }
     
     let chapterNameArray = ["\"낯선 방\"", "\"백연우\"", "\"최지원\"", "\"치료제\"", "\"갈림길\"", "\"안지민\""]
-    
-    // MiniGame
-    @Published var isGlassGame = false
-    @Published var isPullLeverGame = false
-    @Published var isBoxOpenGame = false
 }

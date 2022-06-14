@@ -19,6 +19,10 @@ struct ContentView: View {
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
     @AppStorage("Bfriendship") var Bfriendship: Int = 0
     @AppStorage("Cfriendship") var Cfriendship: Int = 0
+    // MiniGame
+    @AppStorage("isGlassGame") var isGlassGame = false
+    @AppStorage("isPullLeverGame") var isPullLeverGame = false
+    @AppStorage("isBoxOpenGame") var isBoxOpenGame = false
     
     @State var isShowing = false
     @State var isShowingAlert = false
@@ -56,13 +60,13 @@ struct ContentView: View {
             .height(.proportional(0.6))
             .ignoresSafeArea()
         }
-        .fullScreenCover(isPresented: $modelData.isGlassGame) {
+        .fullScreenCover(isPresented: $isGlassGame) {
             GlassAnimationView()
         }
-        .fullScreenCover(isPresented: $modelData.isPullLeverGame) {
+        .fullScreenCover(isPresented: $isPullLeverGame) {
             PullLeverGameView()
         }
-        .fullScreenCover(isPresented: $modelData.isBoxOpenGame) {
+        .fullScreenCover(isPresented: $isBoxOpenGame) {
             BoxOpenView()
         }
     }
