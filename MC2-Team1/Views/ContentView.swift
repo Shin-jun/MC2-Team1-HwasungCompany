@@ -51,7 +51,7 @@ struct ContentView: View {
                 
                 // Choice Buttons
                 // 버튼 최하단에 padding 넣어야 함
-                ButtonViewBuilder()
+                ButtonViewBuilder().padding(.bottom)
             }
             
             // Setting Sheet
@@ -87,8 +87,10 @@ extension ContentView {
             
             if currentParagraph.hasChoices {
                 Group {
-                    ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
-                        ButtonFadeInView(mode: $mode, choice: choice, content: currentParagraph.content)
+                    VStack {
+                        ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
+                            ButtonFadeInView(mode: $mode, choice: choice, content: currentParagraph.content)
+                        }
                     }
                 }
                 .background(ViewGeometry())
