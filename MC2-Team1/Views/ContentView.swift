@@ -86,7 +86,7 @@ extension ContentView {
             if currentParagraph.hasChoices {
                 Group {
                     ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
-                        ButtonFadeInView(mode: $mode, choice: choice)
+                        ButtonFadeInView(mode: $mode, choice: choice, content: currentParagraph.content)
                     }
                 }
                 .background(ViewGeometry())
@@ -169,13 +169,6 @@ extension ContentView {
                 Spacer()
             }
             
-            // Vibration Toggle
-            HStack{
-                Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
-                    Text("진동 효과")
-                }
-            }
-            
             // Text Animation Toggle
             HStack{
                 Toggle(isOn: $isTextAnimation) {
@@ -183,16 +176,9 @@ extension ContentView {
                 }
             }
             
-            // Sound Effect Toggle
-            HStack{
-                Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
-                    Text("사운드 효과")
-                }
-            }
-            
             // Text Size Adjust
             Text("텍스트 크기")
-                .font(.system(size: RatioSize.getResWidth(width: 16)))
+
             VStack{
                 // Sample Text
                 Text("현재 텍스트 크기 입니다.")
@@ -203,11 +189,11 @@ extension ContentView {
                 // Slider
                 HStack{
                     Text("가")
-                        .font(.system(size: 12))
-                    Slider(value: $fontSize, in: 12...24,
+                        .font(.system(size: 14))
+                    Slider(value: $fontSize, in: 14...22,
                            step: 2)
                     Text("가")
-                        .font(.system(size: 24))
+                        .font(.system(size: 22))
                 }
                 .padding(.vertical, RatioSize.getResheight(height: 10))
             }
@@ -236,6 +222,7 @@ extension ContentView {
                             withAnimation {
                                 mode = .start
                             }
+                            paragraphId = 1
                             fontSize = 18
                             isTextAnimation = true
                             Bfriendship = 0
@@ -263,9 +250,15 @@ extension ContentView {
         } else if Bfriendship > Cfriendship {
             let sum = Bfriendship - Cfriendship
             result = CGFloat(Double(sum) * -2.8)
+            if result < CGFloat(-25) {
+                result = CGFloat(-25)
+            }
         } else if Cfriendship > Bfriendship {
             let sum = Cfriendship - Bfriendship
             result = CGFloat(Double(sum) * 2.8)
+            if result > CGFloat(25){
+                result = CGFloat(25)
+            }
         }
         return result
     }
