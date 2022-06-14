@@ -50,7 +50,7 @@ struct ContentView: View {
                     .padding(.top, RatioSize.getResheight(height: 5))
                 
                 // Choice Buttons
-                // 버튼 최하단에 padding 넣어야 함
+                // TODO: 버튼 최하단에 padding 넣어야 함
                 ButtonViewBuilder().padding(.bottom)
             }
             
