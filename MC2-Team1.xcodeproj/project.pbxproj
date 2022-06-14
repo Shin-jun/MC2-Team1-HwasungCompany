@@ -16,6 +16,7 @@
 		37D9E2B828570CBC005BB908 /* chapterThree.json in Resources */ = {isa = PBXBuildFile; fileRef = 37D9E2B728570CBC005BB908 /* chapterThree.json */; };
 		3A3A900228587A3100375C7D /* chapterOneJP.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3A900128587A3100375C7D /* chapterOneJP.json */; };
 		3A3C86E228589A6100F0F8DE /* chapterTwoJP.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C86E128589A6100F0F8DE /* chapterTwoJP.json */; };
+		3A3C86E428589E0F00F0F8DE /* chapterThreeJP.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C86E328589E0B00F0F8DE /* chapterThreeJP.json */; };
 		3AA9DFD42851CADD00365420 /* GlassAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */; };
 		3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEA2851DCEC00365420 /* HapticManager.swift */; };
 		3AA9DFF028532FE300365420 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEF28532FE300365420 /* Constants.swift */; };
@@ -65,6 +66,7 @@
 		37D9E2B728570CBC005BB908 /* chapterThree.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterThree.json; sourceTree = "<group>"; };
 		3A3A900128587A3100375C7D /* chapterOneJP.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterOneJP.json; sourceTree = "<group>"; };
 		3A3C86E128589A6100F0F8DE /* chapterTwoJP.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterTwoJP.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		3A3C86E328589E0B00F0F8DE /* chapterThreeJP.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterThreeJP.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassAnimationView.swift; sourceTree = "<group>"; };
 		3AA9DFEA2851DCEC00365420 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		3AA9DFEF28532FE300365420 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				B70C7352285705A6009F8D61 /* chapterSixC.json */,
 				3A3A900128587A3100375C7D /* chapterOneJP.json */,
 				3A3C86E128589A6100F0F8DE /* chapterTwoJP.json */,
+				3A3C86E328589E0B00F0F8DE /* chapterThreeJP.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */,
 				B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */,
 				B7FD7D682855C79B006A509E /* PastPara.json in Resources */,
+				3A3C86E428589E0F00F0F8DE /* chapterThreeJP.json in Resources */,
 				C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */,
 				37D9E2B828570CBC005BB908 /* chapterThree.json in Resources */,
 				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
