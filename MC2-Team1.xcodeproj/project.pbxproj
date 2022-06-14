@@ -18,6 +18,20 @@
 		3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEA2851DCEC00365420 /* HapticManager.swift */; };
 		3AA9DFF028532FE300365420 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEF28532FE300365420 /* Constants.swift */; };
 		B70C7353285705A6009F8D61 /* chapterSixC.json in Resources */ = {isa = PBXBuildFile; fileRef = B70C7352285705A6009F8D61 /* chapterSixC.json */; };
+		B718B1D528587927006D0DB4 /* chapterOneCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1D428587926006D0DB4 /* chapterOneCN.json */; };
+		B718B1D92858AF00006D0DB4 /* chapterTwoCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1D82858AF00006D0DB4 /* chapterTwoCN.json */; };
+		B718B1DB2858B5CF006D0DB4 /* chapterThreeCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1DA2858B5CF006D0DB4 /* chapterThreeCN.json */; };
+		B718B1DD2858BBFC006D0DB4 /* chapterFourCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1DC2858BBFC006D0DB4 /* chapterFourCN.json */; };
+		B718B1DF2858C121006D0DB4 /* chapterFiveCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1DE2858C121006D0DB4 /* chapterFiveCN.json */; };
+		B718B1E12858C596006D0DB4 /* chapterSixBCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1E02858C596006D0DB4 /* chapterSixBCN.json */; };
+		B73777DE2858CA1F00BC049F /* chapterSixCCN.strings in Resources */ = {isa = PBXBuildFile; fileRef = B73777DD2858CA1F00BC049F /* chapterSixCCN.strings */; };
+		B73777E72858D2F500BC049F /* NotoSerifSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E02858D2F400BC049F /* NotoSerifSC-Regular.otf */; };
+		B73777E82858D2F500BC049F /* NotoSerifSC-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E12858D2F400BC049F /* NotoSerifSC-SemiBold.otf */; };
+		B73777E92858D2F500BC049F /* NotoSerifSC-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E22858D2F400BC049F /* NotoSerifSC-Black.otf */; };
+		B73777EA2858D2F500BC049F /* NotoSerifSC-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E32858D2F500BC049F /* NotoSerifSC-Medium.otf */; };
+		B73777EB2858D2F500BC049F /* NotoSerifSC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E42858D2F500BC049F /* NotoSerifSC-Bold.otf */; };
+		B73777EC2858D2F500BC049F /* NotoSerifSC-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E52858D2F500BC049F /* NotoSerifSC-ExtraLight.otf */; };
+		B73777ED2858D2F500BC049F /* NotoSerifSC-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E62858D2F500BC049F /* NotoSerifSC-Light.otf */; };
 		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
 		B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */; };
 		B7690EE82851DB5D008E81AC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE72851DB5D008E81AC /* HistoryView.swift */; };
@@ -65,6 +79,20 @@
 		3AA9DFEA2851DCEC00365420 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		3AA9DFEF28532FE300365420 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B70C7352285705A6009F8D61 /* chapterSixC.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterSixC.json; sourceTree = "<group>"; };
+		B718B1D428587926006D0DB4 /* chapterOneCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterOneCN.json; sourceTree = "<group>"; };
+		B718B1D82858AF00006D0DB4 /* chapterTwoCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterTwoCN.json; sourceTree = "<group>"; };
+		B718B1DA2858B5CF006D0DB4 /* chapterThreeCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterThreeCN.json; sourceTree = "<group>"; };
+		B718B1DC2858BBFC006D0DB4 /* chapterFourCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFourCN.json; sourceTree = "<group>"; };
+		B718B1DE2858C121006D0DB4 /* chapterFiveCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFiveCN.json; sourceTree = "<group>"; };
+		B718B1E02858C596006D0DB4 /* chapterSixBCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterSixBCN.json; sourceTree = "<group>"; };
+		B73777DD2858CA1F00BC049F /* chapterSixCCN.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = chapterSixCCN.strings; sourceTree = "<group>"; };
+		B73777E02858D2F400BC049F /* NotoSerifSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Regular.otf"; sourceTree = "<group>"; };
+		B73777E12858D2F400BC049F /* NotoSerifSC-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-SemiBold.otf"; sourceTree = "<group>"; };
+		B73777E22858D2F400BC049F /* NotoSerifSC-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Black.otf"; sourceTree = "<group>"; };
+		B73777E32858D2F500BC049F /* NotoSerifSC-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Medium.otf"; sourceTree = "<group>"; };
+		B73777E42858D2F500BC049F /* NotoSerifSC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Bold.otf"; sourceTree = "<group>"; };
+		B73777E52858D2F500BC049F /* NotoSerifSC-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-ExtraLight.otf"; sourceTree = "<group>"; };
+		B73777E62858D2F500BC049F /* NotoSerifSC-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Light.otf"; sourceTree = "<group>"; };
 		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7690EE72851DB5D008E81AC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -133,6 +161,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B73777DF2858D2E700BC049F /* CN */ = {
+			isa = PBXGroup;
+			children = (
+				B73777E22858D2F400BC049F /* NotoSerifSC-Black.otf */,
+				B73777E42858D2F500BC049F /* NotoSerifSC-Bold.otf */,
+				B73777E52858D2F500BC049F /* NotoSerifSC-ExtraLight.otf */,
+				B73777E62858D2F500BC049F /* NotoSerifSC-Light.otf */,
+				B73777E32858D2F500BC049F /* NotoSerifSC-Medium.otf */,
+				B73777E02858D2F400BC049F /* NotoSerifSC-Regular.otf */,
+				B73777E12858D2F400BC049F /* NotoSerifSC-SemiBold.otf */,
+			);
+			path = CN;
+			sourceTree = "<group>";
+		};
 		B7690F12285322CE008E81AC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +197,7 @@
 		C613C434283E108A00BCFC82 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B73777DF2858D2E700BC049F /* CN */,
 				D4EE46B92855DE7800C608DA /* NanumMyeongjo.ttf */,
 				D4EE46B72855DE7800C608DA /* NanumMyeongjoBold.ttf */,
 				D4EE46B82855DE7800C608DA /* NanumMyeongjoExtraBold.ttf */,
@@ -248,9 +291,16 @@
 				C6AE2956285705CA00E9F39F /* chapterTwo.json */,
 				05FB2E0E285710360089359B /* chapterSixB.json */,
 				11139EBA28570D5B00EF6FD1 /* chapterFive.json */,
+				B70C7352285705A6009F8D61 /* chapterSixC.json */,
 				C613C434283E108A00BCFC82 /* fonts */,
 				B7FD7D672855C79B006A509E /* PastPara.json */,
-				B70C7352285705A6009F8D61 /* chapterSixC.json */,
+				B718B1D428587926006D0DB4 /* chapterOneCN.json */,
+				B718B1D82858AF00006D0DB4 /* chapterTwoCN.json */,
+				B718B1DA2858B5CF006D0DB4 /* chapterThreeCN.json */,
+				B718B1DC2858BBFC006D0DB4 /* chapterFourCN.json */,
+				B718B1DE2858C121006D0DB4 /* chapterFiveCN.json */,
+				B718B1E02858C596006D0DB4 /* chapterSixBCN.json */,
+				B73777DD2858CA1F00BC049F /* chapterSixCCN.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -321,26 +371,40 @@
 			files = (
 				D4EE46BC2855DE7800C608DA /* NanumMyeongjo.ttf in Resources */,
 				C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */,
+				B718B1E12858C596006D0DB4 /* chapterSixBCN.json in Resources */,
+				B73777ED2858D2F500BC049F /* NotoSerifSC-Light.otf in Resources */,
 				B7690F17285325CA008E81AC /* NuosuSIL-Regular.ttf in Resources */,
 				B70C7353285705A6009F8D61 /* chapterSixC.json in Resources */,
 				D4EE46BB2855DE7800C608DA /* NanumMyeongjoExtraBold.ttf in Resources */,
 				C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */,
+				B718B1D528587927006D0DB4 /* chapterOneCN.json in Resources */,
 				11139EBB28570D5B00EF6FD1 /* chapterFive.json in Resources */,
 				C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */,
 				B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */,
+				B718B1D92858AF00006D0DB4 /* chapterTwoCN.json in Resources */,
+				B73777E92858D2F500BC049F /* NotoSerifSC-Black.otf in Resources */,
+				B73777EC2858D2F500BC049F /* NotoSerifSC-ExtraLight.otf in Resources */,
+				B73777E72858D2F500BC049F /* NotoSerifSC-Regular.otf in Resources */,
 				B7FD7D682855C79B006A509E /* PastPara.json in Resources */,
 				C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */,
 				37D9E2B828570CBC005BB908 /* chapterThree.json in Resources */,
 				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
 				C6AE2957285705CA00E9F39F /* chapterTwo.json in Resources */,
 				C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */,
+				B73777EA2858D2F500BC049F /* NotoSerifSC-Medium.otf in Resources */,
+				B73777DE2858CA1F00BC049F /* chapterSixCCN.strings in Resources */,
 				05FB2E0F285710360089359B /* chapterSixB.json in Resources */,
+				B718B1DD2858BBFC006D0DB4 /* chapterFourCN.json in Resources */,
 				058249AC2854DE9800EC0832 /* openBox.json in Resources */,
 				C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */,
 				C6E1B9BA283B77C100EEC6F1 /* chapterOne.json in Resources */,
 				C6E1B9AF283B772E00EEC6F1 /* Preview Assets.xcassets in Resources */,
+				B73777E82858D2F500BC049F /* NotoSerifSC-SemiBold.otf in Resources */,
+				B73777EB2858D2F500BC049F /* NotoSerifSC-Bold.otf in Resources */,
 				D4EE46BA2855DE7800C608DA /* NanumMyeongjoBold.ttf in Resources */,
+				B718B1DF2858C121006D0DB4 /* chapterFiveCN.json in Resources */,
 				C6E1B9AC283B772E00EEC6F1 /* Assets.xcassets in Resources */,
+				B718B1DB2858B5CF006D0DB4 /* chapterThreeCN.json in Resources */,
 				D4EE46C22857107400C608DA /* chapterFour.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
