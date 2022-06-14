@@ -239,7 +239,8 @@
             "content": "다음으로",
             "nextParagraphId": 21
         }
-    ]
+    ],
+    "game": "PullLeverGame"
   },
   {
     "id": 20,

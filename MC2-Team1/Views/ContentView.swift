@@ -22,9 +22,6 @@ struct ContentView: View {
     
     @State var isShowing = false
     @State var isShowingAlert = false
-    @State var isGlassGame = false
-    @State var isPullLeverGame = false
-    @State var isBoxOpenGame = false
     
     var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
     
@@ -59,13 +56,13 @@ struct ContentView: View {
             .height(.proportional(0.6))
             .ignoresSafeArea()
         }
-        .fullScreenCover(isPresented: $isGlassGame) {
+        .fullScreenCover(isPresented: $modelData.isGlassGame) {
             GlassAnimationView()
         }
-        .fullScreenCover(isPresented: $isPullLeverGame) {
+        .fullScreenCover(isPresented: $modelData.isPullLeverGame) {
             PullLeverGameView()
         }
-        .fullScreenCover(isPresented: $isBoxOpenGame) {
+        .fullScreenCover(isPresented: $modelData.isBoxOpenGame) {
             BoxOpenView()
         }
     }
