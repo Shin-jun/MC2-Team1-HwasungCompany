@@ -86,10 +86,26 @@ extension ButtonFadeInView{
                 }
                 paragraphId = choice.nextParagraphId
                 if let effectB = choice.effectB {
-                    Bfriendship += effectB
+                    withAnimation(.linear) {
+                        Bfriendship += effectB
+                    }
                 }
                 if let effectC = choice.effectC {
-                    Cfriendship += effectC
+                    withAnimation(.linear) {
+                        Cfriendship += effectC
+                    }
+                }
+                if let gameName = currentParagraph.game {
+                    switch gameName {
+                    case "GlassAnimation":
+                        modelData.isGlassGame = true
+                    case "PullLeverGame":
+                        modelData.isPullLeverGame = true
+                    case "BoxOpen":
+                        modelData.isBoxOpenGame = true
+                    default:
+                        break
+                    }
                 }
             }
         } label: {

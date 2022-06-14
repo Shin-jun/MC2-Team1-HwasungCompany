@@ -150,7 +150,8 @@
                 "content": "다음으로",
                 "nextParagraphId": 15
             }
-        ]
+        ],
+        "game": "BoxOpen"
     },
     {
         "id": 15,
