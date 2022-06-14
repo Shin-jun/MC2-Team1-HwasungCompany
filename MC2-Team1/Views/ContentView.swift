@@ -57,7 +57,7 @@ struct ContentView: View {
             HalfASheet(isPresented: $isShowing){
                 settingViewBuilder()
             }
-            .height(.proportional(0.6))
+            .height(.proportional(0.4))
             .ignoresSafeArea()
         }
         .fullScreenCover(isPresented: $isGlassGame) {
