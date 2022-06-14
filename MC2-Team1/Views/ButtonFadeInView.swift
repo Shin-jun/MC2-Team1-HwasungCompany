@@ -54,10 +54,13 @@ extension ButtonFadeInView{
         Button{
             // go to next chapter, need to show bridge view
             if choice.nextParagraphId == -1 {
-                modelData.currentChapterIndex = choice.nextChapterIndex!
-                modelData.pastParas = [["기록들"]]
-                paragraphId = 1
-                withAnimation {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
+                    modelData.currentChapterIndex = choice.nextChapterIndex!
+                    modelData.pastParas = [["기록들"]]
+                    paragraphId = 1
+                }
+                withAnimation(.linear(duration: 0.4)) {
+                    modelData.bridgeChapterIndex = choice.nextChapterIndex!
                     mode = .bridge
                 }
             } else {
