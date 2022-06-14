@@ -18,6 +18,10 @@ struct ButtonFadeInView: View {
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("Bfriendship") var Bfriendship: Int = 0
     @AppStorage("Cfriendship") var Cfriendship: Int = 0
+    // MiniGame
+    @AppStorage("isGlassGame") var isGlassGame = false
+    @AppStorage("isPullLeverGame") var isPullLeverGame = false
+    @AppStorage("isBoxOpenGame") var isBoxOpenGame = false
     @State var opacity: Double = 0
     @State var isButtonHidden = true
     
@@ -77,11 +81,11 @@ extension ButtonFadeInView{
                 if let gameName = currentParagraph.game {
                     switch gameName {
                     case "GlassAnimation":
-                        modelData.isGlassGame = true
+                        isGlassGame = true
                     case "PullLeverGame":
-                        modelData.isPullLeverGame = true
+                        isPullLeverGame = true
                     case "BoxOpen":
-                        modelData.isBoxOpenGame = true
+                        isBoxOpenGame = true
                     default:
                         break
                     }

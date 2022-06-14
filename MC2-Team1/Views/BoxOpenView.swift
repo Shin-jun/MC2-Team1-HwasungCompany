@@ -83,12 +83,12 @@ struct InBox: View {
         
         (offset: CGSize(width: 0.0, height: 200),
          lastOffset: CGSize(width: 0.0, height: 200))
-        
-        
-        
     ]
     
     @State private var Photo = false
+    
+    // MiniGame
+    @AppStorage("isBoxOpenGame") var isBoxOpenGame = false
     
     var body: some View {
         
@@ -138,7 +138,7 @@ struct InBox: View {
                         .padding()
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                                presentationMode.wrappedValue.dismiss()
+                                isBoxOpenGame = false
                             }
                         }
                 }
