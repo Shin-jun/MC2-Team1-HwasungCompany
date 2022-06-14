@@ -38,8 +38,8 @@
         {
             "content": "다친 곳이 더 있는 걸까? 염려스럽다",
             "nextParagraphId": 4,
-            "effectB": 0,
-            "effectC": 0
+            "effectB": 1,
+            "effectC": -1
         }
     ]
   },
@@ -256,7 +256,7 @@
     "content": "그 순간 뒤에서 문이 힘겹게 열리더니 백연우가 들어왔다.",
     "choices": [
         {
-            "content": "다음으로",
+            "content": "다음 챕터로",
             "nextParagraphId": -1,
             "nextChapterIndex": 3
         }

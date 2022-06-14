@@ -5,11 +5,15 @@
         "choices": [
             {
                 "content" : "백연우를 쳐다본다",
-                "nextParagraphId" : 3
+                "nextParagraphId" : 3,
+                "effectB" : 1,
+                "effectC" : -1
             },
             {
                 "content" : "최지원에게 물어본다",
-                "nextParagraphId" : 2
+                "nextParagraphId" : 2,
+                "effectB" : -1,
+                "effectC" : 1
             }
         ]
     },
@@ -188,13 +192,13 @@
             {
                 "content" : "백연우에게 건넨다",
                 "nextParagraphId" : -1,
-                "nextChapterIndex" : 3
+                "nextChapterIndex" : 5
                 
             },
             {
-                "content" : "최지원에게 건넨다",
-                "nextParagraphId" : -1,
-                "nextChapterIndex" : 3
+                "content" : "최지원에게 건넨다.",
+                "nextParagraphId": -1,
+                "nextChapterIndex": 6
             }
         ]
     },

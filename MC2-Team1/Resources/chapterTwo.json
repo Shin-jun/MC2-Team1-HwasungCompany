@@ -142,11 +142,11 @@
     "content": "왼쪽에 책상과 유리수납장이 있다.",
     "choices": [
         {
-            "content" : "캐비닛을 수색한다",
+            "content" : "책상을 수색한다",
             "nextParagraphId" : 14
         },
         {
-            "content" : "책상을 수색한다",
+            "content" : "유리수납장을 수색한다",
             "nextParagraphId" : 15
         },
     ]
@@ -249,7 +249,7 @@
     "content": "그도 어디선가 다친 것인지, 왼쪽 손등에 흉이 져 있었다. 알코올로 소독하고 붕대를 감는 손길이 섬세했다.",
     "choices": [
         {
-            "content" : "다음으로",
+            "content" : "다음 챕터로",
             "nextParagraphId" : -1,
             "nextChapterIndex" : 2
         },

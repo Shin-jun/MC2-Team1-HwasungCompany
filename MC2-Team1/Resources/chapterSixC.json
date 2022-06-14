@@ -334,7 +334,7 @@
     "content": "\"그럼, 가실까요?\"",
     "choices": [
         {
-            "content" : "다음으로",
+            "content" : "처음으로",
             "nextParagraphId" : -1
         }
     ]
