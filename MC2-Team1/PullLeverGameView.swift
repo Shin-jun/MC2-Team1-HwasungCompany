@@ -17,6 +17,9 @@ struct PullLeverGameView: View {
     
     @State private var isTouchEnable = false
     
+    // MiniGame
+    @AppStorage("isPullLeverGame") var isPullLeverGame = false
+    
     private let lights: [Int] = [0, 1, 2, 3, 4].shuffled()   // 전구 켜지는 순서 랜덤 배열
     private var hapticProperties: [HapticProperty] = [
             HapticProperty(count: 1, interval: [0.07], intensity: [0.25], sharpness: [0.5]),
@@ -94,7 +97,7 @@ struct PullLeverGameView: View {
                                 isTouchEnable = false
                                 CustomizeHaptic.instance.haptic(hapticCase: Haptic.dynamic, hapticProperty:hapticProperties[1])
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                    presentationMode.wrappedValue.dismiss()
+                                    isPullLeverGame = false
                                 }
                             }
                             if imageName == "leverOn" && IsGameClear == false && isTouchEnable == true {

@@ -67,6 +67,20 @@ final class ModelData: ObservableObject {
     
     @Published var dotIndex = 0
     
+    @Published var bridgeChapterIndex = UserDefaults.standard.integer(forKey: "currentChapter") {
+        didSet {
+            switch bridgeChapterIndex {
+            case 0...5:
+                bridgeDotIndex = bridgeChapterIndex
+            case 6:
+                bridgeDotIndex = 5
+            default :
+                bridgeDotIndex = 0
+            }
+        }
+    }
+    @Published var bridgeDotIndex = 0
+    
     init() {
         switch currentChapterIndex {
         case 0...5:
@@ -78,5 +92,5 @@ final class ModelData: ObservableObject {
         }
     }
     
-    let chapterNameArray = ["\"낯선 방\"", "\"백연우\"", "\"최지원\""]
+    let chapterNameArray = ["\"낯선 방\"", "\"백연우\"", "\"최지원\"", "\"치료제\"", "\"갈림길\"", "\"안지민\""]
 }

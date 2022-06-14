@@ -12,12 +12,17 @@ struct ButtonFadeInView: View {
     
     // param
     let choice: Choice
+    let content: String
     
     // define
     @EnvironmentObject var modelData: ModelData
     @AppStorage("paragraphId") var paragraphId: Int = 1
     @AppStorage("Bfriendship") var Bfriendship: Int = 0
     @AppStorage("Cfriendship") var Cfriendship: Int = 0
+    // MiniGame
+    @AppStorage("isGlassGame") var isGlassGame = false
+    @AppStorage("isPullLeverGame") var isPullLeverGame = false
+    @AppStorage("isBoxOpenGame") var isBoxOpenGame = false
     @State var opacity: Double = 0
     @State var isButtonHidden = true
     
@@ -42,7 +47,7 @@ struct ButtonFadeInView: View {
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+            DispatchQueue.main.asyncAfter(deadline: .now() + getDelayTime()) {
                 self.isButtonHidden = false
             }
         }
@@ -50,25 +55,61 @@ struct ButtonFadeInView: View {
 }
 
 extension ButtonFadeInView{
+    func getDelayTime() -> Double {
+        let length = Double(content.count)
+        var delayTime = 0.0
+        
+        delayTime = length * 0.03
+
+        return delayTime
+    }
+}
+
+// View Builder Extension
+extension ButtonFadeInView{
     @ViewBuilder func buttonViewBuilder() -> some View {
         Button{
             // go to next chapter, need to show bridge view
             if choice.nextParagraphId == -1 {
-                modelData.currentChapterIndex = choice.nextChapterIndex!
-                modelData.pastParas = [["기록들"]]
-                paragraphId = 1
-                withAnimation {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
+                    modelData.currentChapterIndex = choice.nextChapterIndex!
+                    modelData.pastParas = [["기록들"]]
+                    paragraphId = 1
+                }
+                withAnimation(.linear(duration: 0.4)) {
+                    modelData.bridgeChapterIndex = choice.nextChapterIndex!
                     mode = .bridge
                 }
             } else {
                 // show next paragraph
-                modelData.pastParas.append([currentParagraph.content, choice.content])
+                // now save when existing one choice
+                if currentParagraph.choices?.count == 1 {
+                    modelData.pastParas.append([currentParagraph.content])
+                } else if currentParagraph.choices?.count == 2 {
+                    modelData.pastParas.append([currentParagraph.content, choice.content])
+                }
                 paragraphId = choice.nextParagraphId
                 if let effectB = choice.effectB {
-                    Bfriendship += effectB
+                    withAnimation(.linear) {
+                        Bfriendship += effectB
+                    }
                 }
                 if let effectC = choice.effectC {
-                    Cfriendship += effectC
+                    withAnimation(.linear) {
+                        Cfriendship += effectC
+                    }
+                }
+                if let gameName = currentParagraph.game {
+                    switch gameName {
+                    case "GlassAnimation":
+                        isGlassGame = true
+                    case "PullLeverGame":
+                        isPullLeverGame = true
+                    case "BoxOpen":
+                        isBoxOpenGame = true
+                    default:
+                        break
+                    }
                 }
             }
         } label: {
