@@ -24,7 +24,7 @@ struct HistoryView: View {
                             VStack {
                                 Group {
                                     Text(modelData.pastParas[index][0])
-                                        .padding(.vertical, index == 0 ? RatioSize.getResheight(height: 10) : RatioSize.getResheight(height: 5))
+                                        .padding(.vertical, index == 0 ? RatioSize.getResheight(height: 10) : RatioSize.getResheight(height: 15))
                                         .font(.custom("NanumMyeongjo", size: index == 0 ? fontSize + 4 : fontSize))
                                         .frame(
                                             maxWidth: UIScreen.main.bounds.width,
@@ -41,7 +41,7 @@ struct HistoryView: View {
                                             .foregroundColor(.fontColor)
                                             .font(.custom("NanumMyeongjoBold", size: 18))
                                             .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
-                                            .padding(.vertical, RatioSize.getResheight(height: 5))
+                                            .padding(.vertical, RatioSize.getResheight(height: 15))
                                             .background(Color.bgColor)
                                             .cornerRadius(50)
                                             .shadow(color: Color("ButtonShadow"), radius: 3, x: 0, y: 0)

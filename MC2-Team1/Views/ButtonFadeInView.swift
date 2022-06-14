@@ -62,7 +62,12 @@ extension ButtonFadeInView{
                 }
             } else {
                 // show next paragraph
-                modelData.pastParas.append([currentParagraph.content, choice.content])
+                // now save when existing one choice
+                if currentParagraph.choices?.count == 1 {
+                    modelData.pastParas.append([currentParagraph.content])
+                } else if currentParagraph.choices?.count == 2 {
+                    modelData.pastParas.append([currentParagraph.content, choice.content])
+                }
                 paragraphId = choice.nextParagraphId
                 if let effectB = choice.effectB {
                     Bfriendship += effectB
