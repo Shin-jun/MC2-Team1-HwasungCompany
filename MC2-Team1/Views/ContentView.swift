@@ -222,6 +222,7 @@ extension ContentView {
                             withAnimation {
                                 mode = .start
                             }
+                            paragraphId = 1
                             fontSize = 18
                             isTextAnimation = true
                             Bfriendship = 0

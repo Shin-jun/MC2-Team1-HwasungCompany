@@ -334,8 +334,9 @@
     "content": "\"그럼, 가실까요?\"",
     "choices": [
         {
-            "content" : "처음으로",
-            "nextParagraphId" : -1
+            "content" : "다음으로",
+            "nextParagraphId" : -1,
+            "nextChapterIndex" : -1
         }
     ]
   },

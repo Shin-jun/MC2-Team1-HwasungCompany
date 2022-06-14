@@ -30,16 +30,16 @@ struct BridgeView: View {
                     HStack {
                         Rectangle()
                             .fill(Color.fontColor)
-                            .frame(maxWidth: CGFloat(CGFloat(modelData.dotIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
+                            .frame(maxWidth: CGFloat(CGFloat(modelData.bridgeDotIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
                         Rectangle()
                             .fill(Color.pastColor)
-                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(CGFloat(modelData.dotIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
+                            .frame(maxWidth: UIScreen.main.bounds.width - CGFloat(CGFloat(modelData.bridgeDotIndex) * RatioSize.getResWidth(width: 67) + RatioSize.getResWidth(width: 35)), maxHeight: 2)
                     }
                     
                     HStack(alignment: .center, spacing: RatioSize.getResWidth(width: 50)) {
                         Spacer()
                         ForEach(0..<6, id: \.self) { index in
-                            DotView(circleIndex: index, chapterIndex: modelData.dotIndex)
+                            DotView(circleIndex: index, chapterIndex: modelData.bridgeDotIndex)
                         }
                         Spacer()
                     }
@@ -52,7 +52,7 @@ struct BridgeView: View {
                         .foregroundColor(.fontColor)
                         .padding(.top, RatioSize.getResheight(height: 30))
                         .onAppear {
-                            switch modelData.currentChapterIndex {
+                            switch modelData.bridgeChapterIndex {
                             case 0:
                                 chapterNumber = "1"
                             case 1:
@@ -76,7 +76,7 @@ struct BridgeView: View {
                 
                 HStack {
                     Spacer()
-                    Text("\(modelData.chapterNameArray[modelData.currentChapterIndex])")
+                    Text("\(modelData.chapterNameArray[modelData.bridgeChapterIndex])")
                         .font(.custom("NotoSerifKR-Regular", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.fontColor)
                     Spacer()
