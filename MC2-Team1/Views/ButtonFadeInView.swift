@@ -12,6 +12,7 @@ struct ButtonFadeInView: View {
     
     // param
     let choice: Choice
+    let content: String
     
     // define
     @EnvironmentObject var modelData: ModelData
@@ -42,13 +43,25 @@ struct ButtonFadeInView: View {
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+            DispatchQueue.main.asyncAfter(deadline: .now() + getDelayTime()) {
                 self.isButtonHidden = false
             }
         }
     }
 }
 
+extension ButtonFadeInView{
+    func getDelayTime() -> Double {
+        let length = Double(content.count)
+        var delayTime = 0.0
+        
+        delayTime = length * 0.03
+
+        return delayTime
+    }
+}
+
+// View Builder Extension
 extension ButtonFadeInView{
     @ViewBuilder func buttonViewBuilder() -> some View {
         Button{
