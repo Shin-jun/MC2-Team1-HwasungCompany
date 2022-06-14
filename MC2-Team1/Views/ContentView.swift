@@ -42,7 +42,7 @@ struct ContentView: View {
             VStack{
                 
                 // Tool Bar
-                toolbarViewBuilder()
+                toolbarViewBuilder().padding(.top)
                 
                 // Content && History
                 HistoryView()
@@ -50,6 +50,7 @@ struct ContentView: View {
                     .padding(.top, RatioSize.getResheight(height: 5))
                 
                 // Choice Buttons
+                // 버튼 최하단에 padding 넣어야 함
                 ButtonViewBuilder()
             }
             
