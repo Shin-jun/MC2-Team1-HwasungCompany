@@ -92,7 +92,7 @@ final class ModelData: ObservableObject {
         }
     }
     
-    let chapterNameArray = ["A Strange Room".localized(), "Baek Yeonwoo".localized(), "Choi Jiwon".localized(), "The Cure".localized(), "A Branch Road".localized(), "Ahn Jimin".localized()]
+    let chapterNameArray = ["A Strange Room".localized(), "Baek Yeonwoo".localized(), "Choi Jiwon".localized(), "The Cure".localized(), "A Branch Road".localized(), "Ahn Jimin".localized(), "Ahn Jimin".localized()]
     
     var contentFontName: String {
         get {
