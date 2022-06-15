@@ -97,7 +97,7 @@ extension ContentView {
             }
             
         }
-        .padding(.horizontal, 20)
+        .padding(.horizontal, RatioSize.getResWidth(width: 20))
     }
     
     // Toolbar ViewBuilder
