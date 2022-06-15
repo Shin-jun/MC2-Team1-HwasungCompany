@@ -11,7 +11,7 @@
     },
     {
         "id": 2,
-        "content": "Okay, take it easy.\nI looked around in the room, taking a deep breath.\nI see white walls, almost as white as if they had been bleached. I also see piles of papers all over the floor. The light is blinking and I can sense the strong scent of something bloody, mingled with some kind of alcohol.",
+        "content": "Okay, take it easy.\nI looked around the room, taking a deep breath.\nThe walls were almost as white as if they had been bleached. I also see piles of papers all over the floor. I can sense the strong scent of something bloody, mingled with some kind of alcohol.",
         "choices": [
             {
                 "content" : "Next",
@@ -65,7 +65,7 @@
     },
     {
         "id": 7,
-        "content": "It felt like everything was fading away as if I was sunk under water, as I closed my eyes and held my breath.\nWaterdrops… I can hear some water running.\nI figured out that it was coming from the small crack on the door.",
+        "content": "It felt like everything was fading away as if I was sunk under water, as I closed my eyes and held my breath.\nAnd I can hear some water running.\nI figured out that it was coming from the small crack on the door.",
         "choices": [
             {
                 "content" : "Was I not alone here?",
@@ -89,10 +89,10 @@
     },
     {
         "id": 9,
-        "content": "I had a sudden relief knowing that I was not the only one here, but soon it turned into a fear. What if that is the person who killed the other one?\nI could feel my own heartbeat, and I accidentally opened the door. It was a mistake due to nervousness.\nThe person stopped all the moves for a second, and slowly turned around. Their eyes were staring right into mine, through the door that was half open.",
+        "content": "I had a sudden relief, but soon it turned into a fear. What if that's the killer?\nI could feel my own heartbeat, and I accidentally opened the door. \nThe person stopped all the moves for a second, and slowly turned around. Their eyes were staring right into mine, through the door that was half open.",
         "choices": [
             {
-                "content" : "What sould I do?",
+                "content" : "What should I do?",
                 "nextParagraphId" : 10
             },
             {
@@ -125,7 +125,7 @@
     },
     {
         "id": 12,
-        "content": "\"Oh gosh, I'm so glad that you're alive. I thought you were already… Are you okay? Aren't you feeling dizzy or uneasy?\"\nThey said while calmly wiping off the water from their hands onto a towel. Their face looked as if they were worried about me.",
+        "content": "\"Oh gosh, I'm so glad that you're alive. I thought you were already… Are you okay? Aren't you feeling uneasy?\"\nThey said while calmly wiping off the water from their hands onto a towel. They looked worried.",
         "choices": [
             {
                 "content" : "Next",

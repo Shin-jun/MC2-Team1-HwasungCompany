@@ -49,7 +49,7 @@
     },
     {
         "id": 5,
-        "content": "\"…Nothing changes. I can't give it to you. Every single cure has already been disposed of.\"\nChris Turner talked in a low voice.\n\"Disposed of...?\"\n\"That was also the reason why I had to stay.\"",
+        "content": "\"…Nothing changes. I can't give it to you. Every single cure has already been disposed of.\"\nChris Turner talked in a low voice.\n\"Disposed of…?\"\n\"That was also the reason why I had to stay.\"",
         "choices": [
             {
                 "content" : "Next",
@@ -59,7 +59,7 @@
     },
     {
         "id": 6,
-        "content": "What did they just say? They disposed of the cure? Then what's this?\nI could still feel the glass stick inside the pocket.",
+        "content": "What did they just say? They disposed of the cure? Then what's this?\nI could still feel the glass inside the pocket.",
         "choices": [
             {
                 "content" : "Next",
@@ -69,7 +69,7 @@
     },
     {
         "id": 7,
-        "content": "Bailey Jones opened their mouth after a short silence.\n\"Why did you have to do that, knowing how many people will be saved due to the cure?\"\n\"I said it was because of the risk that-\"\n\"Isn't it because of the experiment without rightful permission?\"\nChris Turner looked shocked.",
+        "content": "Jones blamed Turner.\n\"Why did you have to do that, knowing how many people will be saved due to the cure?\"\n\"I said it was because of the risk that-\"\n\"Isn't it because of the experiment without rightful permission?\"\nChris Turner looked shocked.",
         "choices": [
             {
                 "content" : "Next",
@@ -109,7 +109,7 @@
     },
     {
         "id": 11,
-        "content": "\"And there is just one type of subject in the National Institute of Personality Separation. Those who have dual personalities in one body, and one of which turned into a pure evil and is proven to be a great harm to the society.\"",
+        "content": "\"And there is just one type of subject in the Institute of Personality Separation. Those who have dual personalities in one body, and one of which turned into a pure evil and is proven to be a great harm to the society.\"",
         "choices": [
             {
                 "content" : "Next",

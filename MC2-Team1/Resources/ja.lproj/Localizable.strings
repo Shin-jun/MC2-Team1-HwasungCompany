@@ -1,7 +1,38 @@
-/* 
+/*
   Localizable.strings
   MC2-Team1
 
   Created by peo on 2022/06/15.
   
 */
+
+"Setting" = "設定";
+"Text Animation Effects" = "テキストアニメーション";
+"Text Size" = "テキストサイズ";
+"Current Text Size" = "現在テキストサイズ";
+"A" = "あ";
+"Restart the Game" = "ゲームリセット";
+"Are you sure to restart the game?" = "本当にゲームをリセットしますか？";
+"The game is going to be initialized.\nThis act cannot be undone." = "ゲームがリセットされます。\nこの作業は戻せません。";
+"Cancel" = "キャンセル";
+"Confirm" = "確認";
+"Records" = "記録";
+"Baek" = "安";
+"Choi" = "千";
+"Ahn" = "私";
+"TAP TO START" = "タップしてスタート";
+"Drag to open the box" = "ドラックして箱を開く";
+"Double click to inspect the box" = "ダブルクリックして箱を確認";
+"A Strange Room" = "\"見知らぬ部屋\"";
+"Baek Yeonwoo" = "\"早川優\"";
+"Choi Jiwon" = "\"千秋忍\"";
+"The Cure" = "\"治療剤\"";
+"A Branch Road" = "\"岐路\"";
+"Ahn Jimin" = "\"安藤葵\"";
+"sampleChoice1" = "誰かがいるのかな？";
+"sampleCoice2" = "ドアに近づく";
+"seq1" = "画面右上の歯車を押して、\nゲーム設定を変更することができます。";
+"seq2" = "ご希望の選択肢をタッチして\nストーリーを続けてください。";
+"seq3" = "画面を上から下にスクロールすることで、\n以前のストーリーと選択肢を確認することができます。";
+"seq4" = "選択肢によって人物の好感度が異なります。\n画面上部で現在の好感度を確認してください。";
+"seq5" = "矢印をクリックすると\nゲームが始まります";

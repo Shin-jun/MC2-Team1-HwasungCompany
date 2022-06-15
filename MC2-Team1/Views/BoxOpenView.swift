@@ -6,49 +6,36 @@
 //
 
 import SwiftUI
-import Lottie
 
 struct BoxOpenView: View {
-    @State private var dragCompleted = false
-    @State private var showBox = true
-    @State private var showInBox = false
-    @State private var opac: Double = 0
     @State private var boxDec = "Drag to open the box".localized()
-    
-    @State private var showBlack = false
-    @State private var showWhite = true
+    @State private var step = 0
     
     var body: some View {
         VStack {
             ZStack {
-                if showBox {
-                    LottieBox()
+                switch step {
+                case 0:
+                    Image("Box")
+                        .padding(.bottom, 80)
                         .gesture(
                             DragGesture(minimumDistance: RatioSize.getResWidth(width: 50))
                                 .onEnded { _ in
-                                    dragCompleted = true
-                                    boxDec = "Double click to inspect the box".localized()
+                                    boxDec = "Double Tap to inspect the box".localized()
+                                    step += 1
                                 })
-                    
-                }
-                
-                if dragCompleted && showBox {
-                    LottieBoxOpen()
+                case 1:
+                    Image("OpenBox")
+                        .padding(.bottom, 80)
                         .gesture(
                             TapGesture(count: 2)
                                 .onEnded { _ in
                                     withAnimation(Animation.easeInOut.delay(1.5)) {
-                                        showBox = false
-                                        dragCompleted = false
-                                        opac = 1
                                         boxDec = ""
-                                        showInBox = true
+                                        step += 1
                                     }
                                 })
-                    
-                }
-                
-                if showInBox == true {
+                default:
                     InBox()
                 }
             }
@@ -72,8 +59,8 @@ struct InBox: View {
     typealias OffsetType = (offset: CGSize, lastOffset: CGSize)
     
     @State private var objects: [OffsetType] = [
-        (offset: CGSize(width: -20, height: 0.0),
-         lastOffset: CGSize(width: -20, height: 0.0)),
+        (offset: CGSize(width: -10, height: 0.0),
+         lastOffset: CGSize(width: -10, height: 0.0)),
         
         (offset: CGSize(width: 40, height: 0.0),
          lastOffset: CGSize(width: 40, height: 0.0)),
@@ -81,8 +68,8 @@ struct InBox: View {
         (offset: CGSize(width: 0.0, height: -200),
          lastOffset: CGSize(width: 0.0, height: -200)),
         
-        (offset: CGSize(width: 0.0, height: 200),
-         lastOffset: CGSize(width: 0.0, height: 200))
+        (offset: CGSize(width: 0.0, height: 220),
+         lastOffset: CGSize(width: 0.0, height: 220))
     ]
     
     @State private var Photo = false
@@ -201,62 +188,3 @@ struct InBox: View {
         
     }
 }
-
-
-struct LottieBoxOpen: UIViewRepresentable {
-    var name = "openBox"
-    var loopMode: LottieLoopMode = .playOnce
-    
-    func makeUIView(context: UIViewRepresentableContext<LottieBoxOpen>) -> UIView {
-        let view = UIView(frame: .zero)
-        
-        let animationView = AnimationView()
-        let animation = Animation.named(name)
-        animationView.animation = animation
-        animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = loopMode
-        animationView.play()
-        
-        animationView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(animationView)
-        NSLayoutConstraint.activate([
-            animationView.heightAnchor.constraint(equalTo: view.heightAnchor),
-            animationView.widthAnchor.constraint(equalTo: view.widthAnchor)
-        ])
-        
-        return view
-    }
-    
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-    }
-}
-
-
-struct LottieBox: UIViewRepresentable {
-    var name = "openBox"
-    var loopMode: LottieLoopMode = .playOnce
-    
-    func makeUIView(context: UIViewRepresentableContext<LottieBox>) -> UIView {
-        let view = UIView(frame: .zero)
-        
-        let animationView = AnimationView()
-        let animation = Animation.named(name)
-        animationView.animation = animation
-        animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = loopMode
-        
-        
-        animationView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(animationView)
-        NSLayoutConstraint.activate([
-            animationView.heightAnchor.constraint(equalTo: view.heightAnchor),
-            animationView.widthAnchor.constraint(equalTo: view.widthAnchor)
-        ])
-        
-        return view
-    }
-    
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-    }
-}
-

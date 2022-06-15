@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "content": "\"This place is called NIPS. It's one of the five national institutes founded for the government's projects.\"",
+    "content": "\"This place is called IOPS. It's one of the five national institutes founded for the government's projects.\"",
     "choices": [
         {
             "content" : "Next",
@@ -35,7 +35,7 @@
   },
   {
     "id": 4,
-    "content": "\"NIPS is divided into two parts, the General Access Area and the Private Access Area.\nWe have to go to the Private Access Area because the General one is already taken by the rebel forces.\"",
+    "content": "\"IOPS is divided into two parts, the General Access Area and the Private Access Area.\nWe have to go to the Private Access Area because the General one is already taken by the rebel forces.\"",
     "choices": [
         {
             "content" : "Next",
@@ -173,7 +173,7 @@
   },
   {
     "id": 16,
-    "content": "The table is full of papers. I guess I got the wrong place. Let me check the glass closet then.",
+    "content": "The table is full of papers. I guess I got the wrong place. Let me check the glass sideboard then.",
     "choices": [
         {
             "content" : "next",
