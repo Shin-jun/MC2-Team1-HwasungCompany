@@ -281,7 +281,7 @@
   },
   {
     "id": 29,
-    "content": "\"Nice to meet you. You're Bailey Jones, who was invited to deliver a lecture on anatomy today at NIPS. Unfortunately it had to be cancelled due to the rebel forces attacks.\"",
+    "content": "\"Nice to meet you. You're Bailey Jones, who was invited to deliver a lecture on anatomy today at IOPS. Unfortunately it had to be cancelled due to the rebel forces attacks.\"",
     "choices": [
         {
             "content" : "Next",
@@ -301,7 +301,7 @@
   },
   {
     "id": 31,
-    "content": "\"Oh, excuse me for the late introduction. I am Andrea Davies, a researcher of NIPS. I was supposed to be your assistant for today's lecture.\"",
+    "content": "\"Oh, excuse me for the late introduction. I am Andrea Davies, a researcher of IOPS. I was supposed to be your assistant for today's lecture.\"",
     "choices": [
         {
             "content" : "Next",

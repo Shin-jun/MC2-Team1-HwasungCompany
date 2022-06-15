@@ -27,7 +27,7 @@ struct StartView: View {
                 
                 Group{
                     HStack{
-                        Text("NIPS")
+                        Text("IOPS")
                             .font(.custom(modelData.titleFontName, size: RatioSize.getResWidth(width: 96)))
                             .foregroundColor(.fontColor)
                     }.frame(width: textWidth, alignment: .leading)
