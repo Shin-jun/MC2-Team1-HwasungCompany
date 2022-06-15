@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		058249AA2854DE7300EC0832 /* BoxOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058249A92854DE7300EC0832 /* BoxOpenView.swift */; };
 		058249AC2854DE9800EC0832 /* openBox.json in Resources */ = {isa = PBXBuildFile; fileRef = 058249AB2854DE9800EC0832 /* openBox.json */; };
-		058249AF2854DECF00EC0832 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 058249AE2854DECF00EC0832 /* Lottie */; };
 		05FB2E0F285710360089359B /* chapterSixBKR.json in Resources */ = {isa = PBXBuildFile; fileRef = 05FB2E0E285710360089359B /* chapterSixBKR.json */; };
 		05FB2E5D2859E5D90089359B /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB2E5C2859E5D90089359B /* CreditView.swift */; };
 		11139EBB28570D5B00EF6FD1 /* chapterFiveKR.json in Resources */ = {isa = PBXBuildFile; fileRef = 11139EBA28570D5B00EF6FD1 /* chapterFiveKR.json */; };
@@ -185,7 +184,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058249AF2854DECF00EC0832 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +400,6 @@
 			);
 			name = "MC2-Team1";
 			packageProductDependencies = (
-				058249AE2854DECF00EC0832 /* Lottie */,
 			);
 			productName = "MC2-Team1";
 			productReference = C6E1B9A4283B772E00EEC6F1 /* MC2-Team1.app */;
@@ -436,7 +433,6 @@
 			);
 			mainGroup = C6E1B99B283B772E00EEC6F1;
 			packageReferences = (
-				058249AD2854DECF00EC0832 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = C6E1B9A5283B772E00EEC6F1 /* Products */;
 			projectDirPath = "";
@@ -770,25 +766,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		058249AD2854DECF00EC0832 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		058249AE2854DECF00EC0832 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 058249AD2854DECF00EC0832 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6E1B99C283B772E00EEC6F1 /* Project object */;
 }
