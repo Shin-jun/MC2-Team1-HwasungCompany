@@ -25,7 +25,7 @@ struct HistoryView: View {
                                 Group {
                                     Text(modelData.pastParas[index][0])
                                         .padding(.vertical, index == 0 ? RatioSize.getResheight(height: 10) : RatioSize.getResheight(height: 15))
-                                        .font(.custom("NanumMyeongjo", size: index == 0 ? fontSize + 4 : fontSize))
+                                        .font(.custom(modelData.contentFontName, size: index == 0 ? fontSize + 4 : fontSize))
                                         .frame(
                                             maxWidth: UIScreen.main.bounds.width,
                                             alignment: index == 0 ? .center : .leading
@@ -39,7 +39,7 @@ struct HistoryView: View {
                                                 alignment: .center
                                             )
                                             .foregroundColor(.fontColor)
-                                            .font(.custom("NanumMyeongjoBold", size: 18))
+                                            .font(.custom(modelData.choiceFontName, size: 18))
                                             .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
                                             .padding(.vertical, RatioSize.getResheight(height: 15))
                                             .background(Color.bgColor)
@@ -49,7 +49,7 @@ struct HistoryView: View {
                                             .padding(.vertical, RatioSize.getResheight(height: 5))
                                     }
                                 }
-                                .font(.custom("NanumMyeongjo", size: fontSize))
+                                .font(.custom(modelData.contentFontName, size: fontSize))
                                 .lineLimit(nil)
                                 .lineSpacing(fontSize - 6)
                             }

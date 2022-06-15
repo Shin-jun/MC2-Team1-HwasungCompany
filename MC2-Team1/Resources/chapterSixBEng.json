@@ -164,8 +164,9 @@
     "content": "Andrea Davies slowly gets up, with a smile on their face.",
     "choices": [
         {
-            "content" : "To the beginning",
-            "nextParagraphId" : -1
+            "content" : "The end",
+            "nextParagraphId" : -1,
+            "nextChapterIndex" : -10
         }
     ]
   },
@@ -284,8 +285,9 @@
     "content": "I couldn't do anything other than just standing there vacantly, hoping someone comes to help me get out of this nightmare. Or hoping maybe I could just fall asleep forever.",
     "choices": [
         {
-            "content" : "To the beginning",
-            "nextParagraphId" : -1
+            "content" : "The end",
+            "nextParagraphId" : -1,
+            "nextChapterIndex" : -10
         }
     ]
   }

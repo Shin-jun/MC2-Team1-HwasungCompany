@@ -33,6 +33,13 @@ struct InitView: View {
                             mode = .content
                         }
                     }
+            case .credit:
+                CreditView(mode: $mode)
+                    .onTapGesture {
+                        withAnimation(.spring()) {
+                            mode = .start
+                        }
+                    }
             }
         }
     }
@@ -42,4 +49,5 @@ enum Mode {
     case start
     case content
     case bridge
+    case credit
 }

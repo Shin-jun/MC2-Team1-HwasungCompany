@@ -17,11 +17,6 @@ struct OnBoardingPageView: View {
     let fontSize: Double = 18
     let paragraphId: Int = 1
     var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
-    private let content: String = "눈을 감고 호흡을 멈추자 물 속에 들어온 것처럼 모든 것이 멀어졌다.\n물소리… 어디선가 물소리가 들려.\n열린 문 틈 사이에서 들려오는 것 같아."
-    
-    // Font
-    private let mainFont = "NanumMyeongjo"
-    private let mainFontBold = "NanumMyeongjoBold"
     
     // Color
     private let shadowColor = Color.black.opacity(0.3)
@@ -99,7 +94,7 @@ extension OnBoardingPageView{
         }
         
         VStack{
-            Text("화면 우측 상단에 있는 톱니바퀴를 눌러\n게임 설정을 변경할 수 있습니다.")
+            Text("seq1")
                 .font(.system(size: 18))
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
@@ -120,9 +115,9 @@ extension OnBoardingPageView{
         VStack{
             Spacer()
             VStack{
-                Text("누군가가 있는걸까?")
+                Text("sampleChoice1".localized())
                     .foregroundColor(.fontColor)
-                    .font(.custom(mainFontBold, size: 18))
+                    .font(.custom(modelData.choiceFontName, size: 18))
                     .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
                     .background(Color.bgColor)
                     .cornerRadius(50)
@@ -131,9 +126,9 @@ extension OnBoardingPageView{
                     .padding(.vertical, RatioSize.getResheight(height: 5))
                     .padding(.top, 10)
 
-                Text("문으로 가까이 다가간다")
+                Text("sampleChoice2".localized())
                     .foregroundColor(.fontColor)
-                    .font(.custom(mainFontBold, size: 18))
+                    .font(.custom(modelData.choiceFontName, size: 18))
                     .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
                     .background(Color.bgColor)
                     .cornerRadius(50)
@@ -150,7 +145,7 @@ extension OnBoardingPageView{
         }
         // Message
         VStack{
-            Text("원하는 선택지를 터치하여\n스토리를 이어가세요.")
+            Text("seq2".localized())
                 .font(.system(size: 18))
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
@@ -178,7 +173,7 @@ extension OnBoardingPageView{
         }
         // Message
         VStack{
-            Text("화면을 위에서 아래로 스크롤하여\n이전 스토리와 선택지를 확인할 수 있습니다.")
+            Text("seq3".localized())
                 .font(.system(size: 18))
                 .multilineTextAlignment(.center)
                 .padding()
@@ -209,7 +204,7 @@ extension OnBoardingPageView{
                 }
                 HStack{
                     Text("?")
-                        .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
+                        .font(.custom(modelData.contentFontName, size: RatioSize.getResWidth(width: 18)))
                         .foregroundColor(.fontColor)
                         .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResWidth(width: 30))
                         .background(Color.tapFontColor)
@@ -218,15 +213,15 @@ extension OnBoardingPageView{
                     Spacer()
                     
                     Text("?")
-                        .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
+                        .font(.custom(modelData.contentFontName, size: RatioSize.getResWidth(width: 18)))
                         .foregroundColor(.fontColor)
                         .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResWidth(width: 30))
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
                 }//HStack
                 
-                Text("나")
-                    .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
+                Text("Ahn".localized())
+                    .font(.custom(modelData.contentFontName, size: RatioSize.getResWidth(width: 18)))
                     .foregroundColor(.fontColor)
                     .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResWidth(width: 30))
                     .background(Color.bgColor)
@@ -247,7 +242,7 @@ extension OnBoardingPageView{
         }
         // Message
         VStack{
-            Text("선택지에 따라 인물의 호감도가 달라집니다.\n화면 상단에서 현재 호감도를 확인하세요.")
+            Text("seq4".localized())
                 .font(.system(size: 18))
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
@@ -282,7 +277,7 @@ extension OnBoardingPageView {
                 }
                 HStack{
                     Text("?")
-                        .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
+                        .font(.custom(modelData.contentFontName, size: RatioSize.getResWidth(width: 18)))
                         .foregroundColor(.fontColor)
                         .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResWidth(width: 30))
                         .background(Color.tapFontColor)
@@ -291,15 +286,15 @@ extension OnBoardingPageView {
                     Spacer()
                     
                     Text("?")
-                        .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
+                        .font(.custom(modelData.contentFontName, size: RatioSize.getResWidth(width: 18)))
                         .foregroundColor(.fontColor)
                         .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResWidth(width: 30))
                         .background(Color.tapFontColor)
                         .cornerRadius(50)
                 }//HStack
                 
-                Text("나")
-                    .font(.custom(mainFont, size: RatioSize.getResWidth(width: 18)))
+                Text("Ahn".localized())
+                    .font(.custom(modelData.contentFontName, size: RatioSize.getResWidth(width: 18)))
                     .foregroundColor(.fontColor)
                     .frame(width: RatioSize.getResWidth(width: 30), height: RatioSize.getResWidth(width: 30))
                     .background(Color.bgColor)
@@ -325,17 +320,17 @@ extension OnBoardingPageView {
     
     // ContentViewBuilder
     @ViewBuilder func contentViewBuiler() -> some View {
-        Text(content)
-            .font(.custom(mainFont, size: 18))
+        Text("sampleContent".localized())
+            .font(.custom(modelData.contentFontName, size: 18))
             .lineSpacing(12)
     }
     
     // ButtonViewReloader
     @ViewBuilder func ButtonViewBuilder() -> some View {
         VStack{
-            Text("누군가가 있는걸까?")
+            Text("sampleChoice1".localized())
                 .foregroundColor(.fontColor)
-                .font(.custom(mainFontBold, size: 18))
+                .font(.custom(modelData.choiceFontName, size: 18))
                 .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
                 .background(Color.bgColor)
                 .cornerRadius(50)
@@ -343,9 +338,9 @@ extension OnBoardingPageView {
                 .padding(.horizontal, 40)
                 .padding(.vertical, RatioSize.getResheight(height: 5))
 
-            Text("문으로 가까이 다가간다")
+            Text("sampleChoice2".localized())
                 .foregroundColor(.fontColor)
-                .font(.custom(mainFontBold, size: 18))
+                .font(.custom(modelData.choiceFontName, size: 18))
                 .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
                 .background(Color.bgColor)
                 .cornerRadius(50)

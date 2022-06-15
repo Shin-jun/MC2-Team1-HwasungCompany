@@ -165,7 +165,8 @@
     "choices": [
         {
             "content" : "最初に",
-            "nextParagraphId" : -1
+            "nextParagraphId" : -1,
+            "nextChapterIndex" : -10
         }
     ]
   },
@@ -285,7 +286,8 @@
     "choices": [
         {
             "content" : "最初に",
-            "nextParagraphId" : -1
+            "nextParagraphId" : -1,
+            "nextChapterIndex" : -10
         }
     ]
   }

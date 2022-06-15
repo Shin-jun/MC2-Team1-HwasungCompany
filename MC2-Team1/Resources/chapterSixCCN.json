@@ -334,9 +334,9 @@
     "content": "\"那么，我们走吧？\"",
     "choices": [
         {
-            "content" : "继续",
+            "content" : "结束",
             "nextParagraphId" : -1,
-            "nextChapterIndex" : -1
+            "nextChapterIndex" : -10
         }
     ]
   },
