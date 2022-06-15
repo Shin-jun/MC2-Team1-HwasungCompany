@@ -24,7 +24,7 @@ struct HistoryView: View {
                             VStack {
                                 Group {
                                     Text(modelData.pastParas[index][0])
-                                        .padding(.vertical, index == 0 ? RatioSize.getResheight(height: 10) : RatioSize.getResheight(height: 15))
+                                        .padding(.vertical, index == 0 ? RatioSize.getResheight(height: 15) : RatioSize.getResheight(height: 20))
                                         .font(.custom("NanumMyeongjo", size: index == 0 ? fontSize + 4 : fontSize))
                                         .frame(
                                             maxWidth: UIScreen.main.bounds.width,
@@ -46,7 +46,7 @@ struct HistoryView: View {
                                             .cornerRadius(50)
                                             .shadow(color: Color("ButtonShadow"), radius: 3, x: 0, y: 0)
                                             .padding(.horizontal)
-                                            .padding(.vertical, RatioSize.getResheight(height: 5))
+                                            .padding(.vertical, RatioSize.getResheight(height: 20))
                                     }
                                 }
                                 .font(.custom("NanumMyeongjo", size: fontSize))
@@ -58,7 +58,7 @@ struct HistoryView: View {
                                 .fill(Color.bgColor)
                                 .frame(
                                     width: UIScreen.main.bounds.width,
-                                    height: (UIScreen.main.bounds.height - RatioSize.getResheight(height: 350 + recHeight)) / 2.0
+                                    height: (UIScreen.main.bounds.height - RatioSize.getResheight(height: 250 + recHeight)) / 2.0
                                 )
                                 .onAppear {
                                     recHeight = lastSize
