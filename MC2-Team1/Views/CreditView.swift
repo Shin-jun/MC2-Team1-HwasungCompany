@@ -26,8 +26,7 @@ struct CreditView: View {
     
     var body: some View {
         ZStack {
-            Image("EndCreditBackgroud")
-                .resizable()
+            Color.bgColor.ignoresSafeArea()
             Text(attributedString)
                 .fontWeight(.bold)
                 .foregroundColor(.fontColor)
