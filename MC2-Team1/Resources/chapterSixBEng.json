@@ -65,7 +65,7 @@
     "choices": [
         {
             "content" : "Next",
-            "nextParagraphId" : 8
+            "nextParagraphId" : -2
         }
     ]
   },
