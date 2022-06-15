@@ -15,11 +15,17 @@
 ## :people_hugging: Authors
 
 [EllyJ]()
+
 [Bethev]()
+
 [Digi]()
+
 [Everett]()
+
 [Sophie]()
+
 [Rang]()
+
 [Woody]()
 
 
