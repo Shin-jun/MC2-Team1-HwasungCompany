@@ -17,7 +17,7 @@ final class LocalizeManager {
         } else if preferredLanguage!.contains("ja") {
             return "JP"
         } else {
-            return "EN"
+            return "Eng"
         }
     }
 }
