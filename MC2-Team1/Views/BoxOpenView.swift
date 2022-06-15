@@ -54,6 +54,7 @@ struct BoxOpenView_Previews: PreviewProvider {
  */
 
 struct InBox: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode
     
     typealias OffsetType = (offset: CGSize, lastOffset: CGSize)
@@ -114,17 +115,17 @@ struct InBox: View {
             if Photo == true {
                 ZStack {
                     Rectangle()
-                        .foregroundColor(.white)
+                        .foregroundColor(.bgColor)
                         .frame(width: RatioSize.getResWidth(width: 1000), height: RatioSize.getResWidth(width: 1000))
                         .padding()
                         .edgesIgnoringSafeArea(.all)
                     
-                    Image("Photo")
+                    Image(colorScheme == .light ? "Photo":"PhotoD")
                         .resizable()
                         .frame(width: RatioSize.getResWidth(width: 400), height: RatioSize.getResWidth(width: 400))
                         .padding()
                         .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                                 isBoxOpenGame = false
                             }
                         }

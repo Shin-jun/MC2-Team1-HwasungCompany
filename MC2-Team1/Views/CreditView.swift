@@ -14,14 +14,14 @@ import AVFoundation
 struct CreditView: View {
     @State private var animationStart = false
     @State private var animationEnd = false
+    @EnvironmentObject var modelData: ModelData
     
 
     // animation 지속시간
     private let startAnimationDuration = 5.0
     private let middleAnimationDuration = 6.0
     private let endAnimationDuration = 0.5
-    private let mainFont = "NanumMyeongjo"
-    @State var attributedString = AttributedString("화성상사\n\n회장 Woody \n최고학력자 Digi \n영양사 Bethev \n충전 EllyJ \n글루건 Rang \n원어민 Sophie \n과장 Everett \n\n And You")
+    @State var attributedString = AttributedString("화성상사\n\n Woody \n Digi \n Bethev \n EllyJ \n Rang \n Sophie \n Everett \n\n And You")
     @State var opacity: Double = 0
     
     var body: some View {
@@ -30,7 +30,8 @@ struct CreditView: View {
                 .resizable()
             Text(attributedString)
                 .fontWeight(.bold)
-                .font(.custom(mainFont, size: 35))
+                .foregroundColor(.fontColor)
+                .font(.custom(modelData.contentFontName, size: 35))
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)
                 .truncationMode(.head)
@@ -43,14 +44,6 @@ struct CreditView: View {
                 .frame(width: 500, height: animationStart ? 750 : 0)
                 //.animation(Animation.linear(duration: startAnimationDuration), value: opacity)
                 .onAppear() {
-                    attributeItem(text: "회장")
-                    attributeItem(text: "최고학력자")
-                    attributeItem(text: "영양사")
-                    attributeItem(text: "충전")
-                    attributeItem(text: "글루건")
-                    attributeItem(text: "원어민")
-                    attributeItem(text: "과장")
-                    
                     withAnimation(.linear(duration: animationEnd ? endAnimationDuration : startAnimationDuration)) {
                         self.animationStart.toggle()
                         opacity = 1
@@ -64,11 +57,6 @@ struct CreditView: View {
             }
         }
         .ignoresSafeArea()
-    }
-    
-    func attributeItem(text: String) {
-        let range = attributedString.range(of: text)!
-        attributedString[range].font = .custom(mainFont, size: 20)
     }
 }
 

@@ -70,16 +70,34 @@ extension ButtonFadeInView{
     @ViewBuilder func buttonViewBuilder() -> some View {
         Button{
             self.isButtonHidden = true
-            // go to next chapter, need to show bridge view
+            // chapter end
             if choice.nextParagraphId == -1 {
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
-                    modelData.currentChapterIndex = choice.nextChapterIndex!
-                    modelData.pastParas = [["Records".localized()]]
-                    paragraphId = 1
-                }
-                withAnimation(.linear(duration: 0.4)) {
-                    modelData.bridgeChapterIndex = choice.nextChapterIndex!
-                    mode = .bridge
+                // go to next chapter, need to show bridge view
+                if choice.nextChapterIndex != -10 {
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
+                        modelData.currentChapterIndex = choice.nextChapterIndex!
+                        modelData.pastParas = [["Records"]]
+                        paragraphId = 1
+                    }
+                    withAnimation(.linear(duration: 0.4)) {
+                        modelData.bridgeChapterIndex = choice.nextChapterIndex!
+                        mode = .bridge
+                    }
+                } else {
+                    // the end, show credit view while resetting data
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
+                        modelData.currentChapterIndex = 0
+                        modelData.pastParas = [["Records"]]
+                        paragraphId = 1
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.5) {
+                        withAnimation(.linear(duration: 2.5)) {
+                            mode = .credit
+                        }
+                    }
+                    withAnimation(.linear(duration: 0.8)) {
+                        mode = .endingBridge
+                    }
                 }
             // 호감도에 따른 갈림길
             } else if choice.nextParagraphId == -2 {

@@ -65,7 +65,7 @@
     "choices": [
         {
             "content" : "继续",
-            "nextParagraphId" : 8
+            "nextParagraphId" : -2
         }
     ]
   },
@@ -165,7 +165,8 @@
     "choices": [
         {
             "content" : "结束",
-            "nextParagraphId" : -1
+            "nextParagraphId" : -1,
+            "nextChapterIndex" : -10
         }
     ]
   },
@@ -285,7 +286,8 @@
     "choices": [
         {
             "content" : "结束",
-            "nextParagraphId" : -1
+            "nextParagraphId" : -1,
+            "nextChapterIndex" : -10
         }
     ]
   }

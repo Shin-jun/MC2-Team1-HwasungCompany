@@ -22,7 +22,7 @@
 "Ahn" = "私";
 "TAP TO START" = "タップしてスタート";
 "Drag to open the box" = "ドラックして箱を開く";
-"Double click to inspect the box" = "ダブルクリックして箱を確認";
+"Double click to inspect the box" = "ダブルタップして箱を確認";
 "A Strange Room" = "\"見知らぬ部屋\"";
 "Baek Yeonwoo" = "\"早川優\"";
 "Choi Jiwon" = "\"千秋忍\"";
@@ -30,7 +30,7 @@
 "A Branch Road" = "\"岐路\"";
 "Ahn Jimin" = "\"安藤葵\"";
 "sampleChoice1" = "誰かがいるのかな？";
-"sampleCoice2" = "ドアに近づく";
+"sampleChoice2" = "ドアに近づく";
 "seq1" = "画面右上の歯車を押して、\nゲーム設定を変更することができます。";
 "seq2" = "ご希望の選択肢をタッチして\nストーリーを続けてください。";
 "seq3" = "画面を上から下にスクロールすることで、\n以前のストーリーと選択肢を確認することができます。";

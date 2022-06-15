@@ -51,6 +51,7 @@
 		B73777F12859A8A600BC049F /* LocalizeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73777F02859A8A600BC049F /* LocalizeManager.swift */; };
 		B73777F42859AAC200BC049F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B73777F62859AAC200BC049F /* Localizable.strings */; };
 		B73777FB2859E51300BC049F /* LanguageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73777FA2859E51300BC049F /* LanguageEnum.swift */; };
+		B73777FD285A099E00BC049F /* EndingBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73777FC285A099E00BC049F /* EndingBridgeView.swift */; };
 		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
 		B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */; };
 		B7690EE82851DB5D008E81AC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE72851DB5D008E81AC /* HistoryView.swift */; };
@@ -137,6 +138,7 @@
 		B73777F82859AAD100BC049F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B73777F92859AAD700BC049F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B73777FA2859E51300BC049F /* LanguageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageEnum.swift; sourceTree = "<group>"; };
+		B73777FC285A099E00BC049F /* EndingBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingBridgeView.swift; sourceTree = "<group>"; };
 		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7690EE72851DB5D008E81AC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				B7690F1A28548C0F008E81AC /* BridgeView.swift */,
 				058249A92854DE7300EC0832 /* BoxOpenView.swift */,
 				05FB2E5C2859E5D90089359B /* CreditView.swift */,
+				B73777FC285A099E00BC049F /* EndingBridgeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				C6AE999B28587A1500FF8BD0 /* OnBoardingView.swift in Sources */,
 				B7690EE22851C613008E81AC /* StartView.swift in Sources */,
 				37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */,
+				B73777FD285A099E00BC049F /* EndingBridgeView.swift in Sources */,
 				C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */,
 				B7690EE82851DB5D008E81AC /* HistoryView.swift in Sources */,
 				B7FD7D662855C347006A509E /* JsonManager.swift in Sources */,
@@ -688,7 +692,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC2-Team1/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JP3V2463G6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-Team1/Info.plist";
@@ -720,7 +724,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC2-Team1/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JP3V2463G6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-Team1/Info.plist";
