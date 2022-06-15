@@ -103,7 +103,7 @@ struct StartView: View {
                 
                 HStack {
                     Spacer()
-                    Text("탭해서 시작하기")
+                    Text("TAP TO START".localized())
                         .font(.custom("Inter-SemiBold", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.tapFontColor)
                         .opacity(tapFontColorOpacity ? 1 : 0)

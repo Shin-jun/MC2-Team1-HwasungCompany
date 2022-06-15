@@ -72,7 +72,7 @@ extension ButtonFadeInView{
             if choice.nextParagraphId == -1 {
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
                     modelData.currentChapterIndex = choice.nextChapterIndex!
-                    modelData.pastParas = [["기록들"]]
+                    modelData.pastParas = [["Records".localized()]]
                     paragraphId = 1
                 }
                 withAnimation(.linear(duration: 0.4)) {
