@@ -26,6 +26,7 @@ struct ContentView: View {
     
     @State var isShowing = false
     @State var isShowingAlert = false
+    @State var isButtonHidden: Bool = true
     
     var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
     
@@ -34,7 +35,6 @@ struct ContentView: View {
     // body
     var body: some View {
         ZStack{
-            
             // Background
             Color.bgColor
                 .ignoresSafeArea()
@@ -48,6 +48,9 @@ struct ContentView: View {
                 HistoryView()
                     .padding(.horizontal, RatioSize.getResWidth(width: 20))
                     .padding(.top, RatioSize.getResheight(height: 5))
+                    .onTapGesture {
+                        isButtonHidden = false
+                    }
                 
                 // Choice Buttons
                 // TODO: 버튼 최하단에 padding 넣어야 함
@@ -75,7 +78,6 @@ struct ContentView: View {
 
 // ViewBuilder Extension
 extension ContentView {
-    
     // FadeInViewReloader
     @ViewBuilder func FadeInViewReloader(text: String, fontSize: CGFloat) -> some View {
         FadeInView(text: text, fontSize: fontSize, isTextAnimation: isTextAnimation)
@@ -84,12 +86,11 @@ extension ContentView {
     // ButtonViewReloader
     @ViewBuilder func ButtonViewBuilder() -> some View {
         Group {
-            
             if currentParagraph.hasChoices {
                 Group {
                     VStack {
                         ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
-                            ButtonFadeInView(mode: $mode, choice: choice, content: currentParagraph.content)
+                            ButtonFadeInView(mode: $mode, choice: choice, content: currentParagraph.content, isButtonHidden: $isButtonHidden)
                         }
                     }
                 }

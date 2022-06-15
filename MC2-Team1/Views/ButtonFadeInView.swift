@@ -20,11 +20,11 @@ struct ButtonFadeInView: View {
     @AppStorage("Bfriendship") var Bfriendship: Int = 0
     @AppStorage("Cfriendship") var Cfriendship: Int = 0
     // MiniGame
-    @AppStorage("isGlassGame") var isGlassGame = false
-    @AppStorage("isPullLeverGame") var isPullLeverGame = false
-    @AppStorage("isBoxOpenGame") var isBoxOpenGame = false
+    @AppStorage("isGlassGame") var isGlassGame: Bool = false
+    @AppStorage("isPullLeverGame") var isPullLeverGame: Bool = false
+    @AppStorage("isBoxOpenGame") var isBoxOpenGame: Bool = false
     @State var opacity: Double = 0
-    @State var isButtonHidden = true
+    @Binding var isButtonHidden: Bool
     
     var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
     private let mainFontBold = "NanumMyeongjoBold"
@@ -69,6 +69,7 @@ extension ButtonFadeInView{
 extension ButtonFadeInView{
     @ViewBuilder func buttonViewBuilder() -> some View {
         Button{
+            self.isButtonHidden = true
             // go to next chapter, need to show bridge view
             if choice.nextParagraphId == -1 {
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
