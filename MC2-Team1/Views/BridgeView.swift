@@ -67,7 +67,7 @@ struct BridgeView: View {
                 HStack {
                     Spacer()
                     Text("Chapter \(chapterNumber)")
-                        .font(.custom("NuosuSIL-Regular", size: RatioSize.getResWidth(width: 24)))
+                        .font(.custom(modelData.getTitleFontName(), size: RatioSize.getResWidth(width: 24)))
                         .foregroundColor(.fontColor)
                         .padding(.top, RatioSize.getResheight(height: 30))
                         .onAppear {
@@ -96,7 +96,7 @@ struct BridgeView: View {
                 HStack {
                     Spacer()
                     Text("\(modelData.chapterNameArray[modelData.bridgeChapterIndex])")
-                        .font(.custom("NotoSerifKR-Regular", size: RatioSize.getResWidth(width: 20)))
+                        .font(.custom(modelData.getContentFontName(), size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.fontColor)
                     Spacer()
                 }
@@ -106,7 +106,7 @@ struct BridgeView: View {
                 
                 HStack {
                     Spacer()
-                    Text("탭해서 시작하기")
+                    Text("TAP TO START".localized())
                         .font(.custom("Inter-SemiBold", size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.tapFontColor)
                         .opacity(tapFontColorOpacity ? 1 : 0)

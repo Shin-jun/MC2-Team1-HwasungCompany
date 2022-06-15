@@ -27,7 +27,6 @@ struct ButtonFadeInView: View {
     @Binding var isButtonHidden: Bool
     
     var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
-    private let mainFontBold = "NanumMyeongjoBold"
 
     var body: some View {
         
@@ -74,7 +73,7 @@ extension ButtonFadeInView{
             if choice.nextParagraphId == -1 {
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
                     modelData.currentChapterIndex = choice.nextChapterIndex!
-                    modelData.pastParas = [["기록들"]]
+                    modelData.pastParas = [["Records".localized()]]
                     paragraphId = 1
                 }
                 withAnimation(.linear(duration: 0.4)) {
@@ -126,7 +125,7 @@ extension ButtonFadeInView{
         } label: {
             Text(choice.content)
                 .foregroundColor(.fontColor)
-                .font(.custom(mainFontBold, size: 18))
+                .font(.custom(modelData.getChoiceFontName(), size: 18))
                 .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
                 .background(Color.bgColor)
                 .cornerRadius(50)
