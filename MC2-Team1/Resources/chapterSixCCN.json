@@ -24,7 +24,7 @@
     "content": "\"您什么时候找到治疗剂？\"\n白延宇的表情表示他不知道为什么把治疗剂给崔智远。",
     "choices": [
         {
-            "content" : "다음으로",
+            "content" : "继续",
             "nextParagraphId" : 4
         }
     ]
@@ -154,7 +154,7 @@
     "content": "\"就是现在！\"\n崔智远跑过来，在白延宇的手臂上插上了治疗剂。",
     "choices": [
         {
-            "content" : "다음으로",
+            "content" : "继续",
             "nextParagraphId" : 17
         }
     ]
