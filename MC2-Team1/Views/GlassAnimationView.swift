@@ -10,6 +10,9 @@ import SwiftUI
 struct GlassAnimationView: View {
     @Environment(\.presentationMode) var presentationMode
     
+    // MiniGame
+    @AppStorage("isGlassGame") var isGlassGame = false
+    
     private let targetTouchCount = 3
     private let customHaptics: [HapticProperty] = [
         HapticProperty(count: 2, interval: [0.0, 0.1], intensity: [0.25, 0.3], sharpness: [0.85, 0.3]),
@@ -48,7 +51,7 @@ struct GlassAnimationView: View {
                             positions.y = height * 1.1
                         }
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                            presentationMode.wrappedValue.dismiss()
+                            isGlassGame = false
                         }
                     }
                 }
