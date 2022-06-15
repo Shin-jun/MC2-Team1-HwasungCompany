@@ -231,7 +231,7 @@
   },
   {
     "id": 2007,
-    "content": "\"Adrea, are you okay?\"\nI could faintly hear Chris Turner shouting out my name.\nAnd a few seconds later, I blacked out.",
+    "content": "\"Andrea, are you okay?\"\nI could faintly hear Chris Turner shouting out my name.\nAnd a few seconds later, I blacked out.",
     "choices": [
         {
             "content" : "Next",
@@ -244,7 +244,7 @@
     "content": "I wonder how long I've been asleep. I woke up with a terrible headache. Bailey Jones was lying on the floor just like I remember.",
     "choices": [
         {
-            "content" : "다음으로",
+            "content" : "Next",
             "nextParagraphId" : 2009
         }
     ]
