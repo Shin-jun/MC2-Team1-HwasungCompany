@@ -101,8 +101,6 @@ final class ModelData: ObservableObject {
                 return "NanumMyeongjo"
             case .CN, .JP:
                 return "NotoSerifSC-Medium"
-            default :
-                return "NanumMyeongjo"
             }
         }
     }
@@ -113,8 +111,6 @@ final class ModelData: ObservableObject {
                 return "NanumMyeongjoBold"
             case .CN, .JP:
                 return "NotoSerifSC-Bold"
-            default :
-                return "NanumMyeongjoBold"
             }
         }
     }
@@ -125,8 +121,6 @@ final class ModelData: ObservableObject {
                 return "NuosuSIL-Regular"
             case .CN, .JP:
                 return "NotoSerifSC-Regular"
-            default :
-                return "NuosuSIL-Regular"
             }
         }
     }
