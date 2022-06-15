@@ -24,7 +24,7 @@
     "content": "\"您什么时候找到治疗剂？\"\n白延宇的表情表示他不知道为什么把治疗剂给崔智远。",
     "choices": [
         {
-            "content" : "다음으로",
+            "content" : "继续",
             "nextParagraphId" : 4
         }
     ]
@@ -154,7 +154,7 @@
     "content": "\"就是现在！\"\n崔智远跑过来，在白延宇的手臂上插上了治疗剂。",
     "choices": [
         {
-            "content" : "다음으로",
+            "content" : "继续",
             "nextParagraphId" : 17
         }
     ]
@@ -281,7 +281,7 @@
   },
   {
     "id": 29,
-    "content": "\"您好，白延宇。您是今天被邀请到NIPS进行解剖学演讲。可惜的是，由于叛军的袭击，演讲被中断了。\"",
+    "content": "\"您好，白延宇。您是今天被邀请到IOPS进行解剖学演讲。可惜的是，由于叛军的袭击，演讲被中断了。\"",
     "choices": [
         {
             "content" : "继续",
@@ -301,7 +301,7 @@
   },
   {
     "id": 31,
-    "content": "\"对，看来介绍晚了。我是NIPS所属研究员的安智敏。按照原来的计划，今天要支持您的活动。\"",
+    "content": "\"对，看来介绍晚了。我是IOPS所属研究员的安智敏。按照原来的计划，今天要支持您的活动。\"",
     "choices": [
         {
             "content" : "继续",
@@ -334,9 +334,9 @@
     "content": "\"那么，我们走吧？\"",
     "choices": [
         {
-            "content" : "继续",
+            "content" : "结束",
             "nextParagraphId" : -1,
-            "nextChapterIndex" : -1
+            "nextChapterIndex" : -10
         }
     ]
   },

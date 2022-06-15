@@ -334,9 +334,9 @@
     "content": "\"Shall we go?\"",
     "choices": [
         {
-            "content" : "Next",
+            "content" : "The end",
             "nextParagraphId" : -1,
-            "nextChapterIndex" : -1
+            "nextChapterIndex" : -10
         }
     ]
   },

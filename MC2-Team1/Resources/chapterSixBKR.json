@@ -165,7 +165,8 @@
     "choices": [
         {
             "content" : "처음으로",
-            "nextParagraphId" : -1
+            "nextParagraphId" : -1,
+            "nextChapterIndex" : -10
         }
     ]
   },
@@ -284,8 +285,9 @@
     "content": "나는 멍하니 있을 수밖에 없었다. 누군가 나를 이 악몽에서 구원해 주기를 바라며. 혹은, 영영 눈을 감아버릴 수 있기를 바라며.",
     "choices": [
         {
-            "content" : "처음으로",
-            "nextParagraphId" : -1
+            "content" : "종료",
+            "nextParagraphId" : -1,
+            "nextChapterIndex" : -10
         }
     ]
   }

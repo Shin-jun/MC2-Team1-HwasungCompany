@@ -92,7 +92,7 @@ final class ModelData: ObservableObject {
         }
     }
     
-    let chapterNameArray = ["A Strange Room".localized(), "Baek Yeonwoo".localized(), "Choi Jiwon".localized(), "The Cure".localized(), "A Branch Road".localized(), "Ahn Jimin".localized()]
+    let chapterNameArray = ["A Strange Room".localized(), "Baek Yeonwoo".localized(), "Choi Jiwon".localized(), "The Cure".localized(), "A Branch Road".localized(), "Ahn Jimin".localized(), "Ahn Jimin".localized()]
     
     var contentFontName: String {
         get {
@@ -101,8 +101,6 @@ final class ModelData: ObservableObject {
                 return "NanumMyeongjo"
             case .CN, .JP:
                 return "NotoSerifSC-Medium"
-            default :
-                return "NanumMyeongjo"
             }
         }
     }
@@ -113,8 +111,6 @@ final class ModelData: ObservableObject {
                 return "NanumMyeongjoBold"
             case .CN, .JP:
                 return "NotoSerifSC-Bold"
-            default :
-                return "NanumMyeongjoBold"
             }
         }
     }
@@ -122,11 +118,9 @@ final class ModelData: ObservableObject {
         get {
             switch LocalizeManager.deviceLanguage {
             case .KR, .EN:
-                return "NuosuSIL-Regular"
+                return "NanumMyeongjoExtraBold"
             case .CN, .JP:
-                return "NotoSerifSC-Regular"
-            default :
-                return "NuosuSIL-Regular"
+                return "NanumMyeongjoExtraBold"
             }
         }
     }

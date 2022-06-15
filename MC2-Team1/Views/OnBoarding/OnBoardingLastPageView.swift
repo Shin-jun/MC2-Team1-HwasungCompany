@@ -22,7 +22,7 @@ struct OnBoardingLastPageView: View {
                     .foregroundColor(Color.fontColor)
                     .padding(.bottom, 30)
             }
-            Text("화살표를 클릭해서\n게임을 시작하세요.")
+            Text("seq5".localized())
                 .font(.system(size: 18))
                 .multilineTextAlignment(.center)
         }
