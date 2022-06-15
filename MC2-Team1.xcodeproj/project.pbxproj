@@ -12,6 +12,13 @@
 		058249AF2854DECF00EC0832 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 058249AE2854DECF00EC0832 /* Lottie */; };
 		05FB2E0F285710360089359B /* chapterSixBKR.json in Resources */ = {isa = PBXBuildFile; fileRef = 05FB2E0E285710360089359B /* chapterSixBKR.json */; };
 		11139EBB28570D5B00EF6FD1 /* chapterFiveKR.json in Resources */ = {isa = PBXBuildFile; fileRef = 11139EBA28570D5B00EF6FD1 /* chapterFiveKR.json */; };
+		11F4C4022859A509002CE9F4 /* chapterFiveEng.json in Resources */ = {isa = PBXBuildFile; fileRef = 11F4C4002859A509002CE9F4 /* chapterFiveEng.json */; };
+		11F4C4032859A509002CE9F4 /* chapterFourEng.json in Resources */ = {isa = PBXBuildFile; fileRef = 11F4C4012859A509002CE9F4 /* chapterFourEng.json */; };
+		11F4C4062859A520002CE9F4 /* chapterSixBEng.json in Resources */ = {isa = PBXBuildFile; fileRef = 11F4C4042859A520002CE9F4 /* chapterSixBEng.json */; };
+		11F4C4072859A520002CE9F4 /* chapterOneEng.json in Resources */ = {isa = PBXBuildFile; fileRef = 11F4C4052859A520002CE9F4 /* chapterOneEng.json */; };
+		11F4C40B2859A532002CE9F4 /* chapterThreeEng.json in Resources */ = {isa = PBXBuildFile; fileRef = 11F4C4082859A532002CE9F4 /* chapterThreeEng.json */; };
+		11F4C40C2859A532002CE9F4 /* chapterTwoEng.json in Resources */ = {isa = PBXBuildFile; fileRef = 11F4C4092859A532002CE9F4 /* chapterTwoEng.json */; };
+		11F4C40D2859A532002CE9F4 /* chapterSixCEng.json in Resources */ = {isa = PBXBuildFile; fileRef = 11F4C40A2859A532002CE9F4 /* chapterSixCEng.json */; };
 		37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9E2AD2851CA31005BB908 /* DotView.swift */; };
 		37D9E2B828570CBC005BB908 /* chapterThreeKR.json in Resources */ = {isa = PBXBuildFile; fileRef = 37D9E2B728570CBC005BB908 /* chapterThreeKR.json */; };
 		3A3A900228587A3100375C7D /* chapterOneJP.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3A900128587A3100375C7D /* chapterOneJP.json */; };
@@ -86,6 +93,13 @@
 		058249AB2854DE9800EC0832 /* openBox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = openBox.json; sourceTree = "<group>"; };
 		05FB2E0E285710360089359B /* chapterSixBKR.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterSixBKR.json; sourceTree = "<group>"; };
 		11139EBA28570D5B00EF6FD1 /* chapterFiveKR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFiveKR.json; sourceTree = "<group>"; };
+		11F4C4002859A509002CE9F4 /* chapterFiveEng.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterFiveEng.json; sourceTree = "<group>"; };
+		11F4C4012859A509002CE9F4 /* chapterFourEng.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterFourEng.json; sourceTree = "<group>"; };
+		11F4C4042859A520002CE9F4 /* chapterSixBEng.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterSixBEng.json; sourceTree = "<group>"; };
+		11F4C4052859A520002CE9F4 /* chapterOneEng.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterOneEng.json; sourceTree = "<group>"; };
+		11F4C4082859A532002CE9F4 /* chapterThreeEng.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterThreeEng.json; sourceTree = "<group>"; };
+		11F4C4092859A532002CE9F4 /* chapterTwoEng.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterTwoEng.json; sourceTree = "<group>"; };
+		11F4C40A2859A532002CE9F4 /* chapterSixCEng.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterSixCEng.json; sourceTree = "<group>"; };
 		37D9E2AD2851CA31005BB908 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 		37D9E2B728570CBC005BB908 /* chapterThreeKR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterThreeKR.json; sourceTree = "<group>"; };
 		3A3A900128587A3100375C7D /* chapterOneJP.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterOneJP.json; sourceTree = "<group>"; };
@@ -334,6 +348,13 @@
 				11139EBA28570D5B00EF6FD1 /* chapterFiveKR.json */,
 				05FB2E0E285710360089359B /* chapterSixBKR.json */,
 				B70C7352285705A6009F8D61 /* chapterSixCKR.json */,
+				11F4C4002859A509002CE9F4 /* chapterFiveEng.json */,
+				11F4C40A2859A532002CE9F4 /* chapterSixCEng.json */,
+				11F4C4082859A532002CE9F4 /* chapterThreeEng.json */,
+				11F4C4092859A532002CE9F4 /* chapterTwoEng.json */,
+				11F4C4052859A520002CE9F4 /* chapterOneEng.json */,
+				11F4C4042859A520002CE9F4 /* chapterSixBEng.json */,
+				11F4C4012859A509002CE9F4 /* chapterFourEng.json */,
 				C613C434283E108A00BCFC82 /* fonts */,
 				B7FD7D672855C79B006A509E /* PastPara.json */,
 				B718B1D428587926006D0DB4 /* chapterOneCN.json */,
@@ -422,6 +443,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F4C4062859A520002CE9F4 /* chapterSixBEng.json in Resources */,
+				11F4C40D2859A532002CE9F4 /* chapterSixCEng.json in Resources */,
+				11F4C40B2859A532002CE9F4 /* chapterThreeEng.json in Resources */,
+				11F4C40C2859A532002CE9F4 /* chapterTwoEng.json in Resources */,
 				D4EE46BC2855DE7800C608DA /* NanumMyeongjo.ttf in Resources */,
 				C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */,
 				B718B1E12858C596006D0DB4 /* chapterSixBCN.json in Resources */,
@@ -452,6 +477,10 @@
 				37D9E2B828570CBC005BB908 /* chapterThreeKR.json in Resources */,
 				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
 				C6AE2957285705CA00E9F39F /* chapterTwoKR.json in Resources */,
+				11F4C4072859A520002CE9F4 /* chapterOneEng.json in Resources */,
+				11F4C4032859A509002CE9F4 /* chapterFourEng.json in Resources */,
+				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
+				11F4C4022859A509002CE9F4 /* chapterFiveEng.json in Resources */,
 				C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */,
 				B73777EA2858D2F500BC049F /* NotoSerifSC-Medium.otf in Resources */,
 				B73777DE2858CA1F00BC049F /* chapterSixCCN.json in Resources */,

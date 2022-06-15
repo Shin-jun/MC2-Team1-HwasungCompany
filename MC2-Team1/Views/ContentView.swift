@@ -95,7 +95,7 @@ extension ContentView {
             }
             
         }
-        .padding(.horizontal, 20)
+        .padding(.horizontal)
     }
     
     // Toolbar ViewBuilder
