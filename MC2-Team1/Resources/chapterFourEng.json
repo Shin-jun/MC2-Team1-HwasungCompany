@@ -29,7 +29,7 @@
     },
     {
         "id": 3,
-        "content": "Jones talked to Turner.\"Nice to meet you. You must be the head researcher Chris Turner, right? I'm Bailey Jones, a junior researcher from the other department.\"\n\"……\"\nTurner stared at Jones cautiously.",
+        "content": "Jones talked to Turner.\n\"Nice to meet you. You must be the head researcher Chris Turner, right? I'm Bailey Jones, a junior researcher from some other department.\"\n\"……\"\nTurner stared at Jones doubtfully.",
         "choices": [
             {
                 "content": "Next",
@@ -59,7 +59,7 @@
     },
     {
         "id": 6,
-        "content": "\"By the way, do you have any proper medicines for wounds? We looked around on our way but we couldn't really find one\"",
+        "content": "\"By the way, do you have any proper medicines for wounds? We looked around on our way but we couldn't really find one.\"",
         "choices": [
             {
                 "content": "Next",
@@ -89,7 +89,7 @@
     },
     {
         "id": 9,
-        "content": "\"Andrea, maybe you could go over to the room next door and take some rest for a few minutes. Don't move too much since you're hurt.\"\nChris Turner looked at me and said.",
+        "content": "\"Andrea, maybe you could go over to the next room and take some rest for a few minutes. Don't move too much since you're hurt.\"\nChris Turner looked at me and said.",
         "choices": [
             {
                 "content": "Next",
@@ -165,7 +165,7 @@
     },
     {
         "id": 16,
-        "content": "And this glass stick, it looks like it's the cure that Bailey Jones was looking for.\nAs I was holding the stick and looking into it, I heard a voice of someone shouting from the other room.",
+        "content": "And this glass stick, it looks like it's the cure that Bailey Jones was looking for.\nAs I was holding the cylinder and looking into it, I heard a voice of someone shouting from the other room.",
         "choices": [
             {
                 "content": "Next",

@@ -29,14 +29,14 @@
     },
     {
         "id": 3,
-        "content": "\"I've been trying to find something. It's actually a cure, but it was developed by some other department so I don't have any idea where I can find it.\"",
+        "content": "\"I've been trying to find something. It's actually a cure, but it was developed by some other department so I have no idea where to find it.\"",
         "choices": [
             {
                 "content": "A cure?",
                 "nextParagraphId": 4
             },
             {
-                "content": "Are they hurt or something",
+                "content": "Are they hurt or something?",
                 "nextParagraphId": 4,
                 "effectB": 1,
                 "effectC": -1
@@ -59,7 +59,7 @@
     },
     {
         "id": 5,
-        "content": "\"It's not really like I want you to help me find it. The cure is really important to me but one thing that's more important is to get you out of here safely. So what I want is, maybe if you happen to see it, please just tell me. That's all.\"",
+        "content": "\"It's not really like I want you to help me find it. The cure is important but one thing that's more important is to get you out of here safely. So if you happen to see it, please just tell me. That's all I want.\"",
         "choices": [
             {
                 "content": "How does it look like?",
@@ -77,7 +77,7 @@
     },
     {
         "id": 6,
-        "content": "\"It's red and it's liquid. I'm guessing maybe you'll see it inside a sealed glass tube kind of thing. If you ever see something like that, please let me know.\"\n\"Alright, I will.\"",
+        "content": "\"It's red and it's liquid. I'm guessing maybe you'll see it inside a sealed glass tube. If you ever see something like that, please let me know.\"\n\"Alright, I will.\"",
         "choices": [
             {
                 "content": "Next",
@@ -107,7 +107,7 @@
     },
     {
         "id": 9,
-        "content": "\"Andrea? You there?\"\nBailey Jones banged the door from the other side.\n\"Yes, I'm here. What the fuck is this?\"\n\"I was a few steps away from you and all of a sudden this thing just appeared out of nowhere.\"",
+        "content": "\"Andrea? You there?\"\nJones banged the door from the other side.\n\"Yes, I'm here. What the is this?\"\n\"I was a few steps away from you and all of a sudden this thing just appeared out of nowhere.\"",
         "choices": [
             {
                 "content": "Next",
@@ -124,7 +124,7 @@
                 "nextParagraphId": 11
             },
             {
-                "content": "What the hell should we do now?",
+                "content": "What should we do now?",
                 "nextParagraphId": 11
             }
         ]
@@ -134,7 +134,7 @@
         "content": "As I was looking around in panic, someone grabbed my shoulder.\nThe person, without giving me a moment to shout out, started talking urgently, but also quietly.\n\"What are you doing here? Why are you with that person?\"",
         "choices": [
             {
-                "content": "Who the fuck are you?",
+                "content": "Who the hell are you?",
                 "nextParagraphId": 12
             },
             {
@@ -145,7 +145,7 @@
     },
     {
         "id": 12,
-        "content": "They kept on talking without giving me an answer to my question.\n\"Did they tell you that they are a researcher or something?\"\nIs it a question worth answering? I was confused.\n\"Don't you remember anything?\"\nThey stared right into my eyes and asked.\"",
+        "content": "They kept on talking without giving me an answer to my question.\n\"Did they tell you that they are a researcher or something?\"\nIs it a question worth answering? I was confused.\n\"Don't you remember anything?\"\nThey stared right into my eyes and asked.",
         "choices": [
             {
                 "content": "Next",
@@ -175,7 +175,7 @@
     },
     {
         "id": 15,
-        "content": "\"You, you had a yellow cat named Amber. Also, you had a job where you taught kids, because you love them. Don't you remember all these things?\"",
+        "content": "\"You, you had a yellow cat named Amber. Also, you had a job where you taught kids, because you loved them. Don't you remember all these things?\"",
         "choices": [
             {
                 "content": "It's different from what Jones said",
@@ -192,7 +192,7 @@
         "content": "They continued in a serious manner.\n\"And please, don't trust that dude. I'm not 100% sure but I can tell you that they can put you in a danger.\"",
         "choices": [
             {
-                "content": "Do you have any proof",
+                "content": "Do you have any proof?",
                 "nextParagraphId": 17
             },
             {
@@ -223,7 +223,7 @@
     },
     {
         "id": 18,
-        "content": "I closely looked at the shutter. It's a lot of dusts. Well there should be something that opens the door...",
+        "content": "I closely looked at the shutter. It's a lot of dusts. Well, there should be something that opens the door...",
         "choices": [
             {
                 "content": "Next",
