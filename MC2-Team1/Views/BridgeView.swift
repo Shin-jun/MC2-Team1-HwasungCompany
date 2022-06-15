@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BridgeView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     @EnvironmentObject var modelData: ModelData
     @State private var tapFontColorOpacity = true
     @Binding var mode: Mode
@@ -28,15 +30,15 @@ struct BridgeView: View {
                 
                 switch chapterNumber {
                 case "2":
-                    Image("백연우").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
+                    Image(colorScheme == .light ? "백연우":"백연우_반전").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 case "3":
-                    Image("최지원").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
+                    Image(colorScheme == .light ? "최지원":"최지원_반전").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 case "4":
-                    Image("치료제").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
+                    Image(colorScheme == .light ? "치료제":"치료제_반전").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 case "5":
-                    Image("갈림길").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
+                    Image(colorScheme == .light ? "갈림길":"갈림길_반전").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 case "6":
-                    Image("안지민").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
+                    Image(colorScheme == .light ? "안지민":"안지민_반전").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 default:
                     EmptyView()
                 }
