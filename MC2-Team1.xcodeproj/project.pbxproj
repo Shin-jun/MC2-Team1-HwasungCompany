@@ -11,6 +11,7 @@
 		058249AC2854DE9800EC0832 /* openBox.json in Resources */ = {isa = PBXBuildFile; fileRef = 058249AB2854DE9800EC0832 /* openBox.json */; };
 		058249AF2854DECF00EC0832 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 058249AE2854DECF00EC0832 /* Lottie */; };
 		05FB2E0F285710360089359B /* chapterSixBKR.json in Resources */ = {isa = PBXBuildFile; fileRef = 05FB2E0E285710360089359B /* chapterSixBKR.json */; };
+		05FB2E5D2859E5D90089359B /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB2E5C2859E5D90089359B /* CreditView.swift */; };
 		11139EBB28570D5B00EF6FD1 /* chapterFiveKR.json in Resources */ = {isa = PBXBuildFile; fileRef = 11139EBA28570D5B00EF6FD1 /* chapterFiveKR.json */; };
 		11F4C4022859A509002CE9F4 /* chapterFiveEng.json in Resources */ = {isa = PBXBuildFile; fileRef = 11F4C4002859A509002CE9F4 /* chapterFiveEng.json */; };
 		11F4C4032859A509002CE9F4 /* chapterFourEng.json in Resources */ = {isa = PBXBuildFile; fileRef = 11F4C4012859A509002CE9F4 /* chapterFourEng.json */; };
@@ -93,6 +94,7 @@
 		058249A92854DE7300EC0832 /* BoxOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOpenView.swift; sourceTree = "<group>"; };
 		058249AB2854DE9800EC0832 /* openBox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = openBox.json; sourceTree = "<group>"; };
 		05FB2E0E285710360089359B /* chapterSixBKR.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterSixBKR.json; sourceTree = "<group>"; };
+		05FB2E5C2859E5D90089359B /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
 		11139EBA28570D5B00EF6FD1 /* chapterFiveKR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFiveKR.json; sourceTree = "<group>"; };
 		11F4C4002859A509002CE9F4 /* chapterFiveEng.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterFiveEng.json; sourceTree = "<group>"; };
 		11F4C4012859A509002CE9F4 /* chapterFourEng.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterFourEng.json; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				B7690F1828548932008E81AC /* InitView.swift */,
 				B7690F1A28548C0F008E81AC /* BridgeView.swift */,
 				058249A92854DE7300EC0832 /* BoxOpenView.swift */,
+				05FB2E5C2859E5D90089359B /* CreditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 			files = (
 				3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */,
 				B73777FB2859E51300BC049F /* LanguageEnum.swift in Sources */,
+				05FB2E5D2859E5D90089359B /* CreditView.swift in Sources */,
 				3AA9DFF028532FE300365420 /* Constants.swift in Sources */,
 				D4EE46B0285465AE00C608DA /* PullLeverGameView.swift in Sources */,
 				C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */,
