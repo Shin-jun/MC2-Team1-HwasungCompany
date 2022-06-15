@@ -13,6 +13,7 @@ struct ButtonFadeInView: View {
     // param
     let choice: Choice
     let content: String
+    @Binding var isButtonAnimation: Bool
     
     // define
     @EnvironmentObject var modelData: ModelData
@@ -24,7 +25,7 @@ struct ButtonFadeInView: View {
     @AppStorage("isPullLeverGame") var isPullLeverGame: Bool = false
     @AppStorage("isBoxOpenGame") var isBoxOpenGame: Bool = false
     @State var opacity: Double = 0
-    @Binding var isButtonHidden: Bool
+    @State var isButtonHidden: Bool = true
     
     var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
 
@@ -46,7 +47,7 @@ struct ButtonFadeInView: View {
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + getDelayTime()) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + (isButtonAnimation ? getDelayTime():Double(0.0))) {
                 self.isButtonHidden = false
             }
         }
@@ -100,12 +101,9 @@ extension ButtonFadeInView{
                 }
             // 호감도에 따른 갈림길
             } else if choice.nextParagraphId == -2 {
-                print(Bfriendship)
                 if Bfriendship <= 10 {
-                    print("under 10")
                     paragraphId = 1001
                 } else {
-                    print("over 10")
                     paragraphId = 2001
                 }
             } else {
@@ -139,6 +137,7 @@ extension ButtonFadeInView{
                         break
                     }
                 }
+                isButtonAnimation = true
             }
         } label: {
             Text(choice.content)
