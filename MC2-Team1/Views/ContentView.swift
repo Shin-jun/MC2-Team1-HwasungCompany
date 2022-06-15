@@ -42,7 +42,7 @@ struct ContentView: View {
             VStack{
                 
                 // Tool Bar
-                toolbarViewBuilder()
+                toolbarViewBuilder().padding(.top)
                 
                 // Content && History
                 HistoryView()
@@ -50,14 +50,15 @@ struct ContentView: View {
                     .padding(.top, RatioSize.getResheight(height: 5))
                 
                 // Choice Buttons
-                ButtonViewBuilder()
+                // TODO: 버튼 최하단에 padding 넣어야 함
+                ButtonViewBuilder().padding(.bottom)
             }
             
             // Setting Sheet
             HalfASheet(isPresented: $isShowing){
                 settingViewBuilder()
             }
-            .height(.proportional(0.6))
+            .height(.proportional(0.4))
             .ignoresSafeArea()
         }
         .fullScreenCover(isPresented: $isGlassGame) {
@@ -86,8 +87,10 @@ extension ContentView {
             
             if currentParagraph.hasChoices {
                 Group {
-                    ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
-                        ButtonFadeInView(mode: $mode, choice: choice, content: currentParagraph.content)
+                    VStack {
+                        ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
+                            ButtonFadeInView(mode: $mode, choice: choice, content: currentParagraph.content)
+                        }
                     }
                 }
                 .background(ViewGeometry())
