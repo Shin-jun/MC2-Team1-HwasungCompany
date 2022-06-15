@@ -27,11 +27,13 @@ struct ContentView: View {
     @State var isShowing = false
     @State var isShowingAlert = false
     @State var isButtonHidden: Bool = true
+    @State var isButtonAnimation: Bool = true
     
     var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
     
     // body
     var body: some View {
+        
         ZStack{
             // Background
             Color.bgColor
@@ -47,12 +49,18 @@ struct ContentView: View {
                     .padding(.horizontal, RatioSize.getResWidth(width: 20))
                     .padding(.top, RatioSize.getResheight(height: 5))
                     .onTapGesture {
-                        isButtonHidden = false
+                        isButtonAnimation = false
                     }
                 
                 // Choice Buttons
                 // TODO: 버튼 최하단에 padding 넣어야 함
-                ButtonViewBuilder().padding(.bottom)
+                if isButtonAnimation {
+                    ButtonViewBuilder()
+                        .padding(.bottom)
+                } else {
+                    ButtonViewBuilder()
+                        .padding(.bottom)
+                }
             }
             
             // Setting Sheet
@@ -88,13 +96,12 @@ extension ContentView {
                 Group {
                     VStack {
                         ForEach(currentParagraph.choices ?? [], id: \.self) {choice in
-                            ButtonFadeInView(mode: $mode, choice: choice, content: currentParagraph.content, isButtonHidden: $isButtonHidden)
+                            ButtonFadeInView(mode: $mode, choice: choice, content: currentParagraph.content, isButtonAnimation: $isButtonAnimation)
                         }
                     }
                 }
                 .background(ViewGeometry())
             }
-            
         }
         .padding(.horizontal)
     }
@@ -252,6 +259,7 @@ extension ContentView {
 
 // function Extension
 extension ContentView {
+    
     func getFriendshipDistance() -> CGFloat{
         var result = CGFloat(0)
         
