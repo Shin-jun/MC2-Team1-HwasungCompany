@@ -73,6 +73,16 @@ extension ButtonFadeInView{
                 withAnimation {
                     mode = .bridge
                 }
+            // 호감도에 따른 갈림길
+            } else if choice.nextParagraphId == -2 {
+                print(Bfriendship)
+                if Bfriendship <= 10 {
+                    print("under 10")
+                    paragraphId = 1001
+                } else {
+                    print("over 10")
+                    paragraphId = 2001
+                }
             } else {
                 // show next paragraph
                 modelData.pastParas.append([currentParagraph.content, choice.content])
