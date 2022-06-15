@@ -10,10 +10,10 @@
 		058249AA2854DE7300EC0832 /* BoxOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058249A92854DE7300EC0832 /* BoxOpenView.swift */; };
 		058249AC2854DE9800EC0832 /* openBox.json in Resources */ = {isa = PBXBuildFile; fileRef = 058249AB2854DE9800EC0832 /* openBox.json */; };
 		058249AF2854DECF00EC0832 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 058249AE2854DECF00EC0832 /* Lottie */; };
-		05FB2E0F285710360089359B /* chapterSixB.json in Resources */ = {isa = PBXBuildFile; fileRef = 05FB2E0E285710360089359B /* chapterSixB.json */; };
-		11139EBB28570D5B00EF6FD1 /* chapterFive.json in Resources */ = {isa = PBXBuildFile; fileRef = 11139EBA28570D5B00EF6FD1 /* chapterFive.json */; };
+		05FB2E0F285710360089359B /* chapterSixBKR.json in Resources */ = {isa = PBXBuildFile; fileRef = 05FB2E0E285710360089359B /* chapterSixBKR.json */; };
+		11139EBB28570D5B00EF6FD1 /* chapterFiveKR.json in Resources */ = {isa = PBXBuildFile; fileRef = 11139EBA28570D5B00EF6FD1 /* chapterFiveKR.json */; };
 		37D9E2AE2851CA31005BB908 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9E2AD2851CA31005BB908 /* DotView.swift */; };
-		37D9E2B828570CBC005BB908 /* chapterThree.json in Resources */ = {isa = PBXBuildFile; fileRef = 37D9E2B728570CBC005BB908 /* chapterThree.json */; };
+		37D9E2B828570CBC005BB908 /* chapterThreeKR.json in Resources */ = {isa = PBXBuildFile; fileRef = 37D9E2B728570CBC005BB908 /* chapterThreeKR.json */; };
 		3A3A900228587A3100375C7D /* chapterOneJP.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3A900128587A3100375C7D /* chapterOneJP.json */; };
 		3A3C86E228589A6100F0F8DE /* chapterTwoJP.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C86E128589A6100F0F8DE /* chapterTwoJP.json */; };
 		3A3C86E428589E0F00F0F8DE /* chapterThreeJP.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C86E328589E0B00F0F8DE /* chapterThreeJP.json */; };
@@ -24,7 +24,7 @@
 		3AA9DFD42851CADD00365420 /* GlassAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */; };
 		3AA9DFEB2851DCEC00365420 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEA2851DCEC00365420 /* HapticManager.swift */; };
 		3AA9DFF028532FE300365420 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9DFEF28532FE300365420 /* Constants.swift */; };
-		B70C7353285705A6009F8D61 /* chapterSixC.json in Resources */ = {isa = PBXBuildFile; fileRef = B70C7352285705A6009F8D61 /* chapterSixC.json */; };
+		B70C7353285705A6009F8D61 /* chapterSixCKR.json in Resources */ = {isa = PBXBuildFile; fileRef = B70C7352285705A6009F8D61 /* chapterSixCKR.json */; };
 		B718B1D528587927006D0DB4 /* chapterOneCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1D428587926006D0DB4 /* chapterOneCN.json */; };
 		B718B1D92858AF00006D0DB4 /* chapterTwoCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1D82858AF00006D0DB4 /* chapterTwoCN.json */; };
 		B718B1DB2858B5CF006D0DB4 /* chapterThreeCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1DA2858B5CF006D0DB4 /* chapterThreeCN.json */; };
@@ -40,6 +40,8 @@
 		B73777EC2858D2F500BC049F /* NotoSerifSC-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E52858D2F500BC049F /* NotoSerifSC-ExtraLight.otf */; };
 		B73777ED2858D2F500BC049F /* NotoSerifSC-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E62858D2F500BC049F /* NotoSerifSC-Light.otf */; };
 		B73777EF2859A2BE00BC049F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73777EE2859A2BE00BC049F /* String.swift */; };
+		B73777F12859A8A600BC049F /* LocalizeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73777F02859A8A600BC049F /* LocalizeManager.swift */; };
+		B73777F42859AAC200BC049F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B73777F62859AAC200BC049F /* Localizable.strings */; };
 		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
 		B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */; };
 		B7690EE82851DB5D008E81AC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE72851DB5D008E81AC /* HistoryView.swift */; };
@@ -58,7 +60,7 @@
 		C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */; };
 		C66C56E22845E2A200BDC0CC /* FadeInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66C56E12845E2A200BDC0CC /* FadeInView.swift */; };
 		C6AE29532855CDB200E9F39F /* ButtonFadeInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE29522855CDB200E9F39F /* ButtonFadeInView.swift */; };
-		C6AE2957285705CA00E9F39F /* chapterTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = C6AE2956285705CA00E9F39F /* chapterTwo.json */; };
+		C6AE2957285705CA00E9F39F /* chapterTwoKR.json in Resources */ = {isa = PBXBuildFile; fileRef = C6AE2956285705CA00E9F39F /* chapterTwoKR.json */; };
 		C6AE999B28587A1500FF8BD0 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE999A28587A1500FF8BD0 /* OnBoardingView.swift */; };
 		C6AE999D28587AC700FF8BD0 /* OnBoardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE999C28587AC700FF8BD0 /* OnBoardingPageView.swift */; };
 		C6AE999F2858858200FF8BD0 /* OnBoardingLastPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE999E2858858200FF8BD0 /* OnBoardingLastPageView.swift */; };
@@ -70,22 +72,22 @@
 		C6E1B9AC283B772E00EEC6F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E1B9AB283B772E00EEC6F1 /* Assets.xcassets */; };
 		C6E1B9AF283B772E00EEC6F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E1B9AE283B772E00EEC6F1 /* Preview Assets.xcassets */; };
 		C6E1B9B8283B778800EEC6F1 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9B7283B778800EEC6F1 /* Paragraph.swift */; };
-		C6E1B9BA283B77C100EEC6F1 /* chapterOne.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */; };
+		C6E1B9BA283B77C100EEC6F1 /* chapterOneKR.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E1B9B9283B77C100EEC6F1 /* chapterOneKR.json */; };
 		C6E1B9BC283B782700EEC6F1 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1B9BB283B782700EEC6F1 /* ModelData.swift */; };
 		D4EE46B0285465AE00C608DA /* PullLeverGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE46AF285465AE00C608DA /* PullLeverGameView.swift */; };
 		D4EE46BA2855DE7800C608DA /* NanumMyeongjoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4EE46B72855DE7800C608DA /* NanumMyeongjoBold.ttf */; };
 		D4EE46BB2855DE7800C608DA /* NanumMyeongjoExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4EE46B82855DE7800C608DA /* NanumMyeongjoExtraBold.ttf */; };
 		D4EE46BC2855DE7800C608DA /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4EE46B92855DE7800C608DA /* NanumMyeongjo.ttf */; };
-		D4EE46C22857107400C608DA /* chapterFour.json in Resources */ = {isa = PBXBuildFile; fileRef = D4EE46C12857107400C608DA /* chapterFour.json */; };
+		D4EE46C22857107400C608DA /* chapterFourKR.json in Resources */ = {isa = PBXBuildFile; fileRef = D4EE46C12857107400C608DA /* chapterFourKR.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		058249A92854DE7300EC0832 /* BoxOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOpenView.swift; sourceTree = "<group>"; };
 		058249AB2854DE9800EC0832 /* openBox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = openBox.json; sourceTree = "<group>"; };
-		05FB2E0E285710360089359B /* chapterSixB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterSixB.json; sourceTree = "<group>"; };
-		11139EBA28570D5B00EF6FD1 /* chapterFive.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFive.json; sourceTree = "<group>"; };
+		05FB2E0E285710360089359B /* chapterSixBKR.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterSixBKR.json; sourceTree = "<group>"; };
+		11139EBA28570D5B00EF6FD1 /* chapterFiveKR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFiveKR.json; sourceTree = "<group>"; };
 		37D9E2AD2851CA31005BB908 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
-		37D9E2B728570CBC005BB908 /* chapterThree.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterThree.json; sourceTree = "<group>"; };
+		37D9E2B728570CBC005BB908 /* chapterThreeKR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterThreeKR.json; sourceTree = "<group>"; };
 		3A3A900128587A3100375C7D /* chapterOneJP.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chapterOneJP.json; sourceTree = "<group>"; };
 		3A3C86E128589A6100F0F8DE /* chapterTwoJP.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterTwoJP.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		3A3C86E328589E0B00F0F8DE /* chapterThreeJP.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterThreeJP.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
@@ -96,7 +98,7 @@
 		3AA9DFD32851CADD00365420 /* GlassAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassAnimationView.swift; sourceTree = "<group>"; };
 		3AA9DFEA2851DCEC00365420 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		3AA9DFEF28532FE300365420 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B70C7352285705A6009F8D61 /* chapterSixC.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterSixC.json; sourceTree = "<group>"; };
+		B70C7352285705A6009F8D61 /* chapterSixCKR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterSixCKR.json; sourceTree = "<group>"; };
 		B718B1D428587926006D0DB4 /* chapterOneCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterOneCN.json; sourceTree = "<group>"; };
 		B718B1D82858AF00006D0DB4 /* chapterTwoCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterTwoCN.json; sourceTree = "<group>"; };
 		B718B1DA2858B5CF006D0DB4 /* chapterThreeCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterThreeCN.json; sourceTree = "<group>"; };
@@ -112,6 +114,11 @@
 		B73777E52858D2F500BC049F /* NotoSerifSC-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-ExtraLight.otf"; sourceTree = "<group>"; };
 		B73777E62858D2F500BC049F /* NotoSerifSC-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Light.otf"; sourceTree = "<group>"; };
 		B73777EE2859A2BE00BC049F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		B73777F02859A8A600BC049F /* LocalizeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeManager.swift; sourceTree = "<group>"; };
+		B73777F52859AAC200BC049F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B73777F72859AACC00BC049F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B73777F82859AAD100BC049F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B73777F92859AAD700BC049F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7690EE72851DB5D008E81AC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -131,7 +138,7 @@
 		C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-ExtraLight.otf"; sourceTree = "<group>"; };
 		C66C56E12845E2A200BDC0CC /* FadeInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInView.swift; sourceTree = "<group>"; };
 		C6AE29522855CDB200E9F39F /* ButtonFadeInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFadeInView.swift; sourceTree = "<group>"; };
-		C6AE2956285705CA00E9F39F /* chapterTwo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterTwo.json; sourceTree = "<group>"; };
+		C6AE2956285705CA00E9F39F /* chapterTwoKR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterTwoKR.json; sourceTree = "<group>"; };
 		C6AE999A28587A1500FF8BD0 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		C6AE999C28587AC700FF8BD0 /* OnBoardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageView.swift; sourceTree = "<group>"; };
 		C6AE999E2858858200FF8BD0 /* OnBoardingLastPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingLastPageView.swift; sourceTree = "<group>"; };
@@ -144,13 +151,13 @@
 		C6E1B9AB283B772E00EEC6F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6E1B9AE283B772E00EEC6F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6E1B9B7283B778800EEC6F1 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
-		C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterOne.json; sourceTree = "<group>"; };
+		C6E1B9B9283B77C100EEC6F1 /* chapterOneKR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterOneKR.json; sourceTree = "<group>"; };
 		C6E1B9BB283B782700EEC6F1 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		D4EE46AF285465AE00C608DA /* PullLeverGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullLeverGameView.swift; path = "MC2-Team1/PullLeverGameView.swift"; sourceTree = SOURCE_ROOT; };
 		D4EE46B72855DE7800C608DA /* NanumMyeongjoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoBold.ttf; sourceTree = "<group>"; };
 		D4EE46B82855DE7800C608DA /* NanumMyeongjoExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoExtraBold.ttf; sourceTree = "<group>"; };
 		D4EE46B92855DE7800C608DA /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
-		D4EE46C12857107400C608DA /* chapterFour.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFour.json; sourceTree = "<group>"; };
+		D4EE46C12857107400C608DA /* chapterFourKR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFourKR.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +211,7 @@
 				3AA9DFEA2851DCEC00365420 /* HapticManager.swift */,
 				B7FD7D652855C347006A509E /* JsonManager.swift */,
 				3AA9DFEF28532FE300365420 /* Constants.swift */,
+				B73777F02859A8A600BC049F /* LocalizeManager.swift */,
 				B7690F13285322D5008E81AC /* Extensions */,
 			);
 			path = Helpers;
@@ -271,7 +279,6 @@
 				C6E1B9A6283B772E00EEC6F1 /* MC2-Team1 */,
 				C6E1B9A5283B772E00EEC6F1 /* Products */,
 				C66C56DE2844A71900BDC0CC /* Frameworks */,
-				3A3A9000285879E200375C7D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,13 +327,13 @@
 			isa = PBXGroup;
 			children = (
 				058249AB2854DE9800EC0832 /* openBox.json */,
-				C6E1B9B9283B77C100EEC6F1 /* chapterOne.json */,
-				C6AE2956285705CA00E9F39F /* chapterTwo.json */,
-				37D9E2B728570CBC005BB908 /* chapterThree.json */,
-				D4EE46C12857107400C608DA /* chapterFour.json */,
-				11139EBA28570D5B00EF6FD1 /* chapterFive.json */,
-				05FB2E0E285710360089359B /* chapterSixB.json */,
-				B70C7352285705A6009F8D61 /* chapterSixC.json */,
+				C6E1B9B9283B77C100EEC6F1 /* chapterOneKR.json */,
+				C6AE2956285705CA00E9F39F /* chapterTwoKR.json */,
+				37D9E2B728570CBC005BB908 /* chapterThreeKR.json */,
+				D4EE46C12857107400C608DA /* chapterFourKR.json */,
+				11139EBA28570D5B00EF6FD1 /* chapterFiveKR.json */,
+				05FB2E0E285710360089359B /* chapterSixBKR.json */,
+				B70C7352285705A6009F8D61 /* chapterSixCKR.json */,
 				C613C434283E108A00BCFC82 /* fonts */,
 				B7FD7D672855C79B006A509E /* PastPara.json */,
 				B718B1D428587926006D0DB4 /* chapterOneCN.json */,
@@ -343,6 +350,7 @@
 				3A3C86E72858C1C500F0F8DE /* chapterFiveJP.json */,
 				3A3C86E92858D12C00F0F8DE /* chapterSixBJP.json */,
 				3A3C86EB2858E1F400F0F8DE /* chapterSixCJP.json */,
+				B73777F62859AAC200BC049F /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -393,6 +401,8 @@
 				en,
 				Base,
 				ko,
+				"zh-Hans",
+				ja,
 			);
 			mainGroup = C6E1B99B283B772E00EEC6F1;
 			packageReferences = (
@@ -417,12 +427,13 @@
 				B718B1E12858C596006D0DB4 /* chapterSixBCN.json in Resources */,
 				B73777ED2858D2F500BC049F /* NotoSerifSC-Light.otf in Resources */,
 				B7690F17285325CA008E81AC /* NuosuSIL-Regular.ttf in Resources */,
-				B70C7353285705A6009F8D61 /* chapterSixC.json in Resources */,
+				B70C7353285705A6009F8D61 /* chapterSixCKR.json in Resources */,
 				D4EE46BB2855DE7800C608DA /* NanumMyeongjoExtraBold.ttf in Resources */,
 				3A3C86EC2858E1F400F0F8DE /* chapterSixCJP.json in Resources */,
 				C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */,
 				B718B1D528587927006D0DB4 /* chapterOneCN.json in Resources */,
-				11139EBB28570D5B00EF6FD1 /* chapterFive.json in Resources */,
+				B73777F42859AAC200BC049F /* Localizable.strings in Resources */,
+				11139EBB28570D5B00EF6FD1 /* chapterFiveKR.json in Resources */,
 				C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */,
 				B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */,
 				B718B1D92858AF00006D0DB4 /* chapterTwoCN.json in Resources */,
@@ -430,7 +441,7 @@
 				B73777EC2858D2F500BC049F /* NotoSerifSC-ExtraLight.otf in Resources */,
 				B73777E72858D2F500BC049F /* NotoSerifSC-Regular.otf in Resources */,
 				3A3C86E228589A6100F0F8DE /* chapterTwoJP.json in Resources */,
-				11139EBB28570D5B00EF6FD1 /* chapterFive.json in Resources */,
+				11139EBB28570D5B00EF6FD1 /* chapterFiveKR.json in Resources */,
 				C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */,
 				B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */,
 				3A3C86E82858C1C500F0F8DE /* chapterFiveJP.json in Resources */,
@@ -438,20 +449,20 @@
 				B7FD7D682855C79B006A509E /* PastPara.json in Resources */,
 				3A3C86E428589E0F00F0F8DE /* chapterThreeJP.json in Resources */,
 				C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */,
-				37D9E2B828570CBC005BB908 /* chapterThree.json in Resources */,
+				37D9E2B828570CBC005BB908 /* chapterThreeKR.json in Resources */,
 				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
-				C6AE2957285705CA00E9F39F /* chapterTwo.json in Resources */,
+				C6AE2957285705CA00E9F39F /* chapterTwoKR.json in Resources */,
 				C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */,
 				B73777EA2858D2F500BC049F /* NotoSerifSC-Medium.otf in Resources */,
 				B73777DE2858CA1F00BC049F /* chapterSixCCN.json in Resources */,
-				05FB2E0F285710360089359B /* chapterSixB.json in Resources */,
+				05FB2E0F285710360089359B /* chapterSixBKR.json in Resources */,
 				B718B1DD2858BBFC006D0DB4 /* chapterFourCN.json in Resources */,
 				3A3C86E62858B69100F0F8DE /* chapterFourJP.json in Resources */,
-				05FB2E0F285710360089359B /* chapterSixB.json in Resources */,
+				05FB2E0F285710360089359B /* chapterSixBKR.json in Resources */,
 				3A3A900228587A3100375C7D /* chapterOneJP.json in Resources */,
 				058249AC2854DE9800EC0832 /* openBox.json in Resources */,
 				C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */,
-				C6E1B9BA283B77C100EEC6F1 /* chapterOne.json in Resources */,
+				C6E1B9BA283B77C100EEC6F1 /* chapterOneKR.json in Resources */,
 				C6E1B9AF283B772E00EEC6F1 /* Preview Assets.xcassets in Resources */,
 				B73777E82858D2F500BC049F /* NotoSerifSC-SemiBold.otf in Resources */,
 				B73777EB2858D2F500BC049F /* NotoSerifSC-Bold.otf in Resources */,
@@ -459,7 +470,7 @@
 				B718B1DF2858C121006D0DB4 /* chapterFiveCN.json in Resources */,
 				C6E1B9AC283B772E00EEC6F1 /* Assets.xcassets in Resources */,
 				B718B1DB2858B5CF006D0DB4 /* chapterThreeCN.json in Resources */,
-				D4EE46C22857107400C608DA /* chapterFour.json in Resources */,
+				D4EE46C22857107400C608DA /* chapterFourKR.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +497,7 @@
 				B73777EF2859A2BE00BC049F /* String.swift in Sources */,
 				C6E1945D284A58EF00EC9131 /* VerticalSlideTransition.swift in Sources */,
 				B7690F1B28548C0F008E81AC /* BridgeView.swift in Sources */,
+				B73777F12859A8A600BC049F /* LocalizeManager.swift in Sources */,
 				058249AA2854DE7300EC0832 /* BoxOpenView.swift in Sources */,
 				C66C56E22845E2A200BDC0CC /* FadeInView.swift in Sources */,
 				C6AE29532855CDB200E9F39F /* ButtonFadeInView.swift in Sources */,
@@ -500,11 +512,26 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		B73777F62859AAC200BC049F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B73777F52859AAC200BC049F /* en */,
+				B73777F72859AACC00BC049F /* ko */,
+				B73777F82859AAD100BC049F /* zh-Hans */,
+				B73777F92859AAD700BC049F /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		C6E1B9B0283B772E00EEC6F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -565,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

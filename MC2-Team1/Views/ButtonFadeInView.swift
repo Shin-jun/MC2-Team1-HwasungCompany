@@ -27,7 +27,6 @@ struct ButtonFadeInView: View {
     @State var isButtonHidden = true
     
     var currentParagraph: Paragraph {modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId)}
-    private let mainFontBold = "NanumMyeongjoBold"
 
     var body: some View {
         
@@ -125,7 +124,7 @@ extension ButtonFadeInView{
         } label: {
             Text(choice.content)
                 .foregroundColor(.fontColor)
-                .font(.custom(mainFontBold, size: 18))
+                .font(.custom(modelData.getChoiceFontName(), size: 18))
                 .frame(maxWidth: .infinity, maxHeight: RatioSize.getResheight(height: 60))
                 .background(Color.bgColor)
                 .cornerRadius(50)

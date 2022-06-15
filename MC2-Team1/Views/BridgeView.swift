@@ -48,7 +48,7 @@ struct BridgeView: View {
                 HStack {
                     Spacer()
                     Text("Chapter \(chapterNumber)")
-                        .font(.custom("NuosuSIL-Regular", size: RatioSize.getResWidth(width: 24)))
+                        .font(.custom(modelData.getTitleFontName(), size: RatioSize.getResWidth(width: 24)))
                         .foregroundColor(.fontColor)
                         .padding(.top, RatioSize.getResheight(height: 30))
                         .onAppear {
@@ -77,7 +77,7 @@ struct BridgeView: View {
                 HStack {
                     Spacer()
                     Text("\(modelData.chapterNameArray[modelData.bridgeChapterIndex])")
-                        .font(.custom("NotoSerifKR-Regular", size: RatioSize.getResWidth(width: 20)))
+                        .font(.custom(modelData.getContentFontName(), size: RatioSize.getResWidth(width: 20)))
                         .foregroundColor(.fontColor)
                     Spacer()
                 }

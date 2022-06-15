@@ -33,7 +33,7 @@ final class ModelData: ObservableObject {
             chapterFileName = "chapterOne"
         }
         
-        let chapter: [Paragraph] = JsonManager.load("\(chapterFileName)CN.json")
+        let chapter: [Paragraph] = JsonManager.load("\(chapterFileName)\(LocalizeManager.getDeviceLanguage()).json")
         var filteredPara: Paragraph {
             chapter.filter { paragraph in paragraph.id == id }.first!
         }
@@ -93,4 +93,37 @@ final class ModelData: ObservableObject {
     }
     
     let chapterNameArray = ["\"낯선 방\"", "\"백연우\"", "\"최지원\"", "\"치료제\"", "\"갈림길\"", "\"안지민\""]
+    
+    func getContentFontName() -> String {
+        switch LocalizeManager.getDeviceLanguage() {
+        case "KR", "EN":
+            return "NanumMyeongjo"
+        case "CN", "JP":
+            return "NotoSerifSC-Medium"
+        default :
+            return "NanumMyeongjo"
+        }
+    }
+    
+    func getChoiceFontName() -> String {
+        switch LocalizeManager.getDeviceLanguage() {
+        case "KR", "EN":
+            return "NanumMyeongjoBold"
+        case "CN", "JP":
+            return "NotoSerifSC-Bold"
+        default :
+            return "NanumMyeongjoBold"
+        }
+    }
+    
+    func getTitleFontName() -> String {
+        switch LocalizeManager.getDeviceLanguage() {
+        case "KR", "EN":
+            return "NuosuSIL-Regular"
+        case "CN", "JP":
+            return "NotoSerifSC-Regular"
+        default :
+            return "NuosuSIL-Regular"
+        }
+    }
 }
