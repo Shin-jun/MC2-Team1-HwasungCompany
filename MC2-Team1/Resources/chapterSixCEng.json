@@ -111,7 +111,7 @@
   },
   {
     "id": 12,
-    "content": "And at that moment I had a sudden realization that Jones has no intention to hurt me. They were holding the broken piece of glass but that was all. They were not pressing it against my neck.",
+    "content": "And at that moment I had a sudden realization that Jones had no intention to hurt me. They were holding the broken piece of glass but that was all. They were not pressing it against my neck.",
     "choices": [
         {
             "content" : "Next",
@@ -151,7 +151,7 @@
   },
   {
     "id": 16,
-    "content": "\"Now!\"\nChris Turner ran over to me and Jones and injected the cure on Jones' arm.",
+    "content": "\"Now!\"\nChris Turner ran over to me and Jones, and injected the cure into Jones' arm.",
     "choices": [
         {
             "content" : "Next",
@@ -251,7 +251,7 @@
   },
   {
     "id": 26,
-    "content": "Someone who has been collapsed on the floor got up slowly with a confused face.\nThey detected another body across the room.",
+    "content": "Someone who has been collapsed on the floor gets up slowly with a confused face.\nThey detect another body across the room.",
     "choices": [
         {
             "content" : "Next",
@@ -261,7 +261,7 @@
   },
   {
     "id": 27,
-    "content": "Being surprised, they looked around to see what was going on",
+    "content": "Being surprised, they look around to see what is going on",
     "choices": [
         {
             "content" : "Next",
@@ -271,7 +271,7 @@
   },
   {
     "id": 28,
-    "content": "\"You're awake! What a relief.\"\nThey turned their eyes to the direction of the somewhat familiar voice. The owner of the voice came and sat down in front of them.",
+    "content": "\"You're awake! What a relief.\"\nThey turn their eyes to the direction of the somewhat familiar voice. The owner of the voice comes and sits down in front of them.",
     "choices": [
         {
             "content" : "Next",
@@ -321,7 +321,7 @@
   },
   {
     "id": 33,
-    "content": "Andrea Davies smiled at Bailey Jones.",
+    "content": "Andrea Davies smiles at Bailey Jones.",
     "choices": [
         {
             "content" : "Next",
