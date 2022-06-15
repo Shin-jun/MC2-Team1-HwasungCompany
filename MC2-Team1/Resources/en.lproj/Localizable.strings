@@ -29,3 +29,11 @@
 "The Cure" = "\"The Cure\"";
 "A Branch Road" = "\"A Branch Road\"";
 "Ahn Jimin" = "\"Andrea Davies\"";
+"sampleContent" = "It felt like everything was fading away as if I was sunk under water, as I closed my eyes and held my breath.\nWaterdrops… I can hear some water running.\nI figured out that it was coming from the small crack on the door.";
+"sampleChoice1" = "Was I not alone here?";
+"sampleCoice2" = "Secretly approach the door";
+"seq1" = "You can access the setting page\nby clicking the gear button on the right top.";
+"seq2" = "Continue the story\nby choosing an option you like.";
+"seq3" = "Check the previous story and choices\nby scrolling the screen.";
+"seq4" = "Trust level for each party will differ based on choices.\nCheck the trust level at the top center.";
+"seq5" = "Click the arrow\nin order to start.";
