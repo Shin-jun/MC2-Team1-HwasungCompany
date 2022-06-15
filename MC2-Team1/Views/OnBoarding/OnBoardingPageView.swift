@@ -150,7 +150,7 @@ extension OnBoardingPageView{
         }
         // Message
         VStack{
-            Text("원하는 스토리를 터치하여\n스토리를 이어가세요.")
+            Text("원하는 선택지를 터치하여\n스토리를 이어가세요.")
                 .font(.system(size: 18))
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
