@@ -65,7 +65,7 @@
     "choices": [
         {
             "content" : "次に",
-            "nextParagraphId" : 8
+            "nextParagraphId" : -2
         }
     ]
   },
@@ -164,7 +164,7 @@
     "content": "安藤が徐々に体を起こす。\n誰かの顔には笑みがこぼれている。",
     "choices": [
         {
-            "content" : "最初に",
+            "content" : "終了",
             "nextParagraphId" : -1,
             "nextChapterIndex" : -10
         }
@@ -285,7 +285,7 @@
     "content": "誰かが私をこの悪夢から救ってくれることを願いながら私はぼんやりしているしかなかった。\nあるいは永遠に目を閉じられることを願いながら・・・",
     "choices": [
         {
-            "content" : "最初に",
+            "content" : "終了",
             "nextParagraphId" : -1,
             "nextChapterIndex" : -10
         }
