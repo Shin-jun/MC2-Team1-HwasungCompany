@@ -43,20 +43,13 @@ struct CreditView: View {
                 .frame(width: 500, height: animationStart ? 750 : 0)
                 //.animation(Animation.linear(duration: startAnimationDuration), value: opacity)
                 .onAppear() {
-                    let range = attributedString.range(of: "회장")!
-                    attributedString[range].font = .custom(mainFont, size: 20)
-                    let range1 = attributedString.range(of: "최고학력자")!
-                    attributedString[range1].font = .custom(mainFont, size: 20)
-                    let range2 = attributedString.range(of: "영양사")!
-                    attributedString[range2].font = .custom(mainFont, size: 20)
-                    let range3 = attributedString.range(of: "충전")!
-                    attributedString[range3].font = .custom(mainFont, size: 20)
-                    let range4 = attributedString.range(of: "글루건")!
-                    attributedString[range4].font = .custom(mainFont, size: 20)
-                    let range5 = attributedString.range(of: "원어민")!
-                    attributedString[range5].font = .custom(mainFont, size: 20)
-                    let range6 = attributedString.range(of: "과장")!
-                    attributedString[range6].font = .custom(mainFont, size: 20)
+                    attributeItem(text: "회장")
+                    attributeItem(text: "최고학력자")
+                    attributeItem(text: "영양사")
+                    attributeItem(text: "충전")
+                    attributeItem(text: "글루건")
+                    attributeItem(text: "원어민")
+                    attributeItem(text: "과장")
                     
                     withAnimation(.linear(duration: animationEnd ? endAnimationDuration : startAnimationDuration)) {
                         self.animationStart.toggle()
@@ -71,6 +64,11 @@ struct CreditView: View {
             }
         }
         .ignoresSafeArea()
+    }
+    
+    func attributeItem(text: String) {
+        let range = attributedString.range(of: text)!
+        attributedString[range].font = .custom(mainFont, size: 20)
     }
 }
 
