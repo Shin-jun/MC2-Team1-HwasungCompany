@@ -334,7 +334,7 @@
     "content": "「それでは、行きましょうか？」",
     "choices": [
         {
-            "content" : "最初に",
+            "content" : "終了",
             "nextParagraphId" : -1,
             "nextChapterIndex" : -1
         }

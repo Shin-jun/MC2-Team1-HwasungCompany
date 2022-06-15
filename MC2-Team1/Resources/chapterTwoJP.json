@@ -230,7 +230,7 @@
     "content": "うっ、ガラスの破片で手が切れたようだ。 思ったより深く切られたのか血が落ちた。",
     "choices": [
         {
-            "content" : "다음으로",
+            "content" : "次に",
             "nextParagraphId" : 22
         },
     ],
