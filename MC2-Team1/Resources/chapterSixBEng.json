@@ -101,7 +101,7 @@
   },
   {
     "id": 1004,
-    "content": "At that time their smile looked kind of creepy. I stared at them with confusion in my head.\nAs I turned my eyes onto the source of the pain, I found out the cure was injected on my arm.",
+    "content": "At that time their smile looked somewhat creepy. I stared at them with confusion in my head.\nAs I turned my eyes onto the source of the pain, I found out the cure was injected in my arm.",
     "choices": [
         {
             "content" : "Next",
@@ -211,7 +211,7 @@
   },
   {
     "id": 2005,
-    "content": "And that's when I heard Bailey Jones scream out of pain. The cure was injected on their arm.",
+    "content": "And that's when I heard Bailey Jones scream out of pain. The cure was injected in their arm.",
     "choices": [
         {
             "content" : "Next",
@@ -221,7 +221,7 @@
   },
   {
     "id": 2006,
-    "content": "Jones fell down onto the floor.\nConfusion, resentment, and sorrow... I saw them all in their eyes. Seeing them suffering from pain made me feel so bad.\nWas it really the right decision?",
+    "content": "Jones fell down onto the floor.\nConfusion, resentment, and sorrow... I saw all of those in their eyes. Seeing them suffering from pain made me feel so bad.\nWas it really the right decision?",
     "choices": [
         {
             "content" : "Next",
@@ -281,7 +281,7 @@
   },
   {
     "id": 2012,
-    "content": "I couldn't do anything other than just standing there vacantly, hoping someone comes to help me get out of this nightmare. Or hoping maybe I could just fall asleep forever.",
+    "content": "I couldn't do anything other than just standing there vacantly, hoping someone comes to save me from this nightmare. Or hoping maybe I could just fall asleep forever.",
     "choices": [
         {
             "content" : "To the beginning",
