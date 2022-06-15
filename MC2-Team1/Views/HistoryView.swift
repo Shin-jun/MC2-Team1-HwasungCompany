@@ -71,8 +71,7 @@ struct HistoryView: View {
                                 text: modelData.filterPara(currentChapter: modelData.currentChapterIndex, id: paragraphId).content,
                                 fontSize: fontSize
                             )
-                            .padding(.top, 120)
-                            .padding(.bottom, 160)
+                            .padding(.bottom, RatioSize.getResheight(height: 100))
                             .frame(
                                 maxWidth: UIScreen.main.bounds.width,
                                 alignment: .leading
