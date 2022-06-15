@@ -24,7 +24,7 @@
 		B718B1DD2858BBFC006D0DB4 /* chapterFourCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1DC2858BBFC006D0DB4 /* chapterFourCN.json */; };
 		B718B1DF2858C121006D0DB4 /* chapterFiveCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1DE2858C121006D0DB4 /* chapterFiveCN.json */; };
 		B718B1E12858C596006D0DB4 /* chapterSixBCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1E02858C596006D0DB4 /* chapterSixBCN.json */; };
-		B73777DE2858CA1F00BC049F /* chapterSixCCN.strings in Resources */ = {isa = PBXBuildFile; fileRef = B73777DD2858CA1F00BC049F /* chapterSixCCN.strings */; };
+		B73777DE2858CA1F00BC049F /* chapterSixCCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B73777DD2858CA1F00BC049F /* chapterSixCCN.json */; };
 		B73777E72858D2F500BC049F /* NotoSerifSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E02858D2F400BC049F /* NotoSerifSC-Regular.otf */; };
 		B73777E82858D2F500BC049F /* NotoSerifSC-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E12858D2F400BC049F /* NotoSerifSC-SemiBold.otf */; };
 		B73777E92858D2F500BC049F /* NotoSerifSC-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E22858D2F400BC049F /* NotoSerifSC-Black.otf */; };
@@ -32,6 +32,7 @@
 		B73777EB2858D2F500BC049F /* NotoSerifSC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E42858D2F500BC049F /* NotoSerifSC-Bold.otf */; };
 		B73777EC2858D2F500BC049F /* NotoSerifSC-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E52858D2F500BC049F /* NotoSerifSC-ExtraLight.otf */; };
 		B73777ED2858D2F500BC049F /* NotoSerifSC-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E62858D2F500BC049F /* NotoSerifSC-Light.otf */; };
+		B73777EF2859A2BE00BC049F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73777EE2859A2BE00BC049F /* String.swift */; };
 		B7690EE22851C613008E81AC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE12851C613008E81AC /* StartView.swift */; };
 		B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */; };
 		B7690EE82851DB5D008E81AC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE72851DB5D008E81AC /* HistoryView.swift */; };
@@ -85,7 +86,7 @@
 		B718B1DC2858BBFC006D0DB4 /* chapterFourCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFourCN.json; sourceTree = "<group>"; };
 		B718B1DE2858C121006D0DB4 /* chapterFiveCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterFiveCN.json; sourceTree = "<group>"; };
 		B718B1E02858C596006D0DB4 /* chapterSixBCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterSixBCN.json; sourceTree = "<group>"; };
-		B73777DD2858CA1F00BC049F /* chapterSixCCN.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = chapterSixCCN.strings; sourceTree = "<group>"; };
+		B73777DD2858CA1F00BC049F /* chapterSixCCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterSixCCN.json; sourceTree = "<group>"; };
 		B73777E02858D2F400BC049F /* NotoSerifSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Regular.otf"; sourceTree = "<group>"; };
 		B73777E12858D2F400BC049F /* NotoSerifSC-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-SemiBold.otf"; sourceTree = "<group>"; };
 		B73777E22858D2F400BC049F /* NotoSerifSC-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Black.otf"; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		B73777E42858D2F500BC049F /* NotoSerifSC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Bold.otf"; sourceTree = "<group>"; };
 		B73777E52858D2F500BC049F /* NotoSerifSC-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-ExtraLight.otf"; sourceTree = "<group>"; };
 		B73777E62858D2F500BC049F /* NotoSerifSC-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Light.otf"; sourceTree = "<group>"; };
+		B73777EE2859A2BE00BC049F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B7690EE12851C613008E81AC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7690EE72851DB5D008E81AC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				B7690F14285322E2008E81AC /* Color.swift */,
+				B73777EE2859A2BE00BC049F /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,8 +292,8 @@
 				37D9E2B728570CBC005BB908 /* chapterThree.json */,
 				D4EE46C12857107400C608DA /* chapterFour.json */,
 				C6AE2956285705CA00E9F39F /* chapterTwo.json */,
-				05FB2E0E285710360089359B /* chapterSixB.json */,
 				11139EBA28570D5B00EF6FD1 /* chapterFive.json */,
+				05FB2E0E285710360089359B /* chapterSixB.json */,
 				B70C7352285705A6009F8D61 /* chapterSixC.json */,
 				C613C434283E108A00BCFC82 /* fonts */,
 				B7FD7D672855C79B006A509E /* PastPara.json */,
@@ -300,7 +303,7 @@
 				B718B1DC2858BBFC006D0DB4 /* chapterFourCN.json */,
 				B718B1DE2858C121006D0DB4 /* chapterFiveCN.json */,
 				B718B1E02858C596006D0DB4 /* chapterSixBCN.json */,
-				B73777DD2858CA1F00BC049F /* chapterSixCCN.strings */,
+				B73777DD2858CA1F00BC049F /* chapterSixCCN.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = C6E1B99B283B772E00EEC6F1;
 			packageReferences = (
@@ -392,7 +396,7 @@
 				C6AE2957285705CA00E9F39F /* chapterTwo.json in Resources */,
 				C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */,
 				B73777EA2858D2F500BC049F /* NotoSerifSC-Medium.otf in Resources */,
-				B73777DE2858CA1F00BC049F /* chapterSixCCN.strings in Resources */,
+				B73777DE2858CA1F00BC049F /* chapterSixCCN.json in Resources */,
 				05FB2E0F285710360089359B /* chapterSixB.json in Resources */,
 				B718B1DD2858BBFC006D0DB4 /* chapterFourCN.json in Resources */,
 				058249AC2854DE9800EC0832 /* openBox.json in Resources */,
@@ -428,6 +432,7 @@
 				B7FD7D662855C347006A509E /* JsonManager.swift in Sources */,
 				B7690F15285322E2008E81AC /* Color.swift in Sources */,
 				C6E19457284A58EA00EC9131 /* HalfASheet.swift in Sources */,
+				B73777EF2859A2BE00BC049F /* String.swift in Sources */,
 				C6E1945D284A58EF00EC9131 /* VerticalSlideTransition.swift in Sources */,
 				B7690F1B28548C0F008E81AC /* BridgeView.swift in Sources */,
 				058249AA2854DE7300EC0832 /* BoxOpenView.swift in Sources */,

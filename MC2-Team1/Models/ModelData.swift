@@ -33,7 +33,7 @@ final class ModelData: ObservableObject {
             chapterFileName = "chapterOne"
         }
         
-        let chapter: [Paragraph] = JsonManager.load("\(chapterFileName).json")
+        let chapter: [Paragraph] = JsonManager.load("\(chapterFileName)CN.json")
         var filteredPara: Paragraph {
             chapter.filter { paragraph in paragraph.id == id }.first!
         }

@@ -16,7 +16,7 @@ struct FadeInView: View {
     // Define
     @AppStorage("isTextAnimation") var isTextAnimation: Bool = true
     @State var opacity: Double = 0
-    private let mainFont = "NanumMyeongjo"
+    private let mainFont = "NotoSerifSC-Medium"
     
     // body
     var body: some View {
