@@ -11,7 +11,7 @@ struct EndingBridgeView: View {
     var body: some View {
         ZStack {
             Color.bgColor
-        }
+        }.ignoresSafeArea()
     }
 }
 

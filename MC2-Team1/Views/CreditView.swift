@@ -44,14 +44,6 @@ struct CreditView: View {
                 .frame(width: 500, height: animationStart ? 750 : 0)
                 //.animation(Animation.linear(duration: startAnimationDuration), value: opacity)
                 .onAppear() {
-                    attributeItem(text: "회장")
-                    attributeItem(text: "최고학력자")
-                    attributeItem(text: "영양사")
-                    attributeItem(text: "충전")
-                    attributeItem(text: "글루건")
-                    attributeItem(text: "원어민")
-                    attributeItem(text: "과장")
-                    
                     withAnimation(.linear(duration: animationEnd ? endAnimationDuration : startAnimationDuration)) {
                         self.animationStart.toggle()
                         opacity = 1
@@ -65,11 +57,6 @@ struct CreditView: View {
             }
         }
         .ignoresSafeArea()
-    }
-    
-    func attributeItem(text: String) {
-        let range = attributedString.range(of: text)!
-        attributedString[range].font = .custom(modelData.contentFontName, size: 20)
     }
 }
 

@@ -124,7 +124,7 @@ struct InBox: View {
                         .frame(width: RatioSize.getResWidth(width: 400), height: RatioSize.getResWidth(width: 400))
                         .padding()
                         .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                                 isBoxOpenGame = false
                             }
                         }
