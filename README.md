@@ -14,19 +14,19 @@
 
 ## :people_hugging: Authors
 
-[EllyJ]()
+[EllyJ](https://github.com/jeong-hyeonHwang)
 
-[Bethev]()
+[Bethev](https://github.com/LEJMO)
 
-[Digi]()
+[Digi](https://github.com/pagh2322)
 
-[Everett]()
+[Everett](https://github.com/Shin-jun)
 
-[Sophie]()
+[Sophie](https://github.com/eeunho)
 
-[Rang]()
+[Rang](https://github.com/bee712)
 
-[Woody]()
+[Woody](https://github.com/insub4067)
 
 
 ## :fireworks: Screenshots
