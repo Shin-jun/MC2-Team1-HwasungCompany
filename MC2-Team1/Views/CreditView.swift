@@ -15,14 +15,13 @@ struct CreditView: View {
     @State private var animationStart = false
     @State private var animationEnd = false
     @EnvironmentObject var modelData: ModelData
-    @Binding var mode: Mode
     
 
     // animation 지속시간
     private let startAnimationDuration = 5.0
     private let middleAnimationDuration = 6.0
     private let endAnimationDuration = 0.5
-    @State var attributedString = AttributedString("화성상사\n\n회장 Woody \n최고학력자 Digi \n영양사 Bethev \n충전 EllyJ \n글루건 Rang \n원어민 Sophie \n과장 Everett \n\n And You")
+    @State var attributedString = AttributedString("화성상사\n\n Woody \n Digi \n Bethev \n EllyJ \n Rang \n Sophie \n Everett \n\n And You")
     @State var opacity: Double = 0
     
     var body: some View {
@@ -31,6 +30,7 @@ struct CreditView: View {
                 .resizable()
             Text(attributedString)
                 .fontWeight(.bold)
+                .foregroundColor(.fontColor)
                 .font(.custom(modelData.contentFontName, size: 35))
                 .multilineTextAlignment(.center)
                 .lineLimit(nil)
@@ -75,6 +75,6 @@ struct CreditView: View {
 
 struct CreditView_Previews: PreviewProvider {
     static var previews: some View {
-        CreditView(mode: .constant(.credit))
+        CreditView()
     }
 }

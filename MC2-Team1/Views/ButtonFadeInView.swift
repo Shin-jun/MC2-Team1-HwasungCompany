@@ -89,9 +89,13 @@ extension ButtonFadeInView{
                         modelData.pastParas = [["Records"]]
                         paragraphId = 1
                     }
-                    withAnimation(.linear(duration: 0.4)) {
-                        modelData.bridgeChapterIndex = 0
-                        mode = .credit
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.5) {
+                        withAnimation(.linear(duration: 2.5)) {
+                            mode = .credit
+                        }
+                    }
+                    withAnimation(.linear(duration: 0.8)) {
+                        mode = .endingBridge
                     }
                 }
             // 호감도에 따른 갈림길

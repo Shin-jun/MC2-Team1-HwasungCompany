@@ -28,13 +28,13 @@ struct StartView: View {
                 Group{
                     HStack{
                         Text("IOPS")
-                            .font(.custom(modelData.titleFontName, size: RatioSize.getResWidth(width: 96)))
+                            .font(.custom(modelData.titleFontName, size: RatioSize.getResWidth(width: 72)))
                             .foregroundColor(.fontColor)
                     }.frame(width: textWidth, alignment: .leading)
                     HStack {
                         Spacer()
                         Text("Hydden")
-                            .font(.custom(modelData.titleFontName, size: RatioSize.getResWidth(width: 60)))
+                            .font(.custom(modelData.titleFontName, size: RatioSize.getResWidth(width: 72)))
                             .foregroundColor(.fontColor)
                     }.frame(width: textWidth, alignment: .trailing)
                 }

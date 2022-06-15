@@ -118,9 +118,9 @@ final class ModelData: ObservableObject {
         get {
             switch LocalizeManager.deviceLanguage {
             case .KR, .EN:
-                return "NuosuSIL-Regular"
+                return "NanumMyeongjoExtraBold"
             case .CN, .JP:
-                return "NotoSerifSC-Regular"
+                return "NanumMyeongjoExtraBold"
             }
         }
     }
