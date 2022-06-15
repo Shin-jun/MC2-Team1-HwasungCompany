@@ -96,7 +96,7 @@ final class ModelData: ObservableObject {
     
     func getContentFontName() -> String {
         switch LocalizeManager.getDeviceLanguage() {
-        case "KR", "EN":
+        case "KR", "Eng":
             return "NanumMyeongjo"
         case "CN", "JP":
             return "NotoSerifSC-Medium"
@@ -107,7 +107,7 @@ final class ModelData: ObservableObject {
     
     func getChoiceFontName() -> String {
         switch LocalizeManager.getDeviceLanguage() {
-        case "KR", "EN":
+        case "KR", "Eng":
             return "NanumMyeongjoBold"
         case "CN", "JP":
             return "NotoSerifSC-Bold"
@@ -118,7 +118,7 @@ final class ModelData: ObservableObject {
     
     func getTitleFontName() -> String {
         switch LocalizeManager.getDeviceLanguage() {
-        case "KR", "EN":
+        case "KR", "Eng":
             return "NuosuSIL-Regular"
         case "CN", "JP":
             return "NotoSerifSC-Regular"
