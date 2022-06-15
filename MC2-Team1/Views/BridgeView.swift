@@ -30,15 +30,15 @@ struct BridgeView: View {
                 
                 switch chapterNumber {
                 case "2":
-                    Image(colorScheme == .light ? "백연우":"백연우_반전").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
+                    Image(colorScheme == .light ? "baek":"baek_dark").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 case "3":
-                    Image(colorScheme == .light ? "최지원":"최지원_반전").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
+                    Image(colorScheme == .light ? "choi":"choi_dark").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 case "4":
-                    Image(colorScheme == .light ? "치료제":"치료제_반전").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
+                    Image(colorScheme == .light ? "cure":"cure_dark").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 case "5":
-                    Image(colorScheme == .light ? "갈림길":"갈림길_반전").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
+                    Image(colorScheme == .light ? "road":"road_dark").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 case "6":
-                    Image(colorScheme == .light ? "안지민":"안지민_반전").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
+                    Image(colorScheme == .light ? "ahn":"ahn_dark").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 default:
                     EmptyView()
                 }
