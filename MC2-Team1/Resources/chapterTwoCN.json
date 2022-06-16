@@ -210,7 +210,7 @@
     "content": "这公文包是空着的。这里好像是没有，去实验台吧",
     "choices": [
         {
-            "content" : "다음으로",
+            "content" : "继续",
             "nextParagraphId" : 20
         },
     ]
