@@ -1,6 +1,6 @@
 # MC2-Team1-HwasungCompany
 
-![Logo](https://dummyimage.com/1000x300/000/fff.png)
+![Logo](https://github.com/DeveloperAcademy-POSTECH/MC2-Team1-HwasungCompany/blob/main/logos/logo.png)
 
 
 # Hydden
@@ -39,8 +39,12 @@
 
 ## :fireworks: Screenshots
 
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-
+![1](https://github.com/DeveloperAcademy-POSTECH/MC2-Team1-HwasungCompany/blob/main/screenshots/1.png)
+![2](https://github.com/DeveloperAcademy-POSTECH/MC2-Team1-HwasungCompany/blob/main/screenshots/2.png)
+![3](https://github.com/DeveloperAcademy-POSTECH/MC2-Team1-HwasungCompany/blob/main/screenshots/3.png)
+![4](https://github.com/DeveloperAcademy-POSTECH/MC2-Team1-HwasungCompany/blob/main/screenshots/4.png)
+![5](https://github.com/DeveloperAcademy-POSTECH/MC2-Team1-HwasungCompany/blob/main/screenshots/5.png)
+![6](https://github.com/DeveloperAcademy-POSTECH/MC2-Team1-HwasungCompany/blob/main/screenshots/6.png)
 
 ## :sparkles: Skills & Tech Stack
 **`SwiftUI`**
