@@ -40,12 +40,8 @@
 		B718B1E12858C596006D0DB4 /* chapterSixBCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B718B1E02858C596006D0DB4 /* chapterSixBCN.json */; };
 		B73777DE2858CA1F00BC049F /* chapterSixCCN.json in Resources */ = {isa = PBXBuildFile; fileRef = B73777DD2858CA1F00BC049F /* chapterSixCCN.json */; };
 		B73777E72858D2F500BC049F /* NotoSerifSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E02858D2F400BC049F /* NotoSerifSC-Regular.otf */; };
-		B73777E82858D2F500BC049F /* NotoSerifSC-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E12858D2F400BC049F /* NotoSerifSC-SemiBold.otf */; };
-		B73777E92858D2F500BC049F /* NotoSerifSC-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E22858D2F400BC049F /* NotoSerifSC-Black.otf */; };
 		B73777EA2858D2F500BC049F /* NotoSerifSC-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E32858D2F500BC049F /* NotoSerifSC-Medium.otf */; };
 		B73777EB2858D2F500BC049F /* NotoSerifSC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E42858D2F500BC049F /* NotoSerifSC-Bold.otf */; };
-		B73777EC2858D2F500BC049F /* NotoSerifSC-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E52858D2F500BC049F /* NotoSerifSC-ExtraLight.otf */; };
-		B73777ED2858D2F500BC049F /* NotoSerifSC-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B73777E62858D2F500BC049F /* NotoSerifSC-Light.otf */; };
 		B73777EF2859A2BE00BC049F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73777EE2859A2BE00BC049F /* String.swift */; };
 		B73777F12859A8A600BC049F /* LocalizeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73777F02859A8A600BC049F /* LocalizeManager.swift */; };
 		B73777F42859AAC200BC049F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B73777F62859AAC200BC049F /* Localizable.strings */; };
@@ -55,18 +51,10 @@
 		B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */; };
 		B7690EE82851DB5D008E81AC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690EE72851DB5D008E81AC /* HistoryView.swift */; };
 		B7690F15285322E2008E81AC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690F14285322E2008E81AC /* Color.swift */; };
-		B7690F17285325CA008E81AC /* NuosuSIL-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7690F16285325CA008E81AC /* NuosuSIL-Regular.ttf */; };
 		B7690F1928548932008E81AC /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690F1828548932008E81AC /* InitView.swift */; };
 		B7690F1B28548C0F008E81AC /* BridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7690F1A28548C0F008E81AC /* BridgeView.swift */; };
 		B7FD7D662855C347006A509E /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD7D652855C347006A509E /* JsonManager.swift */; };
 		B7FD7D682855C79B006A509E /* PastPara.json in Resources */ = {isa = PBXBuildFile; fileRef = B7FD7D672855C79B006A509E /* PastPara.json */; };
-		C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */; };
-		C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */; };
-		C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */; };
-		C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C439283E12A400BCFC82 /* NotoSerifKR-Light.otf */; };
-		C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C438283E12A400BCFC82 /* NotoSerifKR-Medium.otf */; };
-		C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C437283E12A400BCFC82 /* NotoSerifKR-Regular.otf */; };
-		C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */; };
 		C66C56E22845E2A200BDC0CC /* FadeInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66C56E12845E2A200BDC0CC /* FadeInView.swift */; };
 		C6AE29532855CDB200E9F39F /* ButtonFadeInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE29522855CDB200E9F39F /* ButtonFadeInView.swift */; };
 		C6AE2957285705CA00E9F39F /* chapterTwoKR.json in Resources */ = {isa = PBXBuildFile; fileRef = C6AE2956285705CA00E9F39F /* chapterTwoKR.json */; };
@@ -124,12 +112,8 @@
 		B718B1E02858C596006D0DB4 /* chapterSixBCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterSixBCN.json; sourceTree = "<group>"; };
 		B73777DD2858CA1F00BC049F /* chapterSixCCN.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterSixCCN.json; sourceTree = "<group>"; };
 		B73777E02858D2F400BC049F /* NotoSerifSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Regular.otf"; sourceTree = "<group>"; };
-		B73777E12858D2F400BC049F /* NotoSerifSC-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-SemiBold.otf"; sourceTree = "<group>"; };
-		B73777E22858D2F400BC049F /* NotoSerifSC-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Black.otf"; sourceTree = "<group>"; };
 		B73777E32858D2F500BC049F /* NotoSerifSC-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Medium.otf"; sourceTree = "<group>"; };
 		B73777E42858D2F500BC049F /* NotoSerifSC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Bold.otf"; sourceTree = "<group>"; };
-		B73777E52858D2F500BC049F /* NotoSerifSC-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-ExtraLight.otf"; sourceTree = "<group>"; };
-		B73777E62858D2F500BC049F /* NotoSerifSC-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifSC-Light.otf"; sourceTree = "<group>"; };
 		B73777EE2859A2BE00BC049F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B73777F02859A8A600BC049F /* LocalizeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeManager.swift; sourceTree = "<group>"; };
 		B73777F52859AAC200BC049F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -142,19 +126,11 @@
 		B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7690EE72851DB5D008E81AC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		B7690F14285322E2008E81AC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		B7690F16285325CA008E81AC /* NuosuSIL-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NuosuSIL-Regular.ttf"; sourceTree = "<group>"; };
 		B7690F1828548932008E81AC /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
 		B7690F1A28548C0F008E81AC /* BridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeView.swift; sourceTree = "<group>"; };
 		B7FD7D652855C347006A509E /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		B7FD7D672855C79B006A509E /* PastPara.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PastPara.json; sourceTree = "<group>"; };
 		C613C435283E112300BCFC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Black.otf"; sourceTree = "<group>"; };
-		C613C437283E12A400BCFC82 /* NotoSerifKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Regular.otf"; sourceTree = "<group>"; };
-		C613C438283E12A400BCFC82 /* NotoSerifKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Medium.otf"; sourceTree = "<group>"; };
-		C613C439283E12A400BCFC82 /* NotoSerifKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Light.otf"; sourceTree = "<group>"; };
-		C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Bold.otf"; sourceTree = "<group>"; };
-		C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-SemiBold.otf"; sourceTree = "<group>"; };
-		C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-ExtraLight.otf"; sourceTree = "<group>"; };
 		C66C56E12845E2A200BDC0CC /* FadeInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInView.swift; sourceTree = "<group>"; };
 		C6AE29522855CDB200E9F39F /* ButtonFadeInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFadeInView.swift; sourceTree = "<group>"; };
 		C6AE2956285705CA00E9F39F /* chapterTwoKR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapterTwoKR.json; sourceTree = "<group>"; };
@@ -214,13 +190,9 @@
 		B73777DF2858D2E700BC049F /* CN */ = {
 			isa = PBXGroup;
 			children = (
-				B73777E22858D2F400BC049F /* NotoSerifSC-Black.otf */,
 				B73777E42858D2F500BC049F /* NotoSerifSC-Bold.otf */,
-				B73777E52858D2F500BC049F /* NotoSerifSC-ExtraLight.otf */,
-				B73777E62858D2F500BC049F /* NotoSerifSC-Light.otf */,
 				B73777E32858D2F500BC049F /* NotoSerifSC-Medium.otf */,
 				B73777E02858D2F400BC049F /* NotoSerifSC-Regular.otf */,
-				B73777E12858D2F400BC049F /* NotoSerifSC-SemiBold.otf */,
 			);
 			path = CN;
 			sourceTree = "<group>";
@@ -254,15 +226,7 @@
 				D4EE46B92855DE7800C608DA /* NanumMyeongjo.ttf */,
 				D4EE46B72855DE7800C608DA /* NanumMyeongjoBold.ttf */,
 				D4EE46B82855DE7800C608DA /* NanumMyeongjoExtraBold.ttf */,
-				B7690F16285325CA008E81AC /* NuosuSIL-Regular.ttf */,
 				B7690EE52851D153008E81AC /* Inter-SemiBold.ttf */,
-				C613C436283E12A400BCFC82 /* NotoSerifKR-Black.otf */,
-				C613C43A283E12A400BCFC82 /* NotoSerifKR-Bold.otf */,
-				C613C43C283E12A400BCFC82 /* NotoSerifKR-ExtraLight.otf */,
-				C613C439283E12A400BCFC82 /* NotoSerifKR-Light.otf */,
-				C613C438283E12A400BCFC82 /* NotoSerifKR-Medium.otf */,
-				C613C437283E12A400BCFC82 /* NotoSerifKR-Regular.otf */,
-				C613C43B283E12A400BCFC82 /* NotoSerifKR-SemiBold.otf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -453,40 +417,28 @@
 				11F4C40B2859A532002CE9F4 /* chapterThreeEng.json in Resources */,
 				11F4C40C2859A532002CE9F4 /* chapterTwoEng.json in Resources */,
 				D4EE46BC2855DE7800C608DA /* NanumMyeongjo.ttf in Resources */,
-				C613C43D283E14AC00BCFC82 /* NotoSerifKR-Black.otf in Resources */,
 				B718B1E12858C596006D0DB4 /* chapterSixBCN.json in Resources */,
-				B73777ED2858D2F500BC049F /* NotoSerifSC-Light.otf in Resources */,
-				B7690F17285325CA008E81AC /* NuosuSIL-Regular.ttf in Resources */,
 				B70C7353285705A6009F8D61 /* chapterSixCKR.json in Resources */,
 				D4EE46BB2855DE7800C608DA /* NanumMyeongjoExtraBold.ttf in Resources */,
 				3A3C86EC2858E1F400F0F8DE /* chapterSixCJP.json in Resources */,
-				C613C43E283E14AC00BCFC82 /* NotoSerifKR-Bold.otf in Resources */,
 				B718B1D528587927006D0DB4 /* chapterOneCN.json in Resources */,
 				B73777F42859AAC200BC049F /* Localizable.strings in Resources */,
 				11139EBB28570D5B00EF6FD1 /* chapterFiveKR.json in Resources */,
-				C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */,
 				B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */,
 				B718B1D92858AF00006D0DB4 /* chapterTwoCN.json in Resources */,
-				B73777E92858D2F500BC049F /* NotoSerifSC-Black.otf in Resources */,
-				B73777EC2858D2F500BC049F /* NotoSerifSC-ExtraLight.otf in Resources */,
 				B73777E72858D2F500BC049F /* NotoSerifSC-Regular.otf in Resources */,
 				3A3C86E228589A6100F0F8DE /* chapterTwoJP.json in Resources */,
 				11139EBB28570D5B00EF6FD1 /* chapterFiveKR.json in Resources */,
-				C613C43F283E14AC00BCFC82 /* NotoSerifKR-ExtraLight.otf in Resources */,
 				B7690EE62851D157008E81AC /* Inter-SemiBold.ttf in Resources */,
 				3A3C86E82858C1C500F0F8DE /* chapterFiveJP.json in Resources */,
 				3A3C86EA2858D12C00F0F8DE /* chapterSixBJP.json in Resources */,
 				B7FD7D682855C79B006A509E /* PastPara.json in Resources */,
 				3A3C86E428589E0F00F0F8DE /* chapterThreeJP.json in Resources */,
-				C613C440283E14AC00BCFC82 /* NotoSerifKR-Light.otf in Resources */,
 				37D9E2B828570CBC005BB908 /* chapterThreeKR.json in Resources */,
-				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
 				C6AE2957285705CA00E9F39F /* chapterTwoKR.json in Resources */,
 				11F4C4072859A520002CE9F4 /* chapterOneEng.json in Resources */,
 				11F4C4032859A509002CE9F4 /* chapterFourEng.json in Resources */,
-				C613C441283E14AC00BCFC82 /* NotoSerifKR-Medium.otf in Resources */,
 				11F4C4022859A509002CE9F4 /* chapterFiveEng.json in Resources */,
-				C613C442283E14AC00BCFC82 /* NotoSerifKR-Regular.otf in Resources */,
 				B73777EA2858D2F500BC049F /* NotoSerifSC-Medium.otf in Resources */,
 				B73777DE2858CA1F00BC049F /* chapterSixCCN.json in Resources */,
 				05FB2E0F285710360089359B /* chapterSixBKR.json in Resources */,
@@ -495,10 +447,8 @@
 				05FB2E0F285710360089359B /* chapterSixBKR.json in Resources */,
 				3A3A900228587A3100375C7D /* chapterOneJP.json in Resources */,
 				058249AC2854DE9800EC0832 /* openBox.json in Resources */,
-				C613C443283E14AC00BCFC82 /* NotoSerifKR-SemiBold.otf in Resources */,
 				C6E1B9BA283B77C100EEC6F1 /* chapterOneKR.json in Resources */,
 				C6E1B9AF283B772E00EEC6F1 /* Preview Assets.xcassets in Resources */,
-				B73777E82858D2F500BC049F /* NotoSerifSC-SemiBold.otf in Resources */,
 				B73777EB2858D2F500BC049F /* NotoSerifSC-Bold.otf in Resources */,
 				D4EE46BA2855DE7800C608DA /* NanumMyeongjoBold.ttf in Resources */,
 				B718B1DF2858C121006D0DB4 /* chapterFiveCN.json in Resources */,
