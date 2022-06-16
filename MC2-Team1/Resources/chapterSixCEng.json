@@ -251,7 +251,7 @@
   },
   {
     "id": 26,
-    "content": "Someone who has been collapsed on the floor gets up slowly with a confused face.\nThey detect another body across the room.",
+    "content": "                         \n......\n                         ",
     "choices": [
         {
             "content" : "Next",
@@ -261,7 +261,7 @@
   },
   {
     "id": 27,
-    "content": "Being surprised, they look around to see what is going on",
+    "content": "Someone who has been collapsed on the floor gets up slowly with a confused face.\nThey detect another body across the room.",
     "choices": [
         {
             "content" : "Next",
@@ -271,7 +271,7 @@
   },
   {
     "id": 28,
-    "content": "\"You're awake! What a relief.\"\nThey turn their eyes to the direction of the somewhat familiar voice. The owner of the voice comes and sits down in front of them.",
+    "content": "Being surprised, they look around to see what is going on",
     "choices": [
         {
             "content" : "Next",
@@ -281,7 +281,7 @@
   },
   {
     "id": 29,
-    "content": "\"Nice to meet you. You're Bailey Jones, who was invited to deliver a lecture on anatomy today at NISP. Unfortunately it had to be cancelled due to the rebel forces attacks.\"",
+    "content": "\"You're awake! What a relief.\"\nThey turn their eyes to the direction of the somewhat familiar voice. The owner of the voice comes and sits down in front of them.",
     "choices": [
         {
             "content" : "Next",
@@ -291,7 +291,7 @@
   },
   {
     "id": 30,
-    "content": "\"If you're suffering from a memory loss, don't be too worried. It's a temporary side effect of the medicine that you took. While you were fainted I injected you some tranquilizer.\"",
+    "content": "\"Nice to meet you. You're Bailey Jones, who was invited to deliver a lecture on anatomy today at NISP. Unfortunately it had to be cancelled due to the rebel forces attacks.\"",
     "choices": [
         {
             "content" : "Next",
@@ -301,7 +301,7 @@
   },
   {
     "id": 31,
-    "content": "\"Oh, excuse me for the late introduction. I am Andrea Davies, a researcher of NISP. I was supposed to be your assistant for today's lecture.\"",
+    "content": "\"If you're suffering from a memory loss, don't be too worried. It's a temporary side effect of the medicine that you took. While you were fainted I injected you some tranquilizer.\"",
     "choices": [
         {
             "content" : "Next",
@@ -311,7 +311,7 @@
   },
   {
     "id": 32,
-    "content": "\"We're going to be safe once we reach the exit at the Private Access Area. The government has promised to help us. I will try my best to protect you and help you escape safely.\"",
+    "content": "\"Oh, excuse me for the late introduction. I am Andrea Davies, a researcher of NISP. I was supposed to be your assistant for today's lecture.\"",
     "choices": [
         {
             "content" : "Next",
@@ -321,7 +321,7 @@
   },
   {
     "id": 33,
-    "content": "Andrea Davies smiles at Bailey Jones.",
+    "content": "\"We're going to be safe once we reach the exit at the Private Access Area. The government has promised to help us. I will try my best to protect you and help you escape safely.\"",
     "choices": [
         {
             "content" : "Next",
@@ -331,6 +331,16 @@
   },
   {
     "id": 34,
+    "content": "Andrea Davies smiles at Bailey Jones.",
+    "choices": [
+        {
+            "content" : "Next",
+            "nextParagraphId" : 35
+        }
+    ]
+  },
+  {
+    "id": 35,
     "content": "\"Shall we go?\"",
     "choices": [
         {
