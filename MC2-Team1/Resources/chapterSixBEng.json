@@ -131,7 +131,7 @@
   },
   {
     "id": 1007,
-    "content": "Bailey Jones is waiting patiently for something in the middle of silence.",
+    "content": "                         \n......\n                         ",
     "choices": [
         {
             "content" : "Next",
@@ -141,7 +141,7 @@
   },
   {
     "id": 1008,
-    "content": "It was a long silence until the moment when they could hear a rustle.",
+    "content": "Bailey Jones is waiting patiently for something in the middle of silence.",
     "choices": [
         {
             "content" : "Next",
@@ -151,7 +151,7 @@
   },
   {
     "id": 1009,
-    "content": "\"Andea.\"\nJones calls Andrea with a faint nervousness and excitement in their voice.",
+    "content": "It was a long silence until the moment when they could hear a rustle.",
     "choices": [
         {
             "content" : "Next",
@@ -161,6 +161,16 @@
   },
   {
     "id": 1010,
+    "content": "\"Andea.\"\nJones calls Andrea with a faint nervousness and excitement in their voice.",
+    "choices": [
+        {
+            "content" : "Next",
+            "nextParagraphId" : 1011
+        }
+    ]
+  },
+  {
+    "id": 1011,
     "content": "Andrea Davies slowly gets up, with a smile on their face.",
     "choices": [
         {
@@ -242,7 +252,7 @@
   },
   {
     "id": 2008,
-    "content": "I wonder how long I've been asleep. I woke up with a terrible headache. Bailey Jones was lying on the floor just like I remember.",
+    "content": "                         \n......\n                         ",
     "choices": [
         {
             "content" : "Next",
@@ -252,7 +262,7 @@
   },
   {
     "id": 2009,
-    "content": "And I could smell something ominous…",
+    "content": "I wonder how long I've been asleep. I woke up with a terrible headache. Bailey Jones was lying on the floor just like I remember.",
     "choices": [
         {
             "content" : "Next",
@@ -262,7 +272,7 @@
   },
   {
     "id": 2010,
-    "content": "The ominous scent led my attention to someone else, also lying on the floor. And this person was covered with blood. I don't want to believe it, but it was apparently Chris Turner.",
+    "content": "And I could smell something ominous…",
     "choices": [
         {
             "content" : "Next",
@@ -272,7 +282,7 @@
   },
   {
     "id": 2011,
-    "content": "What happened, why is Turner...\nI looked around in confusion. And that's when I found my own hands covered with blood.",
+    "content": "The ominous scent led my attention to someone else, also lying on the floor. And this person was covered with blood. I don't want to believe it, but it was apparently Chris Turner.",
     "choices": [
         {
             "content" : "Next",
@@ -282,6 +292,16 @@
   },
   {
     "id": 2012,
+    "content": "What happened, why is Turner...\nI looked around in confusion. And that's when I found my own hands covered with blood.",
+    "choices": [
+        {
+            "content" : "Next",
+            "nextParagraphId" : 2013
+        }
+    ]
+  },
+  {
+    "id": 2013,
     "content": "I couldn't do anything other than just standing there vacantly, hoping someone comes to save me from this nightmare. Or hoping maybe I could just fall asleep forever.",
     "choices": [
         {
