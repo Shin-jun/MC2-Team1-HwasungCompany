@@ -55,7 +55,6 @@ struct ContentView: View {
                     }
                 
                 // Choice Buttons
-                // TODO: 버튼 최하단에 padding 넣어야 함
                 if isButtonAnimation {
                     ButtonViewBuilder()
                         .padding(.bottom)
