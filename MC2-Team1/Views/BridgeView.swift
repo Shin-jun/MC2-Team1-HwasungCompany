@@ -37,7 +37,7 @@ struct BridgeView: View {
                     Image(colorScheme == .light ? "cure":"cure_dark").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 case "5":
                     Image(colorScheme == .light ? "road":"road_dark").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
-                case "6":
+                case "6-B", "6-C":
                     Image(colorScheme == .light ? "ahn":"ahn_dark").resizable().frame(width: RatioSize.getResWidth(width: 250), height: RatioSize.getResWidth(width: 250)).scaledToFit()
                 default:
                     EmptyView()

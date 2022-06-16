@@ -62,7 +62,7 @@
         "content": "治疗剂已经全部废弃了？那么我手里拿着的是什么？\n我摸了摸口袋里的玻璃棍子。",
         "choices": [
             {
-                "content" : "다음으로",
+                "content" : "继续",
                 "nextParagraphId" : 7
             }
         ]
