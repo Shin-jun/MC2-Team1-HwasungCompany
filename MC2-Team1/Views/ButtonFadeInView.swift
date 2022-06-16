@@ -49,6 +49,7 @@ struct ButtonFadeInView: View {
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + (isButtonAnimation ? getDelayTime():Double(0.0))) {
                 self.isButtonHidden = false
+                isButtonAnimation = false
             }
         }
     }

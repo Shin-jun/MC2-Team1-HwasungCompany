@@ -49,7 +49,9 @@ struct ContentView: View {
                     .padding(.horizontal, RatioSize.getResWidth(width: 20))
                     .padding(.top, RatioSize.getResheight(height: 5))
                     .onTapGesture {
-                        isButtonAnimation = false
+                        if isButtonAnimation == true{
+                            isButtonAnimation = false
+                        }
                     }
                 
                 // Choice Buttons
