@@ -21,21 +21,9 @@
 
 
 ## :people_hugging: Authors
-
-[EllyJ](https://github.com/jeong-hyeonHwang)
-
-[Bethev](https://github.com/LEJMO)
-
-[Digi](https://github.com/pagh2322)
-
-[Everett](https://github.com/Shin-jun)
-
-[Sophie](https://github.com/eeunho)
-
-[Rang](https://github.com/bee712)
-
-[Woody](https://github.com/insub4067)
-
+|![Bethev](https://user-images.githubusercontent.com/96641477/174011851-1dc1e5f7-c508-4311-a24b-60cab7c23733.PNG)|![Digi](https://user-images.githubusercontent.com/96641477/174011858-5a63f102-cbc6-4f3c-888d-43e6863f29fb.PNG)|![EllyJ](https://user-images.githubusercontent.com/96641477/174011885-36f022fb-ed35-4259-a9a9-6dfced3d0116.png)|![Everette](https://user-images.githubusercontent.com/96641477/174011863-30ef6adc-6814-4638-a876-9537330b2c81.JPG)|![Rang](https://user-images.githubusercontent.com/96641477/174011847-29747549-c382-4e3e-99ce-bb55aef6fb5b.PNG)|![Sophie](https://user-images.githubusercontent.com/96641477/174011854-59f24ec8-6cef-48fe-94cc-b7b0e9348d47.PNG)|![Woody](https://user-images.githubusercontent.com/96641477/174012398-9375d710-0933-4a80-95c6-5935aa507dfb.JPG)|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|[Bethev](https://github.com/LEJMO)|[Digi](https://github.com/pagh2322)|[EllyJ](https://github.com/jeong-hyeonHwang)|[Everett](https://github.com/Shin-jun)|[Rang](https://github.com/bee712)|[Sophie](https://github.com/eeunho)|[Woody](https://github.com/insub4067)|
 
 ## :fireworks: Screenshots
 
